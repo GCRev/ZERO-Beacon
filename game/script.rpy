@@ -290,7 +290,7 @@ label ck_noq:
 
 label ck_lorisk:
     show lori at char_pos
-    lori '(blah blah blah)'
+    lorisk '(blah blah blah)'
     hide lorisk
     return
     
