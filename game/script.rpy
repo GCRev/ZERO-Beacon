@@ -97,105 +97,6 @@ define char_pos = Position(xpos = 0.7, xanchor = 'right', ypos = config.screen_h
 
 
 ####################################################
-###############      Locations       ###############
-####################################################
-        
-label loc_market:
-    scene bg market
-    'You are at the Grand Marketplace. (describe)'
-label loc_market_return:
-    menu:
-        'Talk to Cole Demarc':
-            jump ch_cole
-        'Talk to Alkay Volk Kladir':
-            jump ck_alkay
-        '(Back to Map)':
-            jump map_screen
-
-label loc_high_emb:
-    scene bg high_emb
-    'You are at the High Embassy. (describe)'
-label loc_high_emb_return:
-    if plot_state.stage == PlotStage.ARRIVE:
-        if plot_state.high_emb_tried_bribe:
-            guard 'Haven\'t we already talked to you? Unless you have official business here, you may not enter the high embassy.'
-            jump map_screen
-        else:
-            guard 'Hi. What business do you have here?'
-            label high_emb_guard_menu:
-                menu:
-                    'None, actually. I\'ll be on my way.':
-                        jump map_screen
-                    '(lie that you have appt)':
-                        guard '(don\'t see you on appt list)'
-                        jump high_emb_guard_menu
-                    '(try to bribe)':
-                        guard '(offended; tells you to screw off)'
-                        $ plot_state.high_emb_tried_bribe = True
-                        jump map_screen
-    else:
-        menu:
-            'Talk to Benjamin Columbus':
-                jump ch_ben
-            'Talk to Vatrisk Irridiss Kier':
-                jump ck_vatrisk
-            '(Back to Map)':
-                jump map_screen
-    
-label loc_human_emb:
-    scene bg human_emb
-    'You are at the Human Embassy. (describe)'
-label loc_human_emb_return:
-    menu:
-        'Talk to Lauren Gray':
-            jump ch_lauren
-        '(Back to Map)':
-            jump map_screen
-    jump map_screen
-    
-label loc_kald_emb:
-    scene bg kald_emb
-    'You are at the Kaldrean Embassy. (describe)'
-label loc_kald_emb_return:
-    menu:
-        'Talk to Lorisk Nidaria Kol':
-            jump ck_lorisk
-        'Talk to Lida Ezekeri Skar':
-            jump ck_lida
-        '(Back to Map)':
-            jump map_screen
-    jump map_screen
-    
-label loc_res: 
-    scene bg res
-    'You are at the Residences. (describe)'
-label loc_res_return: 
-    menu:
-        'Talk to Sarah Liu':
-            jump ch_sarah
-        'Talk to Adam Demeter':
-            jump ch_adam
-        'Talk to Noq Kriesk Lask':
-            jump ck_noq
-        '(Back to Map)':
-            jump map_screen
-    jump map_screen
-    
-label loc_port:
-    scene bg port
-    'You are at the Spaceport. (describe)'
-label loc_port_return:
-    menu:
-        'Talk to Jonathan Caise':
-            jump ch_jon
-        'Talk to Kro Zalva Ross':
-            jump ck_kro
-        '(Back to Map)':
-            jump map_screen
-    jump map_screen
-        
-
-####################################################
 #############     Menus / Cutscenes    #############
 ####################################################
 
@@ -223,77 +124,178 @@ label intro:
 
 
 ####################################################
+###############      Locations       ###############
+####################################################
+        
+label loc_market:
+    scene bg market
+    'You are at the Grand Marketplace. (describe)'
+    label market_menu:
+        menu:
+            'Talk to Cole Demarc':
+                call ch_cole
+            'Talk to Alkay Volk Kladir':
+                call ck_alkay
+            '(Back to Map)':
+                jump map_screen
+    jump market_menu
+
+label loc_high_emb:
+    scene bg high_emb
+    'You are at the High Embassy. (describe)'
+    label menu_high_emb:
+        if plot_state.stage == PlotStage.ARRIVE:
+            if plot_state.high_emb_tried_bribe:
+                guard 'Haven\'t we already talked to you? Unless you have official business here, you may not enter the high embassy.'
+                jump map_screen
+            else:
+                guard 'Hi. What business do you have here?'
+                label high_emb_guard_menu:
+                    menu:
+                        'None, actually. I\'ll be on my way.':
+                            jump map_screen
+                        '(lie that you have appt)':
+                            guard '(don\'t see you on appt list)'
+                            jump high_emb_guard_menu
+                        '(try to bribe)':
+                            guard '(offended; tells you to screw off)'
+                            $ plot_state.high_emb_tried_bribe = True
+                            jump map_screen
+        else:
+            menu:
+                'Talk to Benjamin Columbus':
+                    call ch_ben
+                'Talk to Vatrisk Irridiss Kier':
+                    call ck_vatrisk
+                '(Back to Map)':
+                    jump map_screen
+    jump menu_high_emb
+
+label loc_human_emb:
+    scene bg human_emb
+    'You are at the Human Embassy. (describe)'
+    label menu_human_emb:
+        menu:
+            'Talk to Lauren Gray':
+                call ch_lauren
+            '(Back to Map)':
+                jump map_screen
+    jump menu_human_emb
+    
+label loc_kald_emb:
+    scene bg kald_emb
+    'You are at the Kaldrean Embassy. (describe)'
+    label menu_kald_emb:
+        menu:
+            'Talk to Lorisk Nidaria Kol':
+                call ck_lorisk
+            'Talk to Lida Ezekeri Skar':
+                call ck_lida
+            '(Back to Map)':
+                jump map_screen
+    jump menu_kald_emb
+    
+label loc_res: 
+    scene bg res
+    'You are at the Residences. (describe)'
+    label menu_res:
+        menu:
+            'Talk to Sarah Liu':
+                call ch_sarah
+            'Talk to Adam Demeter':
+                call ch_adam
+            'Talk to Noq Kriesk Lask':
+                call ck_noq
+            '(Back to Map)':
+                jump map_screen
+    jump menu_res
+    
+label loc_port:
+    scene bg port
+    'You are at the Spaceport. (describe)'
+    label menu_port:
+        menu:
+            'Talk to Jonathan Caise':
+                call ch_jon
+            'Talk to Kro Zalva Ross':
+                call ck_kro
+            '(Back to Map)':
+                jump map_screen
+    jump menu_port
+        
+
+####################################################
 #############     Character Dialog     #############
 ####################################################
 
 label ch_ben:
     show ben at char_pos
-    '(blah blah blah)'
+    ben '(blah blah blah)'
     hide ben
-    jump loc_high_emb_return
+    return
 
 label ch_cole:
     show cole at char_pos
-    '(blah blah blah)'
+    cole '(blah blah blah)'
     hide cole
-    jump loc_market_return
+    return
 
 label ch_jon:
     show jon at char_pos
-    '(blah blah blah)'
+    jon '(blah blah blah)'
     hide jon
-    jump loc_port_return
+    return
 
 label ch_lauren:
     show lauren at char_pos
-    '(blah blah blah)'
+    lauren '(blah blah blah)'
     hide lauren
-    jump loc_human_emb_return
+    return
 
 label ch_adam:
     show adam at char_pos
-    '(blah blah blah)'
+    adam '(blah blah blah)'
     hide adam
-    jump loc_res_return
+    return
 
 label ch_sarah:
     show sarah at char_pos
-    '(blah blah blah)'
+    sarah '(blah blah blah)'
     hide sarah
-    jump loc_res_return    
+    return
 
 label ck_vatrisk:
     show vatrisk at char_pos
-    '(blah blah blah)'
+    vatrisk '(blah blah blah)'
     hide vatrisk
-    jump loc_high_emb_return
+    return
 
 label ck_kro:
     show kro at char_pos
-    '(blah blah blah)'
+    kro '(blah blah blah)'
     hide kro
-    jump loc_port_return
+    return
     
 label ck_alkay:
     show alkay at char_pos
     '(blah blah blah)'
     hide alkay
-    jump loc_market_return
+    return
     
 label ck_noq:
     show noq at char_pos
-    '(blah blah blah)'
+    noq '(blah blah blah)'
     hide noq
-    jump loc_res_return
-    
+    return
+
 label ck_lorisk:
     show lori at char_pos
-    '(blah blah blah)'
+    lori '(blah blah blah)'
     hide lorisk
-    jump loc_kald_emb_return
+    return
     
 label ck_lida:
     show lida at char_pos
-    '(blah blah blah)'
+    lida '(blah blah blah)'
     hide lida
-    jump loc_kald_emb_return
+    return
