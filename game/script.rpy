@@ -16,6 +16,7 @@ init python:
         return im.FactorScale("assets/" + fname + ".png", config.screen_width / 1600.0)
 
 
+
 ####################################################
 ###############    Character Defs    ###############
 ####################################################
@@ -70,6 +71,8 @@ image bg result2 = png("result_2-apprehend")
 image bg result3 = png("result_3-assist")
 image bg result4 = png("result_4-dipolomacy")
 
+define char_pos = Position(xpos = 0.7, xanchor = "right", ypos = config.screen_height - 122)
+
 
 ####################################################
 ###############      Locations       ###############
@@ -78,6 +81,7 @@ image bg result4 = png("result_4-dipolomacy")
 label loc_market:
     scene bg market
     "You are at the Grand Marketplace. (describe)"
+label loc_market_return:
     menu:
         "Talk to Cole Demarc":
             jump ch_cole
@@ -89,6 +93,7 @@ label loc_market:
 label loc_high_emb:
     scene bg high_emb
     "You are at the High Embassy. (describe)"
+label loc_high_emb_return:
     menu:
         "Talk to Benjamin Columbus":
             jump ch_ben
@@ -101,6 +106,7 @@ label loc_high_emb:
 label loc_human_emb:
     scene bg human_emb
     "You are at the Human Embassy. (describe)"
+label loc_human_emb_return:
     menu:
         "Talk to Lauren Gray":
             jump ch_lauren
@@ -111,6 +117,7 @@ label loc_human_emb:
 label loc_kald_emb:
     scene bg kald_emb
     "You are at the Kaldrean Embassy. (describe)"
+label loc_kald_emb_return:
     menu:
         "Talk to Lorisk Nidaria Kol":
             jump ck_lorisk
@@ -123,6 +130,7 @@ label loc_kald_emb:
 label loc_res: 
     scene bg res
     "You are at the Residences. (describe)"
+label loc_res_return: 
     menu:
         "Talk to Sarah Liu":
             jump ch_sarah
@@ -137,6 +145,7 @@ label loc_res:
 label loc_port:
     scene bg port
     "You are at the Spaceport. (describe)"
+label loc_port_return:
     menu:
         "Talk to Jonathan Caise":
             jump ch_jon
@@ -153,19 +162,18 @@ label loc_port:
 
 label map_screen:
     scene bg map
-    "Choose a destination."
     menu:
-        "Grand Marketplace":
-            jump loc_market
-        "High Embassy":
+        "1. High Embassy":
             jump loc_high_emb
-        "Human Embassy":
+        "2. Human Embassy":
             jump loc_human_emb
-        "Kaldrean Embassy":
+        "3. Kaldrean Embassy":
             jump loc_kald_emb
-        "Residences":
+        "4. Residences":
             jump loc_res
-        "Spaceport":
+        "5. Grand Marketplace":
+            jump loc_market
+        "6. Spaceport":
             jump loc_port
 
 label intro:
@@ -180,73 +188,73 @@ label intro:
 ####################################################
 
 label ch_ben:
-    show ben
+    show ben at char_pos
     "(blah blah blah)"
     hide ben
-    jump loc_high_emb
+    jump loc_high_emb_return
 
 label ch_cole:
-    show cole
+    show cole at char_pos
     "(blah blah blah)"
     hide cole
-    jump loc_market
+    jump loc_market_return
 
 label ch_jon:
-    show jon
+    show jon at char_pos
     "(blah blah blah)"
     hide jon
-    jump loc_port
+    jump loc_port_return
 
 label ch_lauren:
-    show lauren
+    show lauren at char_pos
     "(blah blah blah)"
     hide lauren
-    jump loc_human_emb
+    jump loc_human_emb_return
 
 label ch_adam:
-    show adam
+    show adam at char_pos
     "(blah blah blah)"
     hide adam
-    jump loc_res
+    jump loc_res_return
 
 label ch_sarah:
-    show sarah
+    show sarah at char_pos
     "(blah blah blah)"
     hide sarah
-    jump loc_res    
+    jump loc_res_return    
 
 label ck_vatrisk:
-    show vatrisk
+    show vatrisk at char_pos
     "(blah blah blah)"
     hide vatrisk
-    jump loc_high_emb
+    jump loc_high_emb_return
 
 label ck_kro:
-    show kro
+    show kro at char_pos
     "(blah blah blah)"
     hide kro
-    jump loc_port
+    jump loc_port_return
     
 label ck_alkay:
-    show alkay
+    show alkay at char_pos
     "(blah blah blah)"
     hide alkay
-    jump loc_market
+    jump loc_market_return
     
 label ck_noq:
-    show noq
+    show noq at char_pos
     "(blah blah blah)"
     hide noq
-    jump loc_res
+    jump loc_res_return
     
 label ck_lorisk:
-    show lorisk
+    show lori at char_pos
     "(blah blah blah)"
     hide lorisk
-    jump loc_kald_emb
+    jump loc_kald_emb_return
     
 label ck_lida:
-    show lida
+    show lida at char_pos
     "(blah blah blah)"
     hide lida
-    jump loc_kald_emb
+    jump loc_kald_emb_return
