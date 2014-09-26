@@ -50,5 +50,5 @@ errors.txt
 game/bytecode.rpyb
 game/*.bak
 game/*.rpyc
-game/saves/*
+game/saves/
 tmp/*
