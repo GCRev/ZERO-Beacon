@@ -2,9 +2,11 @@
 # Beacon
 # ZERO Studios
 # Kyle McCormick, Graham Held, Garret Holman
+# Main script file
 
 label start:
-    jump intro
+    call intro
+    jump loc_port
 
 
 ####################################################
@@ -27,18 +29,23 @@ init python:
 
     PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS', 'CONCLUSION')
 
-    class PlotState(object):
+    class PlotState:
         stage = PlotStage.ARRIVE
         high_emb_tried_bribe = False
 
+
+####################################################
+#############     Global Variables     #############
+####################################################
+
+# Non-characters
+define char_pos = Position(xpos = 0.7, xanchor = 'right', ypos = config.screen_height - 122)
 define plot_state = PlotState()
 
-
-####################################################
-###############    Character Defs    ###############
-####################################################
-
+# Non-pictured characters
 define p = Character('You')
+define comm = Character('Commander')
+define guard = Character('Embassy Guard')
 
 # Humans
 define ben = Character('Benjamin Columbus')
@@ -55,10 +62,6 @@ define lorisk = Character('Lorisk Nidaria Kol')
 define kro = Character('Kro Zalva Ross')
 define noq = Character('Noq Kriesk Lask')
 define lida = Character('Lida Ezekeri Skar')
-
-# Non-pictured 
-define comm = Character('Commander')
-define guard = Character('Embassy Guard')
 
 
 ####################################################
@@ -93,13 +96,11 @@ image bg result2 = png('result_2-apprehend')
 image bg result3 = png('result_3-assist')
 image bg result4 = png('result_4-dipolomacy')
 
-define char_pos = Position(xpos = 0.7, xanchor = 'right', ypos = config.screen_height - 122)
-
 
 ####################################################
-#############     Menus / Cutscenes    #############
+###############      Locations       ###############
 ####################################################
-
+        
 label map_screen:
     scene bg map
     menu:
@@ -116,17 +117,6 @@ label map_screen:
         '6. Spaceport':
             jump loc_port
 
-label intro:
-    scene black
-    'blah blah blah narration'
-    comm 'blah blah blah more narration'
-    jump loc_port
-
-
-####################################################
-###############      Locations       ###############
-####################################################
-        
 label loc_market:
     scene bg market
     'You are at the Grand Marketplace. (describe)'
@@ -222,80 +212,4 @@ label loc_port:
             '(Back to Map)':
                 jump map_screen
     jump menu_port
-        
-
-####################################################
-#############     Character Dialog     #############
-####################################################
-
-label ch_ben:
-    show ben at char_pos
-    ben '(blah blah blah)'
-    hide ben
-    return
-
-label ch_cole:
-    show cole at char_pos
-    cole '(blah blah blah)'
-    hide cole
-    return
-
-label ch_jon:
-    show jon at char_pos
-    jon '(blah blah blah)'
-    hide jon
-    return
-
-label ch_lauren:
-    show lauren at char_pos
-    lauren '(blah blah blah)'
-    hide lauren
-    return
-
-label ch_adam:
-    show adam at char_pos
-    adam '(blah blah blah)'
-    hide adam
-    return
-
-label ch_sarah:
-    show sarah at char_pos
-    sarah '(blah blah blah)'
-    hide sarah
-    return
-
-label ck_vatrisk:
-    show vatrisk at char_pos
-    vatrisk '(blah blah blah)'
-    hide vatrisk
-    return
-
-label ck_kro:
-    show kro at char_pos
-    kro '(blah blah blah)'
-    hide kro
-    return
-    
-label ck_alkay:
-    show alkay at char_pos
-    '(blah blah blah)'
-    hide alkay
-    return
-    
-label ck_noq:
-    show noq at char_pos
-    noq '(blah blah blah)'
-    hide noq
-    return
-
-label ck_lorisk:
-    show lori at char_pos
-    lorisk '(blah blah blah)'
-    hide lorisk
-    return
-    
-label ck_lida:
-    show lida at char_pos
-    lida '(blah blah blah)'
-    hide lida
-    return
+       
