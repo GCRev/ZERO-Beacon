@@ -44,8 +44,9 @@ Temporary Items
 .apdisk
 
 # Ren'Py files we don't need
-Beacon/game/log.txt
-Beacon/game/traceback.txt
+Beacon/log.txt
+Beacon/traceback.txt
+Beacon/errors.txt
 Beacon/game/bytecode.rpyb
 Beacon/game/*.bak
 Beacon/game/*.rpyc
