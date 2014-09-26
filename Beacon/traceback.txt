@@ -1,0 +1,69 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 199, in script
+    "(blah blah blah)"
+IOError: Couldn't find file 'assets/ch_jon.png.png'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 199, in script
+    "(blah blah blah)"
+  File "C:\Users\kyle\Ren'Py\renpy\ast.py", line 586, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "C:\Users\kyle\Ren'Py\renpy\exports.py", line 995, in say
+    who(what, interact=interact)
+  File "C:\Users\kyle\Ren'Py\renpy\character.py", line 826, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\kyle\Ren'Py\renpy\character.py", line 688, in do_display
+    **display_args)
+  File "C:\Users\kyle\Ren'Py\renpy\character.py", line 491, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\kyle\Ren'Py\renpy\ui.py", line 247, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\kyle\Ren'Py\renpy\display\core.py", line 2145, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "C:\Users\kyle\Ren'Py\renpy\display\core.py", line 2474, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\kyle\Ren'Py\renpy\display\core.py", line 1673, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 363, in renpy.display.render.render_screen (gen\renpy.display.render.c:5330)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\kyle\Ren'Py\renpy\display\layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\kyle\Ren'Py\renpy\display\layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\kyle\Ren'Py\renpy\display\layout.py", line 618, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "accelerator.pyx", line 109, in renpy.display.accelerator.transform_render (gen\renpy.display.accelerator.c:1657)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\kyle\Ren'Py\renpy\display\image.py", line 207, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\kyle\Ren'Py\renpy\display\image.py", line 82, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 98, in renpy.display.render.render (gen\renpy.display.render.c:2849)
+  File "render.pyx", line 174, in renpy.display.render.render (gen\renpy.display.render.c:2537)
+  File "C:\Users\kyle\Ren'Py\renpy\display\im.py", line 465, in render
+    im = cache.get(self)
+  File "C:\Users\kyle\Ren'Py\renpy\display\im.py", line 198, in get
+    surf = image.load()
+  File "C:\Users\kyle\Ren'Py\renpy\display\im.py", line 711, in load
+    surf = cache.get(self.image)
+  File "C:\Users\kyle\Ren'Py\renpy\display\im.py", line 198, in get
+    surf = image.load()
+  File "C:\Users\kyle\Ren'Py\renpy\display\im.py", line 509, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "C:\Users\kyle\Ren'Py\renpy\loader.py", line 438, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'assets/ch_jon.png.png'.
+
+Windows-post2008Server-6.2.9200
+Ren'Py 6.18.1.670
+Beacon 0.0
