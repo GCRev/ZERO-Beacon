@@ -9,7 +9,7 @@ label ch_adam:
     show adam at char_pos
     if plot_state.adam_met:
         adam 'Hello again, $ALIAS_FIRST_NAME.'
-        
+
     else:
         adam 'Hello, or as the kaldreans say: \"kevey\"! I haven\'t seen you around Concord yet so you must be new here. Welcome! I\'m always happy to meet new people.'
         p '[[Introduce yourself]'
@@ -26,7 +26,10 @@ label ch_adam:
                 jump adam_VL_tree_start
             '[[Ask about background]':
                 jump adam_Bg_tree_start
+            '[[Alkay sent me]' if plot_state.alkay_talk_adam == True:
+                call adam_alkay_dialog
             '[[Done talking]':
+                hide adam
                 return
         jump menu_adam
 
@@ -36,6 +39,12 @@ label ch_adam:
 
     label adam_events:
         adam '[[Adam offers you his opinions on recent events]'
+        return
+
+    label adam_alkay_dialog:
+        p '[[Alkay sent me]'
+        adam '[[enthusiastic. Launches into a story about how they met. More information. Specifically mentions Alkay\'s sacrifices to go against his leaders and stop the fighting.]'
+        $ plot_state.adam_alkay_info = InfoGet.SUCCESS
         return
 
     label adam_VL_tree_start:
@@ -65,7 +74,7 @@ label ch_adam:
             label adam_VL_Tree_care_less:
                 p '[[care less about their methods]]'
                 adam '[[sometimes we have to make concessions for the greater good. VL are simply trying to do what is best.]'
-                $ plot_state.adam_vl_info = "success"
+                $ plot_state.adam_vl_info = InfoGet.SUCCESS
                 jump menu_adam
 
         label adam_VL_tree_disapprove:
@@ -91,5 +100,4 @@ label ch_adam:
             adam '[[explains more about the conflict but really waters down detail. You sense he is holding information back]'
             jump menu_adam
 
-    hide adam
-    return
+

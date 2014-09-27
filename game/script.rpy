@@ -36,14 +36,57 @@ init -2 python:
         stage = PlotStage.ARRIVE
         high_emb_tried_bribe = False
         
-        ben_kald_govt_info = InfoGet.NO_ATTEMPT
-        vatrisk_kald_govt_info = InfoGet.NO_ATTEMPT
-
+    #Adam's flags
         adam_met = False
         adam_talk_alkay = False
-        adam_alkay_info = False
+        adam_alkay_info = InfoGet.NO_ATTEMPT
         adam_vl_info = InfoGet.NO_ATTEMPT
+
+    #Alkay's flags
+        alkay_met = False
         alkay_talk_adam = False
+        alkay_adam_info = InfoGet.NO_ATTEMPT
+        alkay_vl_info = InfoGet.NO_ATTEMPT
+
+    #Ben's flags
+        ben_met = False
+        ben_kald_govt_info = InfoGet.NO_ATTEMPT
+
+    #Cole's flags
+        cole_met = False
+        cole_background_info = InfoGet.NO_ATTEMPT
+
+    #Jon's flags
+        jon_met = False
+        jon_vl_info = InfoGet.NO_ATTEMPT
+
+    #Kro's flags
+        kro_met = False
+        kro_obsession_info = InfoGet.NO_ATTEMPT
+        kro_flatter_info = InfoGet.NO_ATTEMPT
+
+    #Lauren's flags
+        lauren_met = False
+        lauren_lorsk_info = InfoGet.NO_ATTEMPT
+
+    #Lida's flags
+        lida_met = False
+
+    #Lorisk's flags
+        lorisk_met = False
+        lorisk_flatter = False
+        lorisk_vl_info = InfoGet.NO_ATTEMPT
+
+    #Noq's flags
+        noq_met = False
+        noq_refuse_dialog = False
+        noq_illegal_info = False
+
+    #Sarah's flags
+
+    #Vatrisk's flags
+        vatrisk_met = False
+        vatrisk_kald_govt_info = InfoGet.NO_ATTEMPT
 
 
 
