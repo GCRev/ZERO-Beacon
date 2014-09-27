@@ -13,7 +13,7 @@ label start:
 #############        Python Code       #############
 ####################################################
 
-init python:
+init -2 python:
 
     # png : string -> Image
     # Helper function for loading & scaling our background and character images
@@ -27,7 +27,7 @@ init python:
         enums = dict(zip(values, range(len(values))))
         return type('Enum', (), enums)
 
-    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS', 'CONCLUSION')
+    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS')
 
     class PlotState:
         stage = PlotStage.ARRIVE
@@ -125,7 +125,7 @@ label map_screen:
 
 label loc_market:
     scene bg market
-    'You are at the Grand Marketplace. (describe)'
+    'You are at the Grand Marketplace. [[describe]'
     label market_menu:
         menu:
             'Talk to Cole Demarc':
@@ -138,7 +138,7 @@ label loc_market:
 
 label loc_high_emb:
     scene bg high_emb
-    'You are at the High Embassy. (describe)'
+    'You are at the High Embassy. [[describe]'
     label menu_high_emb:
         if plot_state.stage == PlotStage.ARRIVE:
             if plot_state.high_emb_tried_bribe:
@@ -150,11 +150,11 @@ label loc_high_emb:
                     menu:
                         'None, actually. I\'ll be on my way.':
                             jump map_screen
-                        '(lie that you have appt)':
-                            guard '(don\'t see you on appt list)'
+                        '[[lie that you have appt]':
+                            guard '[[don\'t see you on appt list]'
                             jump high_emb_guard_menu
-                        '(try to bribe)':
-                            guard '(offended; tells you to screw off)'
+                        '[[try to bribe]':
+                            guard '[[offended; tells you to screw off]'
                             $ plot_state.high_emb_tried_bribe = True
                             jump map_screen
         else:
@@ -169,7 +169,7 @@ label loc_high_emb:
 
 label loc_human_emb:
     scene bg human_emb
-    'You are at the Human Embassy. (describe)'
+    'You are at the Human Embassy. [[describe]'
     label menu_human_emb:
         menu:
             'Talk to Lauren Gray':
@@ -180,7 +180,7 @@ label loc_human_emb:
     
 label loc_kald_emb:
     scene bg kald_emb
-    'You are at the Kaldrean Embassy. (describe)'
+    'You are at the Kaldrean Embassy. [[describe]'
     label menu_kald_emb:
         menu:
             'Talk to Lorisk Nidaria Kol':
@@ -193,7 +193,7 @@ label loc_kald_emb:
     
 label loc_res: 
     scene bg res
-    'You are at the Residences. (describe)'
+    'You are at the Residences. [[describe]'
     label menu_res:
         menu:
             'Talk to Sarah Liu':
@@ -208,7 +208,7 @@ label loc_res:
     
 label loc_port:
     scene bg port
-    'You are at the Spaceport. (describe)'
+    'You are at the Spaceport. [[describe]'
     label menu_port:
         menu:
             'Talk to Jonathan Caise':
