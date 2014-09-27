@@ -8,13 +8,13 @@
 label ch_adam:
     
     if plot_state.adam_met:
-        adam 'Hello again, $ALIAS_FIRST_NAME'
+        adam 'Hello again, $ALIAS_FIRST_NAME.'
 
     else:
         adam 'Hello, or as the kaldreans say: \"kevey\"! I haven\'t seen you around Concord yet so you must be new here. Welcome! I\'m always happy to meet new people.'
         p '[[Introduce yourself]'
         adam '[[friendly response]'
-        $ plot_state.adam_met=True
+        $ plot_state.adam_met = True
 
     label menu_adam:
         menu:
@@ -25,7 +25,7 @@ label ch_adam:
             '[[Ask about VL]':
                 call adam_VLTreeStart
             '[[Done talking]':
-                jump menu_res
+                return
         jump menu_adam
 
     label adam_advice:
