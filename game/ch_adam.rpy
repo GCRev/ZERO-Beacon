@@ -8,12 +8,8 @@
 label ch_adam:
     show adam at char_pos
     if plot_state.adam_met:
-<<<<<<< HEAD
-        adam 'Hello again, $ALIAS_FIRST_NAME'
-=======
         adam 'Hello again, $ALIAS_FIRST_NAME.'
->>>>>>> 6fdfe2ec3c40b00ac7b957423e867f1630b67b94
-
+        
     else:
         adam 'Hello, or as the kaldreans say: \"kevey\"! I haven\'t seen you around Concord yet so you must be new here. Welcome! I\'m always happy to meet new people.'
         p '[[Introduce yourself]'
