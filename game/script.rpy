@@ -90,6 +90,7 @@ image bg kald_emb = png('bg_kald-emb')
 image bg res = png('bg_res')
 image bg port = png('bg_port')
 
+image bg bridge = png('bg_map')
 image bg map = png('bg_map')
 image bg landing_pad = png('bg_landing-pad')
 image bg result1 = png('result_1-inaction')
