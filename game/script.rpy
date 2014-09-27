@@ -33,6 +33,10 @@ init python:
         stage = PlotStage.ARRIVE
         high_emb_tried_bribe = False
         adam_met = False
+        adam_talk_alkay = False
+        adam_alkay_info = False
+        adam_vl_info = "Fail"
+        alkay_talk_adam = False
 
 
 ####################################################
@@ -40,7 +44,7 @@ init python:
 ####################################################
 
 # Non-characters
-define char_pos = Position(xpos = 0.7, xanchor = 'right', ypos = config.screen_height - 122)
+define char_pos = Position(xpos = 0.8, xanchor = 'right', ypos = config.screen_height - 150)
 define plot_state = PlotState()
 
 # Non-pictured characters
