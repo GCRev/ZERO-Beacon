@@ -13,7 +13,7 @@ label start:
 #############        Python Code       #############
 ####################################################
 
-init python:
+init -2 python:
 
     # png : string -> Image
     # Helper function for loading & scaling our background and character images
