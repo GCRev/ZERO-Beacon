@@ -27,7 +27,7 @@ init -2 python:
         enums = dict(zip(values, range(len(values))))
         return type('Enum', (), enums)
 
-    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS', 'CONCLUSION')
+    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS')
 
     class PlotState:
         stage = PlotStage.ARRIVE
