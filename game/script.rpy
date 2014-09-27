@@ -28,15 +28,23 @@ init -2 python:
         return type('Enum', (), enums)
 
     PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS')
+    InfoGet = enum('NO_ATTEMPT', 'FAIL', 'SUCCESS')
+
 
     class PlotState:
+        
         stage = PlotStage.ARRIVE
         high_emb_tried_bribe = False
+        
+        ben_kald_govt_info = InfoGet.NO_ATTEMPT
+        vatrisk_kald_govt_info = InfoGet.NO_ATTEMPT
+
         adam_met = False
         adam_talk_alkay = False
         adam_alkay_info = False
-        adam_vl_info = "Fail"
+        adam_vl_info = InfoGet.NO_ATTEMPT
         alkay_talk_adam = False
+
 
 
 ####################################################
