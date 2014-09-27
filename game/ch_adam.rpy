@@ -8,7 +8,7 @@
 label ch_adam:
     
     if plot_state.adam_met:
-        adam 'Hello again, [[player character name]'
+        adam 'Hello again, $ALIAS_FIRST_NAME'
 
     else:
         adam 'Hello, or as the kaldreans say: \"kevey\"! I haven\'t seen you around Concord yet so you must be new here. Welcome! I\'m always happy to meet new people.'

@@ -41,7 +41,7 @@ label intro:
 
     comm 'Go now, Agent. You have not failed me yet. Do not let this be the first time you do.'
 
-    scene bg map_screen
+    scene bg map
 
     'After a month-long journey through space, you finally arrive on Bridge. As you come to
     land at the Spaceport, you see Concord below you. The city looks utopian-like, set between a
