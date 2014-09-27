@@ -3,7 +3,6 @@
 # ZERO Studios
 # Kyle McCormick, Graham Held, Garret Holman
 # Dialog for Adam Demeter
-# White is not a hue.
 
 label ch_adam:
     show adam at char_pos
