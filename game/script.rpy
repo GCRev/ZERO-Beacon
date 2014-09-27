@@ -32,6 +32,7 @@ init python:
     class PlotState:
         stage = PlotStage.ARRIVE
         high_emb_tried_bribe = False
+        adam_met = False
 
 
 ####################################################
