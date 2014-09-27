@@ -8,16 +8,20 @@
 label ch_adam:
     show adam at char_pos
     if plot_state.adam_met:
-        adam 'Hello again, $ALIAS_FIRST_NAME.'
+        $ last_dialog = 'Hello again, $ALIAS_FIRST_NAME.'
+        adam '[last_dialog]'
 
     else:
         adam 'Hello, or as the kaldreans say: \"kevey\"! I haven\'t seen you around Concord yet so you must be new here. Welcome! I\'m always happy to meet new people.'
         p '[[Introduce yourself]'
-        adam '[[friendly response]'
+        $last_dialog = '[friendly response]'
+        adam '[last_dialog]'
+
         $ plot_state.adam_met = True
 
     label menu_adam:
         menu:
+            adam '[last_dialog]'
             '[[ask for advice]':
                 call adam_advice
             '[[ask about opinions on events]':
@@ -34,10 +38,12 @@ label ch_adam:
         jump menu_adam
 
     label adam_advice:
+        p '[[ask adam for advice]'
         adam 'In my many years... [[and then gives you useful advice]'
         return
 
     label adam_events:
+        p '[[ask adam about recent events]'
         adam '[[Adam offers you his opinions on recent events]'
         return
 
@@ -49,8 +55,8 @@ label ch_adam:
 
     label adam_VL_tree_start:
         p '[[ask about VL]'
-        adam '[[Recognizes that they are indeed in existence. Asks you what you think about this so-called group]'
         menu:
+            adam '[[Recognizes that they are indeed in existence. Asks you what you think about this so-called group]'
             'Sympathize':
                 jump adam_VL_tree_sympathize
             'Disapprove':
@@ -59,19 +65,19 @@ label ch_adam:
 
         label adam_VL_tree_sympathize:
             p '[[express sympathy with VL]'
-            adam '[[agrees that their goals are just, perhaps their methods are not]'
             menu:
+                adam '[[agrees that their goals are just, perhaps their methods are not]'
                 'Violence will get them nowhere':
                     jump adam_VL_tree_nowhere
                 'Care less about their methods':
                     jump adam_VL_tree_care_less
 
-            jump menu_adam
             label adam_VL_tree_nowhere:
                 p '[[Violence will get them nowhere]'
                 adam '[[pensive. Offers perspective from the contact war about that]'
                 jump menu_adam
-            label adam_VL_Tree_care_less:
+
+            label adam_VL_tree_care_less:
                 p '[[care less about their methods]]'
                 adam '[[sometimes we have to make concessions for the greater good. VL are simply trying to do what is best.]'
                 $ plot_state.adam_vl_info = InfoGet.SUCCESS
@@ -83,8 +89,8 @@ label ch_adam:
             jump menu_adam
 
     label adam_Bg_tree_start:
-        adam '[[speaks about his history, leaving out any details from the first contact conflict. Mentions Alkay]'
         menu:
+            adam '[[speaks about his history, leaving out any details from the first contact conflict. Mentions Alkay]'
             '[[ask about Alkay]':
                 jump adam_Bg_tree_Alkay
             '[[ask about contact conflict]':
