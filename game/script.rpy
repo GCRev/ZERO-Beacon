@@ -89,7 +89,7 @@ image bg kald_emb = png('bg_kald-emb')
 image bg res = png('bg_res')
 image bg port = png('bg_port')
 
-image bg bridge = png('bg_bridge')
+image bg bridge = png('bg_map')
 image bg map = png('bg_map')
 image bg landing_pad = png('bg_landing-pad')
 image bg result1 = png('result_1-inaction')
@@ -120,20 +120,20 @@ label map_screen:
 
 label loc_market:
     scene bg market
-    'You are at the Grand Marketplace. [describe]'
+    'You are at the Grand Marketplace. (describe)'
     label market_menu:
         menu:
             'Talk to Cole Demarc':
                 call ch_cole
             'Talk to Alkay Volk Kladir':
                 call ck_alkay
-            '[Back to Map]':
+            '(Back to Map)':
                 jump map_screen
     jump market_menu
 
 label loc_high_emb:
     scene bg high_emb
-    'You are at the High Embassy. [describe]'
+    'You are at the High Embassy. (describe)'
     label menu_high_emb:
         if plot_state.stage == PlotStage.ARRIVE:
             if plot_state.high_emb_tried_bribe:
@@ -145,11 +145,11 @@ label loc_high_emb:
                     menu:
                         'None, actually. I\'ll be on my way.':
                             jump map_screen
-                        '[lie that you have appt]':
-                            guard '[don\'t see you on appt list]'
+                        '(lie that you have appt)':
+                            guard '(don\'t see you on appt list)'
                             jump high_emb_guard_menu
-                        '[try to bribe]':
-                            guard '[offended; tells you to screw off]'
+                        '(try to bribe)':
+                            guard '(offended; tells you to screw off)'
                             $ plot_state.high_emb_tried_bribe = True
                             jump map_screen
         else:
@@ -158,37 +158,37 @@ label loc_high_emb:
                     call ch_ben
                 'Talk to Vatrisk Irridiss Kier':
                     call ck_vatrisk
-                '[Back to Map]':
+                '(Back to Map)':
                     jump map_screen
     jump menu_high_emb
 
 label loc_human_emb:
     scene bg human_emb
-    'You are at the Human Embassy. [describe]'
+    'You are at the Human Embassy. (describe)'
     label menu_human_emb:
         menu:
             'Talk to Lauren Gray':
                 call ch_lauren
-            '[Back to Map]':
+            '(Back to Map)':
                 jump map_screen
     jump menu_human_emb
     
 label loc_kald_emb:
     scene bg kald_emb
-    'You are at the Kaldrean Embassy. [describe]'
+    'You are at the Kaldrean Embassy. (describe)'
     label menu_kald_emb:
         menu:
             'Talk to Lorisk Nidaria Kol':
                 call ck_lorisk
             'Talk to Lida Ezekeri Skar':
                 call ck_lida
-            '[Back to Map]':
+            '(Back to Map)':
                 jump map_screen
     jump menu_kald_emb
     
 label loc_res: 
     scene bg res
-    'You are at the Residences. [describe]'
+    'You are at the Residences. (describe)'
     label menu_res:
         menu:
             'Talk to Sarah Liu':
@@ -197,20 +197,20 @@ label loc_res:
                 call ch_adam
             'Talk to Noq Kriesk Lask':
                 call ck_noq
-            '[Back to Map]':
+            '(Back to Map)':
                 jump map_screen
     jump menu_res
     
 label loc_port:
     scene bg port
-    'You are at the Spaceport. [describe]'
+    'You are at the Spaceport. (describe)'
     label menu_port:
         menu:
             'Talk to Jonathan Caise':
                 call ch_jon
             'Talk to Kro Zalva Ross':
                 call ck_kro
-            '[Back to Map]':
+            '(Back to Map)':
                 jump map_screen
     jump menu_port
        
