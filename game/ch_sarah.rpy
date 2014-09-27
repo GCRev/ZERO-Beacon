@@ -41,8 +41,24 @@ label ch_sarah_arrive:
     return
 
 label ch_sarah_kald_govt_info:
-    sarah "[[TODO]"
 
+    sarah "Have you talked to both Ambassadors yet?"
+
+    if plot_state.ben_kald_govt_info == InfoGet.NO_ATTEMPT or plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
+        p "No, not yet."
+        sarah "Well, what are you waiting for? Come back when you have."
+        return
+
+    p "Yes, I have."
+
+    sarah "And?"
+
+    if plot_state.ben_kald_govt_info == InfoGet.SUCCESS:
+        p "I was able to get some useful information for Benjamin Columbus."
+        p "[[tell Sarah info]"
+        sarah "Very interesting. "
+    else:
+        p "I wasn't able to [[TODO FINISH]"
     return
 
 label ch_sarah_vl_info:
