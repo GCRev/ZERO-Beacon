@@ -14,7 +14,7 @@ label ch_adam:
     else:
         adam 'Hello, or as the kaldreans say: \"kevey\"! I haven\'t seen you around Concord yet so you must be new here. Welcome! I\'m always happy to meet new people.'
         p '[[Introduce yourself]'
-        $last_dialog = '[friendly response]'
+        $ last_dialog = '[friendly response]'
         adam '[last_dialog]'
 
         $ plot_state.adam_met = True
@@ -46,7 +46,7 @@ label ch_adam:
                 call adam_advice
             '[[ask about opinions on events]':
                 call adam_events
-            '[[Ask about VL]':
+            '[[Ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
                 jump adam_VL_tree_start
             '[[Ask about background]':
                 jump adam_Bg_tree_start
@@ -74,6 +74,7 @@ label ch_adam:
         adam '[[enthusiastic. Launches into a story about how they met. More information. Specifically mentions Alkay\'s sacrifices to go against his leaders and stop the fighting.]'
         $last_dialog = '[is there anything else I can help you with?]'
         $ plot_state.adam_alkay_info = InfoGet.SUCCESS
+        $ plot_state.alkay_talk_adam = False
         return
 
     label adam_VL_tree_start:
@@ -86,10 +87,10 @@ label ch_adam:
                 jump adam_VL_tree_disapprove
         jump menu_adam_vl_info
 
-        label adam_VL_tree_sympathize:
+        label adam_VL_tree_sympathize:  
             p '[[express sympathy with VL]'
             menu:
-                adam '[[agrees that their goals are just, perhaps their methods are not]'
+                adam '[[agrees that their goals are just, perhaps their methods are not]'               
                 'Violence will get them nowhere':
                     jump adam_VL_tree_nowhere
                 'Care less about their methods':

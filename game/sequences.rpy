@@ -1,12 +1,13 @@
 
 # Beacon
 # ZERO Studios
-# Kyle McCormick, Graham Held, Garret Holman
+# Kyle McCormick, Graham Held, Garrett Holman
 # Scripted sequences
 
 label intro:
 
-    scene bg bridge
+    scene bg stars
+    show planet_bridge at Position(xpos = 0.5, ypos = 0.75)
 
     'This is the planet Bridge.'
     'Fifty years ago, humans made first contact there with the kaldreans, an advanced 
@@ -18,8 +19,6 @@ label intro:
 
     'The peace of Bridge is essential to the peace of the rest of the galaxy. If human-kaldrean 
     relations on the planet break down, then the rest of the galaxy is bound to follow suit.'
-
-    scene black
 
     comm 'And this is why I have called you here today, Agent $AGENT_NAME. The great city 
     of Concord has of late been troubled by political unrest. A mysterious group of rebels known 
