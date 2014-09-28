@@ -51,6 +51,7 @@ init -2 python:
     #Ben's flags
         ben_met = False
         ben_kald_govt_info = InfoGet.NO_ATTEMPT
+        ben_talk_lida = False
 
     #Cole's flags
         cole_met = False
@@ -67,10 +68,11 @@ init -2 python:
 
     #Lauren's flags
         lauren_met = False
-        lauren_lorsk_info = InfoGet.NO_ATTEMPT
+        lauren_lorisk_info = InfoGet.NO_ATTEMPT
 
     #Lida's flags
         lida_met = False
+        lida_convinced = InfoGet.NO_ATTEMPT
 
     #Lorisk's flags
         lorisk_met = False
