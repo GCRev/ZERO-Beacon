@@ -23,7 +23,7 @@ label ch_lauren:
     label menu_lauren:
         menu:
             lauren '[last_dialog]'
-            '[[You notice she is reading something. Show interest]' if plot_state.stage = PlotStage.VL_INFO:
+            '[[You notice she is reading something. Show interest]' if plot_state.stage == PlotStage.VL_INFO:
                 jump lauren_info_tree_start
             '[[Ask about background]':
                 call lauren_background
