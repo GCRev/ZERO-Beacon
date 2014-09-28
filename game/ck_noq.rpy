@@ -21,9 +21,9 @@ label ck_noq:
     label menu_noq:
         menu:
             noq '[last_dialog]'
-            '[[ask about his designs]':
+            '[[ask about his designs]' if plot_state.stage == PlotStage.VL_INFO:
                 call noq_designs
-            '[[ask about VL]':
+            '[[ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
                 call noq_VL
             '[[ask for advice from Noq]':
                 call noq_advice
