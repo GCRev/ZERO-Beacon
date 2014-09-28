@@ -21,7 +21,7 @@ label ch_cole:
     label menu_cole:
         menu:
             cole '[last_dialog]'
-            '[[ask about Cole\'s background]' plot_state.stage == PlotStage.VL_INFO:
+            '[[ask about Cole\'s background]' if plot_state.stage == PlotStage.VL_INFO:
                 jump cole_Bg_tree_start
             '[[ask for advice from Cole]':
                 call cole_advice
