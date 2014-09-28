@@ -60,6 +60,7 @@ init -2 python:
     #Jon's flags
         jon_met = False
         jon_vl_info = InfoGet.NO_ATTEMPT
+        jon_talk_kro = False
 
     #Kro's flags
         kro_met = False

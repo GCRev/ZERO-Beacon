@@ -43,7 +43,7 @@ label ck_lorisk:
 
         label lorisk_events:
             p '[[ask her opinion on recent events]'
-            lorisk '[[gives you some useful advice]'
+            lorisk '[[gives you her opinion on recent events]'
             $last_dialog = '[is there anything else I can help you with?]'
             return
 

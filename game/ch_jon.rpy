@@ -118,7 +118,8 @@ label ch_jon:
 
             label jon_VL_tree_go_along:
                 p '[[go with it]'
-                $last_dialog = '[direct player to talk to kro]'
+                $last_dialog = '[direct player to talk to Kro]'
+                $plot_state.jon_talk_kro = True
                 jon '[last_dialog]'
                 jump menu_jon
 
