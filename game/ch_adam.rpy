@@ -19,27 +19,7 @@ label ch_adam:
 
         $ plot_state.adam_met = True
 
-    if plot_state.stage == PlotStage.KALD_GOVT_INFO:
-        jump menu_adam_kald_govt_info
-    if plot_state.stage == PlotStage.VL_INFO:
-        jump menu_adam_vl_info
-#    if plot_state.stage == PlotStage.VATRISK_MEET:
-#        do nothing?
-    if plot_state.stage == PlotStage.VL_PLANS:
-        jump menu_adam_vl_plans
-
- #########################################
- #######  kald govt info section #########
- #########################################
-    label menu_adam_kald_govt_info:
-        menu:
-            adam '[last_dialog]'
-
-
- #########################################
- #######      VL info section    #########
- #########################################
-    label menu_adam_vl_info:
+    label menu_adam:
         menu:
             adam '[last_dialog]'
             '[[ask for advice]':
@@ -133,9 +113,4 @@ label ch_adam:
             adam '[[explains more about the conflict but really waters down detail. You sense he is holding information back]'
             $last_dialog = '[is there anything else I can help you with?]'
             jump menu_adam_vl_info
-
-    label menu_adam_vl_plans:
-        menu:
-            adam '[last_dialog]'
-
 
