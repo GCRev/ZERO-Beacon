@@ -77,10 +77,3 @@ label ck_vatrisk:
                 $plot_state.vatrisk_kald_govt_info = InfoGet.SUCCESS
                 $last_dialog = '[Please do not hesitate to ask me anything.]'
                 jump menu_vatrisk
-
-
-
-
-
-
-
