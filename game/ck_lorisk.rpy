@@ -64,12 +64,17 @@ label ck_lorisk:
 
             label lorisk_VL_tree_languages:
                 p '[[ask about languages]'
-                menu:
-                    lorisk '[[says that she speak a multitude of languages]'
-                    '[[ask about traditional dialects]':
-                        jump lorisk_VL_tree_dialects
-                    '[[ask about which languages]':
-                        jump lorisk_VL_tree_list_languages
+                $last_dialog = '[says that she speak a multitude of languages]'
+                if plot_state.alkay_vl_info == InfoGet.SUCCESS:
+                    menu:
+                        lorisk '[last_dialog]'
+                        '[[ask about traditional dialects]':
+                            jump lorisk_VL_tree_dialects
+                        '[[ask about which languages]':
+                            jump lorisk_VL_tree_list_languages
+                else:
+                    p '[[ask about which languages]'
+                    jump lorisk_VL_tree_list_languages  
 
                 label lorisk_VL_tree_dialects:
                     p '[[ask about traditional dialects]'

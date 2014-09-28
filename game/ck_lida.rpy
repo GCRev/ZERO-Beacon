@@ -22,30 +22,30 @@ label ck_lida:
             lida '[last_dialog]'
             '[[meet with Ben dammit]' if plot_state.lida_convinced == InfoGet.NO_ATTEMPT:
                 jump lida_convince_tree
-            '[[ask for advice from lida]':
+            '[[ask for advice from Lida]':
                 call lida_advice
-            '[[ask lida his opinions on recent events]':
+            '[[ask Lida her opinions on recent events]':
                 call lida_events
-            '[[ask lida about his background]':
+            '[[ask Lida about her background]':
                 call lida_background
-            '[[done talking to lida]':
+            '[[done talking to Lida]':
                 hide lida
                 return
         jump menu_lida
 
         label lida_advice:
-            p '[[you ask lida for advice]'
-            lida '[[offers his advice]'
+            p '[[you ask Lida for advice]'
+            lida '[[offers her advice]'
             return
 
         label lida_events:
-            p '[[you ask lida her opinion on recent events]'
+            p '[[you ask Lida her opinion on recent events]'
             lida '[[Very obvious politician speak here. Avoids speaking directly about events.]'
             return
 
         label lida_background:
-            p '[[you ask lida about her background]'
-            lida '[[offers litte information. Sounds canned to you.]'
+            p '[[you ask Lida about her background]'
+            lida '[[offers little information. Sounds canned to you.]'
             return
 
 

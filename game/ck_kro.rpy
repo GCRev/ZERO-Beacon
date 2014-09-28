@@ -11,7 +11,7 @@ label ck_kro:
         kro '[last_dialog]'
 
     else:
-        kro '[[Salutations. I am Flight Commander Kro Zalva.]'
+        kro '[[Salutations. I am Flight Commander Kro Zalva. Welcome to Vivarioss]'
         p '[[introduce yourself to Kro]'
         $plot_state.kro_met = True
         $last_dialog = '[If there is anything you would like to know, please ask. Else move on.]'
