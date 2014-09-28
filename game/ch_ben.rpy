@@ -73,8 +73,3 @@ label ch_ben:
             p '[[you ask Ben on his background]'
             ben '[[offers little information. Sounds canned to you.]'
             return
-
-
-
-
-
