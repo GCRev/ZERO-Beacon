@@ -1,7 +1,7 @@
 
 # Beacon
 # ZERO Studios
-# Kyle McCormick, Graham Held, Garret Holman
+# Kyle McCormick, Graham Held, Garrett Holman
 # Dialog for Alkay Volk Kladir
 
 label ck_alkay:
@@ -20,7 +20,7 @@ label ck_alkay:
 
     label menu_alkay:
         menu:
-            alkay '[last_dialog]'
+            ''
             '[[ask for advice]':
                 call alkay_advice
             '[[ask about opinions on events]':

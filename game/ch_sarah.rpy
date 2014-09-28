@@ -1,7 +1,7 @@
 
 # Beacon
 # ZERO Studios
-# Kyle McCormick, Graham Held, Garret Holman
+# Kyle McCormick, Graham Held, Garrett Holman
 # Dialog for Sarah Liu
 
 label ch_sarah:

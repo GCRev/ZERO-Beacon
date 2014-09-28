@@ -1,7 +1,7 @@
 
 # Beacon
 # ZERO Studios
-# Kyle McCormick, Graham Held, Garret Holman
+# Kyle McCormick, Graham Held, Garrett Holman
 # Dialog for Vatrisk Irridiss Kier
    
 label ck_vatrisk:

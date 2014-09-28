@@ -1,7 +1,7 @@
 ﻿
 # Beacon
 # ZERO Studios
-# Kyle McCormick, Graham Held, Garret Holman
+# Kyle McCormick, Graham Held, Garrett Holman
 # Main script file
 
 label start:
@@ -15,10 +15,15 @@ label start:
 
 init -2 python:
 
-    # png : string -> Image
-    # Helper function for loading & scaling our background and character images
-    def png(fname):
+    # char_img : string -> Image
+    # Helper function for loading & scaling our character images
+    def char_img(fname):
         return im.FactorScale('assets/' + fname + '.png', config.screen_width / 1600.0)
+
+    # bkg_img : string -> Image
+    # Helper function for loading & scaling our background images
+    def bkg_img(fname):
+        return im.Scale('assets/' + fname + '.png', config.screen_width, config.screen_height)
 
     # enum : string ... -> type
     # Creates an enumerated type from a list of strings. Used to add support for
@@ -29,7 +34,6 @@ init -2 python:
 
     PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS')
     InfoGet = enum('NO_ATTEMPT', 'FAIL', 'SUCCESS')
-
 
     class PlotState:
         
@@ -127,34 +131,36 @@ define lida = Character('Lida Ezekeri Skar')
 ###############        Images        ###############
 ####################################################
 
-image ben = png('ch_ben')
-image cole = png('ch_cole')
-image jon = png('ch_jon') 
-image lauren = png('ch_lauren')
-image adam = png('ch_adam')
-image sarah = png('ch_sarah')
+image ben = char_img('ch_ben')
+image cole = char_img('ch_cole')
+image jon = char_img('ch_jon') 
+image lauren = char_img('ch_lauren')
+image adam = char_img('ch_adam')
+image sarah = char_img('ch_sarah')
 
-image vatrisk = png('ck_vatrisk')
-image alkay = png('ck_alkay') 
-image lorisk = png('ck_lorisk') 
-image kro = png('ck_kro') 
-image noq = png('ck_noq')
-image lida = png('ck_lida')
+image vatrisk = char_img('ck_vatrisk')
+image alkay = char_img('ck_alkay') 
+image lorisk = char_img('ck_lorisk') 
+image kro = char_img('ck_kro') 
+image noq = char_img('ck_noq')
+image lida = char_img('ck_lida')
 
-image bg market = png('bg_market')
-image bg high_emb = png('bg_high-emb')
-image bg human_emb = png('bg_human-emb')
-image bg kald_emb = png('bg_kald-emb')
-image bg res = png('bg_res')
-image bg port = png('bg_port')
+image bg market = bkg_img('bg_market')
+image bg high_emb = bkg_img('bg_high-emb')
+image bg human_emb = bkg_img('bg_human-emb')
+image bg kald_emb = bkg_img('bg_kald-emb')
+image bg res = bkg_img('bg_res')
+image bg port = bkg_img('bg_port')
 
-image bg bridge = png('bg_map')
-image bg map = png('bg_map')
-image bg landing_pad = png('bg_landing-pad')
-image bg result1 = png('result_1-inaction')
-image bg result2 = png('result_2-apprehend')
-image bg result3 = png('result_3-assist')
-image bg result4 = png('result_4-dipolomacy')
+image planet_bridge = im.Scale('assets/bg_bridge.png', config.screen_width / 2.0, config.screen_width / 2.0)
+
+image bg stars = bkg_img('bg_stars')
+image bg map = bkg_img('bg_map')
+image bg landing_pad = bkg_img('bg_landing-pad')
+image bg result1 = bkg_img('bg_result_1-inaction')
+image bg result2 = bkg_img('bg_result_2-apprehend')
+image bg result3 = bkg_img('bg_result_3-assist')
+image bg result4 = bkg_img('bg_result_4-dipolomacy')
 
 
 ####################################################
