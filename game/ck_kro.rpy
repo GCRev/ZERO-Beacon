@@ -22,13 +22,13 @@ label ck_kro:
             kro '[last_dialog]'
             '[[Jon sent me]' if plot_state.jon_talk_kro:
                 jump kro_jon_tree_start
-            '[[flatter]':
+            '[[flatter]' if plot_state.stage == PlotStage.VL_INFO:
                 call kro_flatter
             '[[ask for advice]':
                 call kro_advice
-            '[[ask about opinions on events]':
+            '[[ask about opinions on events]' :
                 call kro_events
-            '[[Ask about her background]':
+            '[[Ask about her background]' :
                 call kro_background
             '[[Done talking]':
                 hide kro

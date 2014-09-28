@@ -26,9 +26,9 @@ label ck_lorisk:
                 call lorisk_advice
             '[[ask about opinions on events]':
                 call lorisk_events
-            '[[Ask about her background]':
+            '[[Ask about her background]' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_VL_tree_start
-            '[[Ask about VL]':
+            '[[Ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_personal_reasons
             '[[Done talking]':
                 hide lorisk

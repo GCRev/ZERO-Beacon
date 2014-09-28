@@ -27,7 +27,7 @@ label ch_adam:
                 call adam_events
             '[[Ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
                 jump adam_VL_tree_start
-            '[[Ask about background]':
+            '[[Ask about background]' if plot_state.stage == PlotStage.VL_INFO:
                 jump adam_Bg_tree_start
             '[[Alkay sent me]' if plot_state.alkay_talk_adam == True:
                 call adam_alkay_dialog

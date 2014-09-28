@@ -20,7 +20,7 @@ label ck_lida:
     label menu_lida:
         menu:
             lida '[last_dialog]'
-            '[[meet with Ben dammit]' if plot_state.ben_talk_lida nad plot_state.lida_convinced == InfoGet.NO_ATTEMPT:
+            '[[meet with Ben dammit]' if plot_state.ben_talk_lida and plot_state.lida_convinced == InfoGet.NO_ATTEMPT and plot_state.stage == PlotStage.KALD_GOVT_INFO:
                 jump lida_convince_tree
             '[[ask for advice from Lida]':
                 call lida_advice
@@ -45,7 +45,7 @@ label ck_lida:
 
         label lida_background:
             p '[[you ask Lida about her background]'
-            lida '[[offers little information. Sounds canned to you.]'
+            lida '[[offers little information. She sounds like she does not want to talk to you.]'
             return
 
 

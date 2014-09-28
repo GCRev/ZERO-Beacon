@@ -25,9 +25,9 @@ label ck_alkay:
                 call alkay_advice
             '[[ask about opinions on events]':
                 call alkay_events
-            '[[Ask about VL]':
+            '[[Ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
                 jump alkay_VL_tree_start
-            '[[Ask about background]':
+            '[[Ask about background]' if plot_state.stage == PlotStage.VL_INFO:
                 jump alkay_Bg_tree_start
             '[[Adam sent me]' if plot_state.adam_talk_alkay == True:
                 jump alkay_adam_tree_start

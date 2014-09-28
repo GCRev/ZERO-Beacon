@@ -21,7 +21,7 @@ label ch_jon:
     label menu_jon:
         menu:
             jon '[last_dialog]'
-            '[[lie about hobbies]' if plot_state.ben_talk_lida and plot_state.stage = PlotStage.VL_INFO:
+            '[[lie about hobbies]' if plot_state.stage = PlotStage.VL_INFO:
                 jump jon_hobbies_tree_start
             '[[ask about VL]' if plot_state.stage = PlotStage.VL_INFO:
                 jump jon_VL_tree_start
