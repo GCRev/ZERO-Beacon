@@ -4,7 +4,6 @@
 # Kyle McCormick, Graham Held, Garrett Holman
 # Dialog for Adam Demeter
 
-
 label ch_adam:
     show adam at char_pos
     if plot_state.adam_met:
