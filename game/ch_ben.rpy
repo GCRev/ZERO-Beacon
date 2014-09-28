@@ -53,6 +53,5 @@ label ch_lida:
     ben ‘[[Good job, here is my information on the Kaldrean Government. Blah blah blah]’
     $ben_kald-govt-info = InfoGet.Success
 
-
     hide ben
     return
