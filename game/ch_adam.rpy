@@ -19,7 +19,27 @@ label ch_adam:
 
         $ plot_state.adam_met = True
 
-    label menu_adam:
+    if plot_state.stage == PlotStage.KALD_GOVT_INFO:
+        jump menu_adam_kald_govt_info
+    if plot_state.stage == PlotStage.VL_INFO:
+        jump menu_adam_vl_info
+#    if plot_state.stage == PlotStage.VATRISK_MEET:
+#        do nothing?
+    if plot_state.stage == PlotStage.VL_PLANS:
+        jump menu_adam_vl_plans
+
+ #########################################
+ #######  kald govt info section #########
+ #########################################
+    label menu_adam_kald_govt_info:
+        menu:
+            adam '[last_dialog]'
+
+
+ #########################################
+ #######      VL info section    #########
+ #########################################
+    label menu_adam_vl_info:
         menu:
             adam '[last_dialog]'
             '[[ask for advice]':
@@ -35,7 +55,7 @@ label ch_adam:
             '[[Done talking]':
                 hide adam
                 return
-        jump menu_adam
+        jump menu_adam_vl_info
 
     label adam_advice:
         p '[[ask adam for advice]'
@@ -64,7 +84,7 @@ label ch_adam:
                 jump adam_VL_tree_sympathize
             'Disapprove':
                 jump adam_VL_tree_disapprove
-        jump menu_adam
+        jump menu_adam_vl_info
 
         label adam_VL_tree_sympathize:
             p '[[express sympathy with VL]'
@@ -79,20 +99,20 @@ label ch_adam:
                 p '[[Violence will get them nowhere]'
                 adam '[[pensive. Offers perspective from the contact war about that]'
                 $last_dialog = '[is there anything else I can help you with?]'
-                jump menu_adam
+                jump menu_adam_vl_info
 
             label adam_VL_tree_care_less:
                 p '[[care less about their methods]'
                 adam '[[sometimes we have to make concessions for the greater good. VL are simply trying to do what is best.]'
                 $last_dialog = '[is there anything else I can help you with?]'
                 $ plot_state.adam_vl_info = InfoGet.SUCCESS
-                jump menu_adam
+                jump menu_adam_vl_info
 
         label adam_VL_tree_disapprove:
             p '[[express disapproval of VL]'
             adam '[[affirms that their goals are just, and that the kaldrean government won\'t change without some force]'
             $last_dialog = '[is there anything else I can help you with?]'
-            jump menu_adam
+            jump menu_adam_vl_info
 
     label adam_Bg_tree_start:
         menu:
@@ -106,11 +126,15 @@ label ch_adam:
             adam '[[mentions that he is a dear friend for many years. Mention my name when you talk to Alkay]'
             $last_dialog = '[is there anything else I can help you with?]'
             $ plot_state.adam_talk_alkay = True
-            jump menu_adam
+            jump menu_adam_vl_info
 
         label adam_Bg_tree_conflict:
             adam '[[explains more about the conflict but really waters down detail. You sense he is holding information back]'
             $last_dialog = '[is there anything else I can help you with?]'
-            jump menu_adam
+            jump menu_adam_vl_info
+
+    label menu_adam_vl_plans:
+        menu:
+            adam '[last_dialog]'
 
 
