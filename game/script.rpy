@@ -85,6 +85,7 @@ init -2 python:
         lorisk_met = False
         lorisk_flatter = False
         lorisk_vl_info = InfoGet.NO_ATTEMPT
+        lorisk_vl_plan_info = InfoGet.NO_ATTEMPT
 
     #Noq's flags
         noq_met = False

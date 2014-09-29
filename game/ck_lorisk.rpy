@@ -7,8 +7,18 @@
 label ck_lorisk:
     show lorisk at char_pos
 
+    if lorisk_vl_plan_info == InfoGet.SUCCESS:
+        $last_dialog = '[[Thank you so much, $AGENT_FIRST_NAME. I really needed to talk to someone about this. Is there anything you still want to ask?]'
+        lorisk '[last_dialog]'
+        jump menu_lorisk
+
+    if lorisk_vl_plan_info == InfoGet.FAIL:
+        lorisk '[[I do not want to speak with you again. Take your bigotry elsewhere.]'
+        hide lorisk
+        return
+
     if plot_state.lorisk_met:
-        $last_dialog = '[Hello again, $PLAYER_FIRST_NAME, how can I help you?]'
+        $last_dialog = '[Hello again, $AGENT_FIRST_NAME, how can I help you?]'
         lorisk '[last_dialog]'
 
     else:
@@ -30,6 +40,8 @@ label ck_lorisk:
                 jump lorisk_VL_tree_start
             '[[Ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_personal_reasons
+            '[[confront Lorisk about her parents]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.lauren_lorisk_info:
+                jump lorisk_VL_plans_tree_start
             '[[Done talking]':
                 hide lorisk
                 return
@@ -127,3 +139,60 @@ label ck_lorisk:
 
                     '[[ask about langauges]':
                         jump lorisk_VL_tree_languages
+
+        label lorisk_VL_plans_tree_start:
+            p '[[you tell Lorisk that you know about her mixed-race parents]'
+            menu:
+                lorisk '[[Oh. You know about that? What do you care?]'
+                '[[show sympathy]':
+                    jump lorisk_VL_plans_tree_sympathy
+                '[[show disgust]':
+                    jump lorisk_VL_plans_tree_disgust
+
+            label lorisk_VL_plans_tree_sympathy:
+                p '[[respond with sympathy]'
+                menu:
+                    lorisk '[[breaks down and reveals just how badly she wants this revolution to go through.]'
+                    '[[offer trust and confidentiality]':
+                        jump lorisk_VL_plans_tree_sympathy_confidentiality
+                    '[[the rebels are going to ruin your chances with their ways]':
+                        jump lorisk_VL_plans_tree_disgust
+
+                label lorisk_VL_plans_tree_sympathy_confidentiality:
+                    p '[[offer trust and confidentiality]'
+                    menu:
+                        lorisk '[[reveals that she  is a part of the VL and that she is willing to go to any length to make a difference.]'
+                        '[[peace is slow but more stable]':
+                            jump lorisk_VL_plans_tree_sympathy_confidentiality_peace
+                        '[[important to only punish those responsible]':
+                            jump lorisk_VL_plans_tree_sympathy_confidentiality_reason
+                        '[[quick violence will solve problem quickly]':
+                            jump lorisk_VL_plans_tree_sympathy_confidentiality_violence
+
+                    label lorisk_VL_plans_tree_sympathy_confidentiality_peace:
+                        p '[[peace is slow but more stable]'
+                        lorisk '[[agrees, but does not like that her people would have to wait any longer]'
+                        $plot_state.lorisk_vl_plan_info = InfoGet.SUCCESS
+                        $last_dialog = '[Thank you for talking to me about this. Let me know if you need anything else.]'
+                        jump menu_lorisk
+
+                    label lorisk_VL_plans_tree_sympathy_confidentiality_violence:
+                        p '[[quick violence will solve problem quickly]'
+                        lorisk '[[agrees, but hopes that if it does come to violence, that it is minimal.]'
+                        $plot_state.lorisk_vl_plan_info = InfoGet.SUCCESS
+                        $last_dialog = '[Thank you for talking to me about this. Let me know if you need anything else.]'
+                        jump menu_lorisk
+
+
+                    label lorisk_VL_plans_tree_sympathy_confidentiality_reason:
+                        p '[[important to only punish those responsible]'
+                        lorisk '[[agrees. Those who were caught up, including those under corrupt control, may not have wholeheartedly agreed.]'
+                        $plot_state.lorisk_vl_plan_info = InfoGet.SUCCESS
+                        $last_dialog = '[Thank you for talking to me about this. Let me know if you need anything else.]'
+                        jump menu_lorisk
+
+            label lorisk_VL_plans_tree_disgust:
+                p '[[don\'t you find that wrong?]'
+                lorisk '[[blows up in your face about hardship and how you have no idea. Ceases conversation]'
+                hide lorisk 
+                return
