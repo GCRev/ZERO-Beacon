@@ -173,6 +173,8 @@ image bg result4 = bkg_img('bg_result_4-dipolomacy')
 ####################################################
         
 label map_screen:
+    stop music
+    play music "assets/mu_menu.ogg"
     scene bg map
     menu:
         '1. High Embassy':
@@ -189,6 +191,8 @@ label map_screen:
             jump loc_port
 
 label loc_market:
+    stop music
+    play music "assets/mu_market.ogg"
     scene bg market
     'You are at the Grand Marketplace. [[describe]'
     label market_menu:
@@ -202,6 +206,8 @@ label loc_market:
     jump market_menu
 
 label loc_high_emb:
+    stop music
+    play music "assets/mu_emb.ogg"
     scene bg high_emb
     'You are at the High Embassy. [[describe]'
     label menu_high_emb:
@@ -233,6 +239,8 @@ label loc_high_emb:
     jump menu_high_emb
 
 label loc_human_emb:
+    stop music
+    play music "assets/mu_emb.ogg"
     scene bg human_emb
     'You are at the Human Embassy. [[describe]'
     label menu_human_emb:
@@ -244,6 +252,8 @@ label loc_human_emb:
     jump menu_human_emb
     
 label loc_kald_emb:
+    stop music
+    play music "assets/mu_emb.ogg"
     scene bg kald_emb
     'You are at the Kaldrean Embassy. [[describe]'
     label menu_kald_emb:
@@ -256,7 +266,9 @@ label loc_kald_emb:
                 jump map_screen
     jump menu_kald_emb
     
-label loc_res: 
+label loc_res:
+    stop music
+    play music "assets/mu_res.ogg"
     scene bg res
     'You are at the Residences. [[describe]'
     label menu_res:
@@ -274,6 +286,8 @@ label loc_res:
     jump menu_res
     
 label loc_port:
+    stop music
+    play music "assets/mu_port.ogg"
     scene bg port
     'You are at the Spaceport. [[describe]'
     label menu_port:
