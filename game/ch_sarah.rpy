@@ -7,19 +7,19 @@
 label ch_sarah:
     show sarah at char_pos
     if plot_state.stage == PlotStage.ARRIVE:
-        call ch_sarah_arrive
+        call sarah_arrive
     elif plot_state.stage == PlotStage.KALD_GOVT_INFO:
-        call ch_sarah_kald_govt_info
+        call sarah_kald_govt_info
     elif plot_state.stage == PlotStage.VL_INFO:
-        call ch_sarah_vl_info
+        call sarah_vl_info
     elif plot_state.stage == PlotStage.VATRISK_MEET:
-        call ch_sarah_vatrisk_meet
+        call sarah_vatrisk_meet
     elif plot_state.stage == PlotStage.VL_PLANS:
-        call ch_sarah_vl_plans
+        call sarah_vl_plans
     hide sarah
     return
 
-label ch_sarah_arrive:
+label sarah_arrive:
 
     sarah "Greetings, $ALIAS_FIRST_NAME. I’m Agent Redmont, but I prefer to stay in character whenever possible, 
     so call me Sarah. I’ve heard that you’re quite the sharp one."
@@ -40,7 +40,7 @@ label ch_sarah_arrive:
 
     return
 
-label ch_sarah_kald_govt_info:
+label sarah_kald_govt_info:
 
     sarah "Have you talked to both Ambassadors yet?"
 
@@ -100,7 +100,7 @@ label ch_sarah_kald_govt_info:
         p "[[tell Sarah what you've learned about kaldrean gov't from Ben]"
         return
 
-label ch_sarah_vl_info:
+label sarah_vl_info:
     menu:
         sarah "Have you gathered enough information to talk to Ambassador Kier yet?"
         "Yes, I'm ready.":
@@ -112,11 +112,11 @@ label ch_sarah_vl_info:
             sarah "Okay."
     return
 
-label ch_sarah_vatrisk_meet:
+label sarah_vatrisk_meet:
     sarah "Shouldn't you be meeting with Ambassador Kier."
     return
 
-label ch_sarah_vl_plans:
+label sarah_vl_plans:
 
     menu:
 
@@ -148,7 +148,7 @@ label ch_sarah_vl_plans:
                 "[[option # 9 (incorrect)]":
                     $ sarah_vl_plans_scenario = 9
                 "On second thought, I'm not sure.":
-                    jump ch_sarah_vl_plans_unsure
+                    jump sarah_vl_plans_unsure
             menu:
                 sarah "And when do they plan to do this?"
                 "Five O'Clock this afternoon.":
@@ -164,7 +164,7 @@ label ch_sarah_vl_plans:
                 "Midnight tomorrow.":
                     $ sarah_vl_plans_time = 5
                 "On second thought, I'm not sure.":
-                    jump ch_sarah_vl_plans_unsure
+                    jump sarah_vl_plans_unsure
             menu:
                 sarah "[[are you completely sure? you can't guess again.]"
                 "Yes.":
@@ -173,17 +173,53 @@ label ch_sarah_vl_plans:
                     else:
                         jump ending_incorrect_plans
                 "On second thought, no, I'm not.":
-                    jump ch_sarah_vl_plans_unsure
+                    jump sarah_vl_plans_unsure
 
         "I think I know who they are.":
-            sarah "[[TODO]"
-
+            python:
+                char_names = [
+                    "Benjamin Columbus",
+                    "Cole Demarc",
+                    "Jonathan Caise",
+                    "Lauren Gray",
+                    "Adam Demeter",
+                    "Kro Zalva Ross",
+                    "Alkay Volk Kladir",
+                    "Noq Kriesk Lask",
+                    "Lorisk Nidaria Kol",
+                    "Lida Ezekeri Skar"
+                ]
+                num_chars = len(char_names)
+                char_check_states = [(c, False) for c in char_names]
+                while True:
+                    char_menu_strs = [("[[x] " if cs[1] else "[[ ] ") + cs[0] for cs in char_check_states]
+                    menu_items = zip(char_menu_strs, range(num_chars))
+                    menu_items.append(("On second thought, I'm not sure.", "cancel"))
+                    if len(filter(lambda x: x[1], char_check_states)) >= 2:
+                        menu_items.append(("Done", "done"))
+                    sel_ix = menu(menu_items)
+                    if sel_ix == "cancel":
+                        renpy.jump('sarah_vl_plans_unsure')
+                    elif sel_ix == "done":
+                        break
+                    else:
+                        char_check_states[sel_ix] = (char_check_states[sel_ix][0], not char_check_states[sel_ix][1])
+                rebel_indexes = [2, 4, 6, 8]    
+                sel_indexes = [i for i in range(len(char_check_states)) if char_check_states[i][1]]
+                num_correct_ids = len([i for i in sel_indexes if rebel_indexes.count(i) > 0])
+                num_incorrect_ids = len(sel_indexes) - num_correct_ids
+                if num_correct_ids < 3:
+                    renpy.call('ending_not_enough_rebels_identified')
+                elif num_incorrect_ids > 1:
+                    renpy.call('ending_too_many_wrong_rebels_identified')
+                else:
+                    renpy.call('ending_correct_rebels')
         "No, I haven't.":
             sarah "Well, what are you waiting for? We haven't much time."   
 
     return
 
-    label ch_sarah_vl_plans_unsure:
+    label sarah_vl_plans_unsure:
         sarah "Well come back to me when you are sure. And be quick about it; 
         we don't have much time." 
         return

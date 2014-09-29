@@ -5,6 +5,7 @@
 # Main script file
 
 label start:
+    call tests
     call intro
     jump loc_port
 
