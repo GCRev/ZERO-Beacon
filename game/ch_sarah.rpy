@@ -54,21 +54,136 @@ label ch_sarah_kald_govt_info:
     sarah "And?"
 
     if plot_state.ben_kald_govt_info == InfoGet.SUCCESS:
-        p "I was able to get some useful information for Benjamin Columbus."
-        p "[[tell Sarah info]"
-        sarah "Very interesting. "
+        p "I was able to get some useful information for Ambassador Columbus."
+        p "[[tell Sarah what you've learned about kaldrean gov't from Columbus]"
+        sarah "Very interesting! And Kier?"
+        if plot_state.vatrisk_kald_govt_info == InfoGet.SUCCESS:
+            call sarah_kald_govt_info_vatrisk_tell
+            sarah "Yes, this is very good to know. Excellent work, Agent."
+        else:
+            p "I didn't have the same luck with him... he wasn't willing to tell me anything of use."
+            sarah "Hmmm, that is unfortunate. At least we have something, though."
     else:
-        p "I wasn't able to [[TODO FINISH]"
+        p "I wasn't able to get any information from Ambassador Columbus, unfortunately."
+        sarah "Yes, that is very unfortunate. I assume you had better luck with Vatrisk, at least?"
+        if plot_state.vatrisk_kald_govt_info == InfoGet.SUCCESS:
+            p "Yes, I did."
+            call sarah_kald_govt_info_vatrisk_tell
+            sarah "Yes, this is very good to know. Good work."
+        else:
+            p "Well... he wasn't very willing to divulge much information either."
+            sarah "Dammit. I expected more of you, Agent. Oh well."
+
+    sarah "For your next talk: As you know, there are rumors of Ambassador Kier's life being
+    in danger. As you know, the asssissination of such an important kaldrean figure would surely
+    destabilize our already-fragile inter-racial relations."
+
+    sarah "Unfortunately, Kier does not seem to be aware of these rumors, and if he is, he
+    does not seem to be taking them seriously. He's been seen walking around the city, unguarded,
+    as if there is nothing to fear. We must convince him otherwise."
+
+    sarah "So, I want you to go around the city, and find out information about this mysterious
+    rebel group that calls themselves the Valak Lideri. Try to learn as much as you can about them,
+    finding out whether or not this grave rumor is true."
+
+    sarah "When you've talked to several people and think you're ready, I'll set up an exclusive
+    meeting between you and Ambassador Kier. By then, you'll hopefully have enough information to 
+    convince him to lay low until this threat has passed."
+
+    p "Sounds good."
+
+    $ plot_state.stage = PlotStage.VL_INFO
+
     return
 
+    label sarah_kald_govt_info_vatrisk_tell:
+        p "[[tell Sarah what you've learned about kaldrean gov't from Ben]"
+        return
+
 label ch_sarah_vl_info:
-    sarah "[[TODO]"
+    menu:
+        sarah "Have you gathered enough information to talk to Ambassador Kier yet?"
+        "Yes, I'm ready.":
+            sarah "Okay, I'll arrange for you to meet with him. Head
+            to the High Embassy and ask to speak with him."
+            p "Will do."
+            $ plot_state.stage = PlotStage.VATRISK_MEET
+        "No, I still need to talk to some more people.":
+            sarah "Okay."
     return
 
 label ch_sarah_vatrisk_meet:
-    sarah "[[TODO]"
+    sarah "Shouldn't you be meeting with Ambassador Kier."
     return
 
 label ch_sarah_vl_plans:
-    sarah "[[TODO]"
+
+    menu:
+
+        sarah "Have you found out who the rebels are or what their plan is?"
+
+        "I think I've figured out what their plan is.":
+            $ sarah_vl_plans_scenario = -1
+            $ sarah_vl_plans_time = -1
+            menu:
+                sarah "Excellent! So what is it?"
+                "[[option # 0 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 0
+                "[[option # 1 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 1
+                "[[option # 2 (correct)]":
+                    $ sarah_vl_plans_scenario = 2
+                "[[option # 3 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 3
+                "[[option # 4 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 4
+                "[[option # 5 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 5
+                "[[option # 6 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 6
+                "[[option # 7 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 7
+                "[[option # 8 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 8
+                "[[option # 9 (incorrect)]":
+                    $ sarah_vl_plans_scenario = 9
+                "On second thought, I'm not sure.":
+                    jump ch_sarah_vl_plans_unsure
+            menu:
+                sarah "And when do they plan to do this?"
+                "Five O'Clock this afternoon.":
+                    $ sarah_vl_plans_time = 0
+                "Seven O'Clock tonight.":
+                    $ sarah_vl_plans_time = 1
+                "Midnight tonight.":
+                    $ sarah_vl_plans_time = 2
+                "Five O'Clock tomorrow afternoon.":
+                    $ sarah_vl_plans_time = 3
+                "Seven O'Clock tomorrow night.":
+                    $ sarah_vl_plans_time = 4
+                "Midnight tomorrow.":
+                    $ sarah_vl_plans_time = 5
+                "On second thought, I'm not sure.":
+                    jump ch_sarah_vl_plans_unsure
+            menu:
+                sarah "[[are you completely sure? you can't guess again.]"
+                "Yes.":
+                    if sarah_vl_plans_scenario == 2 and sarah_vl_plans_time == 0:
+                        jump ending_correct_plans
+                    else:
+                        jump ending_incorrect_plans
+                "On second thought, no, I'm not.":
+                    jump ch_sarah_vl_plans_unsure
+
+        "I think I know who they are.":
+            sarah "[[TODO]"
+
+        "No, I haven't.":
+            sarah "Well, what are you waiting for? We haven't much time."   
+
     return
+
+    label ch_sarah_vl_plans_unsure:
+        sarah "Well come back to me when you are sure. And be quick about it; 
+        we don't have much time." 
+        return

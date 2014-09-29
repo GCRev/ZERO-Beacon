@@ -32,7 +32,7 @@ init -2 python:
         enums = dict(zip(values, range(len(values))))
         return type('Enum', (), enums)
 
-    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS')
+    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS', "GAME_OVER")
     InfoGet = enum('NO_ATTEMPT', 'FAIL', 'SUCCESS')
 
     class PlotState:
@@ -258,6 +258,8 @@ label loc_res:
         menu:
             'Talk to Sarah Liu':
                 call ch_sarah
+                if plot_state.stage == PlotStage.GAME_OVER:
+                    return
             'Talk to Adam Demeter':
                 call ch_adam
             'Talk to Noq Kriesk Lask':
