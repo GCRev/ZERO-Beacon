@@ -74,7 +74,7 @@ label sarah_kald_govt_info:
             p "Well... he wasn't very willing to divulge much information either."
             sarah "Dammit. I expected more of you, Agent. Oh well."
 
-    sarah "For your next talk: As you know, there are rumors of Ambassador Kier's life being
+    sarah "For your next task: As you know, there are rumors of Ambassador Kier's life being
     in danger. As you know, the asssissination of such an important kaldrean figure would surely
     destabilize our already-fragile inter-racial relations."
 
@@ -113,7 +113,7 @@ label sarah_vl_info:
     return
 
 label sarah_vatrisk_meet:
-    sarah "Shouldn't you be meeting with Ambassador Kier."
+    sarah "Shouldn't you be meeting with Ambassador Kier?"
     return
 
 label sarah_vl_plans:
@@ -197,6 +197,8 @@ label sarah_vl_plans:
                     menu_items.append(("On second thought, I'm not sure.", "cancel"))
                     if len(filter(lambda x: x[1], char_check_states)) >= 2:
                         menu_items.append(("Done", "done"))
+                    else: 
+                        menu_items.append(("Click to select the suspected rebels.", None))
                     sel_ix = menu(menu_items)
                     if sel_ix == "cancel":
                         renpy.jump('sarah_vl_plans_unsure')
