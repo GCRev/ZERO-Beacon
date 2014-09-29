@@ -186,6 +186,7 @@ label map_screen:
 
 label loc_market:
     scene bg market
+    play music "mu_market.ogg"
     'You are at the Grand Marketplace. [[describe]'
     label market_menu:
         menu:
