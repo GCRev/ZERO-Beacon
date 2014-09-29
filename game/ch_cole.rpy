@@ -42,35 +42,35 @@ label ch_cole:
             cole '[[Earnest opinion on recent events.]'
             return      
 
-    label cole_Bg_tree_start:
-        p '[[you ask Cole about his backgrounds]'
-        menu:
-            cole '[[irritated that you asked about background.]'
-            '[[Please tell me. Perhaps you can tell me about this other part of your background.]':
-                jump cole_Bg_tree_pursue
-            '[[apologize for prying]':
-                jump cole_Bg_tree_apologize
-
-        label cole_Bg_tree_pursue:
-            p '[[Please tell me. Perhaps you can tell me about this other part of your background.]'
-            cole '[[They shoulda taught you some respet boy.]'
-            $last_dialog = '[don\'t you keep tryin to pry.]'
-            $plot_state.cole_background_info = InfoGet.FAIL
-            jump menu_cole
-
-        label cole_Bg_tree_apologize:
-            p '[[apologize for prying]'
+        label cole_Bg_tree_start:
+            p '[[you ask Cole about his backgrounds]'
             menu:
-                cole '[[sympathetic. Hints that his past was not a happy one]'
-                '[[pursue again]':
+                cole '[[irritated that you asked about background.]'
+                '[[Please tell me. Perhaps you can tell me about this other part of your background.]':
                     jump cole_Bg_tree_pursue
-                '[[offer confidentiality]':
-                    jump cole_Bg_tree_confidentiality
+                '[[apologize for prying]':
+                    jump cole_Bg_tree_apologize
 
-
-            label cole_Bg_tree_confidentiality:
-                p '[[offer confidentiality]'        
-                cole '[[offers some info on his background - just regarding his involvement in OpBridge. Mentions how much some kaldreans tried to stop the fighting and failed.]'
-                $last_dialog = '[Not much else I want to tell you. But thank you for time.]'
-                $cole_background_info = InfoGet.SUCCESS
+            label cole_Bg_tree_pursue:
+                p '[[Please tell me. Perhaps you can tell me about this other part of your background.]'
+                cole '[[They shoulda taught you some respet boy.]'
+                $last_dialog = '[don\'t you keep tryin to pry.]'
+                $plot_state.cole_background_info = InfoGet.FAIL
                 jump menu_cole
+
+            label cole_Bg_tree_apologize:
+                p '[[apologize for prying]'
+                menu:
+                    cole '[[sympathetic. Hints that his past was not a happy one]'
+                    '[[pursue again]':
+                        jump cole_Bg_tree_pursue
+                    '[[offer confidentiality]':
+                        jump cole_Bg_tree_confidentiality
+
+
+                label cole_Bg_tree_confidentiality:
+                    p '[[offer confidentiality]'        
+                    cole '[[offers some info on his background - just regarding his involvement in OpBridge. Mentions how much some kaldreans tried to stop the fighting and failed.]'
+                    $last_dialog = '[Not much else I want to tell you. But thank you for time.]'
+                    $cole_background_info = InfoGet.SUCCESS
+                    jump menu_cole

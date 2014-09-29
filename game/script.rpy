@@ -88,7 +88,7 @@ init -2 python:
     #Noq's flags
         noq_met = False
         noq_refuse_dialog = False
-        noq_illegal_info = False
+        noq_vl_plan_info = InfoGet.NO_ATTEMPT
 
     #Sarah's flags
 
