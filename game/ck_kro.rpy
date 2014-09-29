@@ -30,6 +30,8 @@ label ck_kro:
                 call kro_events
             '[[Ask about her background]' :
                 call kro_background
+            '[[ask about VL]' if plot_state.stage == PlotStage.VL_PLANS:
+                call kro_VL_tree_start
             '[[Done talking]':
                 hide kro
                 return
@@ -81,3 +83,29 @@ label ck_kro:
                 $last_dialog = '[If there is anything you need, I am at your service (Mr. or Ms.) $AGENT_LAST_NAME].'
                 $plot_state.kro_obsession_info = True
                 jump menu_kro
+
+        label kro_VL_tree_start:
+            p '[[ask about VL]'
+            menu:
+                kro '[[I do not know this group as well as you would like me to.]'
+                '[[I just need an idea]':
+                    jump kro_VL_tree_idea
+                '[[Who do you think it is.]':
+                    jump kro_VL_tree_who
+
+            label kro_VL_tree_idea:
+                p '[[I just need an idea]'
+                lorisk '[[Clearly they are a rebel group with an obsession for change. More info on what she thinks]'
+                $last_dialog = '[Take care what you say, not all will be so willing to speak on sensitive matters. If you require anything further, (Mr. or Ms.) $AGENT_LAST_NAME], Let me know.'
+                jump menu_kro
+
+
+            label kro_VL_tree_who:
+                p '[[Who do you think could be a rebel.]'
+                kro '[[Suggest that the people she\'d most expect to be rebels would be Cole (due to his unfortunate experience in the first contact), 
+                Noq (due to his eccentric nature and hate of the military), and Lorisk (due to her general progressive and sympathetic attitude)]'
+                $last_dialog = '[Take care what you say, not all will be so willing to speak on sensitive matters. If you require anything further, (Mr. or Ms.) $AGENT_LAST_NAME], Let me know.'
+                jump menu_kro
+
+            
+            
