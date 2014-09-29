@@ -31,6 +31,13 @@ label ck_alkay:
                 jump alkay_Bg_tree_start
             '[[Adam sent me]' if plot_state.adam_talk_alkay == True:
                 jump alkay_adam_tree_start
+            '[[show sympathy with VL]'if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
+                call alkay_VL_plan_sympathy
+            '[[accuse Alkay of being involved with VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
+                jump alkay_VL_plan_sympathy
+            '[[lie about what you know]'if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
+                jump alkay_VL_plan_lie
+
             '[[Done talking]':
                 hide alkay
                 return
@@ -129,3 +136,13 @@ label ck_alkay:
             $last_dialog = '[What else would you like to know?]'
             jump menu_alkay
 
+    label alkay_VL_plan_sympathy:
+        p '[[show sympathy with VL]'
+        alkay '[[Alkay suspects something is up when you suddenly show support for the VL]'
+        $plot_state.alkay_vl_plan_info = InfoGet.FAIL
+        return
+
+    label alkay_VL_plan_lie:
+        p '[[lie about what you know]'
+        alkay '[[immediately spots your lie and will assume that you are liar. Won\'t give information away to liars]'
+        $plot_state.alkay_vl_plan_info = InfoGet.FAIL
