@@ -55,3 +55,47 @@ label intro:
     soon as you arrive.'
 
     return
+
+label ending_incorrect_plans:
+    "[[TODO]"
+    jump result1
+
+label ending_correct_plans:
+    "[[TODO]"
+    jump result2
+
+label ending_too_many_wrong_rebels_identified:
+    "[[TODO]"
+    jump result1
+
+label ending_not_enough_rebels_identified:
+    "[[TODO]"
+    jump result1
+
+label ending_correct_rebels:
+    "[[TODO]"
+    jump result2
+
+
+# None of the below labels should be called directly. Instead, the program should call ending_ labels,
+#   which will call these appropriately
+
+label result1:
+    scene bg result1
+    $ plot_state.stage = PlotStage.GAME_OVER
+    $ renpy.pause()
+
+label result2:
+    scene bg result2
+    $ plot_state.stage = PlotStage.GAME_OVER
+    $ renpy.pause()
+
+label result3:
+    scene bg result3
+    $ plot_state.stage = PlotStage.GAME_OVER
+    $ renpy.pause()
+
+label result4:
+    scene bg result4
+    $ plot_state.stage = PlotStage.GAME_OVER
+    $ renpy.pause()
