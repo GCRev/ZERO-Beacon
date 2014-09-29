@@ -6,6 +6,12 @@
 
 label ch_jon:
     show jon at char_pos
+
+    if plot_state.jon_vl_plan_info == InfoGet.FAIL:
+        jon '[[Listen buddy. You take your crazy talk elsewhere.]'
+        hide jon
+        return
+
     if plot_state.jon_met:
         $ last_dialog = 'Hello again, $ALIAS_FIRST_NAME'
         jon '[last_dialog]'
@@ -31,7 +37,11 @@ label ch_jon:
                 call jon_events
             '[[ask Jon about his background]':
                 call jon_background
-            '[[done talking to jon]':
+            '[[show sympathy with the VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.kro_obsession_info and plot_state.jon_vl_plan_info == InfoGet.NO_ATTEMPT:
+                jump jon_VL_plan_tree_start
+            '[[accuse of association with the VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.kro_obsession_info and plot_state.jon_vl_plan_info == InfoGet.NO_ATTEMPT:
+                jump jon_accuse
+            '[[done talking to Jon]':
                 hide jon
                 return
         jump menu_jon
@@ -121,6 +131,57 @@ label ch_jon:
                 $last_dialog = '[direct player to talk to Kro]'
                 $plot_state.jon_talk_kro = True
                 jon '[last_dialog]'
+                jump menu_jon
+
+    label jon_accuse:
+        p '[[accuse of association with VL]'
+        jon '[[angry that you made such a heinous assertion. Won\'t speak about VL seriously with you after this point.]'
+        $plot_state.jon_vl_plan_info = InfoGet.FAIL
+        return
+
+    label jon_VL_plan_tree_start:
+        p '[[how sympathy with the VL]'
+        menu:
+            jon '[[miffed that you are essentially accusing him of being a rebel, but obviously relieved that you sympathize.]'
+            '[[bluff that you are aware of VL plans]':
+                jump jon_VL_plan_tree_bluff
+            '[[you want galactic change]':
+                jump jon_VL_plan_tree_change
+
+        label jon_VL_plan_tree_bluff:
+            p '[[bluff that you are aware of VL plans]'
+            jon '[[Jon: accuses YOU of being VL and says he has nothing to do with it. Won\'t speak with you after this point.]'
+            $plot_state.jon_vl_plan_info = InfoGet.FAIL
+            hide jon
+            return
+
+        label jon_VL_plan_tree_change:
+            p '[[you want galactic change]'
+            menu:
+                jon '[[agrees. Asks you how far you would go for change.]'
+                '[[argue on the side of violence]':
+                    jump jon_VL_plan_tree_change_violence
+                '[[not so much about how, but what it is that changes]':
+                    jump jon_VL_plan_tree_change_what
+                '[[argue on the side of peace]':
+                    jump jon_VL_plan_tree_change_peace
+
+            label jon_VL_plan_tree_change_violence:
+                p '[[argue on the side of violence]'
+                jon '[[agrees that violence acts quickly, but does not create a lasting peace as seen throughout history.]'
+                $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
+                jump menu_jon
+
+            label jon_VL_plan_tree_change_what:
+                p '[[not so much about how, but what it is that changes]'
+                jon '[[agrees that change itself is more important than the means of change.]'
+                $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
+                jump menu_jon
+
+            label jon_VL_plan_tree_change_peace:
+                p '[[argue on the side of peace]'
+                jon '[[agrees that peace is powerful, but very slow to act.]'
+                $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
                 jump menu_jon
 
 
