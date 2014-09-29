@@ -35,6 +35,7 @@ init -2 python:
 
     PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS', "GAME_OVER")
     InfoGet = enum('NO_ATTEMPT', 'FAIL', 'SUCCESS')
+    TrustLevel = enum('LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH')
 
     class PlotState:
         
@@ -97,6 +98,7 @@ init -2 python:
     #Vatrisk's flags
         vatrisk_met = False
         vatrisk_kald_govt_info = InfoGet.NO_ATTEMPT
+        vatrisk_trust = TrustLevel.MEDIUM
 
 
 
