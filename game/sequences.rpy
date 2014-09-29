@@ -57,23 +57,23 @@ label intro:
     return
 
 label ending_incorrect_plans:
-    "[[TODO]"
+    "[[You incorrectly identified the rebels' plans]"
     jump result1
 
 label ending_correct_plans:
-    "[[TODO]"
+    "[[You correctly identified the rebels' plans]"
     jump result2
 
 label ending_too_many_wrong_rebels_identified:
-    "[[TODO]"
+    "[[You identified too many people as rebels that weren't]"
     jump result1
 
 label ending_not_enough_rebels_identified:
-    "[[TODO]"
+    "[[You didn't identify enough rebels]"
     jump result1
 
 label ending_correct_rebels:
-    "[[TODO]"
+    "[[You correctly identified enough rebels]"
     jump result2
 
 
@@ -84,18 +84,22 @@ label result1:
     scene bg result1
     $ plot_state.stage = PlotStage.GAME_OVER
     $ renpy.pause()
+    return
 
 label result2:
     scene bg result2
     $ plot_state.stage = PlotStage.GAME_OVER
     $ renpy.pause()
+    return
 
 label result3:
     scene bg result3
     $ plot_state.stage = PlotStage.GAME_OVER
     $ renpy.pause()
+    return
 
 label result4:
     scene bg result4
     $ plot_state.stage = PlotStage.GAME_OVER
     $ renpy.pause()
+    return
