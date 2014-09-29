@@ -43,6 +43,7 @@ label ch_ben:
         $plot_state.ben_met = True
         $plot_state.ben_talk_lida = True
         ben '[last_dialog]'
+        hide ben
         return
 
     label menu_ben:
