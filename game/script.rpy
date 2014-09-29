@@ -18,7 +18,7 @@ init -2 python:
     # char_img : string -> Image
     # Helper function for loading & scaling our character images
     def char_img(fname):
-        return im.FactorScale('assets/' + fname + '.png', config.screen_width / 1600.0)
+        return im.FactorScale('assets/' + fname + '.png', config.screen_width / 1350.0)
 
     # bkg_img : string -> Image
     # Helper function for loading & scaling our background images
