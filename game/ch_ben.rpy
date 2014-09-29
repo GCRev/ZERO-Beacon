@@ -39,10 +39,11 @@ label ch_ben:
         p '$ALIAS_FIRST_NAME'
         ben 'Ah, yes. Welcome to Concord. What can I do for you today?'
         p 'Sarah has informed me about some mysterious underground information, care to elaborate?'
-        $last_dialog = '[Go to Lida, see if you can earn her trust and convince her to meet with me]'
+        $last_dialog = '[Go to Lida, see if you can earn her trust and convince her to meet with me. She\'s in the Kaldrean Embassy]'
         $plot_state.ben_met = True
         $plot_state.ben_talk_lida = True
         ben '[last_dialog]'
+        hide ben
         return
 
     label menu_ben:
