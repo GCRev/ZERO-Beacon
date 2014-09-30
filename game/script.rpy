@@ -33,7 +33,7 @@ init -2 python:
         enums = dict(zip(values, range(len(values))))
         return type('Enum', (), enums)
 
-    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'VL_PLANS', "GAME_OVER")
+    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'ATTACK_JUST_HAPPENED', 'VL_PLANS', "GAME_OVER")
     InfoGet = enum('NO_ATTEMPT', 'FAIL', 'SUCCESS')
     TrustLevel = enum('LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH')
 
@@ -228,6 +228,10 @@ label loc_high_emb:
                     call ch_ben
                 'Talk to Vatrisk Irridiss Kier':
                     call ck_vatrisk
+                    if plot_state.stage == PlotStage.ATTACK_JUST_HAPPENED:
+                        scene bg res
+                        call ch_sarah
+                        jump map_screen
                 '(Back to Map)':
                     jump map_screen
     jump menu_high_emb

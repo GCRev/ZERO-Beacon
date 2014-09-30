@@ -14,6 +14,8 @@ label ch_sarah:
         call sarah_vl_info
     elif plot_state.stage == PlotStage.VATRISK_MEET:
         call sarah_vatrisk_meet
+    elif plot_state.stage == PlotStage.ATTACK_JUST_HAPPENED:
+        call sarah_attack_just_happened
     elif plot_state.stage == PlotStage.VL_PLANS:
         call sarah_vl_plans
     hide sarah
@@ -114,6 +116,15 @@ label sarah_vl_info:
 
 label sarah_vatrisk_meet:
     sarah "Shouldn't you be meeting with Ambassador Kier?"
+    return
+
+label sarah_attack_just_happened:
+    sarah "[[I heard what happened. panic panic panic panic]"
+    p "[[We needa find out who is in the VL and what their plans are ASAP]"
+    sarah "[[Good idea. Go around the city and do that. When you think you've
+    figured out who they are or what their plans are, come back to me, and I'll organize
+    a raid]"
+    $  plot_state.stage = PlotStage.VL_PLANS
     return
 
 label sarah_vl_plans:
@@ -225,3 +236,5 @@ label sarah_vl_plans:
         sarah "Well come back to me when you are sure. And be quick about it; 
         we don't have much time." 
         return
+
+
