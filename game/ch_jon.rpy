@@ -19,7 +19,7 @@ label ch_jon:
     else:
         jon'[[typical intro stuff]'
         p '[[Introduce self]'
-        $last_dialog = '[uneasy response]'
+        $last_dialog = '[Welcome to Concord, (Mr. or Ms.) $AGENT_LAST_NAME. Let me know if can get you anything.]'
         jon '[last_dialog]'
 
         $plot_state.jon_met = True

@@ -58,7 +58,7 @@ label sarah_kald_govt_info:
     if plot_state.ben_kald_govt_info == InfoGet.SUCCESS:
         p "I was able to get some useful information for Ambassador Columbus."
         p "[[tell Sarah what you've learned about kaldrean gov't from Columbus]"
-        sarah "Very interesting! And Kier?"
+        sarah "Very interesting! And Irridiss?"
         if plot_state.vatrisk_kald_govt_info == InfoGet.SUCCESS:
             call sarah_kald_govt_info_vatrisk_tell
             sarah "Yes, this is very good to know. Excellent work, Agent."
@@ -76,11 +76,11 @@ label sarah_kald_govt_info:
             p "Well... he wasn't very willing to divulge much information either."
             sarah "Dammit. I expected more of you, Agent. Oh well."
 
-    sarah "For your next task: As you know, there are rumors of Ambassador Kier's life being
+    sarah "For your next task: As you know, there are rumors of Ambassador Irridiss' life being
     in danger. As you know, the asssissination of such an important kaldrean figure would surely
     destabilize our already-fragile inter-racial relations."
 
-    sarah "Unfortunately, Kier does not seem to be aware of these rumors, and if he is, he
+    sarah "Unfortunately, Irridiss does not seem to be aware of these rumors, and if he is, he
     does not seem to be taking them seriously. He's been seen walking around the city, unguarded,
     as if there is nothing to fear. We must convince him otherwise."
 
@@ -89,7 +89,7 @@ label sarah_kald_govt_info:
     finding out whether or not this grave rumor is true."
 
     sarah "When you've talked to several people and think you're ready, I'll set up an exclusive
-    meeting between you and Ambassador Kier. By then, you'll hopefully have enough information to 
+    meeting between you and Ambassador Irridiss. By then, you'll hopefully have enough information to 
     convince him to lay low until this threat has passed."
 
     p "Sounds good."
@@ -99,12 +99,12 @@ label sarah_kald_govt_info:
     return
 
     label sarah_kald_govt_info_vatrisk_tell:
-        p "[[tell Sarah what you've learned about kaldrean gov't from Ben]"
+        p "[[tell Sarah what you've learned about kaldrean gov't from Vatrisk]"
         return
 
 label sarah_vl_info:
     menu:
-        sarah "Have you gathered enough information to talk to Ambassador Kier yet?"
+        sarah "Have you gathered enough information to talk to Ambassador Irridiss yet?"
         "Yes, I'm ready.":
             sarah "Okay, I'll arrange for you to meet with him. Head
             to the High Embassy and ask to speak with him."
@@ -115,7 +115,7 @@ label sarah_vl_info:
     return
 
 label sarah_vatrisk_meet:
-    sarah "Shouldn't you be meeting with Ambassador Kier?"
+    sarah "Shouldn't you be meeting with Ambassador Irridiss?"
     return
 
 label sarah_attack_just_happened:

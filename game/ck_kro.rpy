@@ -20,7 +20,7 @@ label ck_kro:
     label menu_kro:
         menu:
             kro '[last_dialog]'
-            '[[Jon sent me]' if plot_state.jon_talk_kro:
+            '[[Jon sent me]' if plot_state.jon_talk_kro and plot_state.stage == PlotStage.VL_INFO:
                 jump kro_jon_tree_start
             '[[flatter]' if plot_state.stage == PlotStage.VL_INFO:
                 call kro_flatter

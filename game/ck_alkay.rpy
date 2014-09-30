@@ -29,7 +29,7 @@ label ck_alkay:
                 jump alkay_VL_tree_start
             '[[Ask about background]' if plot_state.stage == PlotStage.VL_INFO:
                 jump alkay_Bg_tree_start
-            '[[Adam sent me]' if plot_state.adam_talk_alkay == True:
+            '[[Adam sent me]' if plot_state.adam_talk_alkay == True and plot_state.stage == PlotStage.VL_INFO:
                 jump alkay_adam_tree_start
             '[[show sympathy with VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info == InfoGet.SUCCESS and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
                 call alkay_VL_plan_sympathy
