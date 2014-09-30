@@ -42,7 +42,7 @@ label ck_vatrisk:
                 jump vatrisk_VL_inform_tree_start
             '[[Suggest that he publicly denounce kaldrean government]' if plot_state.stage == PlotStage.VL_PLANS:
                 jump vatrisk_VL_denounce
-            '[[Offer to join him when he goes for his walk in the grove.]' if plot_stage.alkay_vl_plan_info = InfoGet.SUCCESS:
+            '[[Offer to join him when he goes for his walk in the grove.]' if plot_state.alkay_vl_plan_info == InfoGet.SUCCESS:
                 jump vatrisk_VL_lure
             '[[done talking to Vatrisk]':
                 hide vatrisk
@@ -225,9 +225,9 @@ label ck_vatrisk:
 
         label vatrisk_meeting_success:
             vatrisk "[[Well, I was about to leave to board a transport, but based on what you've told me, that 
-            doesn't seem like a very good idea.]"
+            doesn\'t seem like a very good idea.]"
             "You and the ambassador sit and talk about the Valak Lideri for a bit longer. Then, you hear a sudden,
-            deafening blast from outside Kier's office"
+            deafening blast from outside Kier\'s office"
             play sound "assets/sf_attack1.ogg"
             $ renpy.pause(delay=6)
             "[[Clearly, some sort of aircraft has been shot in mid-air, and is now plummeting towards the ground]"
