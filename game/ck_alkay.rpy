@@ -169,12 +169,12 @@ label ck_alkay:
 
         label alkay_VL_accuse_tree_hardship:
             p '[[I\'ve been told what this hardship is like. I want to help things change]'
-            if plot_state.lorisk_vl_reveal:
-                $last_dialog = '[applauds your apparent passion. Detects that you have no basis for this assertion. Questions you.]'
-                jump alkay_VL_accuse_tree_hardship_question
-            else:
+            if plot_state.lorisk_vl_plan_info == InfoGet.SUCCESS:
                 $last_dialog = '[nods in approval, recognizing authenticity. Pauses. I trust you, kid. I can see the spark of change in your eye. By mid morning tomorrow that change will be realized.]'
                 jump alkay_VL_accuse_tree_hardship_approval
+            else:
+                $last_dialog = '[applauds your apparent passion. Detects that you have no basis for this assertion. Questions you.]'
+                jump alkay_VL_accuse_tree_hardship_question
 
         label alkay_VL_accuse_tree_hardship_approval:
             menu:
