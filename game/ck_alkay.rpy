@@ -33,8 +33,8 @@ label ck_alkay:
                 jump alkay_adam_tree_start
             '[[show sympathy with VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
                 call alkay_VL_plan_sympathy
-##            '[[accuse Alkay of being involved with VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
-##                jump alkay_VL_accuse_tree_start
+            '[[accuse Alkay of being involved with VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
+                jump alkay_VL_accuse_tree_start
             '[[lie about what you know]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump alkay_VL_plan_lie
 
@@ -150,9 +150,84 @@ label ck_alkay:
             hide alkay
             return
 
-##    label alkay_VL_accuse_tree_start:
-##        p '[[accuse Alkay of being involved with VL]'
-##        menu:
-##            alkay  '[[Alkay begins to speak quieter, but doesn\'t deny being VL straight on. 
-##            You must coerce him to give you more information. If successful, you learn the VL's assassination plan.]'
-##            ''
+    label alkay_VL_accuse_tree_start:
+        p '[[accuse Alkay of being involved with VL]'
+        menu:
+            alkay  '[[Alkay begins to speak quieter, but doesn\'t deny being VL straight on. 
+            You must coerce him to give you more information. If successful, you learn the VL\'s assassination plan.]'
+            '[[I\'ve been told what this hardship is like. I want to help things change]':
+                jump alkay_VL_accuse_tree_hardship
+            '[[threaten to reveal his intent if he does not tell you his plans]':
+                jump alkay_VL_accuse_tree_threaten
+
+        label alkay_VL_accuse_tree_threaten:
+            p '[[threaten to reveal his intent if he does not tell you his plans]'
+            alkay '[[you cannot scare me. Do not make me laugh]'
+            $plot_state.alkay_vl_plan_info = InfoGet.FAIL
+            $last_dialog = '[You are holding up the line. Be brief.]'
+            jump menu_alkay
+
+        label alkay_VL_accuse_tree_hardship:
+            p '[[I\'ve been told what this hardship is like. I want to help things change]'
+            if plot_state.lorisk_vl_reveal:
+                $last_dialog = '[applauds your apparent passion. Detects that you have no basis for this assertion. Questions you.]'
+                jump alkay_VL_accuse_tree_hardship_question
+            else:
+                $last_dialog = '[nods in approval, recognizing authenticity. Pauses. I trust you, kid. I can see the spark of change in your eye. By mid morning tomorrow that change will be realized.]'
+                jump alkay_VL_accuse_tree_hardship_approval
+
+        label alkay_VL_accuse_tree_hardship_approval:
+            menu:
+                alkay '[last_dialog]'
+                '[[ask if there is a way to spur revolution without killing Vatrisk]':
+                    jump alkay_VL_accuse_tree_hardship_approval_vatrisk
+                '[[if you could do it differently how would you?]':
+                    jump alkay_VL_accuse_tree_hardship_approval_different
+
+            label alkay_VL_accuse_tree_hardship_approval_vatrisk:
+                p '[[ask if there is a way to spur revolution without killing Vatrisk]'
+                alkay '[[Chuckles, saying the only way that would ever happen is if Vatrisk came out one day and publicly denounced the kaldrean government. 
+                But that\'s not likely to happen any time this millennium.]'
+                $last_dialog = '[You have my trust. Is there anything else you want to know?]'
+                $plot_state.alkay_vl_plan_info = InfoGet.SUCCESS
+                jump menu_alkay
+
+            label alkay_VL_accuse_tree_hardship_approval_different:
+                p '[[if you could do it differently how would you?]'
+                alkay '[[You cannot solve problems effectively by simply shooting your way through it. You can only solve them quickly. 
+                We have no choice now, but in my years of experience, even the deepest wounds are healed when words close wars]'
+                $last_dialog = '[You have my trust. Is there anything else you want to know?]'
+                $plot_state.alkay_vl_plan_info = InfoGet.SUCCESS
+                jump menu_alkay
+
+        label alkay_VL_accuse_tree_hardship_question:
+            menu:
+                alkay '[last_dialog]'
+                '[[lie and push that you know what you are talking about]':
+                    jump alkay_VL_plan_lie
+                '[[admit that you were embellishing, but pursue the change]':
+                    jump alkay_VL_accuse_tree_hardship_embellishing
+
+            label alkay_VL_accuse_tree_hardship_embellishing:
+                p '[[admit that you were embellishing, but pursue the change]'
+                menu:
+                    alkay '[[Believes you, but requires further convincing.]'
+                    '[[trust me when I say this is important to me]':
+                        jump alkay_VL_accuse_tree_hardship_embellishing_important
+                    '[[you don\'t have to believe me. But I AM on speaking terms with Irridiss. That is a fact.]':
+                        jump alkay_VL_accuse_tree_hardship_embellishing_irridiss
+
+                label alkay_VL_accuse_tree_hardship_embellishing_irridiss:
+                    p '[[you don\'t have to believe me. But i AM on speaking terms with Irridiss]'
+                    alkay '[[Alkay: laughs. I suppose you know then that the Ambassador always takes a stroll through the grove at sunrise. 
+                    Sometimes we talk. Now be on your way. I have a line out the door]'
+                    $last_dialog = '[You have my trust. Is there anything else you want to know?]'
+                    $plot_state.alkay_vl_plan_info = InfoGet.SUCCESS
+                    jump menu_alkay
+
+                label alkay_VL_accuse_tree_hardship_embellishing_important:
+                    p '[[trust me when I say this is important to me]'
+                    alkay '[[It is important to us too. That does not suddenly gain you access a change you cannot comprehend.]'
+                    $last_dialog = '[Keep your head down. Is there anything else you want to know?]'
+                    $plot_state.alkay_vl_plan_info = InfoGet.FAIL
+                    jump menu_alkay

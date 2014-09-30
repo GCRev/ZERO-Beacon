@@ -38,6 +38,12 @@ label ck_vatrisk:
                 jump vatrisk_bribe
             '[[intimidate/lie/something]' if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
                 jump vatrisk_intimidate
+            '[[Tell him about VL and why they want to kill him]' if plot_state.stage == PlotStage.VL_PLANS:
+                jump vatrisk_VL_inform_tree_start
+            '[[Suggest that he publicly denounce kaldrean government]' if plot_state.stage == PlotStage.VL_PLANS:
+                jump vatrisk_VL_denounce
+            '[[Offer to join him when he goes for his walk in the grove.]' if plot_stage.alkay_vl_plan_info = InfoGet.SUCCESS:
+                jump vatrisk_VL_lure
             '[[done talking to Vatrisk]':
                 hide vatrisk
                 return
@@ -83,6 +89,69 @@ label ck_vatrisk:
                 $last_dialog = '[Please do not hesitate to ask me anything.]'
                 jump menu_vatrisk
 
+        label vatrisk_VL_denounce:
+            p '[[you should denounce the kaldrean government.]'
+            vatrisk '[[You are crazy, don\'t come back here unless you have something intelligent to say.]'
+            $plot_state.vatrisk_trust = TrustLevel.LOW
+            hide vatrisk
+            return
+
+        label vatrisk_VL_inform_tree_start:
+            p '[[Tell him about VL and why they want to kill him]'
+            menu:
+                vatrisk '[[He seems reluctant to believe you, but asks you to continue]'
+                '[[suggest that he publicly denounce kaldrean government]':
+                    jump vatrisk_VL_denounce
+                '[[ask him about his government, ad what he thinks is best for his people]':
+                    jump vatrisk_VL_inform_tree_ask
+
+            label vatrisk_VL_inform_tree_ask:
+                p '[[ask him about his government, ad what he thinks is best for his people]'
+                vatrisk '[[He speaks about how he believes his government, while caring of the people\'s welfare, is very corrupt and oppressive. But they do keep war from breaking out.]'
+                if plot_state.vatrisk_trust == TrustLevel.LOW or plot_state.vatrisk_trust == TrustLevel.MEDIUM:
+                    jump vatrisk_VL_inform_tree_no_change
+
+                if plot_state.vatrisk_trust == TrustLevel.HIGH:
+                    jump vatrisk_VL_inform_tree_not_sure
+
+                if plot_state.vatrisk_trust == TrustLevel.VERY_HIGH:
+                    jump vatrisk_VL_inform_tree_persuade
+
+            label vatrisk_VL_inform_tree_no_change:
+                vatrisk '[[But he thinks it\'s best to keep things as they are instead of risking chaos and change.]'
+                $last_dialog = '[thank you for talking to me, (Mr. or Ms.) $AGENT_LAST_NAME.]'
+                jump menu_vatrisk
+
+            label vatrisk_VL_inform_tree_not_sure:
+                menu:
+                    vatrisk '[[But he\'s not sure what to do.]'
+                    '[[The kaldrean government is weak right now. This rebellion will guarantee the change that your people seek]':
+                        vatrisk '[[Nothing is guaranteed. I cannot risk the stability of the government]'
+                        jump vatrisk_VL_inform_tree_no_change
+                    '[[Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.]':
+                        jump vatrisk_VL_inform_tree_persuade
+
+            label vatrisk_VL_inform_tree_persuade:
+                p '[[Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.]'
+                vatrisk '[[He thinks for a bit, then exclaims, \"It\'s time for me to act.\"]'
+#               ending 4!!!
+        
+        label vatrisk_VL_lure:
+            p '[[I will accompany you on your morning walk. We should meet in the center of the grove]'
+            if plot_state.vatrisk_trust == TrustLevel.HIGH or plot_state.vatrisk_trust == TrustLevel.VERY_HIGH:
+                jump vatrisk_will_sex_you
+            else:
+                jump vatrisk_VL_lure_decline
+
+            label vatrisk_will_sex_you:
+                vatrisk '[[Of course. Ordinarily my guards ask me to stay away from that area, but I trust you.]'
+#               ending 3!!!
+
+            label vatrisk_VL_lure_decline:
+                vatrisk '[[I am sorry, but I will not be going out tomorrow morning as I will be busy.]'
+                $last_dialog = '[Again, my apologies. Perhaps another time. Until then, are there any other questions I may answer?]'
+                jump menu_vatrisk
+                
     label vatrisk_meeting:
 
         vatrisk "[[Hello, Diplomat $ALIAS_LAST_NAME. How can I help you?]"
