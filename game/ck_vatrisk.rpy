@@ -134,20 +134,17 @@ label ck_vatrisk:
             label vatrisk_VL_inform_tree_persuade:
                 p '[[Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.]'
                 vatrisk '[[He thinks for a bit, then exclaims, \"It\'s time for me to act.\"]'
-#               ending 4!!!
-        
+
+                call ending_vatrisk_denounce_govt
+                return
+
         label vatrisk_VL_lure:
             p '[[I will accompany you on your morning walk. We should meet in the center of the grove]'
             if plot_state.vatrisk_trust == TrustLevel.HIGH or plot_state.vatrisk_trust == TrustLevel.VERY_HIGH:
-                jump vatrisk_will_sex_you
-            else:
-                jump vatrisk_VL_lure_decline
-
-            label vatrisk_will_sex_you:
                 vatrisk '[[Of course. Ordinarily my guards ask me to stay away from that area, but I trust you.]'
-#               ending 3!!!
-
-            label vatrisk_VL_lure_decline:
+                call ending_vatrisk_lure
+                return
+            else:
                 vatrisk '[[I am sorry, but I will not be going out tomorrow morning as I will be busy.]'
                 $last_dialog = '[Again, my apologies. Perhaps another time. Until then, are there any other questions I may answer?]'
                 jump menu_vatrisk

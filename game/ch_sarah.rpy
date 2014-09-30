@@ -236,5 +236,3 @@ label sarah_vl_plans:
         sarah "Well come back to me when you are sure. And be quick about it; 
         we don't have much time." 
         return
-
-

@@ -58,49 +58,62 @@ label intro:
     return
 
 label ending_incorrect_plans:
-    "[[You incorrectly identified the rebels' plans]"
-    jump result1
+    hide sarah
+    "[[Sarah goes to initiate the raid.]"
+    "[[Later you find out that you incorrectly identified the rebels' plans. You have failed to apprehend
+    the rebels in time]"
+    scene bg result1
+    jump game_over
 
 label ending_correct_plans:
-    "[[You correctly identified the rebels' plans]"
-    jump result2
+    stop music
+    hide sarah
+    "[[Sarah goes to initiate the raid.]"
+    scene bg result2
+    jump game_over
 
 label ending_too_many_wrong_rebels_identified:
-    "[[You identified too many people as rebels that weren't]"
-    jump result1
+    stop music
+    hide sarah
+    "[[Sarah goes to initiate the raid.]"
+    "[[Later you find out that you identified too many people as rebels that weren't. 
+    You have failed to apprehend the rebels in time]"
+    scene bg result1
+    jump game_over
 
 label ending_not_enough_rebels_identified:
-    "[[You didn't identify enough rebels]"
-    jump result1
+    stop music
+    hide sarah
+    "[[Sarah goes to initiate the raid.]"
+    "[[Later you find out that you didn't identify enough rebels 
+    You have failed to apprehend the rebels in time]"
+    scene bg result1
+    jump game_over
 
 label ending_correct_rebels:
+    stop music
     "[[You correctly identified enough rebels]"
-    jump result2
-
-
-# None of the below labels should be called directly. Instead, the program should call ending_ labels,
-#   which will call these appropriately
-
-label result1:
-    scene bg result1
-    $ plot_state.stage = PlotStage.GAME_OVER
-    $ renpy.pause()
-    return
-
-label result2:
     scene bg result2
-    $ plot_state.stage = PlotStage.GAME_OVER
-    $ renpy.pause()
-    return
+    jump game_over
 
-label result3:
-    scene bg result3
-    $ plot_state.stage = PlotStage.GAME_OVER
-    $ renpy.pause()
-    return
-
-label result4:
+label ending_vatrisk_denounce_govt:
+    stop music
     scene bg result4
+    jump game_over
+
+label ending_vatrisk_lure:
+    stop music
+    scene black
+    "[[Vatrisk trustingly follows you out to the grove, unguarded]"
+    play sound "assets/sf_assassination1.ogg"
+    "[[After talking for a short time, you hear the blast of a plasma gun]"
+    play sound "assets/sf_assassination2.ogg"
+    "[[Vatrisk falls to the ground, fatally wounded]"
+    scene bg result3
+    jump game_over
+
+label game_over:
+    stop sound
     $ plot_state.stage = PlotStage.GAME_OVER
     $ renpy.pause()
     return

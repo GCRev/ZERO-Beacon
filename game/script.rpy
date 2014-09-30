@@ -6,7 +6,8 @@
 
 label start:
     call tests
-    call intro
+    if not skip_intro:
+        call intro
     jump loc_port
 
 
@@ -110,6 +111,7 @@ init -2 python:
 # Non-characters
 define char_pos = Position(xpos = 0.8, xanchor = 'right', ypos = config.screen_height - 150)
 define plot_state = PlotState()
+define skip_intro = False # for debugging only
 
 # Non-pictured characters
 define p = Character('You')
@@ -166,7 +168,7 @@ image bg landing_pad = bkg_img('bg_landing-pad')
 image bg result1 = bkg_img('bg_result_1-inaction')
 image bg result2 = bkg_img('bg_result_2-apprehend')
 image bg result3 = bkg_img('bg_result_3-assist')
-image bg result4 = bkg_img('bg_result_4-dipolomacy')
+image bg result4 = bkg_img('bg_result_4-diplomacy')
 
 
 ####################################################
@@ -239,6 +241,8 @@ label loc_high_emb:
                         scene bg res
                         call ch_sarah
                         jump map_screen
+                    elif plot_state.stage == PlotStage.GAME_OVER:
+                        return
                 '(Back to Map)':
                     jump map_screen
     jump menu_high_emb
