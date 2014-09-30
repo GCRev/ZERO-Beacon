@@ -64,7 +64,7 @@ label ch_adam:
                     jump adam_VL_tree_sympathize
                 'Disapprove':
                     jump adam_VL_tree_disapprove
-            jump menu_adam_vl_info
+            jump menu_adam
 
             label adam_VL_tree_sympathize:  
                 p '[[express sympathy with VL]'
@@ -79,20 +79,20 @@ label ch_adam:
                     p '[[Violence will get them nowhere]'
                     adam '[[pensive. Offers perspective from the contact war about that]'
                     $last_dialog = '[is there anything else I can help you with?]'
-                    jump menu_adam_vl_info
+                    jump menu_adam
 
                 label adam_VL_tree_care_less:
                     p '[[care less about their methods]'
                     adam '[[sometimes we have to make concessions for the greater good. VL are simply trying to do what is best.]'
                     $last_dialog = '[is there anything else I can help you with?]'
                     $ plot_state.adam_vl_info = InfoGet.SUCCESS
-                    jump menu_adam_vl_info
+                    jump menu_adam
 
             label adam_VL_tree_disapprove:
                 p '[[express disapproval of VL]'
                 adam '[[affirms that their goals are just, and that the kaldrean government won\'t change without some force]'
                 $last_dialog = '[is there anything else I can help you with?]'
-                jump menu_adam_vl_info
+                jump menu_adam
 
         label adam_Bg_tree_start:
             menu:
@@ -106,10 +106,10 @@ label ch_adam:
                 adam '[[mentions that he is a dear friend for many years. Mention my name when you talk to Alkay]'
                 $last_dialog = '[is there anything else I can help you with?]'
                 $ plot_state.adam_talk_alkay = True
-                jump menu_adam_vl_info
+                jump menu_adam
 
             label adam_Bg_tree_conflict:
                 adam '[[explains more about the conflict but really waters down detail. You sense he is holding information back]'
                 $last_dialog = '[is there anything else I can help you with?]'
-                jump menu_adam_vl_info
+                jump menu_adam
 
