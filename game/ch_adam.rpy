@@ -34,7 +34,7 @@ label ch_adam:
             '[[Done talking]':
                 hide adam
                 return
-        jump menu_adam_vl_info
+        jump menu_adam
 
         label adam_advice:
             p '[[ask adam for advice]'

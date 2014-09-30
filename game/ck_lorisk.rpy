@@ -7,12 +7,12 @@
 label ck_lorisk:
     show lorisk at char_pos
 
-    if lorisk_vl_plan_info == InfoGet.SUCCESS:
+    if plot_state.lorisk_vl_plan_info == InfoGet.SUCCESS:
         $last_dialog = '[[Thank you so much, $AGENT_FIRST_NAME. I really needed to talk to someone about this. Is there anything you still want to ask?]'
         lorisk '[last_dialog]'
         jump menu_lorisk
 
-    if lorisk_vl_plan_info == InfoGet.FAIL:
+    if plot_state.lorisk_vl_plan_info == InfoGet.FAIL:
         lorisk '[[I do not want to speak with you again. Take your bigotry elsewhere.]'
         hide lorisk
         return
