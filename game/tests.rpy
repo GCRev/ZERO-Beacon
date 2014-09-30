@@ -8,5 +8,5 @@ label tests:
 ##    $ plot_state.stage = PlotStage.VL_PLANS
 ##    $plot_state.lauren_lorisk_info = InfoGet.SUCCESS
 ##    $plot_state.adam_alkay_info = InfoGet.SUCCESS
-##    $plot_state.kro_obsession_info = InfoGet.SUCCESS
+##    $plot_state.kro_obsession_info = InfoGet.SUCCESS 
     return
