@@ -12,6 +12,7 @@ label ch_ben:
             if plot_state.lida_convinced == InfoGet.NO_ATTEMPT:
                 p '[[I have not]'
                 ben '[[Please do, else I cannot hold up my end of our bargain.]'
+                hide ben
                 return
             elif plot_state.lida_convinced == InfoGet.FAIL:
                 p '[[She was too difficult.]'
@@ -19,6 +20,7 @@ label ch_ben:
                 ben '[[You can come back and talk any time.]'
                 $plot_state.ben_kald_govt_info = InfoGet.FAIL
                 $plot_state.ben_talk_lida = False
+                hide ben
                 return
 
             else:
@@ -27,6 +29,7 @@ label ch_ben:
                 ben '[[You can come back and talk any time.]'
                 $plot_state.ben_kald_govt_info = InfoGet.SUCCESS
                 $plot_state.ben_talk_lida = False
+                hide ben
                 return
 
         else:
