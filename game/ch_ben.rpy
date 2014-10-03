@@ -8,16 +8,18 @@ label ch_ben:
     show ben at char_pos
     if plot_state.ben_met:
         if plot_state.ben_talk_lida:
-            ben '[[Good to see you again, $AGENT_FIRST_NAME, have you spoken with Lida yet?]'
+            ben "Good to see you again, $AGENT_FIRST_NAME? Have you spoken with Miss Ezekeri yet?"
             if plot_state.lida_convinced == InfoGet.NO_ATTEMPT:
-                p '[[I have not]'
-                ben '[[Please do, else I cannot hold up my end of our bargain.]'
+                p "Sorry, I haven\’t done that yet."
+                ben "Take your time. I will be awaiting news of your success."
                 hide ben
                 return
             elif plot_state.lida_convinced == InfoGet.FAIL:
-                p '[[She was too difficult.]'
-                ben '[[Then I am sorry, my friend, can\'t give you infos.]'
-                ben '[[You can come back and talk any time.]'
+                p "I did talk to her but…"
+                ben "Let me guess, she was too difficult."
+                p "Unfortunately, yes."
+                ben "Well, thank you for trying at any rate. Perhaps we\’ll talk about that information another time. 
+                Until then, is there anything else you would like to ask me?"
                 $plot_state.ben_kald_govt_info = InfoGet.FAIL
                 $plot_state.ben_talk_lida = False
                 hide ben
@@ -38,11 +40,21 @@ label ch_ben:
             jump menu_ben
 
     else:
-        ben 'Hello there, I don\'t believe we\'ve met. I\'m Benjamin Columbus, Ambassador of the humans, but you can just call me Benjamin Columubus. And you are?'
-        p '$ALIAS_FIRST_NAME'
-        ben 'Ah, yes. Welcome to Concord. What can I do for you today?'
-        p 'Sarah has informed me about some mysterious underground information, care to elaborate?'
-        $last_dialog = '[Go to Lida, see if you can earn her trust and convince her to meet with me. She\'s in the Kaldrean Embassy]'
+        ben "I was told we were going to have a new team-member. You must be $AGENT_FIRST_NAME."
+        p "That is me."
+        ben "Wonderful. I\’m, as you might already know, Ambassador Columbus. But please, just call me Ben. I hope that your time on Concord thus far has been pleasant."
+        p "I\t’s a beautiful city."
+        ben "It certainly is. Now, everyone has a reason to end up here, what can I do for you today?"
+        p "Actually, I need some information on the state of the kaldrean government so that I can better understand the political climate."
+        ben "I see. Well, if we are talking favors I\’ll cut you a deal -  I have been trying to meet with the Senior Operations manager for some time now, 
+        but she will only respond to the kaldrean Ambassador\’s requests. If you can convince her to meet up with me, then we can talk."
+        p "Any reason why you think she has been avoiding you? Or why she can in the first place?"
+        ben "As a kaldrean she is only obligated to respond to meeting requests with other kaldreans. On top of that she is an older woman who has a certain… disdain for humans. 
+        However, she is partial to new faces and I am confident that you can pull this off. So… do we have a deal?"
+        p "Of course, but why exactly are you so confident in me? You only met me a few minutes ago."
+        ben "I can just tell that you are going to have an impact here - perhaps you don\’t recognize it yet."
+        p "I’ll take your word for it. It was nice to meet you, Ben."
+        $last_dialog = "Likewise, $AGENT_FIRST_NAME"
         $plot_state.ben_met = True
         $plot_state.ben_talk_lida = True
         ben '[last_dialog]'
@@ -64,13 +76,43 @@ label ch_ben:
         jump menu_ben
 
         label ben_advice:
-            p '[[you ask Ben for advice]'
-            ben '[[offers his advice]'
+            p "What advice can you offer, from one diplomat to another?"
+ 
+            ben "Ah yes, of course. What often happens to the greenhorns who arrive here from Earth and Qolisk alike, 
+            is that they forget that they are entering an environment they have never before experienced. 
+            You have to drop your prejudices and fabrications and simply observe. If you can\’t, then you struggle."
+             
+            p "I respect your advice, Ambassador –"
+             
+            ben "Call me Ben, please"
+             
+            p "ben, but doesn\’t it seem like a lot to ask of anyone to simply, \‘drop their prejudices?\’"
+             
+            ben "Of course it is. It\’s completely unreasonable – everyone will remain with their judgment 
+            tailored by their experiences. I never claimed it was possible simply, up and become judgment-free. 
+            That does not mean that you can\’t try. The closer you come to being spotless, the more those around you will accept you."
+             
+            ben "if only… (muttered)"
+             
+            p "What?"
+             
+            ben "Nevermind then! Anything else?" 
             return
 
         label ben_events:
-            p '[[you ask Ben his opinion on recent events]'
-            ben '[[Very obvious politician speak here. Avoids speaking directly about events.]'
+            p "You probably know all about the rumors of racial tensions that have been circulating. Care to elaborate?"
+
+            ben "Rumors are but rumors - they are innocuous little flies that eventually die down. No need to concern yourself with these 
+            \“rumors\” my friend. I can assure that both I and my colleague, Ambassador Irridiss are on quite even terms. 
+            The peace that we maintain here is secure so there is really no need to worry."
+
+            p "If you insist…"
+
+            ben "I have no reason to be dishonest with you."
+
+            p "No, I believe you. Thank you for the reassurance, Ben."
+
+            Ben "Not a problem, $AGENT_FIRST_NAME. Is there anything else you would like to know?"
             return
 
         label ben_background:

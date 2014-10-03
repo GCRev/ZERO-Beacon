@@ -7,14 +7,16 @@
 label ck_kro:
     show kro at char_pos
     if plot_state.kro_met:
-        $last_dialog = '[(Mr. or Ms.) $AGENT_LAST_NAME, greetings]'
+        $last_dialog = "Greetings (Mr. or Ms.) $AGENT_LAST_NAME."
         kro '[last_dialog]'
 
     else:
-        kro '[[Salutations. I am Flight Commander Kro Zalva. Welcome to Vivarioss]'
-        p '[[introduce yourself to Kro]'
+        kro "Salutations. I am Flight Commander Kro Zalva. Welcome to Vivarioss"
+
+        p "Nice to meet you Commander, I\’m $AGENT_FIRST_NAME $AGENT_LAST_NAME"
+
+        $last_dialog = "Likewise. Now, if there is anything you would like to know, please ask. Else move on."
         $plot_state.kro_met = True
-        $last_dialog = '[If there is anything you would like to know, please ask. Else move on.]'
         kro '[last_dialog]'
 
     label menu_kro:
@@ -45,15 +47,37 @@ label ck_kro:
             return
 
         label kro_advice:
-            p '[[ask Kro for advice]'
-            kro '[[gives you some useful advice]'
+            p "Could you offer any advice to someone new to Concord?"
+
+            kro "I will tell you what I have told others before you, and what I was told early on in my training: By choosing to come here you have agreed to change yourself. 
+            You will be judged by a new set of rules and regulations, and who you become will be no one like who you left behind."
+
+            p "That seems a little intense."
+
+            kro "It is quite true. I recognize it in myself and those close to me."
+
+            p "And how does that affect you?"
+
+            kro "I have yet to understand."
+
+            p "Well… thank you for your words of advice."
+
             $last_dialog = '[is there anything else I can help you with?]'
             return
 
         label kro_events:
-            p '[[ask her opinion on recent events]'
-            kro '[[gives you her opinion on recent events]'
-            $last_dialog = '[is there anything else I can help you with?]'
+            p "Have you heard about this so-called tension between the humans and kaldreans here?"
+
+            kro "I do not spend too much of my operational time actually on Concord, I am simply here for the remainder of the week 
+            as my starship receives routine maintenance. You are likely much better informed that I am on these matters."
+
+            p "You\’re probably right."
+
+            kro "Just ask around, if you have heard of these “rumors” then I am sure others have heard the same word. If you have not already talked to Elder Vollk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the residences."
+
+            p "Thanks for the direction."
+
+            $last_dialog =  "No need to thank me. Do you have any other questions?"
             return
 
         label kro_background:

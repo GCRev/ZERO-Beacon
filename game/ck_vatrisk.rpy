@@ -12,13 +12,17 @@ label ck_vatrisk:
         return
 
     elif plot_state.vatrisk_met:
-        $ last_dialog = 'Hello again, $ALIAS_FIRST_NAME'
+        $ last_dialog = "Hello again, $ALIAS_FIRST_NAME, with what may I help you?"
         vatrisk '[last_dialog]'
 
     else:
-        vatrisk'[[Welcome to Vivarioss, or as you may know it, Concord. It is absolutely a pleasure to meet you.]'
-        p '[[Introduce self]'
-        $last_dialog = '[Wonderful. How may my colleague and I be of assistance to you, Mr. $AGENT_LAST_NAME?]'
+        vatrisk "$AGENT_FIRST_NAME $AGENT_LAST_NAME, welcome to Vivarioss! Or as you may know it, Concord. It is an absolute pleasure to make your acquaintance. 
+        I hope that another bright mind at work can make the cooperation and peace here even more resilient."
+
+        p "I am going to do my best."
+
+        vatrisk "And we will support you. Ambassador Columbus and I are committed to your success. Because your successes contribute to all of our successes."
+        $last_dialog = "So as new arrival I trust you have some questions to ask?"
         vatrisk '[last_dialog]'
 
         $ plot_state.vatrisk_met = True
