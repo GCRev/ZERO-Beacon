@@ -143,6 +143,7 @@ init -2 python:
 define char_pos = Position(xpos = 0.8, xanchor = 'right', ypos = config.screen_height - 150)
 define plot_state = PlotState()
 define skip_intro = False # for debugging only
+define alias = None
 
 # Non-pictured characters
 define p = Character('You')
