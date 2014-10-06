@@ -51,9 +51,12 @@ label intro:
             first = renpy.input('First name: ')
             last = renpy.input('Last name: ')
             alias = Alias(gender, first, last)
-            renpy.say(comm, 'So, to confirm, you will be the diplomat [alias.title_full]. Yes?')
-            if renpy.display_menu([("That's correct.", True), ("No; I've changed my mind.", False)]):
-                break
+            if "professor" in first.lower() or "moriarty" in first.lower() or "professor" in last.lower() or "moriarty" in last.lower():
+                renpy.say(comm, 'Sorry, that codename is reserved for one of our top stealth couriers. You will have choose another alias.')
+            else:
+                renpy.say(comm, 'So, to confirm, you will be the diplomat [alias.title_full]. Yes?')
+                if renpy.display_menu([("That's correct.", True), ("No; I've changed my mind.", False)]):
+                    break
     comm 'Very good. It is time for you to get going, then, Agent.'
     comm 'You have not failed me yet. Do not let this be the first time you do.'
 

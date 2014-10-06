@@ -8,19 +8,30 @@ label ch_jon:
     show jon at char_pos
 
     if plot_state.jon_vl_plan_info == InfoGet.FAIL:
-        jon '[[Listen buddy. You take your crazy talk elsewhere.]'
+        jon "Listen buddy. You take your crazy talk elsewhere.]"
         hide jon
         return
 
     if plot_state.jon_met:
-        $ last_dialog = 'Hello again, [alias.first]'
-        jon '[last_dialog]'
+        $ last_dialog = "Hello again, "+alias.title_last+". What brings you here?"
+        jon "[last_dialog]"
 
     else:
-        jon'[[typical intro stuff]'
-        p '[[Introduce self]'
-        $last_dialog = '[Welcome to Concord, [alias.title_last]. Let me know if can get you anything.]'
-        jon '[last_dialog]'
+        jon "Give me a moment here… HEY! JANS! GET YOUR PEOPLE ON THE TARMAC ASAP. Sorry. Can I help you [alias.address]?"
+
+        p "I\’m just trying to get to know people here."
+
+        jon "New to Concord? Welcome. I\’m Jonathan Caise, manager of logistics here at the port."
+
+        p "[alias.full], diplomat over at the human embassy."
+
+        jon "Greenhorn diplomat? Make sure you really take your time to get to know people."
+        jon "I\’ve seen my fair share of people bail and out and leave because Concord is too much a culture shock for them. 
+        But you look like you\’ve got a good head on your shoulders."
+
+        p "I\’m determined to leave my footprint here."
+
+        $last_dialog = "Good. I like your motivation. Feel free to ask me questions, but I may have to be quick… my work doesn’t often give me breaks."
 
         $plot_state.jon_met = True
 
@@ -183,11 +194,3 @@ label ch_jon:
                     jon '[[agrees that peace is powerful, but very slow to act.]'
                     $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
                     jump menu_jon
-
-
-
-
-
-
-
-
