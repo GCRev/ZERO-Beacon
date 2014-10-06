@@ -10,11 +10,11 @@ label ck_lida:
     if plot_state.lida_met:
         lida '[[Yes?]'
         p '[[Introduce yourself]'
-        $last_dialog = '[Very good, (Mr. or Ms.) $AGENT_LAST_NAME. Then is cold and dismissive to you.]'
+        $last_dialog = '[Very good, ' + alias.title_last + '. Then is cold and dismissive to you.]'
         lida '[last_dialog]'
 
     else:
-        $last_dialog = '[Oh, hello again (Mr. or Ms.) $AGENT_LAST_NAME. Please be brief.]'
+        $last_dialog = '[Oh, hello again ' + alias.title_last + '. Please be brief.]'
         lida '[last_dialog]'
 
     label menu_lida:

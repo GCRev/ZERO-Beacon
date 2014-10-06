@@ -7,13 +7,13 @@
 label ck_alkay:
     show alkay at char_pos
     if plot_state.alkay_met:
-        $ last_dialog = 'Hello again, $ALIAS_FIRST_NAME, what can I get you?'
+        $ last_dialog = 'Hello again, ' + alias.first + ', what can I get you?'
         alkay '[last_dialog]'
 
     else:
-        alkay '[[Welcome to my humble eatery. You must be a new citizen (Mr. or Ms)...]'
+        alkay '[[Welcome to my humble eatery. You must be a new citizen, [alias.address].]'
         p '[[Introduce yourself]'
-        $last_dialog = '[[$AGENT_FIRST_NAME $AGNENT_LAST_NAME of course! Have a seat, first meal is on the house. We\'ll talk over some good food.]'
+        $last_dialog = alias.full + '[[, of course! Have a seat, first meal is on the house. We\'ll talk over some good food.]'
         alkay '[last_dialog]'
 
         $ plot_state.alkay_met = True

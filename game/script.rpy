@@ -102,6 +102,37 @@ init -2 python:
         vatrisk_kald_govt_info = InfoGet.NO_ATTEMPT
         vatrisk_trust = TrustLevel.MEDIUM
 
+    def gend_to_str(gender):
+        if gender == Gender.FEM:
+            return "Feminine"
+        elif gender == Gender.MASC:
+            return "Masculine"
+        elif gender == Gender.NEUT:
+            return "Neutral"
+        else:
+            raise ValueError('illegal value of gender')
+
+    Gender = enum('FEM', 'MASC', 'NEUT')
+    class Alias:
+        def __init__(self, gender, first, last):
+            self.gender = gender
+            if self.gender == Gender.FEM:
+                self.title = 'Ms.'
+                self.address = "ma'am"
+            elif self.gender == Gender.MASC:
+                self.title = 'Mr.'
+                self.address = 'sir'
+            elif self.gender == Gender.NEUT:
+                self.title = 'Mx.'
+                self.address = 'ser'
+            else:
+                raise ValueError('illegal value of gender')
+            self.first = first
+            self.last = last
+            self.full = first + ' ' + last
+            self.title_full = self.title + ' ' + self.full
+            self.title_last = self.title + ' ' + self.last
+
 
 
 ####################################################
@@ -133,6 +164,7 @@ define lorisk = Character('Lorisk Nidaria Kol')
 define kro = Character('Kro Zalva Ross')
 define noq = Character('Noq Kriesk Lask')
 define lida = Character('Lida Ezekeri Skar')
+
 
 
 ####################################################
@@ -169,6 +201,7 @@ image bg result1 = bkg_img('bg_result_1-inaction')
 image bg result2 = bkg_img('bg_result_2-apprehend')
 image bg result3 = bkg_img('bg_result_3-assist')
 image bg result4 = bkg_img('bg_result_4-diplomacy')
+
 
 
 ####################################################

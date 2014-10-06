@@ -8,7 +8,7 @@ label ck_lorisk:
     show lorisk at char_pos
 
     if plot_state.lorisk_vl_plan_info == InfoGet.SUCCESS:
-        $last_dialog = '[[Thank you so much, $AGENT_FIRST_NAME. I really needed to talk to someone about this. Is there anything you still want to ask?]'
+        $last_dialog = '[[Thank you so much, ' + alias.first + '. I really needed to talk to someone about this. Is there anything you still want to ask?]'
         lorisk '[last_dialog]'
         jump menu_lorisk
 
@@ -18,7 +18,7 @@ label ck_lorisk:
         return
 
     if plot_state.lorisk_met:
-        $last_dialog = '[Hello again, $AGENT_FIRST_NAME, how can I help you?]'
+        $last_dialog = '[Hello again, ' + alias.first + ', how can I help you?]'
         lorisk '[last_dialog]'
 
     else:

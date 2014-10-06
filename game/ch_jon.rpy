@@ -13,13 +13,13 @@ label ch_jon:
         return
 
     if plot_state.jon_met:
-        $ last_dialog = 'Hello again, $ALIAS_FIRST_NAME'
+        $ last_dialog = 'Hello again, [alias.first]'
         jon '[last_dialog]'
 
     else:
         jon'[[typical intro stuff]'
         p '[[Introduce self]'
-        $last_dialog = '[Welcome to Concord, (Mr. or Ms.) $AGENT_LAST_NAME. Let me know if can get you anything.]'
+        $last_dialog = '[Welcome to Concord, [alias.title_last]. Let me know if can get you anything.]'
         jon '[last_dialog]'
 
         $plot_state.jon_met = True

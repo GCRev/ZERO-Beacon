@@ -12,11 +12,11 @@ label ck_vatrisk:
         return
 
     elif plot_state.vatrisk_met:
-        $ last_dialog = "Hello again, $ALIAS_FIRST_NAME, with what may I help you?"
+        $ last_dialog = "Hello again, " + alias.first + ", with what may I help you?"
         vatrisk '[last_dialog]'
 
     else:
-        vatrisk "$AGENT_FIRST_NAME $AGENT_LAST_NAME, welcome to Vivarioss! Or as you may know it, Concord. It is an absolute pleasure to make your acquaintance. 
+        vatrisk "[alias.full], welcome to Vivarioss! Or as you may know it, Concord. It is an absolute pleasure to make your acquaintance. 
         I hope that another bright mind at work can make the cooperation and peace here even more resilient."
 
         p "I am going to do my best."
@@ -123,7 +123,7 @@ label ck_vatrisk:
 
             label vatrisk_VL_inform_tree_no_change:
                 vatrisk '[[But he thinks it\'s best to keep things as they are instead of risking chaos and change.]'
-                $last_dialog = '[thank you for talking to me, (Mr. or Ms.) $AGENT_LAST_NAME.]'
+                $last_dialog = '[thank you for talking to me, ' + alias.title_last + '.]'
                 jump menu_vatrisk
 
             label vatrisk_VL_inform_tree_not_sure:
@@ -155,7 +155,7 @@ label ck_vatrisk:
                 
     label vatrisk_meeting:
 
-        vatrisk "[[Hello, Diplomat $ALIAS_LAST_NAME. How can I help you?]"
+        vatrisk "[[Hello, Diplomat [alias.last]. How can I help you?]"
         p "[[I want to talk about recent political unrest in the city]"
         vatrisk "[[Oh. I see. But I was told you were here to discuss interstellar trade laws.]"
         p "[[I am sorry but that was not true. I'm here to actually discuss the Valak Lideri. I have evidence that your life may be in danger]"

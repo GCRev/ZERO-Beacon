@@ -7,16 +7,16 @@
 label ch_adam:
     show adam at char_pos
     if plot_state.adam_met:
-        $ last_dialog = 'Hello again, $ALIAS_FIRST_NAME. What can I do for you?'
+        $ last_dialog = 'Hello again, ' + alias.first + '. What can I do for you?'
         adam '[last_dialog]'
 
     else:
-        adam "Hello! Or as the kaldreans say \“kevey\”! Welcome to my humble living space and please make yourself comfortable. I\’m always happy to meet new people! I\’m Adam by the way."
-        P "It\’s a pleasure to meet you Adam. I\’m $AGENT_FIRST_NAME $AGENT_LAST_NAME. But if we\’re on a first name basis here you can just call me $AGENT_FIRST_NAME."
-        adam "Likewise, $AGENT_FIRST_NAME. If there is anything I can get you just let me know, or perhaps you just want to ask some questions? 
-        I\’m always open to converse. I haven’t seen you around… are you a new arrival?"
-        P "I am."
-        $ last_dialog =  "Even better! I\’m sure you have some questions about Concord then. Please, ask away"
+        adam "Hello! Or as the kaldreans say \"kevey\"! Welcome to my humble living space and please make yourself comfortable. I'm always happy to meet new people! I'm Adam by the way."
+        p "It's a pleasure to meet you Adam. I'm [alias.full]. But if we're on a first name basis, you can just call me [alias.first]."
+        adam "Likewise, [alias.first]. If there is anything I can get you just let me know, or perhaps you just want to ask some questions? 
+        I'm always open to converse. I haven’t seen you around… are you a new arrival?"
+        p "I am."
+        $ last_dialog =  "Even better! I'm sure you have some questions about Concord then. Please, ask away"
         
         adam '[last_dialog]'
 

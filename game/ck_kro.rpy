@@ -7,13 +7,13 @@
 label ck_kro:
     show kro at char_pos
     if plot_state.kro_met:
-        $last_dialog = "Greetings (Mr. or Ms.) $AGENT_LAST_NAME."
+        $last_dialog = "Greetings, " + alias.title_last + "."
         kro '[last_dialog]'
 
     else:
         kro "Salutations. I am Flight Commander Kro Zalva. Welcome to Vivarioss"
 
-        p "Nice to meet you Commander, I\’m $AGENT_FIRST_NAME $AGENT_LAST_NAME"
+        p "Nice to meet you Commander, I\’m [alias.full]."
 
         $last_dialog = "Likewise. Now, if there is anything you would like to know, please ask. Else move on."
         $plot_state.kro_met = True
@@ -98,13 +98,13 @@ label ck_kro:
             label kro_jon_tree_VL:
                 p '[[Jon mentioned something about VL. Ask Kro about VL.]'
                 kro '[[responds genuinely that she is not familiar with the word\'s meaning. Ask an elder or talk to Lorisk]'
-                $last_dialog = '[If there is anything you need, I am at your service (Mr. or Ms.) $AGENT_LAST_NAME].'
+                $last_dialog = '[[If there is anything you need, I am at your service, ' + alias.title_last + '.]'
                 jump menu_kro
 
             label kro_jon_tree_obsession:
                 p '[[why does obsession worry you?]'
                 kro '[[in my experience, obsessions are the result of a buried information]'
-                $last_dialog = '[If there is anything you need, I am at your service (Mr. or Ms.) $AGENT_LAST_NAME].'
+                $last_dialog = '[[If there is anything you need, I am at your service, ' + alias.title_last + '.]'
                 $plot_state.kro_obsession_info = True
                 jump menu_kro
 
@@ -120,7 +120,8 @@ label ck_kro:
             label kro_VL_tree_idea:
                 p '[[I just need an idea]'
                 lorisk '[[Clearly they are a rebel group with an obsession for change. More info on what she thinks]'
-                $last_dialog = '[Take care what you say, not all will be so willing to speak on sensitive matters. If you require anything further, (Mr. or Ms.) $AGENT_LAST_NAME], Let me know.'
+                $last_dialog = '[Take care what you say, not all will be so willing to speak on sensitive matters. If you require anything further, ' + \
+                    alias.title_full + ', Let me know.]'
                 jump menu_kro
 
 
@@ -128,7 +129,8 @@ label ck_kro:
                 p '[[Who do you think could be a rebel.]'
                 kro '[[Suggest that the people she\'d most expect to be rebels would be Cole (due to his unfortunate experience in the first contact), 
                 Noq (due to his eccentric nature and hate of the military), and Lorisk (due to her general progressive and sympathetic attitude)]'
-                $last_dialog = '[Take care what you say, not all will be so willing to speak on sensitive matters. If you require anything further, (Mr. or Ms.) $AGENT_LAST_NAME], Let me know.'
+                $last_dialog = '[Take care what you say, not all will be so willing to speak on sensitive matters. If you require anything further, ' + \
+                    alias.title_full + ', Let me know.]'
                 jump menu_kro
 
             

@@ -21,7 +21,9 @@ label intro:
     'The peace of Bridge is essential to the peace of the rest of the galaxy. If human-kaldrean 
     relations on the planet break down, then the rest of the galaxy is bound to follow suit.'
 
-    comm 'And this is why I have called you here today, Agent $AGENT_NAME. The great city 
+    hide planet_bridge
+
+    comm 'And this is why I have called you here today, Agent. The great city 
     of Concord has of late been troubled by political unrest. A mysterious group of rebels known 
     as “Valak Lideri” has infiltrated Bridge’s government, and it has come to my attention that 
     the life of the kaldrean High Ambassador is under threat. '
@@ -39,7 +41,21 @@ label intro:
     between order in chaos on Bridge. And if the peace of Bridge should be broken, then it is only a 
     matter of time before the rest of the galaxy falls with it. '
 
-    comm 'Go now, Agent. You have not failed me yet. Do not let this be the first time you do.'
+    comm 'Before you go, you must complete your alias as a diplomat.'
+    python:
+        menu_items = [(gend_to_str(gend), gend) for gend in [Gender.FEM, Gender.MASC, Gender.NEUT]]
+        while True:
+            renpy.say(comm, 'What gender will your alias be?')
+            gender = renpy.display_menu(menu_items)
+            renpy.say(comm, 'And what will your first and last name be?')
+            first = renpy.input('First name: ')
+            last = renpy.input('Last name: ')
+            alias = Alias(gender, first, last)
+            renpy.say(comm, 'So, to confirm, you will be the diplomat [alias.title_full]. Yes?')
+            if renpy.display_menu([("That's correct.", True), ("No; I've changed my mind.", False)]):
+                break
+    comm 'Very good. It is time for you to get going, then, Agent.'
+    comm 'You have not failed me yet. Do not let this be the first time you do.'
 
     scene bg map
 

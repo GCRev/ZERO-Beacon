@@ -8,7 +8,7 @@ label ch_ben:
     show ben at char_pos
     if plot_state.ben_met:
         if plot_state.ben_talk_lida:
-            ben "Good to see you again, $AGENT_FIRST_NAME? Have you spoken with Miss Ezekeri yet?"
+            ben "Good to see you again, [alias.first]. Have you spoken with Miss Ezekeri yet?"
             if plot_state.lida_convinced == InfoGet.NO_ATTEMPT:
                 p "Sorry, I haven\’t done that yet."
                 ben "Take your time. I will be awaiting news of your success."
@@ -35,12 +35,12 @@ label ch_ben:
                 return
 
         else:
-            $ last_dialog = 'How may I be of service $ALIAS_FIRST_NAME?'
+            $ last_dialog = 'How may I be of service ' + alias.first + '?'
             ben '[last_dialog]'
             jump menu_ben
 
     else:
-        ben "I was told we were going to have a new team-member. You must be $AGENT_FIRST_NAME."
+        ben "I was told we were going to have a new team-member. You must be [alias.first]."
         p "That is me."
         ben "Wonderful. I\’m, as you might already know, Ambassador Columbus. But please, just call me Ben. I hope that your time on Concord thus far has been pleasant."
         p "I\t’s a beautiful city."
@@ -54,7 +54,7 @@ label ch_ben:
         p "Of course, but why exactly are you so confident in me? You only met me a few minutes ago."
         ben "I can just tell that you are going to have an impact here - perhaps you don\’t recognize it yet."
         p "I’ll take your word for it. It was nice to meet you, Ben."
-        $last_dialog = "Likewise, $AGENT_FIRST_NAME"
+        $last_dialog = "Likewise, " + alias.first + "."
         $plot_state.ben_met = True
         $plot_state.ben_talk_lida = True
         ben '[last_dialog]'
@@ -112,7 +112,7 @@ label ch_ben:
 
             p "No, I believe you. Thank you for the reassurance, Ben."
 
-            Ben "Not a problem, $AGENT_FIRST_NAME. Is there anything else you would like to know?"
+            Ben "Not a problem, [alias.first]. Is there anything else you would like to know?"
             return
 
         label ben_background:

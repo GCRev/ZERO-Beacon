@@ -7,15 +7,15 @@
 label ch_cole:
     show cole at char_pos
     if plot_state.cole_met:
-        $ last_dialog = "Hey there. How are you faring today (Mr. or Ms.) $AGENT_LAST_NAME?"
+        $ last_dialog = "Hey there. How are you faring today " + alias.title_last + "?"
         cole '[last_dialog]'
 
     else:
         cole "Welcome to my store, what are you looking for today?"
 
-        p "Actually, I just arrived here so I\’m still adjusting to the climate and getting to know people. I\’m $AGENT_FIRST_NAME $AGENT_LAST_NAME. Nice to meet you."
+        p "Actually, I just arrived here so I\’m still adjusting to the climate and getting to know people. I\’m [alias.full]. Nice to meet you."
 
-        $last_dialog = "Nice to meet you too, (Mr. or Ms.) $AGENT_LAST_NAME, and welcome to Concord. If you have any questions or comments, don\’t hesitate to speak up. I\’m always happy to talk."
+        $last_dialog = "Nice to meet you too, " + alias.title_last + ", and welcome to Concord. If you have any questions or comments, don\’t hesitate to speak up. I\’m always happy to talk."
         
         cole '[last_dialog]'
 

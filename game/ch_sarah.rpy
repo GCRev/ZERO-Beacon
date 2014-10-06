@@ -23,7 +23,7 @@ label ch_sarah:
 
 label sarah_arrive:
 
-    sarah "Greetings, $ALIAS_FIRST_NAME. I’m Agent Redmont, but I prefer to stay in character whenever possible, 
+    sarah "Greetings. I’m Agent Redmont, but I prefer to stay in character whenever possible, 
     so call me Sarah. I’ve heard that you’re quite the sharp one."
 
     p "[[Respone; some banter]"

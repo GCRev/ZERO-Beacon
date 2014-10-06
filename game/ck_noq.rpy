@@ -13,7 +13,7 @@ label ck_noq:
         return
 
     if plot_state.noq_met:
-        $ last_dialog = 'Hello again, $ALIAS_FIRST_NAME'
+        $ last_dialog = 'Hello again, ' + alias.first + '.'
         noq '[last_dialog]'
 
     else:
