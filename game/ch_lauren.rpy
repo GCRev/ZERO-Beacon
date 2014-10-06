@@ -11,12 +11,15 @@ label ch_lauren:
         lauren '[last_dialog]'
         
     else:
-        lauren 'Welcome. What do you need?'
-        p '[[Introduce yourself]'
-        lauren 'I\'m Lauren Gray, Manager of Logistics here on Concord [[more canned/dismissive response]'
-        p '[[apologies for what appears to be irritation]'
+        lauren "You must be the recent arrival. My director mentioned you. What was your name, [alias.last]? [alias.full]?"
 
-        $ last_dialog = '[If it\'s not related to job-related matters, then please don\'t bother me. I barely get any time off so I try to make the most of it.]'
+        p "You got it."
+
+        lauren "I\’m Lauren Gray, manager of logistics here."
+
+        p "It\’s a pleasure to meet you."
+
+        $last_dialog = "Right. If you have anything you would like to ask, please be snappy."
         lauren '[last_dialog]'
         $ plot_state.lauren_met = True
 
