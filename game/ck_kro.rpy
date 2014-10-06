@@ -49,8 +49,8 @@ label ck_kro:
         label kro_advice:
             p "Could you offer any advice to someone new to Concord?"
 
-            kro "I will tell you what I have told others before you, and what I was told early on in my training: By choosing to come here you have agreed to change yourself. 
-            You will be judged by a new set of rules and regulations, and who you become will be no one like who you left behind."
+            kro "I will tell you what I have told others before you, and what I was told early on in my training: By choosing to come here you have agreed to change yourself." 
+            kro "You will be judged by a new set of rules and regulations, and who you become will be no one like who you left behind."
 
             p "That seems a little intense."
 
@@ -69,11 +69,13 @@ label ck_kro:
             p "Have you heard about this so-called tension between the humans and kaldreans here?"
 
             kro "I do not spend too much of my operational time actually on Concord, I am simply here for the remainder of the week 
-            as my starship receives routine maintenance. You are likely much better informed that I am on these matters."
+            as my starship receives routine maintenance." 
+            kro "You are likely much better informed that I am on these matters."
 
             p "You\’re probably right."
 
-            kro "Just ask around, if you have heard of these “rumors” then I am sure others have heard the same word. If you have not already talked to Elder Vollk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the residences."
+            kro "Just ask around, if you have heard of these “rumors” then I am sure others have come into contact with the same fleeting words."
+            kro "If you have not already talked to Elder Vollk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the residences."
 
             p "Thanks for the direction."
 

@@ -17,7 +17,7 @@ label ch_adam:
         I'm always open to converse. I haven’t seen you around… are you a new arrival?"
         p "I am."
         $ last_dialog =  "Even better! I'm sure you have some questions about Concord then. Please, ask away"
-        
+
         adam '[last_dialog]'
 
         $ plot_state.adam_met = True
