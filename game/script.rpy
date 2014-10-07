@@ -6,7 +6,9 @@
 
 label start:
     call tests
-    if not skip_intro:
+    if skip_intro:
+        $ alias = Alias(Gender.NEUT, 'Dev', 'Eloper')
+    else:
         call intro
     jump loc_port
 
