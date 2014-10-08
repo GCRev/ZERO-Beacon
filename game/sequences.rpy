@@ -6,7 +6,7 @@
 
 label intro:
 
-    play music "assets/mu_menu.ogg"
+    play music "assets/mu_intro.ogg"
     scene bg stars
     show planet_bridge at Position(xpos = 0.5, ypos = 0.75)
 
