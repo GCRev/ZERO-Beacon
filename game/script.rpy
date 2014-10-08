@@ -62,6 +62,7 @@ init -2 python:
         ben_met = False
         ben_kald_govt_info = InfoGet.NO_ATTEMPT
         ben_talk_lida = False
+        ben_trust = TrustLevel.MEDIUM
 
     #Cole's flags
         cole_met = False

@@ -66,7 +66,7 @@ label sarah_kald_govt_info:
             p "I didn't have the same luck with him... he wasn't willing to tell me anything of use."
             sarah "Hmmm, that is unfortunate. At least we have something, though."
     else:
-        p "I wasn't able to get any information from Ambassador Columbus, unfortunately."
+        p "Ambassador Columbus wasn't willing to give me any in-depth information, unfortunately."
         sarah "Yes, that is very unfortunate. I assume you had better luck with Vatrisk, at least?"
         if plot_state.vatrisk_kald_govt_info == InfoGet.SUCCESS:
             p "Yes, I did."

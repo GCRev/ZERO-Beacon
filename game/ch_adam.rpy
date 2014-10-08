@@ -28,7 +28,7 @@ label ch_adam:
             'Ask for advice':
                 call adam_advice
             'Ask about opinions on recent events':
-                call Radam_events
+                call adam_events
             'Ask about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
                 jump adam_VL_tree_start
             'Ask about background' if plot_state.stage == PlotStage.VL_INFO:
