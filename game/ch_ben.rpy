@@ -30,6 +30,8 @@ label ch_ben:
                 call ben_ask_kald_govt
             "Ask about his day" if plot_state.stage == PlotStage.KALD_GOVT_INFO  and plot_state.ben_kald_govt_info != InfoGet.SUCCESS and plot_state.ben_talk_lida == False:
                 call ben_ask_day
+            "Ask about Ben's past":
+                call ben_Bg
             "Mention Lida" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.ben_kald_govt_info != InfoGet.SUCCESS  and plot_state.ben_talk_lida == True:
                 call ben_mention_lida
             "Done talking":
@@ -80,7 +82,6 @@ label ch_ben:
                     $ plot_state.ben_talk_lida = False
         return
 
-
     label ben_ask_day:
         p "How has your day been, Ambassador?"
         ben "Quite frustrating, actually."
@@ -95,16 +96,23 @@ label ch_ben:
 
             "Okay":
                 p "Well, that is quite unfortunate."
+                
                 $ last_dialog = "It certainly is. Is there anything else I can help you with?"
+          
             "Offer to try to persuade her":
+          
                 p "Is it possible she would be more willing to listen to a newcomer such as myself?"
-
+    
                 ben "Hmmm... what a novel idea. Yes, why don't you try to persuade her? I would be most appreciative of the favor."
+
                 ben "Now that I think of it, I'm confident you'll be able to persuade her to meet with me. You'll find Ms. Ezekeri in the kaldrean embassy.
+
                 Tell her that I need to discuss the new trade regulations with her."
 
                 p "Of course, but why exactly are you so confident in me? You only met me a few minutes ago."
+
                 ben "I can just tell that you are going to have an impact here - perhaps you don\'t recognize it yet."
+
                 p "I'll take your word for it."
 
                 $ last_dialog = "Before you leave, is there anything else you'd like to ask?"
@@ -113,24 +121,57 @@ label ch_ben:
 
     label ben_mention_lida:
         ben "Have you spoken to Ms. Ezekeri in kaldrean embassy yet?"
+
         if plot_state.lida_convinced == InfoGet.NO_ATTEMPT:
+
             p "Sorry, I haven\'t done that yet."
+
             ben "Take your time. I will be awaiting news of your success."
+
         elif plot_state.lida_convinced == InfoGet.FAIL:
+
             p "I did talk to her but..."
+
             ben "Let me guess: she was too difficult."
+
             p "Unfortunately, yes."
-            $ last_dialog = "Well, thank you for trying at any rate. Is there anything else you would like to ask me?"
+
+            $ last_dialog = "Well, thank you for trying at any rate. Perhaps we’ll talk about that information another time. Until then, is there anything else you would like to ask me?"
+
             $ plot_state.ben_kald_govt_info = InfoGet.FAIL
+
         elif plot_state.lida_convinced == InfoGet.SUCCESS:
+
             p "I did, and she has decided to meet with you."
+
             ben "That is wonderful news! I knew that you could pull this off, [alias.first]."
+
             ben "Ah yes, she has sent me a message accepting my latest request."
+
             ben "Thank you very much for your help, [alias.first]. I will remember your helpfulness."
-            $ last_dialog = "Now, is there anything I can help you with?"
+
+            ben "So I believe that mean I owe you some information. However, let me be absolutely clear with you, 
+            what affects the kaldrean government does not necessarily affect us out here on Bridge."
+
+            p "I'm listening."
+
+            ben "The kaldrean government on Qolisk is a tad… shall we say, controlling. Have you read Vel Kerriss’ Dystopia?"
+
+            p "I can't say that I have"
+
+            ben "It was a controversial kaldrean novel that made it past the government’s censors and was widely read and lauded as one of the greatest works of literature to date." 
+
+            ben "It may remind you of Fahrenheit 451 by Ray Bradbury. Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to give back in other ways."
+
+            ben "They have the highest standards of living I have ever seen, crime rates are low, there are no apparent problems."
+
+            p "But they are blissfully ignorant."
+
+            ben "You could say that, yes. I think that about covers their situation without distorting the truth. Is there anything else you would like to ask me?"
+
+            $ last_dialog = "You could say that, yes. I think that about covers their situation without distorting the truth. Is there anything else you would like to ask me?"
             $ plot_state.ben_trust = TrustLevel.HIGH
         return
-
 
     label ben_advice:
         p "What advice can you offer, from one diplomat to another?"
@@ -170,4 +211,14 @@ label ch_ben:
         p "No, I believe you. Thank you for the reassurance, Ben."
 
         $ last_dialog = "Not a problem, [alias.first]. Is there anything else you would like to know?"
+        return
+
+    label ben_Bg:
+        p "Tell me about yourself"
+
+        ben "There is not much to tell. I was born and raised here in this beautiful city and grew up inspired by the previous human and kaldrean ambassadors." 
+        
+        ben "After graduate school I went into politics and I suppose you know how that turned out."
+
+        $ last_dialog = "Anything else I can help you with today?"
         return
