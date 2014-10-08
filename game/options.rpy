@@ -14,6 +14,7 @@ init -1 python hide:
     ## cheat using developer tools.
 
     config.developer = True
+    config.rollback_enabled = config.developer
 
     ## These control the width and height of the screen.
 
@@ -44,10 +45,10 @@ init -1 python hide:
         ## Color scheme: Phone Operator
 
         ## The color of an idle widget face.
-        widget = "#59667a",
+        widget = "#000000",
 
         ## The color of a focused widget face.
-        widget_hover = "#343e4d",
+        widget_hover = "#000033",
 
         ## The color of the text in a widget.
         widget_text = "#ffffff",
