@@ -2,7 +2,7 @@
 # Beacon
 # ZERO Studios
 # Kyle McCormick, Graham Held, Garrett Holman
-# Dialog for 
+# Dialog for Lorisk Nideria Kol
 
 label ck_lorisk:
     show lorisk at char_pos
@@ -30,7 +30,7 @@ label ck_lorisk:
             lorisk '[last_dialog]'
             "Ask for advice":
                 call lorisk_advice
-            "Ask about her opinion on recent events:
+            "Ask about her opinion on recent events":
                 call lorisk_events
             'Ask about her background' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_VL_tree_start
@@ -44,14 +44,14 @@ label ck_lorisk:
         jump menu_lorisk
 
         label lorisk_advice:
-            p 'Do you have any advice —'
+            p 'Do you have any —'
             lorisk 'Advice? Always!'
             p 'How did you —'
            
             lorisk "I talk to and interpret people for a living. You\'d find that after doing something like that for so long,
             you develop an intuition to predict what someone is going to say."
             lorisk "Anyway, I\'ll tell you that acceptance is a big deal here. The more you find yourself seeing through someone\'s skin and into their
-            being, the more your definition of \"person\" will change. 
+            being, the more your definition of \"person\" will change." 
             lorisk "While you may recognize someone as kaldrean in passing, when you get to know 
             them you begin to identify them based on their presence in the room, their cadence of speech, the energy they project."
 
