@@ -12,7 +12,7 @@ label ck_vatrisk:
         return
 
     elif plot_state.vatrisk_met:
-        vatrisk "Hello again, " + alias.first + ", with what may I help you?"
+        vatrisk "Hello again, [alias.first], with what may I help you?"
         p "I am doing well. I actually have a few more questions for you, if you have the time."
         $ last_dialog = "Yes, of course. What do you need?"
         vatrisk '[last_dialog]'

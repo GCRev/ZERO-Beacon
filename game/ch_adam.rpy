@@ -79,9 +79,19 @@ label ch_adam:
             return
 
         label adam_alkay_dialog:
-            p '[[Alkay sent me]'
-            adam '[[enthusiastic. Launches into a story about how they met. More information. Specifically mentions Alkay\'s sacrifices to go against his leaders and stop the fighting.]'
-            $last_dialog = '[is there anything else I can help you with?]'
+            p 'Actually, Alkay wanted me to talk to you.'
+            adam 'Yes, of course, any friend of Alkay is a friend of mine! What would you like to know, [alias.first]?' 
+            p 'Well, he mentioned a little bit about how you two met, what was your perspective?'
+            adam 'That\'s not something I\'d normally share with strangers, but if Alkay sent you, I\'m sure that I can trust you.'
+            adam 'Where to begin... Ah yes. The operation.'
+            adam 'I\'ll try to keep this as brief as I can so I don\'t bore you to death.'
+            adam 'So I was part of the team that made first contact with the kaldreans. I was and engineer on the TSS Armada. When we first saw the aliens, the whole ship was dead silent for a long time. Seeing another intelligent being was... Wow. I can\'t even describe the emotion.'
+            adam 'But I digress! Anyways, then the fighting broke out. Neither side wanted to fight, but eventually someone pulled the trigger. Attempting to communicate was practically futile because of the language and culture barriers.'
+            adam 'Through the process though, I befriended Alkay. He was one of the first kaldreans to learn the human standard.'
+            adam 'We were practically the emissaries of the time.'
+            adam 'He was taking a huge risk doing this though. He was going against his leaders to try to stop the fighting. It was very brave of him. Some could argue foolish, but either way he was successful and we live in peace because of it.'
+            adam 'Alkay and I have been friends ever since.'
+            $last_dialog = 'Is there anything else I can help you with, today?'
             $ plot_state.adam_alkay_info = InfoGet.SUCCESS
             $ plot_state.alkay_talk_adam = False
             return
