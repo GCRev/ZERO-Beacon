@@ -11,9 +11,19 @@ label ck_alkay:
         alkay '[last_dialog]'
 
     else:
-        alkay '[[Welcome to my humble eatery. You must be a new citizen, [alias.address].]'
-        p '[[Introduce yourself]'
-        $last_dialog = alias.full + '[[, of course! Have a seat, first meal is on the house. We\'ll talk over some good food.]'
+        alkay "Welcome to my humble eatery. Ah! A new face, you must be a new arrival, are you not?"
+
+        p "I am."
+
+        alkay "Of course, of course. I am Alkay Volk, although some affectionately refer to me as \"Uncle Al\", or \"Uncle Klay.\""
+        alkay "You humans have this interesting way of informally incorporating everyone into your families, a custom of which I have become quite fond."
+        alkay "I apologize for running a tangent, I believe I lack your name."
+
+        p "[alias.full]"
+
+        alkay "[alias.first]. It is my pleasure. Please, have a seat. The first meal is always on the house. We\’ll talk over some good food. Feel free to ask me anything."
+        
+        $last_dialog = "Just be wary, I do like to talk and ramble. Stop me if I go off-subject."
         alkay '[last_dialog]'
 
         $ plot_state.alkay_met = True
@@ -44,46 +54,156 @@ label ck_alkay:
         jump menu_alkay
 
         label alkay_advice:
-            p '[[ask Alkay for advice]'
-            alkay 'In my many years... [[and then gives you useful advice]'
+            p "Do you have any pieces of wisdom you would be willing to share?"
+ 
+            alkay "Certainly! In Vivarioss, or \"Concord\" as you know it, and indeed throughout of this wonderful planet there exists an entirely infant world - 
+            and she is still learning to crawl."
+            
+            alkay "I am an old man, and not to \"toot my own horn\" as you humans say, but I have seen my fair share of conflict, 
+            suffering, violence, camaraderie, hope, and strength to know a thing or two about living and breathing creatures."
+            
+            alkay "We are all the same - over simplified and cliché as it may sound."
+
+            alkay "But I have spent many, many years amongst my people, your people, 
+            and the entirely new people that live here on Bridge."
+
+            alkay "They are neither human, nor kaldrean - but something novel, unique, miraculous even."
+
+            p "I\’m not entirely sure I follow."
+            
+            alkay "think of it like this: you are not the same person as your mother and father. You are separate and you are independent."
+            
+            alkay "They gave you life and they brought you up, but ultimately you shape yourself."
+
+            p "But I am still a human."
+             
+            alkay "Ah, but you see, we are still living beings. The people who live here may appear kaldrean or human, 
+            but they are a new people with a new culture."
+
+            alkay "You must be prepared to navigate this place with an open mind -
+            and you must try. I cannot promise that my words will miraculously change you - that takes years."
+            
+            alkay "I simply hope that I can provide you with an idea of what lies ahead."
+
+            p "Of course. Thank you so much."
+
             $last_dialog = '[is there anything else I can help you with?]'
             return
 
         label alkay_events:
-            p '[[ask Alkay about recent events]'
-            alkay '[[Alkay offers you his opinions on recent events]'
-            $last_dialog = '[is there anything else I can help you with?]'
+            p "Have you heard rumors of racial tension here on Concord."
+
+            alkay "When you run a business where it is practically your job to know people, you certainly do have a chance to hear all the talk."
+
+            alkay "So yes, I have heard about this \"tension,\" as you refer to it." 
+            
+            alkay "However, I think that the terminology is all wrong - \"tension\" 
+            comes across so poorly that people are afraid to speak about it… so I commend you [alias.first] for your bravery to broach the subject." 
+            
+            alkay "But this is no ordinary \"tension.\""
+
+            p "You\’re going to have to elaborate, how do you mean this is not simply tension? What more do you think this is?"
+
+            alkay "Its a change. I remember back when our first dark-energy craft were created, how you could smell the ozone and the distinct and 
+            the scent of dark-energy in the atmosphere." 
+
+            alkay "You could feel the drives buzzing like beatles inside your very bones. 
+            The energy became a volume that you were suddenly within."
+
+            alkay "You can feel that energy here - it is not \"tension\" 
+            because that implies that things are pulling apart, but it is union, when you can sense them becoming closer."
+
+            p "Are you always this well-spoken?"
+
+            alkay "Ha! I have had many years to develop that talent. But, I find that I can only really let loose when it is something that I am passionate for."
+
+            p "So you\’re passionate about whatever this \"union\" is that you referred to."
+
+            alkay "Definately. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we\’ve self-imposed."
+
+            p "I see. I\’m grateful for your wise words."
+
+            $last_dialog =  "It was my pleasure. Is there anything else you want to know?"
             return
 
         label alkay_adam_tree_start:
-            p '[[Adam sent me]'
+            p "I talked to Adam Demeter and he said that you would be enthusiastic to meet a friend."
             $ plot_state.alkay_adam_info = InfoGet.SUCCESS
+            
+            alkay "You know Adam? Ha! Any friend of Adam is a friend of mine!"
+
+            alkay "He and I are very close, he frequents my restaurant when he is not working or enjoying is rather comfortable retirement."
+
+            alkay "We go way back as you might already know. Adam does like to talk as much as I do! Anyway we met under rather strange circumstances..."
+
+            alkay "but for his sake, I think I will leave most of that story up to him to tell. His experiences during the conflict were... traumatic."
+
+            p "How do you mean? Was he tortured or did he lose someone close to him?"
+
+            alkay "I wont divulge that information for his sake. He has sole rights to it."
+
+            p "I see."
+
+            alkay "I still have regrets about... nevermind. If our military had been more organized at the 
+            time we could have avoided a great deal of the pain inflicted upon both sides"
+
+            alkay "I fear for the kaldrean people often, especially when I see the triumphs of humanity\'s democratic unions. The thought of Qolisk\'s controllers grinds my plating."
+
+            $last_dialog = "However, like we saw throughout the first contact conflict and the construction of this wonderful city, our future then was bright as it is now."
+            
             menu:
-                alkay '[[enthusiastic. Launches into a story about how they met. More information.]'
+                alkay "[last_dialog]"
                 '[[ask about Alkay\'s bitterness]':
                     jump alkay_adam_tree_bitterness
                 '[[ask about Alkay\'s hopefulness]':
                     jump alkay_adam_tree_hopefulness
 
             label alkay_adam_tree_bitterness:
-                p '[[ask about Alkay\'s bitterness]'
+                p "You seem quite bitter when you refer to Qolisk's government. Why exactly is that?"
+
+                alkay "Bitter... me? You do not know the half of it. During the conflict the government was difficult to say the least."
+
+                alkay "Had I not stepped in when and where I did the conflict would not have ended as it did, and the chances of alliance would be virtually nonexistent." 
+
+                $last_dialog = "Disobedience is dishonorable, but disobeying fundamentally wrong orders is another matter altogether. I chose to do what was right over what was obedient."
+
                 menu:
-                    alkay '[[explains how the kaldrean gov\'t is difficult to deal with. He\'d much rather be in Vivarioss.]'
+                    alkay '[last_dialog]'
                     '[[ask about VL]':
                         jump alkay_adam_tree_bitterness_VL
                     '[[Will things change?]':
                         jump alkay_adam_tree_bitterness_change
 
                 label alkay_adam_tree_bitterness_VL:
-                    p '[[ask about VL]'
-                    alkay '[[Does not think that VL are the terrorists that everyone thinks they are.]'
-                    $last_dialog = '[Is there anything else I can do for you?]'
+                    p "Do you think that the Valak Lideri share a similar viewpoint?"
+                    
+                    alkay "That was an awfully rapid change of subject there, [alias.first]."
+
+                    p "I\'m just trying to get a better idea. From what I\'ve heard the Valak Lideri are a threat - so naturally that has me asking questions."
+
+                    alkay "I understand. Everyone calls the Valak Lideri a threat and a group of dangerous terrorists with terrorist intent."
+
+                    alkay "While this may have some basis in reality I feel we are misrepresenting them. Like most rebellious groups they have a cause and they are willing to fight for it."
+
+                    alkay "Although, the manner with which they desire to accomplish their goals is questionable. But sometimes, we have to make concessions to serve a greater purpose."
+
+                    p "Right. If we didn\'t then there wouldn\'t be any progress. Thank you for answering my questions Alkay."
+
+                    $last_dialog = "It was my pleasure "+alias.first+". Is there anything else you would like to know?"
                     jump menu_alkay
 
                 label alkay_adam_tree_bitterness_change:
-                    p '[[Will things change?]'
-                    alkay '[[With resolve. They must and they will.]'
-                    $last_dialog = '[I think we are close. Now, is there anything else I can do for you?]'
+                    p "Do you think things are about to change?"
+                    
+                    alkay "I know what you mean, despite how general that question was. Yes, change is inevitable - great change. 
+                    When Concord was Constructed they literally had to move mountains."
+
+                    alkay "This place is capable of what can only be called miracles - when that kind of power is 
+                    condensed into a single point, there is no stopping its impetus."
+                    
+                    p "With conviction like that you should probably be doing my job."
+
+                    $last_dialog = "Ha. I'm much happier here than I have ever been. Do you have any other questions you would like me to consider?"
                     jump menu_alkay
 
             label alkay_adam_tree_hopefulness:
