@@ -13,15 +13,16 @@ label ck_noq:
         return
 
     if plot_state.noq_met:
-        $ last_dialog = 'Hello again, ' + alias.first + '.'
+        $ last_dialog = 'Kevey, ' + alias.title_last + '. Please make your questions quick.'
         noq '[last_dialog]'
-
     else:
-        noq'[[Yes?]'
-        p '[[Introduce self]'
-        $last_dialog = '[Very good. Now please be snappy. I am very busy at the moment.]'
+        noq "Yes?"
+        p "I\'m [alias.full]. Nice to meet you."
+        noq "Very good. Now please be snappy. I am very busy at the moment."
+        p "Alright. I simply wanted to—"
+        $ last_dialog = "My apologies for my irritability. I have to meet deadlines; I wish I had more time to talk. \
+        If you have any questions just make them quick." 
         noq '[last_dialog]'
-
         $plot_state.noq_met = True
 
     label menu_noq:
@@ -45,9 +46,12 @@ label ck_noq:
         jump menu_noq
 
         label noq_advice:
-            p '[[you ask Noq for advice]'
-            noq '[[offers his advice]'
-            $last_dialog = '[I really am quite busy. I would appreciate it if you returned later.]'
+            p "Would you mind sharing some advice?"
+            noq "Normally I wouldn\'t, but right now I am very busy. I have a deadline that I need to meet and right now I\'m in the zone."
+            p "Perhaps later then."
+            noq "Perhaps"
+            p "Alright"
+            $last_dialog = 'So?'
             return
 
         label noq_events:

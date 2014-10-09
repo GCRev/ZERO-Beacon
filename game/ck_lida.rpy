@@ -68,7 +68,7 @@ label ck_lida:
 
 
             label lida_convince_tree_flatter:
-                lida '[[you convinced me… very nice]'
+                lida '[[you convinced me... very nice]'
                 $plot_state.lida_convinced = InfoGet.SUCCESS
                 $last_dialog = '[Your respects are kind.]'
                 jump menu_lida

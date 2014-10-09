@@ -25,7 +25,7 @@ label intro:
 
     comm 'And this is why I have called you here today, Agent. The great city 
     of Concord has of late been troubled by political unrest. A mysterious group of rebels known 
-    as “Valak Lideri” has infiltrated Bridge’s government, and it has come to my attention that 
+    as \"Valak Lideri\" has infiltrated Bridge\'s government, and it has come to my attention that 
     the life of the kaldrean High Ambassador is under threat. '
 
     comm 'On this assignment, you shall travel to Concord. You will act under alias a diplomat, 

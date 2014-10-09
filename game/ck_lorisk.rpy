@@ -2,55 +2,61 @@
 # Beacon
 # ZERO Studios
 # Kyle McCormick, Graham Held, Garrett Holman
-# Dialog for 
+# Dialog for Lorisk Nideria Kol
 
 label ck_lorisk:
     show lorisk at char_pos
 
     if plot_state.lorisk_vl_plan_info == InfoGet.SUCCESS:
         $last_dialog = '[[Thank you so much, ' + alias.first + '. I really needed to talk to someone about this. Is there anything you still want to ask?]'
-        lorisk '[last_dialog]'
         jump menu_lorisk
-
     if plot_state.lorisk_vl_plan_info == InfoGet.FAIL:
-        lorisk '[[I do not want to speak with you again. Take your bigotry elsewhere.]'
+        lorisk 'I do not wish to speak with you again. Take your bigotry elsewhere.'
         hide lorisk
         return
 
     if plot_state.lorisk_met:
-        $last_dialog = '[Hello again, ' + alias.first + ', how can I help you?]'
-        lorisk '[last_dialog]'
-
+        $last_dialog = 'Hello again, ' + alias.first + '. How can I help you?'
     else:
-        lorisk '[[happy to see a new face. Greets in several human languages.]'
-        p '[[introduce yourself to lorisk]'
+        lorisk "Hello, hola, ciao, bonjour, nǐ hǎo, konnichiwa, zdravstvuyte. Welcome to Concord!"
+        lorisk "I\'m Lorisk Nidaria, the senior linguist and interpreter here in Concord. But please, just call me Lorisk."
+        p "Nice to meet you, Lorisk. I\'m [alias.full], a recently-deployed diplomat."
         $plot_state.lorisk_met = True
-        $last_dialog = '[still beaming. Introduces herself as a senior linguist and interpreter. Welcomes you to Concord.]'
-        lorisk '[last_dialog]'
+        $last_dialog = "It\'s wonderful to meet you, " + alias.first + "! You probably have questions, so feel free to ask away. I\'m always open to talk."
+    jump menu_lorisk
 
     label menu_lorisk:
         menu:
             lorisk '[last_dialog]'
-
-            '[[ask for advice]':
+            "Ask for advice":
                 call lorisk_advice
-            '[[ask about opinions on events]':
+            "Ask about her opinion on recent events":
                 call lorisk_events
-            '[[Ask about her background]' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask about her background' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_VL_tree_start
-            '[[Ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask about the Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_personal_reasons
-            '[[confront Lorisk about her parents]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.lauren_lorisk_info:
+            'Question her about her parents' if plot_state.stage == PlotStage.VL_PLANS and plot_state.lauren_lorisk_info:
                 jump lorisk_VL_plans_tree_start
-            '[[Done talking]':
+            'Done talking':
                 hide lorisk
                 return
         jump menu_lorisk
 
         label lorisk_advice:
-            p '[[ask lorisk for advice]'
-            lorisk '[[gives you some useful advice]'
-            $last_dialog = '[is there anything else I can help you with?]'
+            p 'Do you have any —'
+            lorisk 'Advice? Always!'
+            p 'How did you —'
+           
+            lorisk "I talk to and interpret people for a living. You\'d find that after doing something like that for so long,
+            you develop an intuition to predict what someone is going to say."
+            lorisk "Anyway, I\'ll tell you that acceptance is a big deal here. The more you find yourself seeing through someone\'s skin and into their
+            being, the more your definition of \"person\" will change." 
+            lorisk "While you may recognize someone as kaldrean in passing, when you get to know 
+            them you begin to identify them based on their presence in the room, their cadence of speech, the energy they project."
+
+            p "I can see what you mean. Thanks for your advice, Lorisk."
+            $last_dialog = 'Any time!'
             return
 
         label lorisk_events:
@@ -60,13 +66,15 @@ label ck_lorisk:
             return
 
         label lorisk_personal_reasons:
-            p '[[ask about VL]'
-            lorisk '[[does not want to talk about them for personal reasons]'
-            $plot_state.lorisk_vl_info = InfoGet.FAIL
+            p 'Can you tell me anything about the Valak Lideri?'
+            lorisk 'Sorry, but for personal reasons, I\'d rather not.'
+            $ last_dialog = 'Is there any thing else I can help you with?'
+            $ plot_state.lorisk_vl_info = InfoGet.FAIL
             jump menu_lorisk
 
         label lorisk_VL_tree_start:
-            p '[[Ask about lorisk\'s background]'
+            p 'You seem like you have quite a bit of interesting knowledge and experience. 
+            Can you tell me more about yourself and your background?'
             menu:
                 lorisk '[[steers the conversation away from her backgrounds. Mentions that her parents were both linguists]'
                 '[[ask about languages]':

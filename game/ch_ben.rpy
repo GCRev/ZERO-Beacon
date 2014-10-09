@@ -69,10 +69,10 @@ label ch_ben:
                 else:
                     ben "On the other hand, you have shown yourself to be a reliable and competent person, so maybe I could share with you some of my 
                     less... popular opinions on the kaldrean governmental system."
-                    p "I’m listening."
-                    ben "The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read Vel Kerriss’ \"Dystopia\"?"
-                    p "I can’t say that I have."
-                    ben "It was a controversial kaldrean novel that made it past the government’s censors and was widely read and lauded as one of the greatest works of literature to date.
+                    p "I\'m listening."
+                    ben "The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read Vel Kerriss\' \"Dystopia\"?"
+                    p "I can\'t say that I have."
+                    ben "It was a controversial kaldrean novel that made it past the government\'s censors and was widely read and lauded as one of the greatest works of literature to date.
                     It may remind you of Fahrenheit 451 by Ray Bradbury. Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to 
                     give back in other ways - they have the highest standards of living I have ever seen, crime rates are low, there are no apparent problems."
                     p "But they are blissfully ignorant."
@@ -136,7 +136,7 @@ label ch_ben:
 
             p "Unfortunately, yes."
 
-            $ last_dialog = "Well, thank you for trying at any rate. Perhaps we’ll talk about that information another time. Until then, is there anything else you would like to ask me?"
+            $ last_dialog = "Well, thank you for trying at any rate. Perhaps we\'ll talk about that information another time. Until then, is there anything else you would like to ask me?"
 
             $ plot_state.ben_kald_govt_info = InfoGet.FAIL
 
@@ -155,11 +155,11 @@ label ch_ben:
 
             p "I'm listening."
 
-            ben "The kaldrean government on Qolisk is a tad… shall we say, controlling. Have you read Vel Kerriss’ Dystopia?"
+            ben "The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read Vel Kerriss\' Dystopia?"
 
             p "I can't say that I have"
 
-            ben "It was a controversial kaldrean novel that made it past the government’s censors and was widely read and lauded as one of the greatest works of literature to date." 
+            ben "It was a controversial kaldrean novel that made it past the government\'s censors and was widely read and lauded as one of the greatest works of literature to date." 
 
             ben "It may remind you of Fahrenheit 451 by Ray Bradbury. Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to give back in other ways."
 
