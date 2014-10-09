@@ -7,13 +7,13 @@
 label ck_kro:
     show kro at char_pos
     if plot_state.kro_met:
-        $last_dialog = "Greetings, " + alias.title_last + "."
+        $ last_dialog = "Greetings, " + alias.title_last + "."
         kro '[last_dialog]'
 
     else:
         kro "Salutations. I am Flight Commander Kro Zalva. Welcome to Vivarioss"
 
-        p "Nice to meet you Commander, I\’m [alias.full]."
+        p "Nice to meet you Commander, I\'m [alias.full]."
 
         $last_dialog = "Likewise. Now, if there is anything you would like to know, please ask. Else move on."
         $plot_state.kro_met = True
@@ -28,9 +28,9 @@ label ck_kro:
                 call kro_flatter
             '[[ask for advice]':
                 call kro_advice
-            '[[ask about opinions on events]' :
+            '[[ask about opinions on events]':
                 call kro_events
-            '[[Ask about her background]' :
+            '[[Ask about her background]':
                 call kro_background
             '[[ask about VL]' if plot_state.stage == PlotStage.VL_PLANS:
                 call kro_VL_tree_start
@@ -60,9 +60,9 @@ label ck_kro:
 
             kro "I have yet to understand."
 
-            p "Well… thank you for your words of advice."
+            p "Well... thank you for your words of advice."
 
-            $last_dialog = '[is there anything else I can help you with?]'
+            $last_dialog = 'Is there anything else I can help you with?'
             return
 
         label kro_events:
@@ -72,10 +72,10 @@ label ck_kro:
             as my starship receives routine maintenance." 
             kro "You are likely much better informed that I am on these matters."
 
-            p "You\’re probably right."
+            p "You\'re probably right."
 
-            kro "Just ask around, if you have heard of these “rumors” then I am sure others have come into contact with the same fleeting words."
-            kro "If you have not already talked to Elder Vollk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the residences."
+            kro "Just ask around, if you have heard of these \"rumors\"" then I am sure others have come into contact with the same fleeting words."
+            kro "If you have not already talked to Elder Volk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the residences."
 
             p "Thanks for the direction."
 

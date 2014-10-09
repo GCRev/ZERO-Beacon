@@ -8,7 +8,7 @@ label ch_jon:
     show jon at char_pos
 
     if plot_state.jon_vl_plan_info == InfoGet.FAIL:
-        jon "Listen buddy. You take your crazy talk elsewhere.]"
+        jon "Listen, buddy. You take your crazy talk elsewhere."
         hide jon
         return
 
