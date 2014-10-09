@@ -170,6 +170,8 @@ label ch_ben:
             ben "You could say that, yes. I think that about covers their situation without distorting the truth. Is there anything else you would like to ask me?"
 
             $ last_dialog = "You could say that, yes. I think that about covers their situation without distorting the truth. Is there anything else you would like to ask me?"
+            
+            $ plot_state.ben_kald_govt_info = InfoGet.SUCCESS
             $ plot_state.ben_trust = TrustLevel.HIGH
         return
 

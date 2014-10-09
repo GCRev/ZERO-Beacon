@@ -203,7 +203,7 @@ label ck_alkay:
                     
                     p "With conviction like that you should probably be doing my job."
 
-                    $last_dialog = "Ha. I'm much happier here than I have ever been. Do you have any other questions you would like me to consider?"
+                    $last_dialog = "Ha. I'm much happier here in my restaurant than I have ever been. Do you have any other questions you would like me to consider?"
                     jump menu_alkay
 
             label alkay_adam_tree_hopefulness:
