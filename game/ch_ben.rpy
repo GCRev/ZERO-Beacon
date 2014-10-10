@@ -73,8 +73,10 @@ label ch_ben:
                     ben "The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read Vel Kerriss\' \"Dystopia\"?"
                     p "I can\'t say that I have."
                     ben "It was a controversial kaldrean novel that made it past the government\'s censors and was widely read and lauded as one of the greatest works of literature to date.
-                    It may remind you of Fahrenheit 451 by Ray Bradbury. Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to 
-                    give back in other ways - they have the highest standards of living I have ever seen, crime rates are low, there are no apparent problems."
+                    It may remind you of Fahrenheit 451 by Ray Bradbury."
+                    ben "Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to 
+                    give back in other ways."
+                    ben "They have the highest standards of living I have ever seen, crime rates are low, there are no apparent problems."
                     p "But they are blissfully ignorant."
                     ben "You could say that, yes. I think that about covers their situation without distorting the truth."
                     $ last_dialog = "Is there anything else you would like to ask me?"
@@ -117,7 +119,7 @@ label ch_ben:
 
                 $ last_dialog = "Before you leave, is there anything else you'd like to ask?"
                 $ plot_state.ben_talk_lida = True
-                return
+        return
 
     label ben_mention_lida:
         ben "Have you spoken to Ms. Ezekeri in kaldrean embassy yet?"
@@ -149,29 +151,7 @@ label ch_ben:
             ben "Ah yes, she has sent me a message accepting my latest request."
 
             ben "Thank you very much for your help, [alias.first]. I will remember your helpfulness."
-
-            ben "So I believe that mean I owe you some information. However, let me be absolutely clear with you, 
-            what affects the kaldrean government does not necessarily affect us out here on Bridge."
-
-            p "I'm listening."
-
-            ben "The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read Vel Kerriss\' Dystopia?"
-
-            p "I can't say that I have"
-
-            ben "It was a controversial kaldrean novel that made it past the government\'s censors and was widely read and lauded as one of the greatest works of literature to date." 
-
-            ben "It may remind you of Fahrenheit 451 by Ray Bradbury. Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to give back in other ways."
-
-            ben "They have the highest standards of living I have ever seen, crime rates are low, there are no apparent problems."
-
-            p "But they are blissfully ignorant."
-
-            ben "You could say that, yes. I think that about covers their situation without distorting the truth. Is there anything else you would like to ask me?"
-
-            $ last_dialog = "You could say that, yes. I think that about covers their situation without distorting the truth. Is there anything else you would like to ask me?"
-            
-            $ plot_state.ben_kald_govt_info = InfoGet.SUCCESS
+            $ plot_state.ben_talk_lida = False
             $ plot_state.ben_trust = TrustLevel.HIGH
         return
 
