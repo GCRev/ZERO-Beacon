@@ -32,7 +32,7 @@ label ck_lorisk:
                 call lorisk_advice
             "Ask about her opinion on recent events":
                 call lorisk_events
-            'Ask about her background' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask about her background' if plot_state.stage == PlotStage.VL_INFO and not plot_state.lorisk_flatter_offend:
                 jump lorisk_VL_tree_start
             'Ask about the Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_personal_reasons
@@ -76,24 +76,29 @@ label ck_lorisk:
             p 'You seem like you have quite a bit of interesting knowledge and experience. 
             Can you tell me more about yourself and your background?'
             menu:
-                lorisk '[[steers the conversation away from her backgrounds. Mentions that her parents were both linguists]'
-                '[[ask about languages]':
+                lorisk "Well, there isn't much to tell. Both my parents were linguists, and they passed their loves for their
+                profession on to me."
+                "Ask about her love for linguistics":
                     jump lorisk_VL_tree_languages
-                '[[flatter or something]':
-                    jump lorisk_VL_tree_flatter
+                "Flatter her with praise for her passion and intelligence" if not plot_state.lorisk_flatter:
+                    jump lorisk_VL_tree_flatter 
+                "Stop pursing the topic":
+                    p "Interesting."
+                    $ last_dialog = "Anything else you'd like to ask?"
+                    jump menu_lorisk
 
             label lorisk_VL_tree_languages:
-                p '[[ask about languages]'
-                $last_dialog = '[says that she speak a multitude of languages]'
+                p 'So you have love for linguistics?'
+                $ last_dialog = 'Yes!! I speak a multitude of languages.'
                 if plot_state.alkay_vl_info == InfoGet.SUCCESS:
                     menu:
                         lorisk '[last_dialog]'
-                        '[[ask about traditional dialects]':
+                        'Ask about traditional dialects':
                             jump lorisk_VL_tree_dialects
-                        '[[ask about which languages]':
+                        'Ask which ones':
                             jump lorisk_VL_tree_list_languages
                 else:
-                    p '[[ask about which languages]'
+                    lorisk '[last_dialog]'
                     jump lorisk_VL_tree_list_languages  
 
                 label lorisk_VL_tree_dialects:
@@ -113,39 +118,68 @@ label ck_lorisk:
                         jump menu_lorisk
 
                 label lorisk_VL_tree_list_languages:
-                    p '[[ask which languages she speaks]'
+                    p 'Which ones?'
+                    lorisk '(laughs)'
                     menu:
-                        lorisk '[[do you really want me to list off all the languages I speak]'
-                        '[[actually I do]':
-                            jump lorisk_VL_tree_list_all_languages
-                        '[[no, only joking]':
-                            jump lorisk_VL_tree_only_joking
-
-                    label lorisk_VL_tree_list_all_languages:
-                        p '[[actually I do]'
-                        lorisk '[[lists off all modern languages she speaks excluding traditional dialects]'
-                        $last_dialog = '[is there anything else I can help you with?]'
-                        $ plot_state.lorisk_vl_info = InfoGet.FAIL
-                        jump menu_lorisk
-
-                    label lorisk_VL_tree_only_joking:
-                        p '[[I was only joking]'
-                        lorisk '[[laughs with you]'
-                        $last_dialog = '[is there anything else I can help you with?]'
-                        $ plot_state.lorisk_vl_info = InfoGet.FAIL
-                        jump menu_lorisk
+                        lorisk 'Do you really want me to list off all the languages I speak?'
+                        'Yes':
+                            p 'Actually, I do!'
+                            lorisk "Let's see..."
+                            lorisk "English (obviously), "
+                            lorisk "Spanish,"
+                            lorisk "Mandarin,"
+                            lorisk "Chichewa,"
+                            lorisk "Latin,"
+                            lorisk "French,"
+                            lorisk "Japanese,"
+                            lorisk "Nepali,"
+                            lorisk "Hindi,"
+                            lorisk "Italian,"
+                            lorisk "Kaldrean Common,"
+                            lorisk "Ekitri,"
+                            lorisk "Koroa,"
+                            lorisk "Katrs,"
+                            lorisk "Akliko,"
+                            lorisk "Qorosk,"
+                            lorisk "(takes a breath)"
+                            lorisk "Niesk,"
+                            lorisk "Laerek,"
+                            lorisk "Ruas,"
+                            lorisk "Tolaer,"
+                            lorisk "Alkor,"
+                            lorisk "Senteares,"
+                            lorisk "Seleksis,"
+                            lorisk "Qalokalra,"
+                            lorisk "Roaq,"
+                            lorisk "Tarakres,"
+                            lorisk "Viridi,"
+                            lorisk "Irradae,"
+                            lorisk "and... Elvish. Just for fun."
+                            "(you both laugh)"
+                            p "Wow, that's quite an impressive repertoire!"
+                            $ last_dialog = "Why thank you. Anything else I can help you with?"
+                        'No, thanks':
+                            p 'On second thought, I\'ll pass.'
+                            '(you both laugh together)'
+                    $ last_dialog = 'Is there anything else I can help you with?'
+                    $ plot_state.lorisk_vl_info = InfoGet.FAIL
+                    jump menu_lorisk
 
             label lorisk_VL_tree_flatter:
-                p '[[try to charm her]'
+                p "I can tell. There aren't many people I've met as smart and passionate as you."
                 $ plot_state.lorisk_flatter = True
+                lorisk "(laughs)"
                 menu:
-                    lorisk '[[finds your attempts to flatter adorable but does not offer any info]'
-                    '[[pursue more flattery]':
-                        lorisk '[[Alright, that\'s enough. Come back when you\'ve calmed down some.]'
+                    lorisk "Why thank you, [alias.first]. You\'re quite the charmer, aren\'t you?"
+                    'Mention her radiance and beauty':
+                        p "Well, it's hard not to be a charmer around someone of your radiance and beauty."
+                        lorisk "(sighs)"
+                        lorisk "Alright, it was cute at first, but now I can tell you're just using me."
+                        lorisk "Come back when you've calmed down a bit."
+                        $ plot_state.lorisk_flatter_offend = True
                         hide lorisk
                         return
-
-                    '[[ask about langauges]':
+                    "Ask about her passion for languages":
                         jump lorisk_VL_tree_languages
 
         label lorisk_VL_plans_tree_start:

@@ -5,6 +5,7 @@
 # Main script file
 
 label start:
+    $ plot_state = PlotState() # necessary to initialize this here, because it signals Ren'Py to save plot_state
     call tests
     if skip_intro:
         $ alias = Alias(Gender.NEUT, 'Dev', 'Eloper')
@@ -90,6 +91,7 @@ init -2 python:
     #Lorisk's flags
         lorisk_met = False
         lorisk_flatter = False
+        lorisk_flatter_offend = False
         lorisk_vl_info = InfoGet.NO_ATTEMPT
         lorisk_vl_plan_info = InfoGet.NO_ATTEMPT
 
@@ -144,7 +146,7 @@ init -2 python:
 
 # Non-characters
 define char_pos = Position(xpos = 0.8, xanchor = 'right', ypos = config.screen_height - 150)
-define plot_state = PlotState()
+define plot_state = None
 define skip_intro = False # for debugging only
 define alias = None
 
