@@ -20,8 +20,7 @@ label ck_noq:
         p "I\'m [alias.full]. Nice to meet you."
         noq "Very good. Now please be snappy. I am very busy at the moment."
         p "Alright. I simply wanted to—"
-        $ last_dialog = "My apologies for my irritability. I have to meet deadlines; I wish I had more time to talk. \
-        If you have any questions just make them quick." 
+        $ last_dialog = "My apologies for my irritability. I have to meet deadlines; I wish I had more time to talk. If you have any questions just make them quick." 
         noq '[last_dialog]'
         $plot_state.noq_met = True
 
@@ -55,9 +54,14 @@ label ck_noq:
             return
 
         label noq_events:
-            p '[[you ask Noq his opinion on recent events]'
-            noq '[[A rather uninterested discussion about recent events]'
-            $last_dialog = '[I really am quite busy. I would appreciate it if you returned later.]'
+            p "What do you think about the whole \"tension between kaldreans and humans\" supposedly here on Concord?"
+            
+            noq "Ha. I was not aware of this. But that is probably because I do not pay mind to such matters. Clearly it is so obscure that it is not a real problem."
+
+            p "Alright then. I think that's clear enough. I'll let you get back to work."
+
+            $last_dialog = "I really am quite busy. I would appreciate it if you returned later."
+
             return
 
         label noq_background:
@@ -69,12 +73,33 @@ label ck_noq:
         label noq_designs:
             p '[[you ask Noq about his designs]'
             noq '[[Lightens up and talks for a while about his latest structure.]'
-            $last_dialog = '[It\'s refreshing when someone takes an interest in this stuff. I could talk forever about it.]'
+            $last_dialog = '[It\'s refreshing when someone takes an interest in my work. I could talk forever about it.]'
             return
 
         label noq_VL_tree_start:
-            p '[[you ask Noq about VL]'
-            $last_dialog = '[[Does not know the group or what they want - only that they are going about it all wrong. If they want to accomplish anything, they have to bring down the system from the inside out. Threats are not going to get them anywhere]'
+            p "Would you happen to know anything about the Valak Lideri?"
+
+            noq "You could ask anyone and they would be likely to give you a better answer than I."
+
+            noq "Everyone knows about them just no one knows who they are or what they want. Kind of impractical for what is deemed a \"rebel group\" if you ask me."
+
+            noq "What was their most recent thing? A threat? Are they going to kill someone to make their point? How elementary."
+
+            noq "If they want to accomplish anything, they will have to re-think their strategy."
+
+            noq "All I see right now are tactical decisions - they might work in the short term, but they will fail long term."
+
+            noq "Our government has a strong outer shell but a weak internal structure - they should really focus on that instead."
+
+            p "You seem like you know quite a lot this."
+
+            noq "I dislike our government. But I'll deal with it as long as they no longer force obligations down my throat and then mock me when I am incapable."
+
+            p "I'm sorry I asked."
+
+            noq "Just don't ask. Let's avoid talking about my not-so-spectacular military past."
+
+            $last_dialog = "If you have anything else to say, make it fast. I have to finish up these designs."
             if plot_state.stage == PlotStage.VL_PLANS and plot_state.noq_vl_plan_info == InfoGet.NO_ATTEMPT:
                 menu:
                     noq '[last_dialog]'
@@ -85,8 +110,6 @@ label ck_noq:
                         jump menu_noq
 
             else:
-                noq '[last_dialog]'
-                $last_dialog = '[I really am quite busy. I would appreciate it if you returned later.]'
                 jump menu_noq
 
             label noq_VL_tree_ask_again:
