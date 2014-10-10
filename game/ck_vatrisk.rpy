@@ -12,7 +12,9 @@ label ck_vatrisk:
         return
 
     elif plot_state.vatrisk_met:
-        $ last_dialog = "Hello again, " + alias.first + ", with what may I help you?"
+        vatrisk "Hello again, [alias.first], with what may I help you?"
+        p "I am doing well. I actually have a few more questions for you, if you have the time."
+        $ last_dialog = "Yes, of course. What do you need?"
         vatrisk '[last_dialog]'
 
     else:
@@ -54,29 +56,38 @@ label ck_vatrisk:
         jump menu_vatrisk
 
         label vatrisk_advice:
-            p '[[you ask Vatrisk for advice]'
-            vatrisk '[[offers his advice]'
+            p 'What advice would you have for someone like me?'
+            vatrisk 'I definitely recommend going to Alkay\'s restaurant. You\'d probably know it as Oasis. He makes the most delicious vaska.'
+            p 'Good to know, I\'ll keep that in mind. Anything else you could tell me?'
+            vatrisk 'Don\'t believe everything you hear. I\'ve ran into many liars in my life, and they can destroy people. I\'ve seen good people have their careers get destroyed by a single lie, and I believe it shouldn\'t happen to anyone.'
+            p 'Thank you for the advice.'
+            $ last_dialog = 'Anytime, anything else I can help you with today?'
             return
 
         label vatrisk_events:
-            p '[[you ask Vatrisk his opinion on recent events]'
-            vatrisk '[[A rather politically-minded dodge about those recent events.]'
+            p 'So what\'s your take on all of this tension in the city?'
+            vatrisk 'I can assure you that all of this tension is just plain hype. This is just some people getting used to the different cultures, and they will be used to it soon.'
+            $last_dialog = 'Anything else?'
             return
 
         label vatrisk_background:
-            p '[[you ask Vatrisk on his background]'
-            vatrisk '[[offers little information. Does not sound interested in talking about it.]'
+            p 'What can you tell me about your past?'
+            vatrisk 'Well, I was born and raised on Qolisk, went through school just like everyone else, and joined the military. They had me installed in Concord a few years back and I made my way up the rankings. Not much of a story, but that\'s me.'
             return
 
         label vatrisk_flatter:
-            p '[[I do not think that anyone understands how hard you work to achieve peace here.]'
-            vatrisk '[[Finally someone who understands. Gives you the infos]'
+            p 'I don\'t think that anyone understands how hard you work to achieve peace here.'
+            vatrisk 'Finally someone who understands. It\'s not easy being this kind of leader. Sure, our government is a little strict, but that\'s how it has always been!'
+            vatrisk 'It\'s hard with all of these rules and everything, but it works. Crime rates are low as ever. You wouldn\'t believe how hard it is to balance happiness with safety these days.'
+            $ last_dialog = 'Anyways, what else can I do for you?'
             $plot_state.vatrisk_kald_govt_info = InfoGet.SUCCESS
             return
 
         label vatrisk_intimidate:
-            p '[[Intimidate Vatrisk]'
-            vatrisk '[[Your words have no affect on me. Talk to me when you have calmed down, sir.]'
+            p 'Tell me. Why are you making the government so harsh?'
+            vatrisk 'Excuse me?'
+            p 'You heard me.'
+            $ last_dialog = 'Talk to me when you have calmed down.'
             $plot_state.vatrisk_kald_govt_info = InfoGet.FAIL
             hide vatrisk
             return

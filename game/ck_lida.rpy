@@ -8,13 +8,13 @@ label ck_lida:
     show lida at char_pos
     
     if plot_state.lida_met:
-        lida '[[Yes?]'
-        p '[[Introduce yourself]'
-        $last_dialog = '[Very good, ' + alias.title_last + '. Then is cold and dismissive to you.]'
+        lida 'Yes?'
+        p 'Uh, hello, ma’am. I’m [alias.full]. I -'
+        $last_dialog = 'Very good, ' + alias.title_last + '.  If you wish to converse please be concise. I have neither time nor patience for frivolity.'
         lida '[last_dialog]'
 
     else:
-        $last_dialog = '[Oh, hello again ' + alias.title_last + '. Please be brief.]'
+        $last_dialog = 'Yes, ' + alias.title_last + '. Please be brief.'
         lida '[last_dialog]'
 
     label menu_lida:
@@ -34,8 +34,10 @@ label ck_lida:
         jump menu_lida
 
         label lida_advice:
-            p '[[you ask Lida for advice]'
-            lida '[[offers her advice]'
+            p 'Is there any advice that you could offer me?'
+            lida 'Keep your mouth closed unless you have something intelligent to say.'
+            p 'Alright. Thank you I suppose.'
+            lida 'Anything else?'
             return
 
         label lida_events:
@@ -66,7 +68,7 @@ label ck_lida:
 
 
             label lida_convince_tree_flatter:
-                lida '[[you convinced me… very nice]'
+                lida '[[you convinced me... very nice]'
                 $plot_state.lida_convinced = InfoGet.SUCCESS
                 $last_dialog = '[Your respects are kind.]'
                 jump menu_lida

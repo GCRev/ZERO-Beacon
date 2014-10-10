@@ -8,30 +8,30 @@ label ch_jon:
     show jon at char_pos
 
     if plot_state.jon_vl_plan_info == InfoGet.FAIL:
-        jon "Listen buddy. You take your crazy talk elsewhere.]"
+        jon "Listen, buddy. You take your crazy talk elsewhere."
         hide jon
         return
 
     if plot_state.jon_met:
-        $ last_dialog = "Hello again, "+alias.title_last+". What brings you here?"
+        $ last_dialog = "Hello again, " + alias.title_last + ". What brings you here?"
         jon "[last_dialog]"
 
     else:
-        jon "Give me a moment here… HEY! JANS! GET YOUR PEOPLE ON THE TARMAC ASAP. Sorry. Can I help you [alias.address]?"
+        jon "Give me a moment here... HEY! JANS! GET YOUR PEOPLE ON THE TARMAC ASAP. Sorry. Can I help you [alias.address]?"
 
-        p "I\’m just trying to get to know people here."
+        p "I\'m just trying to get to know people here."
 
-        jon "New to Concord? Welcome. I\’m Jonathan Caise, manager of logistics here at the port."
+        jon "New to Concord? Welcome. I\'m Jonathan Caise, manager of logistics here at the port."
 
         p "[alias.full], diplomat over at the human embassy."
 
         jon "Greenhorn diplomat? Make sure you really take your time to get to know people."
-        jon "I\’ve seen my fair share of people bail and out and leave because Concord is too much a culture shock for them. 
-        But you look like you\’ve got a good head on your shoulders."
+        jon "I\'ve seen my fair share of people bail and out and leave because Concord is too much a culture shock for them. 
+        But you look like you\'ve got a good head on your shoulders."
 
-        p "I\’m determined to leave my footprint here."
+        p "I\'m determined to leave my footprint here."
 
-        $last_dialog = "Good. I like your motivation. Feel free to ask me questions, but I may have to be quick… my work doesn’t often give me breaks."
+        $last_dialog = "Good. I like your motivation. Feel free to ask me questions, but I may have to be quick... my work doesn\'t often give me breaks."
 
         $plot_state.jon_met = True
 
@@ -60,25 +60,25 @@ label ch_jon:
         label jon_advice:
             p "Do you have any advice for a newcomer like me?"
  
-            jon "Hm… I want to say something philosophical but nothing is really coming to me."
+            jon "Hmmm... I want to say something philosophical but nothing is really coming to me."
 
             jon "Basically, if you want to successfully build friendships here, do your research. 
-            If you know someone\’s culture then you’re more likely than not going to find it simpler to talk to them."
+            If you know someone\'s culture then you\'re more likely than not going to find it simpler to talk to them."
              
-            p "And how would I go about this \research?\""
+            p "And how would I go about this \"research?\""
              
-            jon "\I’m not going to pretend that history and culture is everyone\’s cup of \"vaska\" but for me, 
-            it\’s the fascination with it that makes me want to learn more."
+            jon "\I\'m not going to pretend that history and culture is everyone\'s cup of \"vaska\" but for me, 
+            it\'s the fascination with it that makes me want to learn more."
 
             jon "The more you genuinely want to find something out, the more you remember along the way and the more likely you are to recall it later... usually when you need it most."
              
             p "\"Vaska?\""
              
-            jon "Oh, sorry… kaldrean beverage that\’s like tea on Earth. Tea doesn\'t grow here, so we had to find some kind of substitute. Alkay\’s place, Oasis, has some of the best in the city."
+            jon "Oh, sorry... kaldrean beverage that\'s like tea on Earth. Tea doesn\'t grow here, so we had to find some kind of substitute. Alkay\'s place, Oasis, has some of the best in the city."
             
             jon "In general Alkay\'s a good guy to know. If you want some REAL advice, talk to him."
              
-            p "I\’ll be sure to check it out. And thank you for your help."
+            p "I\'ll be sure to check it out. And thank you for your help."
 
             $last_dialog = "No problem. Is there anything else I can help you with?"
             return
@@ -90,15 +90,15 @@ label ch_jon:
 
             p "What do you think about them?"
 
-            jon "I don\’t really. You really just have to put that kind of stuff aside and focus on the task at hand. If I\'m preoccupied then I start to make errors in my work." 
+            jon "I don\'t really. You really just have to put that kind of stuff aside and focus on the task at hand. If I\'m preoccupied then I start to make errors in my work." 
 
             jon "And errors in my field of work are unacceptable." 
 
-            jon "Since I do not have much time outside of my work anyway, I just try to make the most of it. I can\’t really do that if I\’m constantly worried about innocuous small talk."
+            jon "Since I do not have much time outside of my work anyway, I just try to make the most of it. I can\'t really do that if I\'m constantly worried about innocuous small talk."
 
             p "Right, I can certainly agree. Thank you for giving me a moment."
 
-            $last_dialog = "Of course. I’m happy to answer your questions."
+            $last_dialog = "Of course. I\'m happy to answer your questions."
 
             return
 

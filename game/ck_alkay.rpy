@@ -70,7 +70,7 @@ label ck_alkay:
             alkay "They are neither human, nor kaldrean - but something novel, unique, miraculous even."
 
             p "I’m not entirely sure I follow."
-            
+
             alkay "think of it like this: you are not the same person as your mother and father. You are separate and you are independent."
             
             alkay "They gave you life and they brought you up, but ultimately you shape yourself."
@@ -98,7 +98,7 @@ label ck_alkay:
             alkay "So yes, I have heard about this \"tension,\" as you refer to it." 
             
             alkay "However, I think that the terminology is all wrong - \"tension\" 
-            comes across so poorly that people are afraid to speak about it… so I commend you [alias.first] for your bravery to broach the subject." 
+            comes across so poorly that people are afraid to speak about it... so I commend you [alias.first] for your bravery to broach the subject." 
             
             alkay "But this is no ordinary \"tension.\""
 
