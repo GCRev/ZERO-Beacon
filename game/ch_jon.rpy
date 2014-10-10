@@ -108,8 +108,30 @@ label ch_jon:
             return
 
         label jon_hobbies_tree_start:
-            p '[[lies about hobbies]'
-            jon '[[speaks about cultural interests and a little about his past]'
+            p "Do you have any hobbies? I myself am super into collecting cultural relics."
+            
+            jon "You too? I'm into that sort of thing, only I specifically focus on firearms. They fascinate me, especially the older ones."
+
+            jon "None of this new-aged single moving part linear motor type stuff - but the real-deal, mechanically operated weapons from the later 20th and early 21st centuries."
+
+            p "I have picked up a few of those myself, nothing too special though."
+
+            jon "Really, what models?"
+
+            p "Hm... I am still having them identified, but I know one is an ACR."
+
+            jon "What a catch! That is a fine piece of machinery. If you haven't searched around for it's service history and stats then I suggest you do." 
+
+            jon "It's always the history and cultural aspects that interest me the most. The more you have looked into a people's culture and history the more you can understand them."
+
+            p "I take it you have also closely studied the kaldrean weapons as well?"
+
+            jon "Oh yes. Theirs are some of the finest I've ever seen. I wish I could find more on their inventors and histories, but the kaldrean government makes that it's nearly impossible."
+
+            p "And why is that?"
+
+            jon "In literally every instance of a great weapon's conception they bury the people involved in its creation and assume the idea themselves. It irritates me to no end."
+
             menu:
                 '[[pursue topic of disliking kaldrean govt]':
                     jump jon_hobbies_tree_pursue
@@ -118,7 +140,7 @@ label ch_jon:
 
             label jon_hobbies_tree_pursue:
                 p '[[pursue topic of disliking kaldrean govt'
-                jon '[[talks about ho they are corrupt]'
+                jon '[[talks about how they are corrupt]'
                 jump menu_jon
 
             label jon_hobbies_tree_VL:
