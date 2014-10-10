@@ -223,20 +223,26 @@ label ck_vatrisk:
 
             label vatrisk_VL_inform_tree_persuade:
               
-                p '[[Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.]'
+                p 'Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.'
                
-                vatrisk '[[He thinks for a bit, then exclaims, \"It\'s time for me to act.\"]'
+                'He thinks for a long moment.'
+                
+                vatrisk 'You are right. \"It\'s time for me to act.\"]'
 
                 call ending_vatrisk_denounce_govt
                 return
 
         label vatrisk_VL_lure:
            
-            p '[[I will accompany you on your morning walk. We should meet in the center of the grove]'
+            p 'Allow me to accompany you on your morning walk tomorrow. It would be my pleasure.'
            
             if plot_state.vatrisk_trust == TrustLevel.HIGH or plot_state.vatrisk_trust == TrustLevel.VERY_HIGH:
+
+                vatrisk 'Ah, of course my friend. I\'d be happy to show you around my garden.'
+
+                p 'Actually, I was hoping that you could show me around the grove.'
            
-                vatrisk '[[Of course. Ordinarily my guards ask me to stay away from that area, but I trust you.]'
+                vatrisk 'That seems like a lovely place for a walk. Ordinarily my guards ask me to stay away from that area, but I trust you. I will meet you there at 08:00 tomorrow.'
            
                 call ending_vatrisk_lure
            
@@ -244,9 +250,9 @@ label ck_vatrisk:
            
             else:
             
-                vatrisk '[[I am sorry, but I will not be going out tomorrow morning as I will be busy.]'
+                vatrisk 'I am terribly sorry, but I will not be going out tomorrow morning as I will be busy.'
             
-                $last_dialog = '[Again, my apologies. Perhaps another time. Until then, are there any other questions I may answer?]'
+                $last_dialog = 'Perhaps another time. Until then, are there any other questions I may answer?'
             
                 jump menu_vatrisk
                 
