@@ -21,7 +21,7 @@ label ck_alkay:
 
         p "[alias.full]"
 
-        alkay "[alias.first]. It is my pleasure. Please, have a seat. The first meal is always on the house. We\’ll talk over some good food. Feel free to ask me anything."
+        alkay "[alias.first]. It is my pleasure. Please, have a seat. The first meal is always on the house. We’ll talk over some good food. Feel free to ask me anything."
         
         $last_dialog = "Just be wary, I do like to talk and ramble. Stop me if I go off-subject."
         alkay '[last_dialog]'
@@ -69,7 +69,7 @@ label ck_alkay:
 
             alkay "They are neither human, nor kaldrean - but something novel, unique, miraculous even."
 
-            p "I\’m not entirely sure I follow."
+            p "I’m not entirely sure I follow."
             
             alkay "think of it like this: you are not the same person as your mother and father. You are separate and you are independent."
             
@@ -102,7 +102,7 @@ label ck_alkay:
             
             alkay "But this is no ordinary \"tension.\""
 
-            p "You\’re going to have to elaborate, how do you mean this is not simply tension? What more do you think this is?"
+            p "You’re going to have to elaborate, how do you mean this is not simply tension? What more do you think this is?"
 
             alkay "Its a change. I remember back when our first dark-energy craft were created, how you could smell the ozone and the distinct and 
             the scent of dark-energy in the atmosphere." 
@@ -117,11 +117,11 @@ label ck_alkay:
 
             alkay "Ha! I have had many years to develop that talent. But, I find that I can only really let loose when it is something that I am passionate for."
 
-            p "So you\’re passionate about whatever this \"union\" is that you referred to."
+            p "So you’re passionate about whatever this \"union\" is that you referred to."
 
-            alkay "Definately. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we\’ve self-imposed."
+            alkay "Definately. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we’ve self-imposed."
 
-            p "I see. I\’m grateful for your wise words."
+            p "I see. I’m grateful for your wise words."
 
             $last_dialog =  "It was my pleasure. Is there anything else you want to know?"
             return
@@ -147,7 +147,7 @@ label ck_alkay:
             alkay "I still have regrets about... nevermind. If our military had been more organized at the 
             time we could have avoided a great deal of the pain inflicted upon both sides"
 
-            alkay "I fear for the kaldrean people often, especially when I see the triumphs of humanity\'s democratic unions. The thought of Qolisk\'s controllers grinds my plating."
+            alkay "I fear for the kaldrean people often, especially when I see the triumphs of humanity's democratic unions. The thought of Qolisk's controllers grinds my plating."
 
             $last_dialog = "However, like we saw throughout the first contact conflict and the construction of this wonderful city, our future then was bright as it is now."
             
@@ -179,7 +179,7 @@ label ck_alkay:
                     
                     alkay "That was an awfully rapid change of subject there, [alias.first]."
 
-                    p "I\'m just trying to get a better idea. From what I\'ve heard the Valak Lideri are a threat - so naturally that has me asking questions."
+                    p "I'm just trying to get a better idea. From what I've heard the Valak Lideri are a threat - so naturally that has me asking questions."
 
                     alkay "I understand. Everyone calls the Valak Lideri a threat and a group of dangerous terrorists with terrorist intent."
 
@@ -187,7 +187,7 @@ label ck_alkay:
 
                     alkay "Although, the manner with which they desire to accomplish their goals is questionable. But sometimes, we have to make concessions to serve a greater purpose."
 
-                    p "Right. If we didn\'t then there wouldn\'t be any progress. Thank you for answering my questions Alkay."
+                    p "Right. If we didn't then there wouldn't be any progress. Thank you for answering my questions Alkay."
 
                     $last_dialog = "It was my pleasure "+alias.first+". Is there anything else you would like to know?"
                     jump menu_alkay
@@ -207,93 +207,245 @@ label ck_alkay:
                     jump menu_alkay
 
             label alkay_adam_tree_hopefulness:
-                p '[[ask about hopefulness]'
-                alkay '[[explains that things are not as bad as they used to be, and perhaps a great change is on the horizon.]'
-                $last_dialog = '[We are close. Now, is there anything else I can do for you?]'
+                p "You think the future is bright? That is quite the opposite from what I've heard."
+                
+                alkay "I can feel the pressure building - I know I am not the only one who feels it either. 
+                You can sense it in the way that everyone carries themselves."
+
+                alkay "They walk with increasing strength when the sun rises every morning. Their eyes have a new vitality and their voices carry just a little farther."
+
+                alkay "Soon enough, paradigms will shift and changes will sweep over all of us."
+
+                p "Your conviction is inspiring. Thank you for your sincerity. It's not exactly easy to come by."
+                
+                $last_dialog = 'And thank you for your kind words. Now, is there anything else I can do for you?'
                 jump menu_alkay
 
         label alkay_VL_tree_start:
-            p '[[ask about VL]'
+            p "Can you tell me about these \"Valak Lideri?\" I've heard about them but the lack of information makes me uneasy."
             menu:
-                alkay '[[seems perturbed by the question. But answers that he has heard of this group.]'
+                alkay "Yes, well, I HAVE heard of this group. But they are just shadows and whispers. I cannot really offer more than my opinions."
                 '[[What does VL mean?]':
                     jump alkay_VL_tree_translate
                 '[[Ask about kaldrean history]':
                     jump alkay_VL_tree_history
 
             label alkay_VL_tree_translate:
-                p '[[What does VL mean?]'
-                alkay '[[Translates VL for you. Mentions kalaras dialect. Finds it odd that a group should name themselves strangely. Jokes about and won\'t really offer more info]'
+                p "Well, perhaps you could tell me more about the title itself? I am curious to know what it means."
+                
+                alkay "Of course. \"Valak Lideri\" is a very, very old phrase from centuries ago. It is a member of the now-deceased {i}kalaras{/i} dialect.
+                Perhaps it is like your Latin dialect."
+
+                alkay "Literally translated it means \"Sovereign Paradise,\" which is a reference to the settling and construction of Qolisk's capital, Citadel."
+
+                alkay "Personally I find it quite strange that a rebel group should name themselves with such an obscure phrase."
+
+                alkay "It does fit within a modern context so it does not speak to most of the younger, and likely more rebellious crowd."
+
+                p "Thank you for elaborating, Alkay."
+
                 $plot_state.alkay_vl_info = InfoGet.SUCCESS
-                $last_dialog = '[Is there anything else you would like to know?]'
+                $last_dialog = "It was my pleasure "+alias.first+". Is there anything else you would like to ask?"
                 jump menu_alkay
 
             label alkay_VL_tree_history:
-                p '[[Ask about kaldrean history]'
-                alkay '[[explains brief history, leaving out how the capital used to be called \"Beacon.\" Mentions something about a \"sovereign paradise.\"]'
-                $last_dialog = '[Is there anything else you would like to know?]'
+                p "Could you explain some of the kaldrean history? What were some key turning points for the kaldrean people? 
+                I think knowing more about the past could put them into context."
+
+                alkay "That is quite a broad-spectrum question, so I'll do my best to generate a concise answer."
+
+                alkay "Just around two and a half millennia ago the Sovereign Paradise which is the largest fertile region on Qolisk. It was their beacon of hope - the could finally settle in one place."
+
+                p "Like Mesopotamia."
+
+                alkay "Yes, exactly."
+
+                alkay "Following settlement, there was a sustained period of development through which multiple industrial 
+                revolutions occurred and many technological boundaries were broken."
+
+                alkay "Wars were waged, nations rose and fell, but eventually a unified government began to consolidate control."
+
+                alkay "They quickly spread their power and their control through industry and eventually created a planet-wide union."
+
+                alkay "They but blinders on their people and gave them comfortable access to resources to suppress chances of rebellion. The people became complacent."
+
+                alkay "Nothing much has changed since then - a few centuries with a stable, albeit corrupted government. 
+                The advent of first contact has started to change things, however."
+
+                p "I see. So do you think that the Valak Lideri want to overthrow the Qolisk's government?"
+
+                alkay "It is entirely possible. Although that level of ambition is quite absurd."
+
+                p "I agree. Thank you for talking with me, Alkay."
+
+                $last_dialog = "I always have time to talk. Is there anything more you would like to ask me?"
                 jump menu_alkay
 
         label alkay_Bg_tree_start:
-            p '[[ask about Alkay\'s background]'
+            p "So how do you get here Alkay? I can tell that there is more to you than just a humble restaurant owner."
+
+            alkay "Then your perception is sharp, because I do have a rather... colorful history. I used to be a rather high-raking individual in the kaldrean military."
+
+            alkay "Now don't go telling everyone about this but - I was the Superior Commandant of the KAU Forerunner {i}Ardelisk{/i}: the flagship of our fleet."
+
+            alkay "My position was the culmination of a lifetime living in a poor family without a high social status. For my family I worked and stove to reach my ambitious goals."
+
+            alkay "I was and still am the record holder for the youngest Superior Commandant this century."
+
+            p "What does that role entail?"
+
+            alkay "It is like your military's \"general\" rank."
+
+            p "Got it. Sorry for interrupting."
+
+            alkay "Not at all. I would rather you listen and ask questions than check out and pay me no attention. So when the conflict began, none of us wanted to fight."
+
+            alkay "However, misunderstandings between us and within our own ranks resulted in a conflict we had desperately hoped to avoid. And corruption finds it way into everything..."
+
+            alkay "It opened my eyes to see just how infested our own military really was. I began to challenge direct orders in favor of protecting my people and yours."
+
+            p "That's quite commendable."
+
+            alkay "Hah! Commendable? When you are brought up believing that disobedience is the greatest weakness you may possess it was nearly impossible to weight my options."
+
+            alkay "But I could see that times and paradigms were about to change. The men and women under my command supported me."
+
+            alkay "Along with a great deal of help from some of your people like Elder Demeter, we were able to avert complete chaos."
+
+            alkay "Promptly following my service to the military I resigned myself, and decided to become scarce. I wanted to leave behind the government that had lied to me."
+
+            alkay "I spent many, many years surviving by myself. As a result I have picked up some valuable skills and learned some quite valuable lessons."
+
+            p "I can tell. You can clearly read people."
+
+            alkay "Yes. It is one of the skills I take pride in possessing. It is invaluable. I can see that you are learning as well."
+
             menu:
-                alkay '[[smiles and shares his history, clearly leaving something out - corrupt kaldrean gov\'t]'
-                '[[ask about Adam]':
+                alkay "I got a little carried away for a moment there. Is there anything else you would like to ask about?"
+                '[[ask about Elder Demeter]':
                     jump alkay_Bg_tree_adam
                 '[[ask about experiences]':
                     jump alkay_Bg_tree_experiences
 
             label alkay_Bg_tree_adam:
-                p '[[ask about Adam]'
-                alkay '[[mentions that he is a dear friend for many years. Mention my name when you talk to Adam]'
-                $plot_state.alkay_talk_adam  =True
-                $last_dialog = '[He is a good man. What else would you like to know?]'
+                p "I noticed that you mentioned an \"Elder Demeter\"? Who exactly is that?"
+
+                alkay "Ah yes, Adam Demeter as you may or may not know him. We became close friends during the first contact conflict."
+
+                p "\"Elder?\""
+
+                alkay "Once a man or woman reaches a certain age and degree of experience they become an elder. It does not matter whether they are human or kaldrean."
+
+                p "Of course. Please continue."
+
+                alkay "It is thanks to him that the the humans and kadreans are speaking to one another, quite literally. In the time that he was working with us he learned to speak kaldrean common."
+
+                alkay "I, in turn, learned human common. He is a good man and he has endured quite a lot. Quite. I think no one should have to experience what he did."
+
+                if plot_state.alkay_talk_adam == False:
+                    alkay "If you go talk to him tell him I sent you, he will be happy to know what we have met. I advise that you avoid the topic of his past in the conflict, however."
+                    $plot_state.alkay_talk_adam  =True
+
+                $last_dialog = "I think that about covers it. What else would you like to know?"
                 jump menu_alkay
 
             label alkay_Bg_tree_experiences:
-                p '[[ask about experiences]'
-                alkay '[[smiles and shares more history, still leaving out opinions regarding gov\'t.]'
-                $last_dialog = '[What else would you like to know?]'
+                p "You mentioned a period of time after the military where you were on your own? What were you doing?"
+
+                alkay "So after I stepped down from my position of high rank, I stayed with my family and settled them into a more comfortable property and lifestyle."
+
+                alkay "I dumped all the money I had into their accounts and then took my leave into the wilderness of Qolisk, craving escape."
+
+                alkay "I built myself a cabin in a small oasis I discovered and stayed there in complete solitude. I became stronger, smarter, and more intelligent through my meditations."
+
+                p "How did you decide when to stop?"
+
+                alkay "I felt it. The same year that I made my journey back to Citadel was year one of Concord's construction. I was able to secure transportation from Qolisk to Bridge."
+
+                alkay "Once I arrived I found that many of my former subordinates and some of my old friends were working on the Concord project."
+                
+                alkay "Instead of settling down I actually walked to the other edge of the continent and back."
+
+                p "You're pulling my leg."
+
+                alkay "It took me a decade - and as a result we have vital information on the flora and fauna variation that exists on this continent."
+
+                p "That is ridiculous."
+
+                alkay "But it is true. I was offered residence here and helped direct operations until construction was completed. At that point I just... decided to start a restaurant."
+
+                alkay "I have the best location in the marketplace, and I content here in my elder years."
+
+                p "I'm impressed, I can't say I've met anyone else with a history as decorated as yours."
+
+                $last_dialog = "You would be surprised. I think I have about talked your ears off. If you have anything else to ask, I will try to brief."
                 jump menu_alkay
 
         label alkay_VL_plan_sympathy:
-            p '[[show sympathy with VL]'
-            alkay '[[Alkay suspects something is up when you suddenly show support for the VL]'
-            $last_dialog = '[Be careful what you say to others, son. Is there anything else you would like to know?]'
+            p "Listen, Alkay, I think that Valak Lideri is striving for a just cause. The corruption on Qolisk makes me sick if not uneasy."
+
+            alkay "Hmm... you are quite convicted in your assertion there. What changed so quickly?"
+
+            p "I've just, been listening around to these rumors."
+
+            alkay "And why are you coming to me about this?"
+
+            p "You seem like you would have a strong moral alignment with them, based on your opinions about the kaldrean government."
+            
+            alkay "While they do seem to share viewpoints with me, I do not think that I am a good source of information about them."
+            
+            $last_dialog = "Be careful what you say to others, [alias.first], because others might respond quite negatively to your sentiments. Is there anything else you would like to know?"
             $plot_state.alkay_vl_plan_info = InfoGet.FAIL
             return
 
         label alkay_VL_plan_lie:
-            p '[[lie about what you know]'
-            alkay '[[immediately spots your lie and will assume that you are liar. Won\'t give information away to liars]'
+            p "Listen, Alkay, I know what the Valak Lideri is and what they are planning. I want to help."
+            
+            alkay "Perhaps you have ingested some illegal substances, but I see that you are lying. Your voice says one thing but your mind, body, and essence say another."
+
+            alkay "I do not know what has changed so quickly, because it seemed that moments ago you were entirely trustworthy."
+
+            p "That's not-"
+
+            alkay "Come back when you have decided to stop lying through your teeth, [alias.first]."
             $plot_state.alkay_vl_plan_info = InfoGet.FAIL
             hide alkay
             return
 
     label alkay_VL_accuse_tree_start:
-        p '[[accuse Alkay of being involved with VL]'
+        p "Alkay, I can tell that you are part of the Valak Lideri. If there is one thing that I have learned from you, it is how to read people."
+
+        p "You talk big, but you cannot hide your intent from me."
+
         menu:
-            alkay  '[[Alkay begins to speak quieter, but doesn\'t deny being VL straight on. 
-            You must coerce him to give you more information. If successful, you learn the VL\'s assassination plan.]'
+            alkay "That is quite the accusation, [alias.first]. I strongly recommend against going about and riddling this city with accusations. Take care when treading about this subject."
             '[[I\'ve been told what this hardship is like. I want to help things change]':
                 jump alkay_VL_accuse_tree_hardship
             '[[threaten to reveal his intent if he does not tell you his plans]':
                 jump alkay_VL_accuse_tree_threaten
 
         label alkay_VL_accuse_tree_threaten:
-            p '[[threaten to reveal his intent if he does not tell you his plans]'
-            alkay '[[you cannot scare me. Do not make me laugh]'
+            p "Alkay, I will call in authorities if you do not tell what the Valak Lideri are planning to do."
+
+            alkay "Hah! You cannot scare me [alias.first]. Make all the threats you want, I guarantee none are as grave or intense as those I have dealt with previously."
+            
+            alkay "I would like to stay level with you, [alias.first]. I will pretend like you did not just accuse me of terrorist associations."
             $plot_state.alkay_vl_plan_info = InfoGet.FAIL
-            $last_dialog = '[You are holding up the line. Be brief.]'
+            $last_dialog = "If you have any more questions, please be brief - I have a line out the door."
             jump menu_alkay
 
         label alkay_VL_accuse_tree_hardship:
-            p '[[I\'ve been told what this hardship is like. I want to help things change]'
+            p "I have talked with the people here - I know what kind of hardship they are enduring to see things change."
             if plot_state.lorisk_vl_plan_info == InfoGet.SUCCESS:
-                $last_dialog = '[nods in approval, recognizing authenticity. Pauses. I trust you, kid. I can see the spark of change in your eye. By mid morning tomorrow that change will be realized.]'
+                
+                alkay "I trust you, [alias.first]. I can see the spark of change in your eye."
+
+                alkay "The struggle that some face is far greater than you can understand, but I can tell that you know this. I can see that you genuinely want to understand it."
+
+                $last_dialog = "We are approaching the horizon, and by mid morning tomorrow we will cross it. The new day will be wonderful -  it will breathe life into us."
                 jump alkay_VL_accuse_tree_hardship_approval
             else:
-                $last_dialog = '[applauds your apparent passion. Detects that you have no basis for this assertion. Questions you.]'
+                $last_dialog = "I want to believe you, "+alias.first+", but something is irking me about your tone."
                 jump alkay_VL_accuse_tree_hardship_question
 
         label alkay_VL_accuse_tree_hardship_approval:
@@ -305,18 +457,29 @@ label ck_alkay:
                     jump alkay_VL_accuse_tree_hardship_approval_different
 
             label alkay_VL_accuse_tree_hardship_approval_vatrisk:
-                p '[[ask if there is a way to spur revolution without killing Vatrisk]'
-                alkay '[[Chuckles, saying the only way that would ever happen is if Vatrisk came out one day and publicly denounced the kaldrean government. 
-                But that\'s not likely to happen any time this millennium.]'
-                $last_dialog = '[You have my trust. Is there anything else you want to know?]'
+                p "Surely you can accomplish this change without killing the Ambassador."
+
+                alkay "Violence is never a good solution to a problem, but sometimes it is entirely necessary."
+
+                alkay "But honestly, hah, the only way around the his death would be if Vatrisk himself came out and denounced the kaldrean government."
+                
+                alkay "But that is not likely to happen any time this millennium."
+                $last_dialog = "You have my trust, "+alias.first+". Is there anything else you want to know?"
                 $plot_state.alkay_vl_plan_info = InfoGet.SUCCESS
                 jump menu_alkay
 
             label alkay_VL_accuse_tree_hardship_approval_different:
-                p '[[if you could do it differently how would you?]'
-                alkay '[[You cannot solve problems effectively by simply shooting your way through it. You can only solve them quickly. 
-                We have no choice now, but in my years of experience, even the deepest wounds are healed when words close wars]'
-                $last_dialog = '[You have my trust. Is there anything else you want to know?]'
+                p "If you could go about this whole... situation differently how would you?"
+
+                alkay "You cannot solve problems effectively by simply shooting your way through it. You can only solve them quickly."
+                
+                alkay "We have no choice now, but in my years of experience, even the deepest wounds are healed when words close wars."
+
+                p "But sometimes..."
+
+                alkay "...we have to make concessions when faced with the greater good. We have no choice, and no amount of hoping things were different can make them change."
+
+                $last_dialog = "You have my trust. Is there anything else you want to know in the meantime?"
                 $plot_state.alkay_vl_plan_info = InfoGet.SUCCESS
                 jump menu_alkay
 
@@ -329,25 +492,36 @@ label ck_alkay:
                     jump alkay_VL_accuse_tree_hardship_embellishing
 
             label alkay_VL_accuse_tree_hardship_embellishing:
-                p '[[admit that you were embellishing, but pursue the change]'
+                p "Alright I admit that I was embellishing the truth a little. I still want to see this change through, however. I can tell that we are close to accomplishing this goal."
+
                 menu:
-                    alkay '[[Believes you, but requires further convincing.]'
+                    alkay "I believe you, [alias.first], but your conviction falters. You are playing at the edge of the fire here on a scale you cannot possibly understand yet."
                     '[[trust me when I say this is important to me]':
                         jump alkay_VL_accuse_tree_hardship_embellishing_important
                     '[[you don\'t have to believe me. But I AM on speaking terms with Irridiss. That is a fact.]':
                         jump alkay_VL_accuse_tree_hardship_embellishing_irridiss
 
                 label alkay_VL_accuse_tree_hardship_embellishing_irridiss:
-                    p '[[you don\'t have to believe me. But i AM on speaking terms with Irridiss]'
-                    alkay '[[Alkay: laughs. I suppose you know then that the Ambassador always takes a stroll through the grove at sunrise. 
-                    Sometimes we talk. Now be on your way. I have a line out the door]'
-                    $last_dialog = '[You have my trust. Is there anything else you want to know?]'
+                    p "Alright then, I won't pretend that I can understand just how vast and important this change is. That does not change the fact that I'm on speaking terms with Irridiss."
+                    
+                    alkay "Then I suppose you know  that the Ambassador always takes a stroll through the grove at sunrise?
+                    Sometimes we talk."
+
+                    p "I see."
+
+                    $last_dialog = "Now be on your way; I have a line out the door. If you have any more questions I will do my best to be quick."
                     $plot_state.alkay_vl_plan_info = InfoGet.SUCCESS
                     jump menu_alkay
 
                 label alkay_VL_accuse_tree_hardship_embellishing_important:
-                    p '[[trust me when I say this is important to me]'
-                    alkay '[[It is important to us too. That does not suddenly gain you access a change you cannot comprehend.]'
-                    $last_dialog = '[Keep your head down. Is there anything else you want to know?]'
+                    p "I have invested myself in this cause, Alkay. This is important to me. Trust me when I say I want to help Valak Lideri bring about this revolution."
+                    
+                    alkay "It is important to us too. That does not suddenly gain you access a change you cannot comprehend. A few days on Concord is not long enough to grasp it."
+
+                    p "What does that even mean? You aren't even giving me chance!"
+
+                    alkay "Anger will not improve your chances of convincing me, [alias.first]. I do not know you well-enough to believe that you can simply \"understand\" on command."
+
+                    $last_dialog = "So keep your head down and allow time to pass. In the meantime if you have any more questions feel free to ask."
                     $plot_state.alkay_vl_plan_info = InfoGet.FAIL
                     jump menu_alkay
