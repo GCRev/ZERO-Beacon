@@ -32,97 +32,159 @@ label ck_vatrisk:
     label menu_vatrisk:
         menu:
             vatrisk '[last_dialog]'
-            '[[ask for advice from Vatrisk]':
+            'Ask Vatrisk for advice':
                 call vatrisk_advice
-            '[[ask Vatrisk his opinions on recent events]':
+            
+            'Ask Vatrisk about his opinion on recent events':
                 call vatrisk_events
-            '[[ask Vatrisk about his background]':
+            
+            'Ask about Vatrisk\'s background':
                 call vatrisk_background
-            '[[flatter]' if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
+            
+            'Flatter Vatrisk for information' if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
                 call vatrisk_flatter
-            '[[bribe]' if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
+            
+            'Bribe Vatrisk for information' if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
                 jump vatrisk_bribe
-            '[[intimidate/lie/something]' if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
+            
+            'Intimidate Vatrisk for information' if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
                 jump vatrisk_intimidate
-            '[[Tell him about VL and why they want to kill him]' if plot_state.stage == PlotStage.VL_PLANS:
+            
+            'Inform Vatrisk of the Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS:
                 jump vatrisk_VL_inform_tree_start
-            '[[Suggest that he publicly denounce kaldrean government]' if plot_state.stage == PlotStage.VL_PLANS:
+            
+            'Suggest that Vatrisk publicly denounce kaldrean government' if plot_state.stage == PlotStage.VL_PLANS:
                 jump vatrisk_VL_denounce
-            '[[Offer to join him when he goes for his walk in the grove.]' if plot_state.alkay_vl_plan_info == InfoGet.SUCCESS:
+            
+            'Attempt to lure Vatrisk to assassination' if plot_state.alkay_vl_plan_info == InfoGet.SUCCESS:
                 jump vatrisk_VL_lure
-            '[[done talking to Vatrisk]':
+            
+            'Done talking to Vatrisk':
                 hide vatrisk
                 return
         jump menu_vatrisk
 
         label vatrisk_advice:
+            
             p 'What advice would you have for someone like me?'
+            
             vatrisk 'I definitely recommend going to Alkay\'s restaurant. You\'d probably know it as Oasis. He makes the most delicious vaska.'
+            
             p 'Good to know, I\'ll keep that in mind. Anything else you could tell me?'
+            
             vatrisk 'Don\'t believe everything you hear. I\'ve ran into many liars in my life, and they can destroy people. I\'ve seen good people have their careers get destroyed by a single lie, and I believe it shouldn\'t happen to anyone.'
+            
             p 'Thank you for the advice.'
+            
             $ last_dialog = 'Anytime, anything else I can help you with today?'
+            
             return
 
         label vatrisk_events:
+            
             p 'So what\'s your take on all of this tension in the city?'
+            
             vatrisk 'I can assure you that all of this tension is just plain hype. This is just some people getting used to the different cultures, and they will be used to it soon.'
+            
             $last_dialog = 'Anything else?'
             return
 
         label vatrisk_background:
+            
             p 'What can you tell me about your past?'
+            
             vatrisk 'Well, I was born and raised on Qolisk, went through school just like everyone else, and joined the military. They had me installed in Concord a few years back and I made my way up the rankings. Not much of a story, but that\'s me.'
+            
             return
 
         label vatrisk_flatter:
+            
             p 'I don\'t think that anyone understands how hard you work to achieve peace here.'
+            
             vatrisk 'Finally someone who understands. It\'s not easy being this kind of leader. Sure, our government is a little strict, but that\'s how it has always been!'
+            
             vatrisk 'It\'s hard with all of these rules and everything, but it works. Crime rates are low as ever. You wouldn\'t believe how hard it is to balance happiness with safety these days.'
+            
             $ last_dialog = 'Anyways, what else can I do for you?'
             $plot_state.vatrisk_kald_govt_info = InfoGet.SUCCESS
             return
 
         label vatrisk_intimidate:
+            
             p 'Tell me. Why are you making the government so harsh?'
+            
             vatrisk 'Excuse me?'
+            
             p 'You heard me.'
+            
             $ last_dialog = 'Talk to me when you have calmed down.'
             $plot_state.vatrisk_kald_govt_info = InfoGet.FAIL
             hide vatrisk
             return
 
         label vatrisk_bribe:
-            p '[[I will sex you if you give me info]'
+            p 'Here, a gift from our embassy to yours.'
+            'You give Vatrisk a lot of money in attempt to bribe him for the truth.'
+            
             if plot_state.high_emb_tried_bribe:
-                vatrisk '[[I know your type. Bribes cannot phase me.]'
+                $ last_dialog = 'I know your type. Bribes cannot phase me.'
                 $plot_state.vatrisk_kald_govt_info = InfoGet.FAIL
                 return
+            
             else:
-                vatrisk '[[Thank you for the money or something]'
+                vatrisk 'Oh my... I can buy a lot of vaska with this...'
+                
+                vatrisk 'Please feel free to ask me anything.'
+
+                p 'Well I was hoping you could tell me why there would be all of these rumors about the kaldreans feeling oppressed'
+
+                vatrisk 'Ok, look. It\'s not easy being me. I have to deal with the pressure of being blamed for everything that this government does.'
+
+                vatrisk 'Even though I don\'t agree with it all the time.'
+
+                vatrisk 'I wish there was a way to keep everyone happy AND safe. It\'s practically impossible. Have you ever read Vel Kerriss\' \"Dystopia\"?'
+
+                p 'I am not familiar.'
+
+                vatrisk 'Well it basically describes our government. How we keep everyone safe with rules and law.'
+
+                vatrisk 'I feel what people fail to understand is that safety is more of a priority than happiness.'
+
+                p 'I kind of see what you mean.'
+
                 $plot_state.vatrisk_kald_govt_info = InfoGet.SUCCESS
-                $last_dialog = '[Please do not hesitate to ask me anything.]'
+                $last_dialog = 'Is there anything else I can help you with today?'
                 jump menu_vatrisk
 
         label vatrisk_VL_denounce:
-            p '[[you should denounce the kaldrean government.]'
-            vatrisk '[[You are crazy, don\'t come back here unless you have something intelligent to say.]'
+            p 'You should denounce the kaldrean government.'
+            
+            vatrisk 'What?'
+            
+            p 'You heard me.'
+
+            $ last_dialog = 'Come back when you have something intelligent to say.'
             $plot_state.vatrisk_trust = TrustLevel.LOW
             hide vatrisk
             return
 
         label vatrisk_VL_inform_tree_start:
-            p '[[Tell him about VL and why they want to kill him]'
+            p 'Irridiss, your life is in grave danger! The Valak Lideri plan to kill you and take down the government.'
             menu:
-                vatrisk '[[He seems reluctant to believe you, but asks you to continue]'
-                '[[suggest that he publicly denounce kaldrean government]':
+                vatrisk 'Come again?'
+               
+                'Ask him to denounce government':
                     jump vatrisk_VL_denounce
-                '[[ask him about his government, ad what he thinks is best for his people]':
+               
+                'Ask him what is best for is his people':
                     jump vatrisk_VL_inform_tree_ask
 
             label vatrisk_VL_inform_tree_ask:
-                p '[[ask him about his government, ad what he thinks is best for his people]'
-                vatrisk '[[He speaks about how he believes his government, while caring of the people\'s welfare, is very corrupt and oppressive. But they do keep war from breaking out.]'
+              
+                p 'You need to think. What is best for your people?'
+               
+                vatrisk 'The entire point of a government is to keep it\'s people safe, not happy. Sure, we may oppress them in some ways, but look at the crime rates. We prevent war!'
+              
                 if plot_state.vatrisk_trust == TrustLevel.LOW or plot_state.vatrisk_trust == TrustLevel.MEDIUM:
                     jump vatrisk_VL_inform_tree_no_change
 
@@ -133,42 +195,69 @@ label ck_vatrisk:
                     jump vatrisk_VL_inform_tree_persuade
 
             label vatrisk_VL_inform_tree_no_change:
-                vatrisk '[[But he thinks it\'s best to keep things as they are instead of risking chaos and change.]'
+                
+                vatrisk 'There is no way that you can change my mind. I will never let this government fall.'
+               
                 $last_dialog = '[thank you for talking to me, ' + alias.title_last + '.]'
                 jump menu_vatrisk
 
             label vatrisk_VL_inform_tree_not_sure:
+               
                 menu:
-                    vatrisk '[[But he\'s not sure what to do.]'
-                    '[[The kaldrean government is weak right now. This rebellion will guarantee the change that your people seek]':
+                    
+                    vatrisk 'But now I\'m not so sure. With the my life in danger, I\'m not sure who I can trust anymore.'
+                    
+                    'Your government is weak':
+                        
+                        p 'The kaldrean government is weak right now. This rebellion will guarantee the change that your people seek.'
+                       
                         vatrisk '[[Nothing is guaranteed. I cannot risk the stability of the government]'
+                      
                         jump vatrisk_VL_inform_tree_no_change
-                    '[[Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.]':
+                  
+                    'Your people need you now more than ever':
+                  
+                        p 'Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.'
+                    
                         jump vatrisk_VL_inform_tree_persuade
 
             label vatrisk_VL_inform_tree_persuade:
+              
                 p '[[Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.]'
+               
                 vatrisk '[[He thinks for a bit, then exclaims, \"It\'s time for me to act.\"]'
 
                 call ending_vatrisk_denounce_govt
                 return
 
         label vatrisk_VL_lure:
+           
             p '[[I will accompany you on your morning walk. We should meet in the center of the grove]'
+           
             if plot_state.vatrisk_trust == TrustLevel.HIGH or plot_state.vatrisk_trust == TrustLevel.VERY_HIGH:
+           
                 vatrisk '[[Of course. Ordinarily my guards ask me to stay away from that area, but I trust you.]'
+           
                 call ending_vatrisk_lure
+           
                 return
+           
             else:
+            
                 vatrisk '[[I am sorry, but I will not be going out tomorrow morning as I will be busy.]'
+            
                 $last_dialog = '[Again, my apologies. Perhaps another time. Until then, are there any other questions I may answer?]'
+            
                 jump menu_vatrisk
                 
     label vatrisk_meeting:
 
         vatrisk "[[Hello, Diplomat [alias.last]. How can I help you?]"
+       
         p "[[I want to talk about recent political unrest in the city]"
+      
         vatrisk "[[Oh. I see. But I was told you were here to discuss interstellar trade laws.]"
+      
         p "[[I am sorry but that was not true. I'm here to actually discuss the Valak Lideri. I have evidence that your life may be in danger]"
 
         vatrisk "[[Really? And what is this evidence?]"
