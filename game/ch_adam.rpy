@@ -97,7 +97,7 @@ label ch_adam:
             return
 
         label adam_VL_tree_start:
-            p 'What can you tell me about the Valak Lideri?'
+            p 'What can you tell me about Valak Lideri?'
 
             adam "Well, that\'s certainly an ambitious question for someone so new to Concord. How did you come across this rumor? I have been here for nearly my
             entire life and I\'ve only heard whispers of this group's existence. And I have a careful ear."
@@ -112,14 +112,14 @@ label ch_adam:
                 adam "I can relate to that - I have been involved in my fair share of coincidences throughout my life. So what do you think about this group, based off what you know? 
                 I\'ve heard some conflicting and slanting viewpoints on them so I'm curious to know what you think."
 
-                'Sympathize with the Valak Lideri':
+                'Sympathize with Valak Lideri':
                     jump adam_VL_tree_sympathize
-                'Disapprove of the Valak Lideri':
+                'Disapprove of Valak Lideri':
                     jump adam_VL_tree_disapprove
             jump menu_adam
 
             label adam_VL_tree_sympathize:  
-                p "I think that the Valak Lideri have a stronger set of morals than the rest of us give them credit. I still think that they are risking a lot, especially now. 
+                p "I think that Valak Lideri have a stronger set of morals than the rest of us give them credit. I still think that they are risking a lot, especially now. 
                 I still need to understand them better though, I\'m basically just going with what I've been told."
                         
                 menu:   
@@ -145,7 +145,7 @@ label ch_adam:
                     rounds to inform them,
                     but this is the way I have seen it work in the past."
 
-                    $ last_dialog = "The Valak Lideri, if could make any guesses, have found their way and they are willing to pursue it with great force. For a rebel group to \
+                    $ last_dialog = "Valak Lideri, if could make any guesses, have found their way and they are willing to pursue it with great force. For a rebel group to \
                     even become a rumor they must have good cause and powerful people in the background. Is there anything else that you want to ask me?"
                 
                     jump menu_adam
@@ -159,7 +159,7 @@ label ch_adam:
                     p "I understand."
 
                     $ plot_state.adam_vl_info = InfoGet.SUCCESS
-                    $ last_dialog = "The Valak Lideri, if could make any guesses, have found their way and they are willing to pursue it with great force. For a rebel group to even \
+                    $ last_dialog = "Valak Lideri, if could make any guesses, have found their way and they are willing to pursue it with great force. For a rebel group to even \
                     become a rumor they must have good cause and powerful people in the background. Is there anything else that you want to ask me?"
                     jump menu_adam
 

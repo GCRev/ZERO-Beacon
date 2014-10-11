@@ -34,7 +34,7 @@ label ck_lorisk:
                 call lorisk_events
             'Ask about her background' if plot_state.stage == PlotStage.VL_INFO and not plot_state.lorisk_flatter_offend:
                 jump lorisk_VL_tree_start
-            'Ask about the Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_personal_reasons
             'Question her about her parents' if plot_state.stage == PlotStage.VL_PLANS and plot_state.lauren_lorisk_info:
                 jump lorisk_VL_plans_tree_start
@@ -66,7 +66,7 @@ label ck_lorisk:
             return
 
         label lorisk_personal_reasons:
-            p 'Can you tell me anything about the Valak Lideri?'
+            p 'Can you tell me anything about Valak Lideri?'
             lorisk 'Sorry, but for personal reasons, I\'d rather not.'
             $ last_dialog = 'Is there any thing else I can help you with?'
             $ plot_state.lorisk_vl_info = InfoGet.FAIL

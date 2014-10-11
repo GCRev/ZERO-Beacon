@@ -50,7 +50,7 @@ label ck_vatrisk:
             'Intimidate Vatrisk for information' if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.vatrisk_kald_govt_info == InfoGet.NO_ATTEMPT:
                 jump vatrisk_intimidate
             
-            'Inform Vatrisk of the Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS:
+            'Inform Vatrisk of Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS:
                 jump vatrisk_VL_inform_tree_start
             
             'Suggest that Vatrisk publicly denounce kaldrean government' if plot_state.stage == PlotStage.VL_PLANS:
@@ -169,7 +169,7 @@ label ck_vatrisk:
             return
 
         label vatrisk_VL_inform_tree_start:
-            p 'Irridiss, your life is in grave danger! The Valak Lideri plan to kill you and take down the government.'
+            p 'Irridiss, your life is in grave danger! Valak Lideri plan to kill you and take down the government.'
             menu:
                 vatrisk 'Come again?'
                
@@ -264,7 +264,7 @@ label ck_vatrisk:
       
         vatrisk "[[Oh. I see. But I was told you were here to discuss interstellar trade laws.]"
       
-        p "[[I am sorry but that was not true. I'm here to actually discuss the Valak Lideri. I have evidence that your life may be in danger]"
+        p "[[I am sorry but that was not true. I'm here to actually discuss Valak Lideri. I have evidence that your life may be in danger]"
 
         vatrisk "[[Really? And what is this evidence?]"
 
@@ -333,7 +333,7 @@ label ck_vatrisk:
         label vatrisk_meeting_success:
             vatrisk "[[Well, I was about to leave to board a transport, but based on what you've told me, that 
             doesn\'t seem like a very good idea.]"
-            "You and the ambassador sit and talk about the Valak Lideri for a bit longer. Then, you hear a sudden,
+            "You and the ambassador sit and talk about Valak Lideri for a bit longer. Then, you hear a sudden,
             deafening blast from outside Kier\'s office"
             play sound "assets/sf_attack1.ogg"
             $ renpy.pause(delay=6)

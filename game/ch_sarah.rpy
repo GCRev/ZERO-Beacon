@@ -23,8 +23,8 @@ label ch_sarah:
 
 label sarah_arrive:
 
-    sarah "Greetings. I\'m Agent Redmont, but I prefer to stay in character whenever possible, 
-    so call me Sarah. I\'ve heard that you\'re quite the sharp one."
+    sarah "Greetings. I'm Agent Redmont, but I prefer to stay in character whenever possible, 
+    so call me Sarah. I've heard that you\'re quite the sharp one."
 
     p "[[Respone; some banter]"
 
@@ -86,7 +86,7 @@ label sarah_kald_govt_info:
     as if there is nothing to fear. We must convince him otherwise."
 
     sarah "So, I want you to go around the city, and find out information about this mysterious
-    rebel group that calls themselves the Valak Lideri. Try to learn as much as you can about them,
+    rebel group that calls themselves Valak Lideri. Try to learn as much as you can about them,
     finding out whether or not this grave rumor is true."
 
     sarah "When you've talked to several people and think you're ready, I'll set up an exclusive

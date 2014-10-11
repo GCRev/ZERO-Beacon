@@ -77,7 +77,7 @@ label ck_noq:
             return
 
         label noq_VL_tree_start:
-            p "Would you happen to know anything about the Valak Lideri?"
+            p "Would you happen to know anything about Valak Lideri?"
 
             noq "You could ask anyone and they would be likely to give you a better answer than I."
 

@@ -175,13 +175,13 @@ label ck_alkay:
                         jump alkay_adam_tree_bitterness_change
 
                 label alkay_adam_tree_bitterness_VL:
-                    p "Do you think that the Valak Lideri share a similar viewpoint?"
+                    p "Do you think that Valak Lideri share a similar viewpoint?"
                     
                     alkay "That was an awfully rapid change of subject there, [alias.first]."
 
-                    p "I'm just trying to get a better idea. From what I've heard the Valak Lideri are a threat - so naturally that has me asking questions."
+                    p "I'm just trying to get a better idea. From what I've heard Valak Lideri are a threat - so naturally that has me asking questions."
 
-                    alkay "I understand. Everyone calls the Valak Lideri a threat and a group of dangerous terrorists with terrorist intent."
+                    alkay "I understand. Everyone calls Valak Lideri a threat and a group of dangerous terrorists with terrorist intent."
 
                     alkay "While this may have some basis in reality I feel we are misrepresenting them. Like most rebellious groups they have a cause and they are willing to fight for it."
 
@@ -272,7 +272,7 @@ label ck_alkay:
                 alkay "Nothing much has changed since then - a few centuries with a stable, albeit corrupted government. 
                 The advent of first contact has started to change things, however."
 
-                p "I see. So do you think that the Valak Lideri want to overthrow the Qolisk's government?"
+                p "I see. So do you think that Valak Lideri want to overthrow the Qolisk's government?"
 
                 alkay "It is entirely possible. Although that level of ambition is quite absurd."
 
@@ -399,7 +399,7 @@ label ck_alkay:
             return
 
         label alkay_VL_plan_lie:
-            p "Listen, Alkay, I know what the Valak Lideri is and what they are planning. I want to help."
+            p "Listen, Alkay, I know what Valak Lideri is and what they are planning. I want to help."
             
             alkay "Perhaps you have ingested some illegal substances, but I see that you are lying. Your voice says one thing but your mind, body, and essence say another."
 
@@ -413,7 +413,7 @@ label ck_alkay:
             return
 
     label alkay_VL_accuse_tree_start:
-        p "Alkay, I can tell that you are part of the Valak Lideri. If there is one thing that I have learned from you, it is how to read people."
+        p "Alkay, I can tell that you are part of Valak Lideri. If there is one thing that I have learned from you, it is how to read people."
 
         p "You talk big, but you cannot hide your intent from me."
 
@@ -425,7 +425,7 @@ label ck_alkay:
                 jump alkay_VL_accuse_tree_threaten
 
         label alkay_VL_accuse_tree_threaten:
-            p "Alkay, I will call in authorities if you do not tell what the Valak Lideri are planning to do."
+            p "Alkay, I will call in authorities if you do not tell what Valak Lideri are planning to do."
 
             alkay "Hah! You cannot scare me [alias.first]. Make all the threats you want, I guarantee none are as grave or intense as those I have dealt with previously."
             

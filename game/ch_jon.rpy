@@ -38,9 +38,9 @@ label ch_jon:
     label menu_jon:
         menu:
             jon '[last_dialog]'
-            '[[lie about hobbies]' if plot_state.stage == PlotStage.VL_INFO:
+            '[[lie about hobbies]' if plot_state.stage == PlotStage.VL_INFO and plot_state.jon_vl_info == InfoGet.NO_ATTEMPT:
                 jump jon_hobbies_tree_start
-            '[[ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
+            '[[ask about VL]' if plot_state.stage == PlotStage.VL_INFO and plot_state.jon_vl_info == InfoGet.NO_ATTEMPT:
                 jump jon_VL_tree_start
             '[[ask for advice from Jon]':
                 call jon_advice
@@ -134,7 +134,7 @@ label ch_jon:
                 jon "In literally every instance of a great weapon's conception they bury the people involved in its creation and assume the idea themselves. It irritates me to no end."
                 "Inquire about dislike of kaldrean government":
                     jump jon_hobbies_tree_pursue
-                "Ask about the Valak Lideri":
+                "Ask about Valak Lideri":
                     jump jon_hobbies_tree_VL
 
             label jon_hobbies_tree_pursue:
@@ -159,48 +159,57 @@ label ch_jon:
                 jump menu_jon
 
             label jon_hobbies_tree_VL:
-                p "Do you think the Valak Lideri are politically charged against the government?"
+                p "Do you think Valak Lideri are politically charged against the government?"
 
                 jon "That could be said about any rebel group. But yes. Currently it makes sense for an organization like that to start gaining political traction."
 
                 p "But they aren't terrorists."
 
-                jon "Right. "
+                jon "Right. From what I've heard, and likely what you've heard as well, they are become a threat as a political influence rather than a violent group."
+
+                jon "Based on what little I know I believe that have a good cause - they want to give the kaldrean progressive movement new life and new force."
 
                 menu:
-                    jon '[[speaks passionately for VL]'
-                    '[[Thanks jon for infos]':
-                        jump on_hobbies_tree_VL_thank_jon
-                    '[[reassure that you think kaldreans deserve liberation]':
+                    jon "Many kaldreans want to be free of their suppressive controllers - Valak Lideri are are not afraid to do what is right."
+                    "Thank Jon for the information":
+                        jump jon_hobbies_tree_VL_thank_jon
+                    "Reassure that you think kaldreans deserve liberation":
                         jump jon_hobbies_tree_VL_liberation
-                    '[[you seem quite passionate]':
+                    "You seem quite passionate":
                         jump jon_hobbies_tree_VL_passionate
 
                 label jon_hobbies_tree_VL_thank_jon:
-                    p '[[Thanks Jon for infos]'
-                    jon '[[seems relieved that you have decided to end the conversation there. Does not want to speak about it more]'
+                    p "Thank you for the information, Jon."
+                    jon "Yeah, well... No problem."
                     $plot_state.jon_vl_info = InfoGet.FAIL
-                    $last_dialog = '[I have enough to worry about. Thinking about VL stresses me out.]'
+                    $last_dialog = "But I have enough to worry about, so I don't pay mind to such things. Is there anything else you would like to ask me?"
                     jump menu_jon
                     
 
                 label jon_hobbies_tree_VL_liberation:
-                    p '[[reassure that you think kaldreans deserve liberation]'
-                    jon '[[seems excited that you think so. Offers a little more info on VL.]'
+                    p "I do not want to see the kaldrean people end in a slow deterioration. I think that the kaldrean people deserve liberation from their fate."
+                    
+                    jon "That's good news. We could use more diplomats who share your our viewpoints working to bring the corruption to justice."
+                    
+                    jon  "Valak Lideri might be the only way that change will ever happen. No offense, greenhorn, but if I've learned anything working here, it's that politicians will not sway."
+
                     $plot_state.jon_vl_info = InfoGet.SUCCESS
-                    $last_dialog = '[The VL are the only ones who seem to notice the corrupt kaldrean government.]'
+                    $last_dialog = "Is there anything else that you would like to know?"
                     jump menu_jon
 
                 label jon_hobbies_tree_VL_passionate:
-                    p '[[You seem quite passionate]'
-                    jon '[[Evades and no longer wants to speak about VL.]'
+                    p "You seem quite passionate about this topic."
+
+                    jon "Well... I am, of course. Outside of my work I am very interested in history and culture so it pains me to see a culture destroyed like this."
+
+                    jon "And... from what I've heard, Valak Lideri are trying to stop the kaldrean government from destroying their people. I can't help but find their perspective... agreeable"
                     $plot_state.jon_vl_info = InfoGet.FAIL
-                    $last_dialog = '[I do no wish to talk about VL any more. It makes me uneasy.]'
+                    $last_dialog = "I'd prefer not to talk about Valak Lideri - they still make me uneasy. If you have any more questions please be quick, I have to get back to work promptly."
                     jump menu_jon
 
 
         label jon_VL_tree_start:
-            p '[[ask about VL]'
+            p "What can you tell me about Valak Lideri?"
             menu:
                 jon '[[other uneasy response]'
                 '[[you seem uneasy]':
