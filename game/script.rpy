@@ -11,6 +11,8 @@ label start:
         $ alias = Alias(Gender.NEUT, 'Dev', 'Eloper')
     else:
         call intro
+
+    show screen objective("Talk to Sarah Liu in Residences")
     jump loc_port
 
 
@@ -45,6 +47,7 @@ init -2 python:
         
         stage = PlotStage.ARRIVE
         high_emb_tried_bribe = False
+        currentObjective = "Talk to Sarah in the residences."
         
     #Adam's flags
         adam_met = False
@@ -213,7 +216,8 @@ image bg result4 = bkg_img('bg_result_4-diplomacy')
 ####################################################
 ###############      Locations       ###############
 ####################################################
-        
+
+     
 label map_screen:
     stop music
     play music "assets/mu_menu.ogg"

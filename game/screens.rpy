@@ -544,6 +544,13 @@ screen quick_menu():
         textbutton _("Auto") action Preference("auto-forward", "toggle")
         textbutton _("Prefs") action ShowMenu('preferences')
 
+screen objective(string):
+    zorder 100
+    modal False
+    frame:
+        background "#000000d0"
+        text "Current Objective: "+string size 15
+
 init -2:
     style quick_button:
         is default

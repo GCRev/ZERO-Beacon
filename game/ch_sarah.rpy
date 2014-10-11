@@ -39,6 +39,7 @@ label sarah_arrive:
     willing to divulge in-depth information, so speak carefully."
 
     $ plot_state.stage = PlotStage.KALD_GOVT_INFO
+    show screen objective("Speak with both ambassadors in High Embassy then return to Sarah")
 
     return
 
