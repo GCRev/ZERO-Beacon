@@ -130,21 +130,43 @@ label ch_jon:
 
             p "And why is that?"
 
-            jon "In literally every instance of a great weapon's conception they bury the people involved in its creation and assume the idea themselves. It irritates me to no end."
-
             menu:
-                '[[pursue topic of disliking kaldrean govt]':
+                jon "In literally every instance of a great weapon's conception they bury the people involved in its creation and assume the idea themselves. It irritates me to no end."
+                "Inquire about dislike of kaldrean government":
                     jump jon_hobbies_tree_pursue
-                '[[ask about VL]':
+                "Ask about the Valak Lideri":
                     jump jon_hobbies_tree_VL
 
             label jon_hobbies_tree_pursue:
-                p '[[pursue topic of disliking kaldrean govt'
-                jon '[[talks about how they are corrupt]'
+                p "Why do they do this to their people? That seems pretty harsh."
+
+                jon "Aren't you supposed to know this, greenhorn? Well... I'm in upper management and they don't tell us anything either. I'll make it easy for you."
+
+                jon "Their government is perfect - a little too perfect if you know what I mean. Really they are so corrupt that they can afford to maintain that kind of image."
+
+                jon "Incidentally it's causing cultural stagnation on a scale the likes of which humanity has never experienced." 
+
+                jon "I hope that the progressive movement on Qolisk does something fast, because if they don't then the kaldreans are at risk of deteriorating."
+
+                jon "The way the government takes cultural movements and crushes them truly makes me sick - it's the slowest and most painful way for a people to die."
+
+                p "I'm genuinely shocked. I'll try to do something about this, but I've talked with the Ambassadors - it could prove challenging."
+
+                jon "Don't expect to get very far. But it's good to know that at least someone else around here recognizes that there is a problem at all."
+
+                $ last_dialog = "I got a little carried away there... Sorry. Is there anything else you would like to ask?"
+
                 jump menu_jon
 
             label jon_hobbies_tree_VL:
-                p '[[ask about VL]'
+                p "Do you think the Valak Lideri are politically charged against the government?"
+
+                jon "That could be said about any rebel group. But yes. Currently it makes sense for an organization like that to start gaining political traction."
+
+                p "But they aren't terrorists."
+
+                jon "Right. "
+
                 menu:
                     jon '[[speaks passionately for VL]'
                     '[[Thanks jon for infos]':

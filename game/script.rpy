@@ -12,7 +12,8 @@ label start:
     else:
         call intro
 
-    show screen objective("Talk to Sarah Liu in Residences")
+    show screen objective("Talk to Sarah Liu in Residences") 
+
     jump loc_port
 
 

@@ -48,7 +48,7 @@ init -1 python hide:
         widget = "#000000",
 
         ## The color of a focused widget face.
-        widget_hover = "#000033",
+        widget_hover = "#1060a0",
 
         ## The color of the text in a widget.
         widget_text = "#ffffff",
@@ -98,6 +98,8 @@ init -1 python hide:
     ## respectively.
 
     style.window.background = Frame("assets/ui_text-frame.png", 12, 12)
+
+    style.window.background = "#000000ff"
 
     ## Margin is space surrounding the window, where the background
     ## is not drawn.
