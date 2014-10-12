@@ -12,8 +12,11 @@ label ck_vatrisk:
         return
 
     elif plot_state.vatrisk_met:
+        
         vatrisk "Hello again, [alias.first], with what may I help you?"
+        
         p "I am doing well. I actually have a few more questions for you, if you have the time."
+        
         $ last_dialog = "Yes, of course. What do you need?"
         vatrisk '[last_dialog]'
 
@@ -24,6 +27,7 @@ label ck_vatrisk:
         p "I am going to do my best."
 
         vatrisk "And we will support you. Ambassador Columbus and I are committed to your success. Because your successes contribute to all of our successes."
+        
         $last_dialog = "So as new arrival I trust you have some questions to ask?"
         vatrisk '[last_dialog]'
 
@@ -124,6 +128,7 @@ label ck_vatrisk:
 
         label vatrisk_bribe:
             p 'Here, a gift from our embassy to yours.'
+        
             'You give Vatrisk a lot of money in attempt to bribe him for the truth.'
             
             if plot_state.high_emb_tried_bribe:
@@ -164,6 +169,7 @@ label ck_vatrisk:
             p 'You heard me.'
 
             $ last_dialog = 'Come back when you have something intelligent to say.'
+        
             $plot_state.vatrisk_trust = TrustLevel.LOW
             hide vatrisk
             return
@@ -173,10 +179,10 @@ label ck_vatrisk:
             menu:
                 vatrisk 'Come again?'
                
-                'Ask him to denounce government':
+                'Ask Vatrisk to denounce government':
                     jump vatrisk_VL_denounce
                
-                'Ask him what is best for is his people':
+                'Ask Vatrisk what is best for is his people':
                     jump vatrisk_VL_inform_tree_ask
 
             label vatrisk_VL_inform_tree_ask:
@@ -198,7 +204,7 @@ label ck_vatrisk:
                 
                 vatrisk 'There is no way that you can change my mind. I will never let this government fall.'
                
-                $last_dialog = '[thank you for talking to me, ' + alias.title_last + '.]'
+                $last_dialog = 'Thank you for talking to me, ' + alias.title_last + '.'
                 jump menu_vatrisk
 
             label vatrisk_VL_inform_tree_not_sure:
@@ -207,15 +213,15 @@ label ck_vatrisk:
                     
                     vatrisk 'But now I\'m not so sure. With the my life in danger, I\'m not sure who I can trust anymore.'
                     
-                    'Your government is weak':
+                    'Tell Vatrisk that the government is weak right now':
                         
                         p 'The kaldrean government is weak right now. This rebellion will guarantee the change that your people seek.'
                        
-                        vatrisk '[[Nothing is guaranteed. I cannot risk the stability of the government]'
+                        vatrisk 'I cannot risk the stability of the government for these rebels.'
                       
                         jump vatrisk_VL_inform_tree_no_change
                   
-                    'Your people need you now more than ever':
+                    'Tell Vatrisk that his people need him now more than ever':
                   
                         p 'Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.'
                     
@@ -269,16 +275,27 @@ label ck_vatrisk:
         vatrisk "Really? And what is this evidence?"
 
         if plot_state.adam_vl_info == InfoGet.SUCCESS:
+        
             p "[[tell him about info from Adam]"
+        
             vatrisk "[[respond]"
+        
         if plot_state.alkay_vl_info == InfoGet.SUCCESS:
+        
             p "[[tell him about info from Alkay]"
+        
             vatrisk "[[respond]"
+        
         if plot_state.jon_vl_info == InfoGet.SUCCESS:
+        
             p "[[tell him about info from Jon]"
+        
             vatrisk "[[respond]"
+        
         if plot_state.lorisk_vl_info == InfoGet.SUCCESS:
+        
             p "[[tell him about info from Lorisk]"
+        
             vatrisk "[[respond]"
 
         $ possible_infos = [plot_state.adam_vl_info, plot_state.alkay_vl_info, plot_state.jon_vl_info, plot_state.lorisk_vl_info]
@@ -286,71 +303,121 @@ label ck_vatrisk:
         $ pct_gotten_infos = float(len(gotten_infos)) / len(possible_infos)
 
         if pct_gotten_infos == 0:
+        
             p "Well, I don't actually have any proof but please, you have to believe me!"
 
         if pct_gotten_infos < 1.0 / 3.0:
+        
             vatrisk "Well, I still don't believe you."
+        
             jump vatrisk_meeting_fail
+        
         elif pct_gotten_infos > 2.0 / 3.0:
+        
             vatrisk "Are you sure that all of this is true?"
+        
             p "Absolutely."
+        
             jump vatrisk_meeting_success
+        
         else:
+        
             menu:
+        
                 vatrisk "This information is definitely unnerving, but I'm still not entirely convinced. Tell me,
                 why should I trust you, an Earthling diplomat who seems to have turned vigilante?"
-                "Your people need you now more than ever.":
+        
+                "Tell Vatrisk that his people need him":
+        
                     p "Your people need you more than ever now. You shouldn't take any risks that would leave them helpless in such a time of need."
+        
                     vatrisk "You're right."
+        
                     jump vatrisk_meeting_success
-                "You need to trust us.":
+        
+                "Tell Vatrisk that he must trust you":
+        
                     p "You need to trust us. We're only looking out for your best interests."
+        
                     vatrisk "Humans never have had our best interests in mind!"
+        
                     jump vatrisk_meeting_fail
-                "These rebels are dangerous enemies of the peace":
+        
+                "Tell Vatrisk that the rebels are dangerous":
+        
                     p "These rebels are dangerous enemies of the peace. You should fear them."
+        
                     vatrisk "I don't need to fear those silly rebels."
+        
                     jump vatrisk_meeting_fail
 
         label vatrisk_meeting_fail:
+
             vatrisk "Now, If you would excuse me, I have a transport to board now."
+
             "The ambassador leaves the room and walks to his personal landing pad to board his transport. 
             You follow him, still trying to dissuade him from leaving the safety of the High Embassy without guard."
 
             scene bg landing_pad
+            
             "Ignoring your protests, he boards the transport. Soon after it takes off, you hear a deafening blast."
+            
             play sound "assets/sf_attack1.ogg"
+            
             $ renpy.pause(delay=6)
+            
             "The ships seems to have been shot! It begins falling."
+            
             play sound "assets/sf_attack2.ogg"
+            
             "Miraculously, the pilot manages to safely land the critically wounded pod on the landing pad."
+            
             $ renpy.pause(delay=6)
+            
             "Ambassador Kier steps out, clearly shaken, but seemingly uninjured."
+            
             if pct_gotten_infos < 1.0 / 3.0:
+            
                 vatrisk "You were right! They tried to kill me. But how did you know? This makes no sense..."
                 $ plot_state.vatrisk_trust = TrustLevel.MEDIUM
+            
             else:
+            
                 vatrisk "You were right! Thank you for trying to save my life."
+            
                 p "We need to get you to safety!"
+            
                 vatrisk "Right away! Guards!"
+            
                 $ plot_state.vatrisk_trust = TrustLevel.HIGH
             jump vatrisk_meeting_end
 
         label vatrisk_meeting_success:
+            
             vatrisk "Well, I was about to leave to board a transport, but I'm not sure anymore. My life could be in danger. I trust you, [alias.full]."
+            
             "You and the ambassador sit and talk about Valak Lideri for a bit longer. Then, you hear a sudden,
             deafening blast from outside Kier\'s office"
             play sound "assets/sf_attack1.ogg"
+            
             $ renpy.pause(delay=6)
+            
             "The sounds of an aircraft plummeting to the ground come from outside."
+            
             play sound "assets/sf_attack2.ogg"
+            
             $ renpy.pause(delay=6)
+            
             vatrisk "That was my transport! You saved my life. I am eternally grateful. If you need anything, you have my full trust."
+            
             $ plot_state.vatrisk_trust = TrustLevel.VERY_HIGH
             jump vatrisk_meeting_end
 
         label vatrisk_meeting_end:
+            
             "You return to Sarah to discuss what you've witnessed."
+            
             stop sound
+            
             $ plot_state.stage = PlotStage.ATTACK_JUST_HAPPENED
             return
