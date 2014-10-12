@@ -258,15 +258,15 @@ label ck_vatrisk:
                 
     label vatrisk_meeting:
 
-        vatrisk "[[Hello, Diplomat [alias.last]. How can I help you?]"
+        vatrisk "Hello, Diplomat [alias.last]. How can I help you?"
        
-        p "[[I want to talk about recent political unrest in the city]"
+        p "I want to talk about recent political unrest in the city"
       
-        vatrisk "[[Oh. I see. But I was told you were here to discuss interstellar trade laws.]"
+        vatrisk "Oh. I see. But I was told you were here to discuss interstellar trade laws."
       
-        p "[[I am sorry but that was not true. I'm here to actually discuss Valak Lideri. I have evidence that your life may be in danger]"
+        p "I am sorry but that was not true. I'm here to actually discuss Valak Lideri. I have evidence that your life may be in danger."
 
-        vatrisk "[[Really? And what is this evidence?]"
+        vatrisk "Really? And what is this evidence?"
 
         if plot_state.adam_vl_info == InfoGet.SUCCESS:
             p "[[tell him about info from Adam]"
@@ -286,30 +286,34 @@ label ck_vatrisk:
         $ pct_gotten_infos = float(len(gotten_infos)) / len(possible_infos)
 
         if pct_gotten_infos == 0:
-            p "[[Actually, I don't have any. But believe me anyway pl0x]"
+            p "Well, I don't actually have any proof but please, you have to believe me!"
 
         if pct_gotten_infos < 1.0 / 3.0:
-            vatrisk "[[I don't believe you]"
+            vatrisk "Well, I still don't believe you."
             jump vatrisk_meeting_fail
         elif pct_gotten_infos > 2.0 / 3.0:
-            vatrisk "[[I believe you; this is quite convincing]"
+            vatrisk "Are you sure that all of this is true?"
+            p "Absolutely."
             jump vatrisk_meeting_success
         else:
             menu:
                 vatrisk "This information is definitely unnerving, but I'm still not entirely convinced. Tell me,
                 why should I trust you, an Earthling diplomat who seems to have turned vigilante?"
-                "Your people need you more than ever now. You shouldn't take any risks that would leave them helpless in such a time of need.":
-                    vatrisk "[[you're right!]"
+                "Your people need you now more than ever.":
+                    p "Your people need you more than ever now. You shouldn't take any risks that would leave them helpless in such a time of need."
+                    vatrisk "You're right."
                     jump vatrisk_meeting_success
-                "[[Trust us; we only have your best interests in mind]":
-                    vatrisk "[[humans never have had our best interests in mind!]"
+                "You need to trust us.":
+                    p "You need to trust us. We're only looking out for your best interests."
+                    vatrisk "Humans never have had our best interests in mind!"
                     jump vatrisk_meeting_fail
-                "[[These rebels are dangerous enemies of the peace, and you should fear them]":
-                    vatrisk "[[noo, I need not fear lawless scum such as them!]"
+                "These rebels are dangerous enemies of the peace":
+                    p "These rebels are dangerous enemies of the peace. You should fear them."
+                    vatrisk "I don't need to fear those silly rebels."
                     jump vatrisk_meeting_fail
 
         label vatrisk_meeting_fail:
-            vatrisk "[[If you would excuse me, I have a transport to board now.]"
+            vatrisk "Now, If you would excuse me, I have a transport to board now."
             "The ambassador leaves the room and walks to his personal landing pad to board his transport. 
             You follow him, still trying to dissuade him from leaving the safety of the High Embassy without guard."
 
@@ -317,35 +321,36 @@ label ck_vatrisk:
             "Ignoring your protests, he boards the transport. Soon after it takes off, you hear a deafening blast."
             play sound "assets/sf_attack1.ogg"
             $ renpy.pause(delay=6)
-            "[[The ships seems to have been shot! It begins falling]"
+            "The ships seems to have been shot! It begins falling."
             play sound "assets/sf_attack2.ogg"
-            "[[Miraculously, the pilot manages to safely land the critically wounded pod on the landing pad.]"
+            "Miraculously, the pilot manages to safely land the critically wounded pod on the landing pad."
             $ renpy.pause(delay=6)
-            "[[Ambassador Kier steps out, clearly shaken, but seemingly uninjured]"
+            "Ambassador Kier steps out, clearly shaken, but seemingly uninjured."
             if pct_gotten_infos < 1.0 / 3.0:
-                vatrisk "[[zomg you were right. but how did you know? this makes no sense...]"
+                vatrisk "You were right! They tried to kill me. But how did you know? This makes no sense..."
                 $ plot_state.vatrisk_trust = TrustLevel.MEDIUM
             else:
-                vatrisk "[[zomg you were right. thx for trying to save my life]"
+                vatrisk "You were right! Thank you for trying to save my life."
+                p "We need to get you to safety!"
+                vatrisk "Right away! Guards!"
                 $ plot_state.vatrisk_trust = TrustLevel.HIGH
             jump vatrisk_meeting_end
 
         label vatrisk_meeting_success:
-            vatrisk "[[Well, I was about to leave to board a transport, but based on what you've told me, that 
-            doesn\'t seem like a very good idea.]"
+            vatrisk "Well, I was about to leave to board a transport, but I'm not sure anymore. My life could be in danger. I trust you, [alias.full]."
             "You and the ambassador sit and talk about Valak Lideri for a bit longer. Then, you hear a sudden,
             deafening blast from outside Kier\'s office"
             play sound "assets/sf_attack1.ogg"
             $ renpy.pause(delay=6)
-            "[[Clearly, some sort of aircraft has been shot in mid-air, and is now plummeting towards the ground]"
+            "The sounds of an aircraft plummeting to the ground come from outside."
             play sound "assets/sf_attack2.ogg"
             $ renpy.pause(delay=6)
-            vatrisk "[[zomg that was my transport. you saved my life.]"
+            vatrisk "That was my transport! You saved my life. I am eternally grateful. If you need anything, you have my full trust."
             $ plot_state.vatrisk_trust = TrustLevel.VERY_HIGH
             jump vatrisk_meeting_end
 
         label vatrisk_meeting_end:
-            "[[You return to Sarah to discuss what you've witnessed]"
+            "You return to Sarah to discuss what you've witnessed."
             stop sound
             $ plot_state.stage = PlotStage.ATTACK_JUST_HAPPENED
             return
