@@ -5,14 +5,16 @@
 # Scripted sequences
 
 label intro:
-
+    stop music
     play music "assets/mu_intro.ogg"
     scene bg stars
     show planet_bridge at Position(xpos = 0.5, ypos = 0.75)
 
     'This is the planet Bridge.'
     'Fifty years ago, humans made first contact there with the kaldreans, an advanced 
-    race of insect-like beings.  At first, there was fighting between the two races, 
+    race of insect-like beings.'
+
+    'At first, there was fighting between the two races, 
     but later that year, the two signed a treaty of friendship and peace. '
 
     'Bridge was settled and the capital city of Concord was constructed. Since then, Concord 
@@ -24,24 +26,32 @@ label intro:
     hide planet_bridge
 
     comm 'And this is why I have called you here today, Agent. The great city 
-    of Concord has of late been troubled by political unrest. A mysterious group of rebels known 
-    as \"Valak Lideri\" has infiltrated Bridge\'s government, and it has come to my attention that 
-    the life of the kaldrean High Ambassador is under threat. '
+    of Concord has of late been troubled by political unrest.'
+
+    comm 'A mysterious group of rebels known as \"Valak Lideri\" has infiltrated Bridge\'s government.'
+
+    comm 'It has come to my attention that the life of the kaldrean High Ambassador is under threat.'
 
     comm 'On this assignment, you shall travel to Concord. You will act under alias a diplomat, 
-    investigating the situation and learning about Valak Lideri. You will work with Agent Redmont,
-    a well-respected special agent such as yourself, who is currently stationed in the city under 
+    investigating the situation and learning about Valak Lideri.'
+
+    comm 'You will work with Agent Redmont, a well-respected special agent such as yourself, who is currently stationed in the city under 
     alias as the scientist Sarah Liu.'
 
     comm 'Then, when you are ready, it is up to you to take action and apprehend those who plan to 
     cause mayhem in the great city.'
 
     comm 'Do not take this mission lightly. The people of Bridge will not be so willing to answer 
-    the prying questions of an Earthling diplomat. How you decide to act may very well be the difference 
-    between order in chaos on Bridge. And if the peace of Bridge should be broken, then it is only a 
-    matter of time before the rest of the galaxy falls with it. '
+    the prying questions of an Earthling diplomat.' 
+
+    comm 'How you decide to act may very well be the difference 
+    between order in chaos on Bridge.' 
+
+    comm 'And if the peace of Bridge should be broken, then it is only a 
+    matter of time before the rest of the galaxy falls with it.'
 
     comm 'Before you go, you must complete your alias as a diplomat.'
+
     python:
         menu_items = [(gend_to_str(gend), gend) for gend in [Gender.FEM, Gender.MASC, Gender.NEUT]]
         while True:
@@ -63,8 +73,9 @@ label intro:
     scene bg map
 
     'After a month-long journey through space, you finally arrive on Bridge. As you come to
-    land at the Spaceport, you see Concord below you. The city looks utopian-like, set between a
-    shimmering coast and an luscious woodland.'
+    land at the Spaceport, you see Concord below you.' 
+
+    'The city looks utopian-like, set between a shimmering coast and an luscious woodland.'
 
     scene bg port
 
