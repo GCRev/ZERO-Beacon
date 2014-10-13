@@ -196,6 +196,9 @@ label ck_lorisk:
 
                 label lorisk_VL_tree_list_languages_cancel:
                     p "No I was only joking."
+
+                    lorisk "Good... I'm sure I would have bored you to tears with a long list."
+                    
                     $ last_dialog = 'Is there anything else I can help you with?'
                     $ plot_state.lorisk_vl_info = InfoGet.FAIL
                     jump menu_lorisk
