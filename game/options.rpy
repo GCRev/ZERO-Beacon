@@ -97,8 +97,6 @@ init -1 python hide:
     ## are the size of the left/right and top/bottom borders,
     ## respectively.
 
-    style.window.background = Frame("assets/ui_text-frame.png", 12, 12)
-
     style.window.background = "#000000ff"
 
     ## Margin is space surrounding the window, where the background
