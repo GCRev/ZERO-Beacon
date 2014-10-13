@@ -22,7 +22,7 @@ label ck_kro:
     label menu_kro:
         menu:
             kro '[last_dialog]'
-            '[[Jon sent me]' if plot_state.jon_talk_kro and plot_state.stage == PlotStage.VL_INFO:
+            '[[Jon sent me]' if plot_state.jon_talk_kro and plot_state.stage == PlotStage.VL_INFO and plot_state.kro_obsession_info == InfoGet.NO_ATTEMPT:
                 jump kro_jon_tree_start
             '[[flatter]' if plot_state.stage == PlotStage.VL_INFO:
                 call kro_flatter
@@ -101,13 +101,14 @@ label ck_kro:
                 p '[[Jon mentioned something about VL. Ask Kro about VL.]'
                 kro '[[responds genuinely that she is not familiar with the word\'s meaning. Ask an elder or talk to Lorisk]'
                 $last_dialog = '[[If there is anything you need, I am at your service, ' + alias.title_last + '.]'
+                $plot_state.kro_obsession_info = InfoGet.FAIL
                 jump menu_kro
 
             label kro_jon_tree_obsession:
                 p '[[why does obsession worry you?]'
                 kro '[[in my experience, obsessions are the result of a buried information]'
                 $last_dialog = '[[If there is anything you need, I am at your service, ' + alias.title_last + '.]'
-                $plot_state.kro_obsession_info = True
+                $plot_state.kro_obsession_info = InfoGet.SUCCESS
                 jump menu_kro
 
         label kro_VL_tree_start:

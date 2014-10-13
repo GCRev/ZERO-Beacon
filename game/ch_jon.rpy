@@ -8,7 +8,7 @@ label ch_jon:
     show jon at char_pos
 
     if plot_state.jon_vl_plan_info == InfoGet.FAIL:
-        jon "Listen, buddy. You take your crazy talk elsewhere."
+        jon "Was I not clear? Don't talk to me [alias.last] unless you find spending time in confinement appealing."
         hide jon
         return
 
@@ -38,21 +38,21 @@ label ch_jon:
     label menu_jon:
         menu:
             jon '[last_dialog]'
-            '[[lie about hobbies]' if plot_state.stage == PlotStage.VL_INFO and plot_state.jon_vl_info == InfoGet.NO_ATTEMPT:
+            "Lie about your hobbies" if plot_state.stage == PlotStage.VL_INFO and plot_state.jon_hobby_info == InfoGet.SUCCESS:
                 jump jon_hobbies_tree_start
-            '[[ask about VL]' if plot_state.stage == PlotStage.VL_INFO and plot_state.jon_vl_info == InfoGet.NO_ATTEMPT:
+            "Ask about Valak Lideri" if plot_state.stage == PlotStage.VL_INFO and plot_state.jon_vl_info == InfoGet.NO_ATTEMPT:
                 jump jon_VL_tree_start
-            '[[ask for advice from Jon]':
+            "Ask Jon for advice":
                 call jon_advice
-            '[[ask Jon his opinions on recent events]':
+            "Ask Jon his opinions on recent events":
                 call jon_events
-            '[[ask Jon about his background]':
+            "Ask Jon about his background":
                 call jon_background
-            '[[show sympathy with the VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.kro_obsession_info and plot_state.jon_vl_plan_info == InfoGet.NO_ATTEMPT:
+            "Show sympathy with Valak Lideri" if plot_state.stage == PlotStage.VL_PLANS and plot_state.kro_obsession_info and plot_state.jon_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump jon_VL_plan_tree_start
-            '[[accuse of association with the VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.kro_obsession_info and plot_state.jon_vl_plan_info == InfoGet.NO_ATTEMPT:
+            "Accuse Jon of association with the VL" if plot_state.stage == PlotStage.VL_PLANS and plot_state.kro_obsession_info and plot_state.jon_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump jon_accuse
-            '[[done talking to Jon]':
+            "Done talking to Jon":
                 hide jon
                 return
         jump menu_jon
@@ -103,8 +103,25 @@ label ch_jon:
             return
 
         label jon_background:
-            p '[[you ask Jon on his background]'
-            jon '[[offers little information. Does not sound interested in talking about it.]'
+            p "Could you tell me about your background?"
+
+            jon "I'm not really an interesting person, greenhorn. I was born and raised here on Concord - I visited Earth for a few years when I was eighteen then came back."
+
+            jon "I have a pretty good memory and eye for detail so I was sought-after for this kind of number work. It's pretty repetitive, but I'll take it as long as it pays me well."
+
+            jon "I am a little obsessed with history and cultures - and especially through the lens of weaponry. In my spare time I collect vintage fire arms and restore them."
+            
+            p "That sounds quite interesting actually."
+
+            jon "It's fascinating. If you find me outside of work I'm most likely researching a weapon, repairing it, or maintaining it."
+
+            p "And you said you weren't an interesting person..."
+
+            jon "Well... not everyone is enthralled by tales of fire arms and how they reflect a people's culture and history. So I tend to leave it out of conversation unless explicitly asked."
+            
+            $last_dialog = "If you have any other questions, feel free to ask."
+            if plot_state.jon_hobby_info == InfoGet.NO_ATTEMPT:
+                $plot_state.jon_hobby_info = InfoGet.SUCCESS
             return
 
         label jon_hobbies_tree_start:
@@ -130,12 +147,17 @@ label ch_jon:
 
             p "And why is that?"
 
-            menu:
-                jon "In literally every instance of a great weapon's conception they bury the people involved in its creation and assume the idea themselves. It irritates me to no end."
-                "Inquire about dislike of kaldrean government":
-                    jump jon_hobbies_tree_pursue
-                "Ask about Valak Lideri":
-                    jump jon_hobbies_tree_VL
+            $last_dialog = "In literally every instance of a great weapon's conception they bury the people involved in its creation and assume the idea themselves. It irritates me to no end."
+            if plot_state.jon_vl_info == InfoGet.NO_ATTEMPT:
+                menu:
+                    jon "[last_dialog]"
+                    "Inquire about dislike of kaldrean government":
+                        jump jon_hobbies_tree_pursue
+                    "Ask about Valak Lideri":
+                        jump jon_hobbies_tree_VL
+            else:
+                jon "[last_dialog]"
+                jump jon_hobbies_tree_pursue
 
             label jon_hobbies_tree_pursue:
                 p "Why do they do this to their people? That seems pretty harsh."
@@ -155,7 +177,7 @@ label ch_jon:
                 jon "Don't expect to get very far. But it's good to know that at least someone else around here recognizes that there is a problem at all."
 
                 $ last_dialog = "I got a little carried away there... Sorry. Is there anything else you would like to ask?"
-
+                $ plot_state.jon_hobby_info = InfoGet.FAIL
                 jump menu_jon
 
             label jon_hobbies_tree_VL:
@@ -200,7 +222,7 @@ label ch_jon:
                 label jon_hobbies_tree_VL_passionate:
                     p "You seem quite passionate about this topic."
 
-                    jon "Well... I am, of course. Outside of my work I am very interested in history and culture so it pains me to see a culture destroyed like this."
+                    jon "Well... I am, of course. Outside of my work I am very interested in history and culture so it pains me to see one so rich ruined like this."
 
                     jon "And... from what I've heard, Valak Lideri are trying to stop the kaldrean government from destroying their people. I can't help but find their perspective... agreeable"
                     $plot_state.jon_vl_info = InfoGet.FAIL
@@ -210,75 +232,136 @@ label ch_jon:
 
         label jon_VL_tree_start:
             p "What can you tell me about Valak Lideri?"
+
+            jon "I don't really have much to say about them other than they make me nervous and distract me from my work. So I don't like to think about them."
             menu:
-                jon '[[other uneasy response]'
-                '[[you seem uneasy]':
+                jon "I wish I could tell you more... but I can't."
+                "Comment on Jon's uneasiness":
                     jump jon_VL_tree_uneasy
-                '[[go with it]':
+                "Play along with Jon's uneasiness":
                     jump jon_VL_tree_go_along
 
             label jon_VL_tree_uneasy:
-                p '[[you seem uneasy]'
-                jon '[[angry that the diplomat is accusing him of fallacy. Does not want to talk about VL anymore]'
+                p "Is there something wrong? You seem a little... uneasy."
+                jon "I feel like you are trying to accuse me of something when you barely know me or anything about who I am. So yes, it makes me very uneasy."
+
+                jon "And I already told you that I do not want to speak about Valak Lideri."
+
+                jon "Threats like that are better handled by professional agents rather than operational and civil agents like you and I."
+
+                p "I apologize. I didn't mean to upset you."
                 $plot_state.jon_vl_info = InfoGet.FAIL
-                $last_dialog = '[Don\'t talk to me unless you have something decent to say.]'
+                $last_dialog = "Yeah well, steer clear of that topic and I'll be your friend. Otherwise I'll get irritated. If you have anything else to ask, make it something simple."
                 jump menu_jon
 
 
             label jon_VL_tree_go_along:
-                p '[[go with it]'
-                $last_dialog = '[direct player to talk to Kro]'
+                p "Right, well I'll just have to dig around some more. "
+                jon "Perhaps you might talk to Flight Commander Zalva. She's younger, but she's seen a lot. She's a little... cold, but oddly friendly."
+                $last_dialog = "If you tell her I sent you she'll be a little more responsive."
                 $plot_state.jon_talk_kro = True
-                jon '[last_dialog]'
                 jump menu_jon
 
         label jon_accuse:
-            p '[[accuse of association with VL]'
-            jon '[[angry that you made such a heinous assertion. Won\'t speak about VL seriously with you after this point.]'
+            p "You know what, Jon, you haven't done a very good job covering up the fact that you are part of Valak Lideri."
+            jon "That is a very serious accusation -  I don't take {i}any{/i} accusations lightly. So get out of my face before I remove you myself."
             $plot_state.jon_vl_plan_info = InfoGet.FAIL
+            hide jon
             return
 
         label jon_VL_plan_tree_start:
-            p '[[how sympathy with the VL]'
+            p "I know it makes you uncomfortable to talk about Valak Lideri, but I want you to know what I agree with their perspective."
             menu:
-                jon '[[miffed that you are essentially accusing him of being a rebel, but obviously relieved that you sympathize.]'
-                '[[bluff that you are aware of VL plans]':
+                jon "Don't make an accusation that you have no basis for, [alias.last]. I don't want to have to charge you for treasonous activity."
+                "Bluff that you are aware of Valak Lideri plans" if plot_state.alkay_vl_plan_info != InfoGet.SUCCESS:
                     jump jon_VL_plan_tree_bluff
-                '[[you want galactic change]':
+                "Assure Jon that you are aware of Valak Lideri plans" if plot_state.alkay_vl_plan_info == InfoGet.SUCCESS:
+                    jump jon_VL_plan_tree_aware
+                "You want to see galactic change":
                     jump jon_VL_plan_tree_change
 
             label jon_VL_plan_tree_bluff:
-                p '[[bluff that you are aware of VL plans]'
-                jon '[[Jon: accuses YOU of being VL and says he has nothing to do with it. Won\'t speak with you after this point.]'
+                p "I'm aware of Valak Lideri's plans, Jon."
+                jon "Hah! You're pulling my leg here. Of the two of us, {i}you{/i} are exhibiting exactly the kind of dangerous behavior that Valak Lideri would expect."
+
+                jon "If you keep talking to me I'll have you removed from this area. Be glad that I'm only sending you off with a warning, [alias.last]."
                 $plot_state.jon_vl_plan_info = InfoGet.FAIL
                 hide jon
                 return
 
             label jon_VL_plan_tree_change:
-                p '[[you want galactic change]'
+                p "Listen to me, Jon, I will not stand here and allow the kaldrean government to continue breaking down their own people or the human government to sit idly and let it happen."
                 menu:
-                    jon '[[agrees. Asks you how far you would go for change.]'
-                    '[[argue on the side of violence]':
+                    jon "You're walking on thin ice, greenhorn, but I agree with you. So answer me this: how far you would go to see this change through?"
+                    "Argue on the side of violence":
                         jump jon_VL_plan_tree_change_violence
-                    '[[not so much about how, but what it is that changes]':
+                    "Not so much about how, but what it is that changes":
                         jump jon_VL_plan_tree_change_what
-                    '[[argue on the side of peace]':
+                    "Argue on the side of peace":
                         jump jon_VL_plan_tree_change_peace
 
                 label jon_VL_plan_tree_change_violence:
-                    p '[[argue on the side of violence]'
-                    jon '[[agrees that violence acts quickly, but does not create a lasting peace as seen throughout history.]'
+                    p "If we want to accomplish anything, we have to enforce it. Violence may not be the best strategic answer, but long-term effects do not spark revolutions."
+                    
+                    p "A bullet can both literally and figuratively create the spark that ignites a change."
+
+                    jon "I can see why you would think that. But you need to understand that the long-term solutions have lasted longer in retrospect."
+
+                    jon "Still, I agree that violence compliments peace in such a delicate balance that it's often broken. Because once you've started the fire, you have to put it out."
+                    
+                    jon "A well-placed bullet can mean the difference between chaotic disaster and effective victory - but at the same time, a well-timed armistice can decide the fate of a people."
+                    
+                    $last_dialog = "It's good to know that we have another supporter of our cause. I hope that you can provide both the impetus and the resolution that the rebellion needs."
                     $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
                     jump menu_jon
 
                 label jon_VL_plan_tree_change_what:
-                    p '[[not so much about how, but what it is that changes]'
-                    jon '[[agrees that change itself is more important than the means of change.]'
+                    p "We have to focus on \"what\" we are trying to change more than \"how\". It's the \"what\" which gives us direction."
+
+                    p "If we lose sight of what we are fighting to change, then it simply turns into a brawl. Once the goal has been achieved, there is no longer a reason to fight for it."
+
+                    jon "Of course... because holding grudges against your enemies after a war is concluded has only ever proven counterproductive."
+
+                    jon "I agree with you, [alias.first], you make a strong point."
+
+                    p "I can't stress it enough. There is simply no need to fight another lengthy war when one isn't necessary or even logical."
+
+                    $ last_dialog = "You're words are inspiring, "+alias.first+". Let me know if you need anything else."
                     $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
                     jump menu_jon
 
                 label jon_VL_plan_tree_change_peace:
-                    p '[[argue on the side of peace]'
-                    jon '[[agrees that peace is powerful, but very slow to act.]'
+                    p "We have to remember, though, that while violence may be able to trip off a revolution, it will not end it with a stable resolution."
+
+                    p "Violence does nothing but alienate people, who forget what they are fighting for and simply that they must kill the enemy."
+
+                    p "It may be powerful, but chaos ultimately creates more chaos. It's simply how the universe works as a closed system."
+
+                    jon "But you have to remember, that while peace may be powerful and orderly, it does not come quickly. You may offend just as many people if you don't fight."
+                    
+                    jon "Kaldreans especially -  they'll lose respect for a force that attempts to avoid battle."
+
+                    p "Unfortunately. But it's a small price to pay when you are going to drastically alter the course of a people's future."
+
+                    jon "I suppose. But you'll have to really do some sweet-talking when you try to convince skeptical kaldreans of this."
+
+                    $last_dialog = "Then again, it's for the benefit of the future generations. They would most likely agree. If you have anything else to ask please do."
                     $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
                     jump menu_jon
+
+            label jon_VL_plan_tree_aware:
+                p "I'm sure if you were to speak to Alkay, he would give his word that I am trustworthy."
+
+                p "He and I have already had this discussion so I what you are going to do."
+
+                jon "You're bluffing."
+
+                p "Tomorrow morning is when everything is going to change - through the lens of a linear rifle scope."
+
+                jon "And what are you going to do about it?"
+
+                p "I assure you that I'm only trying to help."
+
+                jon "I still don't believe you, [alias.last], but I don't know how else you would have obtained that information. I'll humor you."
+                jump jon_VL_plan_tree_change
+

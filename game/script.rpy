@@ -78,6 +78,7 @@ init -2 python:
         jon_vl_info = InfoGet.NO_ATTEMPT
         jon_talk_kro = False
         jon_vl_plan_info = InfoGet.NO_ATTEMPT
+        jon_hobby_info = InfoGet.NO_ATTEMPT
 
     #Kro's flags
         kro_met = False

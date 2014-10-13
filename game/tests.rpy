@@ -5,7 +5,8 @@
 # A place to put testing code that will be run at the beginning of the program
 
 label tests:
-
+    $skip_intro = True
+    $plot_state.stage = PlotStage.VL_INFO
 ##    $ plot_state.stage = PlotStage.VL_PLANS
 ##    $plot_state.lauren_lorisk_info = InfoGet.SUCCESS
 ##    $plot_state.adam_alkay_info = InfoGet.SUCCESS
