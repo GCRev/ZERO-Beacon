@@ -22,19 +22,19 @@ label ch_ben:
     label menu_ben:
         menu:
             ben "[last_dialog]"
-            "Ask for advice":
+            "Ask Ben for advice":
                 call ben_advice
-            "Ask for opinion on recent events":
+            "Ask Ben for opinion on recent events":
                 call ben_events
-            "Ask about kaldrean government" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.ben_kald_govt_info != InfoGet.SUCCESS:
+            "Ask Ben about kaldrean government" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.ben_kald_govt_info != InfoGet.SUCCESS:
                 call ben_ask_kald_govt
-            "Ask about his day" if plot_state.stage == PlotStage.KALD_GOVT_INFO  and plot_state.ben_kald_govt_info != InfoGet.SUCCESS and plot_state.ben_talk_lida == False:
+            "Ask Ben about his day" if plot_state.stage == PlotStage.KALD_GOVT_INFO  and plot_state.ben_kald_govt_info != InfoGet.SUCCESS and plot_state.ben_talk_lida == False:
                 call ben_ask_day
-            "Ask about Ben's past":
+            "Ask Ben about his past":
                 call ben_Bg
             "Mention Lida" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.ben_kald_govt_info != InfoGet.SUCCESS  and plot_state.ben_talk_lida == True:
                 call ben_mention_lida
-            "Done talking":
+            "Done talking to Ben":
                 hide ben
                 return
         jump menu_ben

@@ -25,17 +25,17 @@ label ch_adam:
     label menu_adam:
         menu:
             adam '[last_dialog]'
-            'Ask for advice':
+            'Ask Adam for advice':
                 call adam_advice
-            'Ask about opinions on recent events':
+            'Ask Adam about his opinions on recent events':
                 call adam_events
-            'Ask about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask Adam about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
                 jump adam_VL_tree_start
-            'Ask about background' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask Adam about his background' if plot_state.stage == PlotStage.VL_INFO:
                 jump adam_Bg_tree_start
             'Alkay sent me' if plot_state.alkay_talk_adam == True:
                 call adam_alkay_dialog
-            'Done talking':
+            'Done talking to Adam':
                 hide adam
                 return
         jump menu_adam
@@ -80,17 +80,29 @@ label ch_adam:
 
         label adam_alkay_dialog:
             p "Actually, Alkay wanted me to talk to you."
+            
             adam "Yes, of course, any friend of Alkay is a friend of mine! What would you like to know, [alias.first]?"
+            
             p "Well, he mentioned a little bit about how you two met, what was your perspective?"
+            
             adam "That's not something I'd normally share with strangers, but if Alkay sent you, I'm sure that I can trust you."
+            
             adam 'Where to begin... Ah yes. The operation.'
+            
             adam "I'll try to keep this as brief as I can so I don't bore you to death."
+            
             adam "So I was part of the team that made first contact with the kaldreans. I was and engineer on the TSS Armada. When we first saw the aliens, the whole ship was dead silent for a long time. Seeing another intelligent being was... Wow. I can\'t even describe the emotion."
+            
             adam "But I digress! Anyways, then the fighting broke out. Neither side wanted to fight, but eventually someone pulled the trigger. Attempting to communicate was practically futile because of the language and culture barriers."
+            
             adam "Through the process though, I befriended Alkay. He was one of the first kaldreans to learn the human standard."
+            
             adam "We were practically the emissaries of the time."
+            
             adam "He was taking a huge risk doing this though. He was going against his leaders to try to stop the fighting. It was very brave of him. Some could argue foolish, but either way he was successful and we live in peace because of it."
+            
             adam "Alkay and I have been friends ever since."
+            
             $last_dialog = "Is there anything else I can help you with, today?"
             $ plot_state.adam_alkay_info = InfoGet.SUCCESS
             $ plot_state.alkay_talk_adam = False
@@ -210,9 +222,9 @@ label ch_adam:
 
             menu:
                 adam "You could certainly say that."
-                "Ask about Alkay":
+                "Ask Adam about Alkay":
                     jump adam_Bg_tree_Alkay
-                "Ask about first contact conflict":
+                "Ask Adam about the first contact conflict":
                     jump adam_Bg_tree_conflict
 
             label adam_Bg_tree_Alkay:
