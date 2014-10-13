@@ -34,7 +34,7 @@ label ck_lorisk:
                 call lorisk_events
             'Ask Lorisk about her background' if plot_state.stage == PlotStage.VL_INFO and not plot_state.lorisk_flatter_offend:
                 jump lorisk_VL_tree_start
-            'Ask Lorisk about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask Lorisk about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO and plot_state.lorisk_vl_info != InfoGet.FAIL:
                 jump lorisk_personal_reasons
             'Question Lorisk about her parents' if plot_state.stage == PlotStage.VL_PLANS and plot_state.lauren_lorisk_info:
                 jump lorisk_VL_plans_tree_start
@@ -93,7 +93,7 @@ label ck_lorisk:
 
             p "Please, don't apologize to me. I was prying."
 
-            $ last_dialog = "You could not have known about that. Anyway, is there any thing else I can help you with?"
+            $ last_dialog = "You could not have known about that. Anyway, is there anything else you want to ask?"
             $ plot_state.lorisk_vl_info = InfoGet.FAIL
             jump menu_lorisk
 
@@ -104,7 +104,7 @@ label ck_lorisk:
                 lorisk "Well, there isn't much to tell. Both my parents were linguists, and they made quite sure that I was prepared to communicate with anyone I met."
                 "Ask about linguistics":
                     jump lorisk_VL_tree_languages
-                "Flatter her with praise for her passion and intelligence" if not plot_state.lorisk_flatter:
+                "Praise her dedication" if not plot_state.lorisk_flatter:
                     jump lorisk_VL_tree_flatter 
                 "Stop pursing the topic":
                     p "Interesting."
@@ -126,18 +126,30 @@ label ck_lorisk:
                     jump lorisk_VL_tree_list_languages  
 
                 label lorisk_VL_tree_dialects:
-                    p '[[ask about traditional dialects]'
+                    p "Can you tell me about the traditional dialects? Alkay mentioned them so he got me wondering about them."
                     menu:
-                        lorisk '[[says that she speak two traditional dialects]'
+                        lorisk "I actually know how to read and write in four of the many traditional dialects. Of those four I can speak and understand two: Kalaras and Takress."
                         "ask what \"Valak Lideri\" means":
                             jump lorisk_personal_reasons
                         "ask about dialect history":
                             jump lorisk_VL_tree_dialect_history
 
                     label lorisk_VL_tree_dialect_history:
-                        p '[[ask lorisk about dialect history]'
-                        lorisk '[[gives a history on the two dialects she knows. Mentions the founding of Beacon and sovereign paradise.]'
-                        $last_dialog = '[please ask if you need anything]'
+                        p "Could you talk about the history of those two languages?"
+
+                        lorisk "Actually the reason I can speak and understand Kalaras and Takress is because they are still spoken, just barely anymore."
+
+                        lorisk "They are the more recent of the traditional languages that were prominent around the settlement of Sovereign Paradise."
+
+                        lorisk "Although \"Sovereign Paradise\" is a modern adaptation of the original phrase, which would have meant \"Beacon\" back then."
+
+                        lorisk "Kalaras and Takress were quite similar and eventually they were unified and enforced in education. This was the first iteration of Kaldrean Common."
+
+                        lorisk "Different subcultures still spoke in their native dialects and still do today. Kaldrean Common has evolved quite a bit as a result of all the cultural input."
+
+                        p "Thank you for the information, Lorisk, this is really quite interesting."
+
+                        $last_dialog = "Not at all. I'm happy to spread the knowledge around. Please speak up if you have anything more you would like to ask."
                         $plot_state.lorisk_vl_info = InfoGet.SUCCESS
                         jump menu_lorisk
 
@@ -148,7 +160,7 @@ label ck_lorisk:
 
                     p "Thirty languages? Can you name each one?"
                     menu:
-                        lorisk 'Do you really want me to list off all the languages I speak?'
+                        lorisk 'Do you really want me to list off all the languages I speak? Because I can.'
                         'Yes':
                             jump lorisk_VL_tree_list_all_lauguages
                         'No, thanks':
@@ -198,35 +210,46 @@ label ck_lorisk:
                     p "No I was only joking."
 
                     lorisk "Good... I'm sure I would have bored you to tears with a long list."
-                    
+
                     $ last_dialog = 'Is there anything else I can help you with?'
                     $ plot_state.lorisk_vl_info = InfoGet.FAIL
                     jump menu_lorisk
 
             label lorisk_VL_tree_flatter:
-                p "I can tell. There aren't many people I've met as smart and passionate as you."
+                p "You come across as very intelligent. I can see how it would be easy for you to pick up so many languages."
+
+                lorisk "Why thank you, [alias.first]. You're quite the charmer, aren't you?"
+
+                lorisk "Thank you for the compliment. I don't think it's often that anyone realizes how much work it is to maintain command over thirty languages."
                 $ plot_state.lorisk_flatter = True
-                lorisk "(laughs)"
                 menu:
-                    lorisk "Why thank you, [alias.first]. You\'re quite the charmer, aren\'t you?"
-                    'Mention her radiance and beauty':
-                        p "Well, it's hard not to be a charmer around someone of your radiance and beauty."
-                        lorisk "(sighs)"
-                        lorisk "Alright, it was cute at first, but now I can tell you're just using me."
-                        lorisk "Come back when you've calmed down a bit."
-                        $ plot_state.lorisk_flatter_offend = True
-                        hide lorisk
-                        return
+                    lorisk "I detect another statement - I'll warn you though, compliments and flattery are two very different concepts. I don't appreciate flattery."
+                    "Discontinue conversation":
+                        jump lorisk_VL_tree_flatter_more
                     "Ask about her passion for languages":
                         jump lorisk_VL_tree_languages
 
+                label lorisk_VL_tree_flatter_more:
+                    p "I did mean what I said, Lorisk. I know a few linguists back on Earth, none of whom possess the same repertoire that you do."
+                    
+                    lorisk "Alright. Let me give you some advice, [alias.first]: Be extremely cautious about compliments and flattery around kaldreans."
+
+                    lorisk "I've been tempered by my upbringing on Concord, but other kaldreans might be very easily offended by what you might consider an inane compliment."
+
+                    p "I'll bear that in mind. Thank you Lorisk."
+
+                    $last_dialog = "No problems "+alias.first+". If there is anything else you need please ask."
+
+                    #$ plot_state.lorisk_flatter_offend = True
+                    jump menu_lorisk
+
         label lorisk_VL_plans_tree_start:
-            p '[[you tell Lorisk that you know about her mixed-race parents]'
+            p "Lorisk I know about your parents. I know that they are mixed-race."
             menu:
-                lorisk '[[Oh. You know about that? What do you care?]'
-                '[[show sympathy]':
+                lorisk "Oh. You know about that? What do you care? Are you going to scorn me and my family for doing what they feel is right?"
+                "show sympathy":
                     jump lorisk_VL_plans_tree_sympathy
-                '[[show disgust]':
+                "show skepticism":
                     jump lorisk_VL_plans_tree_disgust
 
             label lorisk_VL_plans_tree_sympathy:
