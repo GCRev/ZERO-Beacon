@@ -19,21 +19,21 @@ label ch_lauren:
     label menu_lauren:
         menu:
             lauren '[last_dialog]'
-            'You notice she is reading something. Show interest' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask Lauren what she is reading' if plot_state.stage == PlotStage.VL_INFO:
                 jump lauren_info_tree_start
-            'Ask about her background':
+            'Ask Lauren about her background':
                 call lauren_background
-            'Ask for advice':
+            'Ask Lauren for advice':
                 call lauren_advice
-            'Ask her opinion on recent events':
+            'Ask Lauren about her opinion on recent events':
                 call lauren_events
-            'Done talking':
+            'Done talking to Lauren':
                 hide lauren
                 return
         jump menu_lauren
 
         label lauren_background:
-            p '[[ask about her background]'
+            p 'So what can you tell me about your past?'
             lauren '[[replies that she does not have time to speak with you about non job-related things]'
             $last_dialog = '[Please keep further inquiry to yourself.]'
             return

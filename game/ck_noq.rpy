@@ -27,19 +27,19 @@ label ck_noq:
     label menu_noq:
         menu:
             noq '[last_dialog]'
-            '[[ask about his designs]' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask Noq about his designs' if plot_state.stage == PlotStage.VL_INFO:
                 call noq_designs
-            '[[ask about VL]' if plot_state.stage == PlotStage.VL_INFO or plot_state.stage == PlotStage.VL_PLANS:
+            'Ask about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO or plot_state.stage == PlotStage.VL_PLANS:
                 jump noq_VL_tree_start
-            '[[ask for advice from Noq]':
+            'Ask Noq for advice':
                 call noq_advice
-            '[[ask Noq his opinions on recent events]':
+            'Ask Noq about his opinions on recent events':
                 call noq_events
-            '[[ask Noq about his background]':
+            'Ask Noq about his background':
                 call noq_background
-            '[[ask Noq about his interests]'  if plot_state.stage == PlotStage.VL_PLANS and plot_state.noq_vl_plan_info == InfoGet.NO_ATTEMPT:
+            'Ask Noq about his interests'  if plot_state.stage == PlotStage.VL_PLANS and plot_state.noq_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump noq_interests_tree_start
-            '[[done talking to noq]':
+            'Done talking to Noq':
                 hide noq
                 return
         jump menu_noq
@@ -50,7 +50,7 @@ label ck_noq:
             p "Perhaps later then."
             noq "Perhaps"
             p "Alright"
-            $last_dialog = 'So?'
+            $last_dialog = 'Anything else? Or shall I be on my way?'
             return
 
         label noq_events:

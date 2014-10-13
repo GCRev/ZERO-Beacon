@@ -31,24 +31,23 @@ label ck_alkay:
     label menu_alkay:
         menu:
             alkay '[last_dialog]'
-            '[[ask for advice]':
+            'Ask Alkay for advice':
                 call alkay_advice
-            '[[ask about opinions on events]':
+            'Ask Alkay about his opinions on recent events':
                 call alkay_events
-            '[[Ask about VL]' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask Alkay about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
                 jump alkay_VL_tree_start
-            '[[Ask about background]' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask Alkay about his background' if plot_state.stage == PlotStage.VL_INFO:
                 jump alkay_Bg_tree_start
-            '[[Adam sent me]' if plot_state.adam_talk_alkay == True and plot_state.stage == PlotStage.VL_INFO:
+            'Adam sent me' if plot_state.adam_talk_alkay == True and plot_state.stage == PlotStage.VL_INFO:
                 jump alkay_adam_tree_start
-            '[[show sympathy with VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info == InfoGet.SUCCESS and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
+            'Show sympathy with Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info == InfoGet.SUCCESS and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
                 call alkay_VL_plan_sympathy
-            '[[accuse Alkay of being involved with VL]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info == InfoGet.SUCCESS and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
+            'Accuse Alkay of being with Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info == InfoGet.SUCCESS and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump alkay_VL_accuse_tree_start
-            '[[lie about what you know]' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info == InfoGet.SUCCESS and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
+            'Lie about wanting to help Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info == InfoGet.SUCCESS and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump alkay_VL_plan_lie
-
-            '[[Done talking]':
+            'Done talking to Alkay':
                 hide alkay
                 return
         jump menu_alkay
@@ -87,7 +86,7 @@ label ck_alkay:
 
             p "Of course. Thank you so much."
 
-            $last_dialog = '[is there anything else I can help you with?]'
+            $last_dialog = 'Is there anything else I can help you with?'
             return
 
         label alkay_events:

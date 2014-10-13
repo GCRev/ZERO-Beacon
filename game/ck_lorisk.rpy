@@ -28,17 +28,17 @@ label ck_lorisk:
     label menu_lorisk:
         menu:
             lorisk '[last_dialog]'
-            "Ask for advice":
+            "Ask Lorisk for advice":
                 call lorisk_advice
-            "Ask about her opinion on recent events":
+            "Ask Lorisk about her opinion on recent events":
                 call lorisk_events
-            'Ask about her background' if plot_state.stage == PlotStage.VL_INFO and not plot_state.lorisk_flatter_offend:
+            'Ask Lorisk about her background' if plot_state.stage == PlotStage.VL_INFO and not plot_state.lorisk_flatter_offend:
                 jump lorisk_VL_tree_start
-            'Ask about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
+            'Ask Lorisk about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO:
                 jump lorisk_personal_reasons
-            'Question her about her parents' if plot_state.stage == PlotStage.VL_PLANS and plot_state.lauren_lorisk_info:
+            'Question Lorisk about her parents' if plot_state.stage == PlotStage.VL_PLANS and plot_state.lauren_lorisk_info:
                 jump lorisk_VL_plans_tree_start
-            'Done talking':
+            'Done talking to Lorisk':
                 hide lorisk
                 return
         jump menu_lorisk

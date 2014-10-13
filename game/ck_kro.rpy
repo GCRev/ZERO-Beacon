@@ -22,19 +22,19 @@ label ck_kro:
     label menu_kro:
         menu:
             kro '[last_dialog]'
-            '[[Jon sent me]' if plot_state.jon_talk_kro and plot_state.stage == PlotStage.VL_INFO and plot_state.kro_obsession_info == InfoGet.NO_ATTEMPT:
+            'Jon sent me' if plot_state.jon_talk_kro and plot_state.stage == PlotStage.VL_INFO:
                 jump kro_jon_tree_start
-            '[[flatter]' if plot_state.stage == PlotStage.VL_INFO:
+            'Flatter Kro' if plot_state.stage == PlotStage.VL_INFO:
                 call kro_flatter
-            '[[ask for advice]':
+            'Ask Kro for advice':
                 call kro_advice
-            '[[ask about opinions on events]':
+            'Ask Kro on her opinions on recent events':
                 call kro_events
-            '[[Ask about her background]':
+            'Ask Kro about her background':
                 call kro_background
-            '[[ask about VL]' if plot_state.stage == PlotStage.VL_PLANS:
+            'Ask Kro about Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS:
                 call kro_VL_tree_start
-            '[[Done talking]':
+            'Done talking to Kro':
                 hide kro
                 return
         jump menu_kro
