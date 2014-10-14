@@ -32,8 +32,10 @@ label sarah_arrive:
 
     p "Diplomat? Ha! It should be a learning experience for all of us."
 
-    sarah "Before we\'re able to quell the political unrest, we need to understand it. I\'ve arranged it so that you
-    now have access to the High Embassy, where you\'ll find High Ambassadors Ben Columbus and Vatrisk Irridiss Kier."
+    sarah "Before we\'re able to quell the political unrest, we need to understand it." 
+
+    sarah "I\'ve arranged it so that you now have access to the High Embassy, where 
+    you\'ll find High Ambassadors Ben Columbus and Vatrisk Irridiss Kier."
 
     sarah "I want you to go talk to them and learn about the state of the kaldrean government. They may not be very 
     willing to divulge in-depth information, so speak carefully."
