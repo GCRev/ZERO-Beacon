@@ -5,7 +5,7 @@
 # Dialog for Lida Ezekeri Skar
 
 label ck_lida:
-    show lida at char_pos
+    $ show_ch('lida', 'right')
     
     if plot_state.lida_met:
         lida 'Yes?'
@@ -29,7 +29,7 @@ label ck_lida:
             'Ask Lida about her background':
                 call lida_background
             'Done talking to Lida':
-                hide lida
+                $ hide_ch('lida', 'right')
                 return
         jump menu_lida
 

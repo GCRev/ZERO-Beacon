@@ -5,7 +5,7 @@
 # Dialog for Benjamin Columbus
 
 label ch_ben:
-    show ben at char_pos
+    $ show_ch('ben', 'left')
 
     if plot_state.ben_met:
         $ last_dialog = "Hello again, " + alias.first + ". What can I do for you?"
@@ -35,7 +35,7 @@ label ch_ben:
             "Mention Lida" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.ben_kald_govt_info != InfoGet.SUCCESS  and plot_state.ben_talk_lida == True:
                 call ben_mention_lida
             "Done talking to Ben":
-                hide ben
+                $ hide_ch('ben', 'left')
                 return
         jump menu_ben
 

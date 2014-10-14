@@ -5,7 +5,7 @@
 # Dialog for Kro Zalva Ross
 
 label ck_kro:
-    show kro at char_pos
+    $ show_ch('kro', 'right')
     if plot_state.kro_met:
         $ last_dialog = "Greetings, " + alias.title_last + "."
         kro '[last_dialog]'
@@ -35,7 +35,7 @@ label ck_kro:
             'Ask Kro about Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS:
                 call kro_VL_tree_start
             'Done talking to Kro':
-                hide kro
+                $ hide_ch('kro', 'right')
                 return
         jump menu_kro
 

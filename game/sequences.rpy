@@ -7,7 +7,7 @@
 label intro:
     stop music
     play music "assets/mu_intro.ogg"
-    scene bg stars
+    scene bg stars with squares
     show planet_bridge at Position(xpos = 0.5, ypos = 0.75)
 
     'This is the planet Bridge.'
@@ -70,14 +70,14 @@ label intro:
     comm 'Very good. It is time for you to get going, then, Agent.'
     comm 'You have not failed me yet. Do not let this be the first time you do.'
 
-    scene bg map
+    scene bg map with squares
 
     'After a month-long journey through space, you finally arrive on Bridge. As you come to
     land at the Spaceport, you see Concord below you.' 
 
     'The city appears utopian, set between a shimmering coast and an luscious jungle.'
 
-    scene bg port
+    scene bg port with fade
 
     'You dismount your spacecraft, stumbling a bit as you readjust to the feeling of gravity. 
     You emerge in the bustling, noisy spaceport. People mill about all around.'
@@ -88,47 +88,47 @@ label intro:
     return
 
 label ending_incorrect_plans:
-    hide sarah
+    $ hide_ch('sarah', 'left')
     "[[Sarah goes to initiate the raid.]"
     "[[Later you find out that you incorrectly identified the rebels' plans. You have failed to apprehend
     the rebels in time]"
-    scene bg result1
+    scene bg result1 with squares
     jump game_over
 
 label ending_correct_plans:
     stop music
-    hide sarah
+    $ hide_ch('sarah', 'left')
     "[[Sarah goes to initiate the raid.]"
-    scene bg result2
+    scene bg result2 with squares
     jump game_over
 
 label ending_too_many_wrong_rebels_identified:
     stop music
-    hide sarah
+    $ hide_ch('sarah', 'left')
     "[[Sarah goes to initiate the raid.]"
     "[[Later you find out that you identified too many people as rebels that weren't. 
     You have failed to apprehend the rebels in time]"
-    scene bg result1
+    scene bg result1 with squares
     jump game_over
 
 label ending_not_enough_rebels_identified:
     stop music
-    hide sarah
+    $ hide_ch('sarah', 'left')
     "[[Sarah goes to initiate the raid.]"
     "[[Later you find out that you didn't identify enough rebels 
     You have failed to apprehend the rebels in time]"
-    scene bg result1
+    scene bg result1 with squares
     jump game_over
 
 label ending_correct_rebels:
     stop music
     "[[You correctly identified enough rebels]"
-    scene bg result2
+    scene bg result2 with squares
     jump game_over
 
 label ending_vatrisk_denounce_govt:
     stop music
-    scene bg result4
+    scene bg result4 with squares
     jump game_over
 
 label ending_vatrisk_lure:
@@ -139,7 +139,7 @@ label ending_vatrisk_lure:
     "[[After talking for a short time, you hear the blast of a plasma gun]"
     play sound "assets/sf_assassination2.ogg"
     "[[Vatrisk falls to the ground, fatally wounded]"
-    scene bg result3
+    scene bg result3 with squares
     jump game_over
 
 label game_over:

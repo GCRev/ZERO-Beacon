@@ -5,7 +5,7 @@
 # Dialog for Lauren Gray
 
 label ch_lauren:
-    show lauren at char_pos
+    $ show_ch('lauren', 'right')
     if plot_state.lauren_met:
         $ last_dialog = 'Yes? Oh, it\'s you again.'        
     else:
@@ -28,7 +28,7 @@ label ch_lauren:
             'Ask Lauren about her opinion on recent events':
                 call lauren_events
             'Done talking to Lauren':
-                hide lauren
+                $ hide_ch('lauren', 'right')
                 return
         jump menu_lauren
 
