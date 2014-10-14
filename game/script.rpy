@@ -12,7 +12,7 @@ label start:
     else:
         call intro
 
-    $ plot_state.set_stage(debug_init_stage if config.developer else PlotState.ARRIVE)
+    $ plot_state.set_stage(debug_init_stage if (config.developer and debug_init_stage != None) else PlotStage.ARRIVE)
 
     if debug_skip_intro and config.developer:
         jump loc_port

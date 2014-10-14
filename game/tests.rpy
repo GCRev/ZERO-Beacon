@@ -7,5 +7,5 @@
 label tests:
     if config.developer:
         $ debug_skip_intro = False
-        $ debug_init_stage = PlotStage.KALD_GOVT_INFO
+        $ debug_init_stage = None
     return
