@@ -26,8 +26,6 @@ label ck_lida:
                 call lida_advice
             'Ask Lida about her opinions on recent events':
                 call lida_events
-            ##'Ask Lida about her background':
-            ##    call lida_background
             'Done talking to Lida':
                 $ hide_ch('lida', 'right')
                 return
@@ -46,12 +44,6 @@ label ck_lida:
             p "Okay then."
             $last_dialog = "Make your questions brief."
             return
-
-        label lida_background:
-            p '[[you ask Lida about her background]'
-            lida '[[offers little information. She sounds like she does not want to talk to you.]'
-            return
-
 
         label lida_convince_tree:
             p "Ms. Ezekeri, I would implore you to meet with Ambassador Columbus. I cannot understand why you decline such a simple request."
