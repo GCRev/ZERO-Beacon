@@ -5,7 +5,7 @@
 # Dialog for Alkay Volk Kladir
 
 label ck_alkay:
-    show alkay at char_pos
+    $ show_ch('alkay', 'left')
     if plot_state.alkay_met:
         $ last_dialog = 'Hello again, ' + alias.first + ', what can I get you?'
         alkay '[last_dialog]'
@@ -48,7 +48,7 @@ label ck_alkay:
             'Lie about wanting to help Valak Lideri' if plot_state.stage == PlotStage.VL_PLANS and plot_state.adam_alkay_info == InfoGet.SUCCESS and plot_state.alkay_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump alkay_VL_plan_lie
             'Done talking to Alkay':
-                hide alkay
+                $ hide_ch('alkay', 'left')
                 return
         jump menu_alkay
 
@@ -408,7 +408,7 @@ label ck_alkay:
 
             alkay "Come back when you have decided to stop lying through your teeth, [alias.first]."
             $plot_state.alkay_vl_plan_info = InfoGet.FAIL
-            hide alkay
+            $ hide_ch('alkay', 'left')
             return
 
     label alkay_VL_accuse_tree_start:

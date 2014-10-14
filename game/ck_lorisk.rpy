@@ -5,14 +5,14 @@
 # Dialog for Lorisk Nideria Kol
 
 label ck_lorisk:
-    show lorisk at char_pos
+    $ show_ch('lorisk', 'left')
 
     if plot_state.lorisk_vl_plan_info == InfoGet.SUCCESS:
         $last_dialog = '[[Thank you so much, ' + alias.first + '. I really needed to talk to someone about this. Is there anything you still want to ask?]'
         jump menu_lorisk
     if plot_state.lorisk_vl_plan_info == InfoGet.FAIL:
         lorisk 'I do not wish to speak with you again. Take your bigotry elsewhere.'
-        hide lorisk
+        $ hide_ch('lorisk', 'left')
         return
 
     if plot_state.lorisk_met:
@@ -39,7 +39,7 @@ label ck_lorisk:
             'Question Lorisk about her parents' if plot_state.stage == PlotStage.VL_PLANS and plot_state.lauren_lorisk_info:
                 jump lorisk_VL_plans_tree_start
             'Done talking to Lorisk':
-                hide lorisk
+                $ hide_ch('lorisk', 'left')
                 return
         jump menu_lorisk
 
@@ -346,5 +346,5 @@ label ck_lorisk:
 
                 lorisk "I thought I could trust you, [alias.title_last], but I guess I couldn't recognize your deceitful tone. I do not want to talk to you anymore."
                 $ plot_state.lorisk_vl_plan_info = InfoGet.FAIL
-                hide lorisk 
+                $ hide_ch('lorisk', 'left')
                 return

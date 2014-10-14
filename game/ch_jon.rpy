@@ -5,11 +5,11 @@
 # Dialog for Jonathan Caise
 
 label ch_jon:
-    show jon at char_pos
+    $ show_ch('jon', 'left')
 
     if plot_state.jon_vl_plan_info == InfoGet.FAIL:
-        jon "Was I not clear? Don't talk to me [alias.last] unless you find spending time in confinement appealing."
-        hide jon
+        jon "Was I not clear? Don't talk to me, [alias.last], unless you find spending time in confinement appealing."
+        $ hide_ch('jon', 'left')
         return
 
     if plot_state.jon_met:
@@ -17,7 +17,9 @@ label ch_jon:
         jon "[last_dialog]"
 
     else:
-        jon "Give me a moment here... HEY! JANS! GET YOUR PEOPLE ON THE TARMAC ASAP. Sorry. Can I help you [alias.address]?"
+        jon "Give me a moment here..."
+        jon "HEY! JANS! GET YOUR PEOPLE ON THE TARMAC ASAP."
+        jon "Sorry. Can I help you [alias.address]?"
 
         p "I\'m just trying to get to know people here."
 
@@ -53,7 +55,7 @@ label ch_jon:
             "Accuse Jon of association with the VL" if plot_state.stage == PlotStage.VL_PLANS and plot_state.kro_obsession_info and plot_state.jon_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump jon_accuse
             "Done talking to Jon":
-                hide jon
+                $ hide_ch('jon', 'left')
                 return
         jump menu_jon
 
@@ -266,7 +268,7 @@ label ch_jon:
             p "You know what, Jon, you haven't done a very good job covering up the fact that you are part of Valak Lideri."
             jon "That is a very serious accusation -  I don't take {i}any{/i} accusations lightly. So get out of my face before I remove you myself."
             $plot_state.jon_vl_plan_info = InfoGet.FAIL
-            hide jon
+            $ hide_ch('jon', 'left')
             return
 
         label jon_VL_plan_tree_start:
@@ -286,7 +288,7 @@ label ch_jon:
 
                 jon "If you keep talking to me I'll have you removed from this area. Be glad that I'm only sending you off with a warning, [alias.last]."
                 $plot_state.jon_vl_plan_info = InfoGet.FAIL
-                hide jon
+                $ hide_ch('jon', 'left')
                 return
 
             label jon_VL_plan_tree_change:

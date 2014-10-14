@@ -5,7 +5,7 @@
 # Dialog for Cole DeMarc
 
 label ch_cole:
-    show cole at char_pos
+    $ show_ch('cole', 'right')
     if plot_state.cole_met:
         $ last_dialog = "Hey there. How are you faring today, " + alias.title_last + "?"
 
@@ -25,7 +25,7 @@ label ch_cole:
             'Ask Cole about his opinions on recent events':
                 call cole_events
             'Done talking to Cole':
-                hide cole
+                $ hide_ch('cole', 'right')
                 return
         jump menu_cole
 

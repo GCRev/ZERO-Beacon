@@ -5,7 +5,7 @@
 # Dialog for Vatrisk Irridiss Kier
    
 label ck_vatrisk:
-    show vatrisk at char_pos
+    $ show_ch('vatrisk', 'right')
 
     if plot_state.stage == PlotStage.VATRISK_MEET:
         call vatrisk_meeting
@@ -64,7 +64,7 @@ label ck_vatrisk:
                 jump vatrisk_VL_lure
             
             'Done talking to Vatrisk':
-                hide vatrisk
+                $ hide_ch('vatrisk', 'right')
                 return
         jump menu_vatrisk
 
@@ -123,7 +123,7 @@ label ck_vatrisk:
             
             $ last_dialog = 'Talk to me when you have calmed down.'
             $plot_state.vatrisk_kald_govt_info = InfoGet.FAIL
-            hide vatrisk
+            $ hide_ch('vatrisk', 'right')
             return
 
         label vatrisk_bribe:
@@ -171,7 +171,7 @@ label ck_vatrisk:
             $ last_dialog = 'Come back when you have something intelligent to say.'
         
             $plot_state.vatrisk_trust = TrustLevel.LOW
-            hide vatrisk
+            $ hide_ch('vatrisk', 'right')
             return
 
         label vatrisk_VL_inform_tree_start:
@@ -358,7 +358,7 @@ label ck_vatrisk:
             "The ambassador leaves the room and walks to his personal landing pad to board his transport. 
             You follow him, still trying to dissuade him from leaving the safety of the High Embassy without guard."
 
-            scene bg landing_pad
+            scene bg landing_pad with move
             
             "Ignoring your protests, he boards the transport. Soon after it takes off, you hear a deafening blast."
             

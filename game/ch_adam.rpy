@@ -5,7 +5,7 @@
 # Dialog for Adam Demeter
 
 label ch_adam:
-    show adam at char_pos
+    $ show_ch('adam', 'right')
     if plot_state.adam_met:
         $ last_dialog = 'Hello again, ' + alias.first + '. What can I do for you?'
         adam '[last_dialog]'
@@ -36,7 +36,7 @@ label ch_adam:
             'Alkay sent me' if plot_state.alkay_talk_adam == True:
                 call adam_alkay_dialog
             'Done talking to Adam':
-                hide adam
+                $ hide_ch('adam', 'right')
                 return
         jump menu_adam
 

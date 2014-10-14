@@ -14,7 +14,10 @@ label start:
 
     show screen objective("Talk to Sarah Liu in Residences") 
 
-    jump loc_port
+    if skip_intro:
+        jump loc_port
+    else:
+        jump loc_port_no_fade
 
 
 ####################################################
@@ -27,11 +30,41 @@ init -2 python:
     # Helper function for loading & scaling our character images
     def char_img(fname):
         return im.FactorScale('assets/' + fname + '.png', config.screen_width / 1350.0)
-
+ 
     # bkg_img : string -> Image
     # Helper function for loading & scaling our background images
     def bkg_img(fname):
         return im.Scale('assets/' + fname + '.png', config.screen_width, config.screen_height)
+
+    # show_ch : Image, string -> void
+    def show_ch(img, direction):
+        trans = None
+        if direction == 'left':
+            trans = moveinleft
+        elif direction == 'right':
+            trans = moveinright
+        else:
+            raise ValueError("invalid direction: " + direction)
+        renpy.show('text_frame')
+        renpy.with_statement(None)
+        renpy.show(img, at_list=[char_pos])
+        renpy.with_statement(trans)
+        renpy.hide('text_frame')
+
+    # hide_ch : string, string -> void
+    def hide_ch(char_name, direction):
+        trans = None
+        if direction == 'left':
+            trans = moveoutleft
+        elif direction == 'right':
+            trans = moveoutright
+        else:
+            raise ValueError("invalid direction: " + direction)
+        renpy.show('text_frame')
+        renpy.with_statement(None)
+        renpy.hide(char_name)
+        renpy.with_statement(trans)
+        renpy.hide('text_frame')
 
     # enum : string ... -> type
     # Creates an enumerated type from a list of strings. Used to add support for
@@ -150,10 +183,10 @@ init -2 python:
 ####################################################
 
 # Non-characters
-define char_pos = Position(xpos = 0.8, xanchor = 'right', ypos = config.screen_height - 150)
 define plot_state = None
 define skip_intro = False # for debugging only
 define alias = None
+define char_pos = Position(xpos=0.8, xanchor='right', ypos=config.screen_height-150)    
 
 # Non-pictured characters
 define p = Character('You')
@@ -204,6 +237,7 @@ image bg res = bkg_img('bg_res')
 image bg port = bkg_img('bg_port')
 
 image planet_bridge = im.Scale('assets/bg_bridge.png', config.screen_width / 2.0, config.screen_width / 2.0)
+image text_frame = im.Scale('assets/ui_text-frame.png', config.screen_width, style.window.yminimum)
 
 image bg stars = bkg_img('bg_stars')
 image bg map = bkg_img('bg_map')
@@ -223,7 +257,7 @@ image bg result4 = bkg_img('bg_result_4-diplomacy')
 label map_screen:
     stop music
     play music "assets/mu_menu.ogg"
-    scene bg map
+    scene bg map with fade
     menu:
         '1. High Embassy':
             jump loc_high_emb
@@ -241,14 +275,14 @@ label map_screen:
 label loc_market:
     stop music
     play music "assets/mu_market.ogg"
-    scene bg market
+    scene bg market with fade
     'You are at the Grand Marketplace. [[describe]'
     label market_menu:
         menu:
-            'Talk to Cole Demarc':
-                call ch_cole
             'Talk to Alkay Volk Kladir':
                 call ck_alkay
+            'Talk to Cole Demarc':
+                call ch_cole
             '(Back to Map)':
                 jump map_screen
     jump market_menu
@@ -256,7 +290,7 @@ label loc_market:
 label loc_high_emb:
     stop music
     play music "assets/mu_emb.ogg"
-    scene bg high_emb
+    scene bg high_emb with fade
     'You are at the High Embassy. [[describe]'
     label menu_high_emb:
         if plot_state.stage == PlotStage.ARRIVE:
@@ -283,7 +317,7 @@ label loc_high_emb:
                 'Talk to Vatrisk Irridiss Kier':
                     call ck_vatrisk
                     if plot_state.stage == PlotStage.ATTACK_JUST_HAPPENED:
-                        scene bg res
+                        scene bg res with squares
                         call ch_sarah
                         jump map_screen
                     elif plot_state.stage == PlotStage.GAME_OVER:
@@ -295,7 +329,7 @@ label loc_high_emb:
 label loc_human_emb:
     stop music
     play music "assets/mu_emb.ogg"
-    scene bg human_emb
+    scene bg human_emb with fade
     'You are at the Human Embassy. [[describe]'
     label menu_human_emb:
         menu:
@@ -308,7 +342,7 @@ label loc_human_emb:
 label loc_kald_emb:
     stop music
     play music "assets/mu_emb.ogg"
-    scene bg kald_emb
+    scene bg kald_emb with fade
     'You are at the Kaldrean Embassy. [[describe]'
     label menu_kald_emb:
         menu:
@@ -323,7 +357,7 @@ label loc_kald_emb:
 label loc_res:
     stop music
     play music "assets/mu_res.ogg"
-    scene bg res
+    scene bg res with fade
     'You are at the Residences. [[describe]'
     label menu_res:
         menu:
@@ -342,7 +376,8 @@ label loc_res:
 label loc_port:
     stop music
     play music "assets/mu_port.ogg"
-    scene bg port
+    scene bg port with fade
+label loc_port_no_fade:
     'You are at the Spaceport. [[describe]'
     label menu_port:
         menu:

@@ -5,7 +5,7 @@
 # Dialog for Sarah Liu
 
 label ch_sarah:
-    show sarah at char_pos
+    $ show_ch('sarah', 'left')
     if plot_state.stage == PlotStage.ARRIVE:
         call sarah_arrive
     elif plot_state.stage == PlotStage.KALD_GOVT_INFO:
@@ -18,7 +18,7 @@ label ch_sarah:
         call sarah_attack_just_happened
     elif plot_state.stage == PlotStage.VL_PLANS:
         call sarah_vl_plans
-    hide sarah
+    $ hide_ch('sarah', 'left')
     return
 
 label sarah_arrive:

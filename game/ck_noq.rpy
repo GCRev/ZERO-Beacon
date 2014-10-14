@@ -5,11 +5,11 @@
 # Dialog for Noq Kriesk Lask
 
 label ck_noq:
-    show noq at char_pos
+    $ show_ch('noq', 'left')
 
     if plot_state.noq_vl_plan_info == InfoGet.FAIL:
         noq '[[I told you not to bother me.]'
-        hide noq
+        $ hide_ch('noq', 'left')
         return
 
     if plot_state.noq_met:
@@ -40,7 +40,7 @@ label ck_noq:
             'Ask Noq about his interests'  if plot_state.stage == PlotStage.VL_PLANS and plot_state.noq_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump noq_interests_tree_start
             'Done talking to Noq':
-                hide noq
+                $ hide_ch('noq', 'left')
                 return
         jump menu_noq
 
@@ -124,7 +124,7 @@ label ck_noq:
                 label noq_VL_tree_assert:
                     p '[[Assert that he must know something right in Noq\'s pretty face]'
                     noq '[[You annoy me very much. Remove yourself or I will have security remove you for you.]'
-                    hide noq
+                    $ hide_ch('noq', 'left')
                     return
 
         label noq_interests_tree_start:
