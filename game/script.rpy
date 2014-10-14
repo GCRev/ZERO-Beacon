@@ -266,7 +266,7 @@ image planet_bridge = im.Scale('assets/bg_bridge.png', config.screen_width / 2.0
 image text_frame = im.Scale('assets/ui_text-frame.png', config.screen_width, style.window.yminimum)
 
 image bg stars = bkg_img('bg_stars')
-image bg map = bkg_img('bg_map')
+image bg map = bkg_img('bg_map_ground')
 image bg landing_pad = bkg_img('bg_landing-pad')
 image bg result1 = bkg_img('bg_result_1-inaction')
 image bg result2 = bkg_img('bg_result_2-apprehend')
@@ -284,20 +284,28 @@ image bg credits = bkg_img('bg_credits')
 label map_screen:
     stop music
     play music "assets/mu_menu.ogg"
-    scene bg map with fade
-    menu:
-        '1. High Embassy':
-            jump loc_high_emb
-        '2. Human Embassy':
-            jump loc_human_emb
-        '3. Kaldrean Embassy':
-            jump loc_kald_emb
-        '4. Residences':
-            jump loc_res
-        '5. Grand Marketplace':
-            jump loc_market
-        '6. Spaceport':
-            jump loc_port
+
+    # Show an imagemap.
+    window hide None
+    call screen main_map
+    scene bg map
+    window show None
+
+    # Call screen assigns the chosen result from the imagemap to the
+    # _return variable. We can use an if statement to vary what
+    # happens based on the user's choice.
+    if _return == "high_emb":
+        jump loc_high_emb
+    elif _return == "human_emb":
+        jump loc_human_emb
+    elif _return == "kald_emb":
+        jump loc_kald_emb
+    elif _return == "residences":
+        jump loc_res
+    elif _return == "market":
+        jump loc_market
+    elif _return == "port":
+        jump loc_port
 
 label loc_market:
     stop music
