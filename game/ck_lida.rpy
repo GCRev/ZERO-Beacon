@@ -26,8 +26,8 @@ label ck_lida:
                 call lida_advice
             'Ask Lida about her opinions on recent events':
                 call lida_events
-            'Ask Lida about her background':
-                call lida_background
+            ##'Ask Lida about her background':
+            ##    call lida_background
             'Done talking to Lida':
                 $ hide_ch('lida', 'right')
                 return
@@ -37,12 +37,14 @@ label ck_lida:
             p 'Is there any advice that you could offer me?'
             lida 'Keep your mouth closed unless you have something intelligent to say.'
             p 'Alright. Thank you I suppose.'
-            lida 'Anything else?'
+            $last_dialog = 'Anything else?'
             return
 
         label lida_events:
-            p '[[you ask Lida her opinion on recent events]'
-            lida '[[Very obvious politician speak here. Avoids speaking directly about events.]'
+            p "Can you tell me anything about the political tension here on bridge?"
+            lida "Pay it no mind. Those rumors are nothing but rumors. It is a waste of your time to pay mind to something so absurd."
+            p "Okay then."
+            $last_dialog = "Make your questions brief."
             return
 
         label lida_background:
@@ -52,23 +54,36 @@ label ck_lida:
 
 
         label lida_convince_tree:
-            p '[[meet with Ben dammit]'
+            p "Ms. Ezekeri, I would implore you to meet with Ambassador Columbus. I cannot understand why you decline such a simple request."
+
+            lida "Oh so I see he's found another fresh one to do whatever he asks? That is just rich."
+
             menu:
-                lida '[[He has no authority to tell me to meet with him. Convince me or I won\'t]'
-                '[[intimidate]':
+                lida "He has no authority to order me to meet with him. But I'll humor you - so go ahead and make your case [alias.title_last]."
+                "Attempt to intimidate Lida":
                     jump lida_convince_tree_intimidate
-                '[[flatter]':
+                "Attempt to flatter Lida":
                     jump lida_convince_tree_flatter
 
             label lida_convince_tree_intimidate:
-                lida '[[you didn\'t convince me]'
+                p "Ms. Ezekeri I know that Ambassador Irridiss has called you to meet with Ambassador Columbus. If you refuse to meet with Columbus you are disobeying Irridiss."
+
+                p "That puts you under threat of insubordination charges."
+                
+                lida "Ha! A threat! You clearly know little about how our system of obligations functions. Please do not make me laugh with your lack of intelligence."
                 $plot_state.lida_convinced = InfoGet.FAIL
-                $last_dialog = '[you thin my patience.]'
+                $last_dialog = "You thin my patience."
                 jump menu_lida
 
 
             label lida_convince_tree_flatter:
-                lida '[[you convinced me... very nice]'
+                p "Ms. Ezekeri I can see that you are very wise - Ambassador Columbus, on of the most important figures in the galaxy, requires your professional input."
+
+                p "He and I both have a deep respect for our elders."
+
+                lida "Hm... very well. You are a sharp one [alias.title_last]. I will accept Ambassador Columbus' request on your word."
+
+                p "On behalf of Columbus and myself, I would like to thank you."
                 $plot_state.lida_convinced = InfoGet.SUCCESS
-                $last_dialog = '[Your respects are kind.]'
+                $last_dialog = "Your respects are kind, "+alias.title_last+". A properly respectful diplomat will be a wonderful addition to Concord. Is there anything else you would like ask?"
                 jump menu_lida
