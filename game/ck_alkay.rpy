@@ -152,9 +152,9 @@ label ck_alkay:
             
             menu:
                 alkay "[last_dialog]"
-                '[[ask about Alkay\'s bitterness]':
+                "Ask about Alkay\'s bitterness":
                     jump alkay_adam_tree_bitterness
-                '[[ask about Alkay\'s hopefulness]':
+                "Ask about Alkay\'s hopefulness':
                     jump alkay_adam_tree_hopefulness
 
             label alkay_adam_tree_bitterness:
@@ -168,9 +168,9 @@ label ck_alkay:
 
                 menu:
                     alkay '[last_dialog]'
-                    '[[ask about VL]':
+                    "Ask Alkay about Valak Lideri":
                         jump alkay_adam_tree_bitterness_VL
-                    '[[Will things change?]':
+                    "Ask Alkay if he thinks things will change":
                         jump alkay_adam_tree_bitterness_change
 
                 label alkay_adam_tree_bitterness_VL:
@@ -224,9 +224,9 @@ label ck_alkay:
             p "Can you tell me about these \"Valak Lideri?\" I've heard about them but the lack of information makes me uneasy."
             menu:
                 alkay "Yes, well, I HAVE heard of this group. But they are just shadows and whispers. I cannot really offer more than my opinions."
-                '[[What does VL mean?]':
+                "Ask Alkay what \"Valak Lideri\" means":
                     jump alkay_VL_tree_translate
-                '[[Ask about kaldrean history]':
+                "Ask Alkay about kaldrean history":
                     jump alkay_VL_tree_history
 
             label alkay_VL_tree_translate:
@@ -321,9 +321,9 @@ label ck_alkay:
 
             menu:
                 alkay "I got a little carried away for a moment there. Is there anything else you would like to ask about?"
-                '[[ask about Elder Demeter]':
+                "Ask Alkay about Elder Demeter":
                     jump alkay_Bg_tree_adam
-                '[[ask about experiences]':
+                "Ask Alkay about his experiences":
                     jump alkay_Bg_tree_experiences
 
             label alkay_Bg_tree_adam:
@@ -418,9 +418,9 @@ label ck_alkay:
 
         menu:
             alkay "That is quite the accusation, [alias.first]. I strongly recommend against going about and riddling this city with accusations. Take care when treading about this subject."
-            '[[I\'ve been told what this hardship is like. I want to help things change]':
+            "You have been told what hardship is like, and you want to help things change":
                 jump alkay_VL_accuse_tree_hardship
-            '[[threaten to reveal his intent if he does not tell you his plans]':
+            "Threaten to reveal his intent if he does not tell you his plans":
                 jump alkay_VL_accuse_tree_threaten
 
         label alkay_VL_accuse_tree_threaten:
@@ -450,9 +450,9 @@ label ck_alkay:
         label alkay_VL_accuse_tree_hardship_approval:
             menu:
                 alkay '[last_dialog]'
-                '[[ask if there is a way to spur revolution without killing Vatrisk]':
+                "Ask Alkay if there is a way to spur revolution without killing Irridiss":
                     jump alkay_VL_accuse_tree_hardship_approval_vatrisk
-                '[[if you could do it differently how would you?]':
+                "Ask Alkay how he might have done this differently":
                     jump alkay_VL_accuse_tree_hardship_approval_different
 
             label alkay_VL_accuse_tree_hardship_approval_vatrisk:
@@ -485,9 +485,9 @@ label ck_alkay:
         label alkay_VL_accuse_tree_hardship_question:
             menu:
                 alkay '[last_dialog]'
-                '[[lie and push that you know what you are talking about]':
+                "Lie and push that you know what you are talking about":
                     jump alkay_VL_plan_lie
-                '[[admit that you were embellishing, but pursue the change]':
+                "Admit that you were embellishing, but pursue the topic of change":
                     jump alkay_VL_accuse_tree_hardship_embellishing
 
             label alkay_VL_accuse_tree_hardship_embellishing:
@@ -495,9 +495,9 @@ label ck_alkay:
 
                 menu:
                     alkay "I believe you, [alias.first], but your conviction falters. You are playing at the edge of the fire here on a scale you cannot possibly understand yet."
-                    '[[trust me when I say this is important to me]':
+                    "Assure Alkay that this is important to you":
                         jump alkay_VL_accuse_tree_hardship_embellishing_important
-                    '[[you don\'t have to believe me. But I AM on speaking terms with Irridiss. That is a fact.]':
+                    "Remind Alkay that you are on speaking terms with Irridiss":
                         jump alkay_VL_accuse_tree_hardship_embellishing_irridiss
 
                 label alkay_VL_accuse_tree_hardship_embellishing_irridiss:
