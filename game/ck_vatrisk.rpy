@@ -276,27 +276,33 @@ label ck_vatrisk:
 
         if plot_state.adam_vl_info == InfoGet.SUCCESS:
         
-            p "[[tell him about info from Adam]"
+            p "Valak Lideri want to start a progressive revolution, and they are willing to go to any means necessary to accomplish that."
+
+            p "Which includes assassinating you."
         
-            vatrisk "[[respond]"
+            vatrisk "I find that quite unlikely, [alias.last]. I am perfectly safe here."
         
-        if plot_state.alkay_vl_info == InfoGet.SUCCESS:
-        
-            p "[[tell him about info from Alkay]"
-        
-            vatrisk "[[respond]"
         
         if plot_state.jon_vl_info == InfoGet.SUCCESS:
         
-            p "[[tell him about info from Jon]"
+            p "They think that the kaldrean people deserve liberation from the corrupted government. They see you as a figurehead for it. I can't argue with that."
         
-            vatrisk "[[respond]"
+            vatrisk "Well... I cannot quite argue with that either. There was a tumult for a while when I was first given office as Ambassador."
         
+        if plot_state.alkay_vl_info == InfoGet.SUCCESS:
+        
+            p "Valak Lideri wish to bring back what was previously known as \"Beacon.\" They want to restore the golden age and make sure it lasts."
+        
+            vatrisk "That sounds unrealistic. Do they not realize how unstable they would make our people?"
+
         if plot_state.lorisk_vl_info == InfoGet.SUCCESS:
         
-            p "[[tell him about info from Lorisk]"
-        
-            vatrisk "[[respond]"
+            p "If you weren't aware, \"Valak Lideri\" {i}means{/i} \"Beacon.\" They are going to be the beacon for this revolution, 
+            and they are likely going to make an example out of you to start it."
+            
+            p "Your death would be the wind underneath the wings of the progressive movement."
+
+            p "I have no reason to lie to you, Ambassador. And I am quite assured that the evidence all points to this. You won't regret this."
 
         $ possible_infos = [plot_state.adam_vl_info, plot_state.alkay_vl_info, plot_state.jon_vl_info, plot_state.lorisk_vl_info]
         $ gotten_infos = [info_state for info_state in possible_infos if info_state == InfoGet.SUCCESS]
@@ -397,7 +403,8 @@ label ck_vatrisk:
             vatrisk "Well, I was about to leave to board a transport, but I'm not sure anymore. My life could be in danger. I trust you, [alias.full]."
             
             "You and the ambassador sit and talk about Valak Lideri for a bit longer. Then, you hear a sudden,
-            deafening blast from outside Kier\'s office"
+            deafening blast from outside Kier\'s office."
+
             play sound "assets/sf_attack1.ogg"
             
             $ renpy.pause(delay=6)
