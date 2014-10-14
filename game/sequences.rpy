@@ -28,9 +28,9 @@ label intro:
     comm 'And this is why I have called you here today, Agent. The great city 
     of Concord has of late been troubled by political unrest.'
 
-    comm 'A mysterious group of rebels known as \"Valak Lideri\" has infiltrated Bridge\'s government.'
+    comm 'A mysterious group of rebels known as \"Valak Lideri\" has infiltrated Bridge\'s government and has induced tensions between humans and kaldreans.'
 
-    comm 'It has come to my attention that the life of the kaldrean High Ambassador is under threat.'
+    comm 'It has come to my attention that the life of the kaldrean High Ambassador may be under threat from this group.'
 
     comm 'On this assignment, you shall travel to Concord. You will act under alias a diplomat, 
     investigating the situation and learning about Valak Lideri.'
@@ -75,12 +75,12 @@ label intro:
     'After a month-long journey through space, you finally arrive on Bridge. As you come to
     land at the Spaceport, you see Concord below you.' 
 
-    'The city looks utopian-like, set between a shimmering coast and an luscious woodland.'
+    'The city appears utopian, set between a shimmering coast and an luscious jungle.'
 
     scene bg port
 
     'You dismount your spacecraft, stumbling a bit as you readjust to the feeling of gravity. 
-    You emerge in a bustling, noisy port. People mill about all around.'
+    You emerge in the bustling, noisy spaceport. People mill about all around.'
 
     'You open your assignment notes, which tell you to meet Agent Redmont in the residences as 
     soon as you arrive.'
