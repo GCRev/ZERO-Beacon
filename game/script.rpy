@@ -311,7 +311,6 @@ label loc_market:
     stop music
     play music "assets/mu_market.ogg"
     scene bg market with fade
-    'You are at the Grand Marketplace. [[describe]'
     label market_menu:
         menu:
             'Talk to Alkay Volk Kladir':
@@ -326,7 +325,6 @@ label loc_high_emb:
     stop music
     play music "assets/mu_emb.ogg"
     scene bg high_emb with fade
-    'You are at the High Embassy. [[describe]'
     label menu_high_emb:
         if plot_state.stage == PlotStage.ARRIVE:
             if plot_state.high_emb_tried_bribe:
@@ -369,7 +367,6 @@ label loc_human_emb:
     stop music
     play music "assets/mu_emb.ogg"
     scene bg human_emb with fade
-    'You are at the Human Embassy. [[describe]'
     label menu_human_emb:
         menu:
             'Talk to Lauren Gray':
@@ -382,7 +379,6 @@ label loc_kald_emb:
     stop music
     play music "assets/mu_emb.ogg"
     scene bg kald_emb with fade
-    'You are at the Kaldrean Embassy. [[describe]'
     label menu_kald_emb:
         menu:
             'Talk to Lorisk Nidaria Kol':
@@ -397,7 +393,6 @@ label loc_res:
     stop music
     play music "assets/mu_res.ogg"
     scene bg res with fade
-    'You are at the Residences. [[describe]'
     label menu_res:
         menu:
             'Talk to Sarah Liu':
@@ -416,7 +411,6 @@ label loc_port:
     stop music
     play music "assets/mu_port.ogg"
     scene bg port with fade
-    'You are at the Spaceport. [[describe]'
 label loc_port_no_fade:
     label menu_port:
         menu:

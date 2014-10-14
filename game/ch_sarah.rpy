@@ -59,7 +59,9 @@ label sarah_kald_govt_info:
 
     if plot_state.ben_kald_govt_info == InfoGet.SUCCESS:
         p "I was able to get some useful information for Ambassador Columbus."
-        p "[[tell Sarah what you've learned about kaldrean gov't from Columbus]"
+        p "Columbus told me that the kaldrean government is incredibly controlling."
+
+        p "That's why they don't seem to have any problems..."
         sarah "Very interesting! And Irridiss?"
         if plot_state.vatrisk_kald_govt_info == InfoGet.SUCCESS:
             call sarah_kald_govt_info_vatrisk_tell
@@ -101,7 +103,9 @@ label sarah_kald_govt_info:
     return
 
     label sarah_kald_govt_info_vatrisk_tell:
-        p "[[tell Sarah what you've learned about kaldrean gov't from Vatrisk]"
+        p "Vatrisk told me about how the main priority of their government is to keep the people safe."
+
+        p "But to them that means sacrificing their happiness."
         return
 
 label sarah_vl_info:
@@ -121,11 +125,15 @@ label sarah_vatrisk_meet:
     return
 
 label sarah_attack_just_happened:
-    sarah "[[I heard what happened. panic panic panic panic]"
-    p "[[We needa find out who is in the VL and what their plans are ASAP]"
-    sarah "[[Good idea. Go around the city and do that. When you think you've
-    figured out who they are or what their plans are, come back to me, and I'll organize
-    a raid]"
+    sarah "I heard what happened! Is Vatrisk alright? Is he safe?"
+    
+    p "Yes, the ambassador is f.ine. We have to find out who the Valak Lideri are and what they are going to do next."
+
+    p "Before it's too late"
+   
+    sarah "Good idea. You go question people in the city and I'll go prepare a squad to take down the Valak Lideri."
+
+    sarah "Talk to me when you've figured out their plans."
     $  plot_state.set_stage(PlotStage.VL_PLANS)
     return
 
@@ -140,6 +148,7 @@ label sarah_vl_plans:
             $ sarah_vl_plans_time = -1
             menu:
                 sarah "Excellent! So what is it?"
+
                 "[[option # 0 (incorrect)]":
                     $ sarah_vl_plans_scenario = 0
                 "[[option # 1 (incorrect)]":
@@ -179,7 +188,7 @@ label sarah_vl_plans:
                 "On second thought, I'm not sure.":
                     jump sarah_vl_plans_unsure
             menu:
-                sarah "[[are you completely sure? you can't guess again.]"
+                sarah "Are you completely sure?"
                 "Yes.":
                     if sarah_vl_plans_scenario == 2 and sarah_vl_plans_time == 0:
                         jump ending_correct_plans

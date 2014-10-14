@@ -40,9 +40,9 @@ label ck_kro:
         jump menu_kro
 
         label kro_flatter:
-            p '[[your ship is so big.]'
-            kro '[[slightly amused. Thanks you for your attempt. Schools you a bit on Kaldrean culture and flattery.]'
-            $last_dialog = '[Keep the sweet-talk to a minimum.]'
+            p "I must say, I am thoroughly impressed with your ship. Based of the AK-213 model?"
+            kro "Yes, in fact. A classic, and it gets the job done."
+            $last_dialog = 'But let\'s keep the sweet talk to a minimum, shall we?'
             $plot_state.kro_flatter_info = True
             return
 

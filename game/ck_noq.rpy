@@ -8,7 +8,7 @@ label ck_noq:
     $ show_ch('noq', 'left')
 
     if plot_state.noq_vl_plan_info == InfoGet.FAIL:
-        noq '[[I told you not to bother me.]'
+        noq 'I told you not to bother me.'
         $ hide_ch('noq', 'left')
         return
 
@@ -35,8 +35,6 @@ label ck_noq:
                 call noq_advice
             'Ask Noq about his opinions on recent events':
                 call noq_events
-            ##'Ask Noq about his background':
-            ##    call noq_background
             'Ask Noq about his interests'  if plot_state.stage == PlotStage.VL_PLANS and plot_state.noq_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump noq_interests_tree_start
             'Done talking to Noq':
@@ -64,16 +62,11 @@ label ck_noq:
 
             return
 
-        label noq_background:
-            p '[[you ask Noq on his background]'
-            noq '[[offers little information. Does not sound interested in talking about it.]'
-            $last_dialog = '[I really am quite busy. I would appreciate it if you returned later.]'
-            return
-
         label noq_designs:
-            p '[[you ask Noq about his designs]'
-            noq '[[Lightens up and talks for a while about his latest structure.]'
-            $last_dialog = '[It\'s refreshing when someone takes an interest in my work. I could talk forever about it.]'
+            p 'So Noq, tell me about this new design you\'re working on.'
+            noq 'Oh, yes this structure right here is...'
+            'Noq talks about his designs, and you get very board'
+            $last_dialog = 'It\'s refreshing when someone takes an interest in my work. I could talk forever about it.'
             return
 
         label noq_VL_tree_start:

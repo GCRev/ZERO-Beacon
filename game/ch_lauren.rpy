@@ -34,8 +34,8 @@ label ch_lauren:
 
         label lauren_background:
             p 'So what can you tell me about your past?'
-            lauren '[[replies that she does not have time to speak with you about non job-related things]'
-            $last_dialog = '[Please keep further inquiry to yourself.]'
+            lauren "I don't really have time for this chit-chat right now."
+            $last_dialog = 'Please keep further inquiry to yourself.'
             return
 
         label lauren_advice:

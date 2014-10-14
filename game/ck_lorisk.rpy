@@ -8,7 +8,7 @@ label ck_lorisk:
     $ show_ch('lorisk', 'left')
 
     if plot_state.lorisk_vl_plan_info == InfoGet.SUCCESS:
-        $last_dialog = '[[Thank you so much, ' + alias.first + '. I really needed to talk to someone about this. Is there anything you still want to ask?]'
+        $last_dialog = 'Thank you so much, ' + alias.first + '. I really needed to talk to someone about this. Is there anything you still want to ask?'
         jump menu_lorisk
     if plot_state.lorisk_vl_plan_info == InfoGet.FAIL:
         lorisk 'I do not wish to speak with you again. Take your bigotry elsewhere.'
