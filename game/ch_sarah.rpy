@@ -40,8 +40,7 @@ label sarah_arrive:
     sarah "I want you to go talk to them and learn about the state of the kaldrean government. They may not be very 
     willing to divulge in-depth information, so speak carefully."
 
-    $ plot_state.stage = PlotStage.KALD_GOVT_INFO
-    show screen objective("Speak with both ambassadors in High Embassy then return to Sarah")
+    $ plot_state.set_stage(PlotStage.KALD_GOVT_INFO)
 
     return
 
@@ -97,7 +96,7 @@ label sarah_kald_govt_info:
 
     p "Sounds good."
 
-    $ plot_state.stage = PlotStage.VL_INFO
+    $ plot_state.set_stage(PlotStage.VL_INFO)
 
     return
 
@@ -112,7 +111,7 @@ label sarah_vl_info:
             sarah "Okay, I'll arrange for you to meet with him. Head
             to the High Embassy and ask to speak with him."
             p "Will do."
-            $ plot_state.stage = PlotStage.VATRISK_MEET
+            $ plot_state.set_stage(PlotStage.VATRISK_MEET)
         "No, I still need to talk to some more people.":
             sarah "Okay."
     return
@@ -127,7 +126,7 @@ label sarah_attack_just_happened:
     sarah "[[Good idea. Go around the city and do that. When you think you've
     figured out who they are or what their plans are, come back to me, and I'll organize
     a raid]"
-    $  plot_state.stage = PlotStage.VL_PLANS
+    $  plot_state.set_stage(PlotStage.VL_PLANS)
     return
 
 label sarah_vl_plans:

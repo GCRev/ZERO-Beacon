@@ -51,4 +51,5 @@ game/bytecode.rpyb
 game/*.bak
 game/*.rpyc
 game/saves/
+game/cache/
 tmp/*

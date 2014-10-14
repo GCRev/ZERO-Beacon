@@ -145,7 +145,7 @@ label ch_ben:
         return
 
     label ben_mention_lida:
-        ben "Have you spoken to Ms. Ezekeri in kaldrean embassy yet?"
+        ben "Have you spoken to Ms. Ezekeri in the Kaldrean Embassy yet?"
 
         if plot_state.lida_convinced == InfoGet.NO_ATTEMPT:
 

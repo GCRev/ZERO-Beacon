@@ -82,7 +82,7 @@ label ck_vatrisk:
             
             p 'Thank you for the advice.'
             
-            $ last_dialog = 'Anytime, anything else I can help you with today?'
+            $ last_dialog = 'Any time. Anything else I can help you with today?'
             
             return
 
@@ -138,18 +138,22 @@ label ck_vatrisk:
             'You give Vatrisk a lot of money in attempt to bribe him for the truth.'
             
             if plot_state.high_emb_tried_bribe:
-                $ last_dialog = 'I know your type. Bribes cannot phase me.'
-                $plot_state.vatrisk_kald_govt_info = InfoGet.FAIL
-                return
+                vatrisk "Ahh, so *you're* the one the guards were talking about! Tried to bribe
+                your way into the embassy, didn't you?"
+                vatrisk "That's right, I know your tricks. Don't think you'll be getting anything out of me 
+                with such petty tactics."
+                $ plot_state.vatrisk_kald_govt_info = InfoGet.FAIL
+                $ last_dialog = "So are you done irritating me, or did you have something else to say?"
+                jump menu_vatrisk
             
             else:
                 vatrisk 'Oh my... I can buy a lot of vaska with this...'
                 
                 vatrisk 'Please feel free to ask me anything.'
 
-                p 'Well I was hoping you could tell me why there would be all of these rumors about the kaldreans feeling oppressed'
+                p 'Well, I was hoping you could tell me why there would be all of these rumors about the kaldreans feeling oppressed.'
 
-                vatrisk 'Ok, look. It\'s not easy being me. I have to deal with the pressure of being blamed for everything that this government does.'
+                vatrisk 'Okay, look. It\'s not easy being me. I have to deal with the pressure of being blamed for everything that this government does.'
 
                 vatrisk 'Even though I don\'t agree with it all the time.'
 
@@ -365,12 +369,12 @@ label ck_vatrisk:
 
         label vatrisk_meeting_fail:
 
-            vatrisk "Now, If you would excuse me, I have a transport to board."
+            vatrisk "Now, if you would excuse me, I have a transport to board."
 
             "The ambassador leaves the room and walks to his personal landing pad to board his transport. 
             You follow him, still trying to dissuade him from leaving the safety of the High Embassy without guard."
 
-            scene bg landing_pad with move
+            scene bg landing_pad with squares
             
             "Ignoring your protests, he boards the transport. Soon after it takes off, you hear a deafening blast."
             
@@ -432,5 +436,5 @@ label ck_vatrisk:
             
             stop sound
             
-            $ plot_state.stage = PlotStage.ATTACK_JUST_HAPPENED
+            $ plot_state.set_stage(PlotStage.ATTACK_JUST_HAPPENED)
             return
