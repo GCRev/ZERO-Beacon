@@ -551,6 +551,18 @@ screen objective(string):
         background "#000000d0"
         text "Current Objective: "+string size 15
 
+screen main_map:
+    imagemap:
+        ground bkg_img('bg_map_ground')
+        hover bkg_img('bg_map_hover')
+
+        hotspot (241, 79, 156, 65) action Return("high_emb") alt "High Embassy"
+        hotspot (206, 177, 177, 87) action Return("human_emb") alt "Human Embassy"
+        hotspot (391, 144, 202, 70) action Return("kald_emb") alt "Kaldrean Embassy"
+        hotspot (640, 10, 223, 239) action Return("residences") alt "Residences"
+        hotspot (526, 303, 312, 310) action Return("market") alt "Grand Marketplace"
+        hotspot (52, 471, 470, 197) action Return("port") alt "Spaceport"
+
 init -2:
     style quick_button:
         is default
