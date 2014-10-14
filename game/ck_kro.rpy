@@ -75,7 +75,7 @@ label ck_kro:
             p "You\'re probably right."
 
             kro "Just ask around, if you have heard of these \"rumors\" then I am sure others have come into contact with the same fleeting words."
-            kro "If you have not already talked to Elder Volk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the residences."
+            kro "If you have not already talked to Elder Volk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the Residences."
 
             p "Thanks for the direction."
 

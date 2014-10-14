@@ -25,7 +25,7 @@ label ch_jon:
 
         jon "New to Concord? Welcome. I\'m Jonathan Caise, manager of logistics here at the port."
 
-        p "[alias.full], diplomat over at the human embassy."
+        p "[alias.full], diplomat over at the Human Embassy."
 
         jon "Greenhorn diplomat? Make sure you really take your time to get to know people."
         jon "I\'ve seen my fair share of people bail and out and leave because Concord is too much a culture shock for them. 

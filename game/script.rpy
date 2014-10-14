@@ -7,14 +7,14 @@
 label start:
     $ plot_state = PlotState() # necessary to initialize this here, because it signals Ren'Py to save plot_state
     call tests
-    if skip_intro:
+    if debug_skip_intro and config.developer:
         $ alias = Alias(Gender.NEUT, 'Dev', 'Eloper')
     else:
         call intro
 
-    show screen objective("Talk to Sarah Liu in Residences") 
+    $ plot_state.set_stage(debug_init_stage if config.developer else PlotState.ARRIVE)
 
-    if skip_intro:
+    if debug_skip_intro and config.developer:
         jump loc_port
     else:
         jump loc_port_no_fade
@@ -73,15 +73,40 @@ init -2 python:
         enums = dict(zip(values, range(len(values))))
         return type('Enum', (), enums)
 
-    PlotStage = enum('ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'ATTACK_JUST_HAPPENED', 'VL_PLANS', "GAME_OVER")
+    PlotStage = enum('INTRO', 'ARRIVE', 'KALD_GOVT_INFO', 'VL_INFO', 'VATRISK_MEET', 'ATTACK_JUST_HAPPENED', 'VL_PLANS', "GAME_OVER")
     InfoGet = enum('NO_ATTEMPT', 'FAIL', 'SUCCESS')
     TrustLevel = enum('LOW', 'MEDIUM', 'HIGH', 'VERY_HIGH')
 
     class PlotState:
         
-        stage = PlotStage.ARRIVE
+        def set_stage(self, stage):
+            self.stage = stage
+            obj = None
+            if stage == PlotStage.INTRO:
+                obj = None
+            elif stage == PlotStage.ARRIVE:
+                obj = "Speak with Sarah Liu in the Residences."
+            elif stage == PlotStage.KALD_GOVT_INFO:
+                obj = "Ask the high ambassadors about the kaldrean government; then, return to Sarah."
+            elif stage == PlotStage.VL_INFO:
+                obj = "Gather information about the Valak Lideri; then, return to Sarah."
+            elif stage == PlotStage.VATRISK_MEET:
+                obj = "Meet with Ambassador Irridiss in the High Embassy; then, return to Sarah."
+            elif stage == PlotStage.ATTACK_JUST_HAPPENED:
+                obj = None
+            elif stage == PlotStage.VL_PLANS:
+                obj = "Try to uncover the rebels' plans and/or identities; then, return to Sarah."
+            elif stage == PlotStage.GAME_OVER:
+                obj = None
+            else:
+                raise ValueError("invalid stage: " + str(stage))
+            if obj is None:
+                renpy.hide_screen('objective')
+            else:
+                renpy.show_screen('objective', obj)
+
+        stage = PlotStage.INTRO
         high_emb_tried_bribe = False
-        currentObjective = "Talk to Sarah in the residences."
         
     #Adam's flags
         adam_met = False
@@ -184,7 +209,8 @@ init -2 python:
 
 # Non-characters
 define plot_state = None
-define skip_intro = False # for debugging only
+define debug_init_stage = None
+define debug_skip_intro = False 
 define alias = None
 define char_pos = Position(xpos=0.8, xanchor='right', ypos=config.screen_height-150)    
 
@@ -246,6 +272,7 @@ image bg result1 = bkg_img('bg_result_1-inaction')
 image bg result2 = bkg_img('bg_result_2-apprehend')
 image bg result3 = bkg_img('bg_result_3-assist')
 image bg result4 = bkg_img('bg_result_4-diplomacy')
+image bg credits = bkg_img('bg_credits')
 
 
 
@@ -295,20 +322,24 @@ label loc_high_emb:
     label menu_high_emb:
         if plot_state.stage == PlotStage.ARRIVE:
             if plot_state.high_emb_tried_bribe:
-                guard 'Haven\'t we already talked to you? Unless you have official business here, you may not enter the high embassy.'
+                guard 'Haven\'t we already talked to you? Unless you have official business here, you may not enter the High Embassy.'
                 jump map_screen
             else:
-                guard 'Hi. What business do you have here?'
+                guard 'Greetings.'
+                $ last_dialog = 'What business do you have here?'
                 label high_emb_guard_menu:
                     menu:
-                        'None, actually. I\'ll be on my way.':
-                            jump map_screen
-                        '[[lie that you have appt]':
-                            guard '[[don\'t see you on appt list]'
+                        guard '[last_dialog]'
+                        'Lie and say that you have an appointment':
+                            guard 'An appointment? Let me check... what\'s your name?'
+                            p '[alias.full].'
+                            guard 'Sorry, but I don\'t see you on my list.'
                             jump high_emb_guard_menu
-                        '[[try to bribe]':
-                            guard '[[offended; tells you to screw off]'
+                        'Try to bribe him to let you in':
+                            guard 'What do I look like, a criminal? Get lost.'
                             $ plot_state.high_emb_tried_bribe = True
+                            jump map_screen
+                        'None, actually. I\'ll be on my way.':
                             jump map_screen
         else:
             menu:
@@ -377,8 +408,8 @@ label loc_port:
     stop music
     play music "assets/mu_port.ogg"
     scene bg port with fade
-label loc_port_no_fade:
     'You are at the Spaceport. [[describe]'
+label loc_port_no_fade:
     label menu_port:
         menu:
             'Talk to Jonathan Caise':

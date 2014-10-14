@@ -75,14 +75,16 @@ label intro:
     'After a month-long journey through space, you finally arrive on Bridge. As you come to
     land at the Spaceport, you see Concord below you.' 
 
-    'The city appears utopian, set between a shimmering coast and an luscious jungle.'
+    'The city appears Utopian, set between a shimmering coast and an luscious jungle.'
+    'Your ship descends to the Spaceport.'
 
+    play music "assets/mu_port.ogg"
     scene bg port with fade
 
     'You dismount your spacecraft, stumbling a bit as you readjust to the feeling of gravity. 
     You emerge in the bustling, noisy spaceport. People mill about all around.'
 
-    'You open your assignment notes, which tell you to meet Agent Redmont in the residences as 
+    'You open your assignment notes, which tell you to meet Agent Redmont in the Residences as 
     soon as you arrive.'
 
     return
@@ -92,44 +94,30 @@ label ending_incorrect_plans:
     "[[Sarah goes to initiate the raid.]"
     "[[Later you find out that you incorrectly identified the rebels' plans. You have failed to apprehend
     the rebels in time]"
-    scene bg result1 with squares
-    jump game_over
+    jump result_1
 
 label ending_correct_plans:
-    stop music
     $ hide_ch('sarah', 'left')
     "[[Sarah goes to initiate the raid.]"
-    scene bg result2 with squares
-    jump game_over
+    jump result_2
 
 label ending_too_many_wrong_rebels_identified:
-    stop music
     $ hide_ch('sarah', 'left')
     "[[Sarah goes to initiate the raid.]"
     "[[Later you find out that you identified too many people as rebels that weren't. 
     You have failed to apprehend the rebels in time]"
-    scene bg result1 with squares
-    jump game_over
+    jump result_1
 
 label ending_not_enough_rebels_identified:
-    stop music
     $ hide_ch('sarah', 'left')
     "[[Sarah goes to initiate the raid.]"
     "[[Later you find out that you didn't identify enough rebels 
     You have failed to apprehend the rebels in time]"
-    scene bg result1 with squares
-    jump game_over
+    jump result_1
 
 label ending_correct_rebels:
-    stop music
     "[[You correctly identified enough rebels]"
-    scene bg result2 with squares
-    jump game_over
-
-label ending_vatrisk_denounce_govt:
-    stop music
-    scene bg result4 with squares
-    jump game_over
+    jump result_2
 
 label ending_vatrisk_lure:
     stop music
@@ -139,11 +127,52 @@ label ending_vatrisk_lure:
     "[[After talking for a short time, you hear the blast of a plasma gun]"
     play sound "assets/sf_assassination2.ogg"
     "[[Vatrisk falls to the ground, fatally wounded]"
-    scene bg result3 with squares
-    jump game_over
+    jump result3
 
-label game_over:
-    stop sound
-    $ plot_state.stage = PlotStage.GAME_OVER
-    $ renpy.pause()
+label ending_vatrisk_denounce_govt:
+    jump result_4
+
+label result_1:
+    $ plot_state.set_stage(PlotStage.GAME_OVER)
+    stop music
+    play music "assets/mu_title.ogg"
+    scene bg result1 with squares
+    "[[text]"
+    jump credits
+
+label result_2:
+    $ plot_state.set_stage(PlotStage.GAME_OVER)
+    stop music
+    play music "assets/mu_title.ogg"
+    scene bg result2 with squares
+    "[[text]"
+    jump credits
+
+label result_3:
+    $ plot_state.set_stage(PlotStage.GAME_OVER)
+    stop music
+    play music "assets/mu_title.ogg"
+    scene bg result3 with squares
+    "[[text]"
+    jump credits
+
+label result_4:
+    $ plot_state.set_stage(PlotStage.GAME_OVER)
+    stop music
+    play music "assets/mu_title.ogg"
+    "[[text]"
+    scene bg result4 with squares
+    jump credits
+
+label credits:
+    "Thank you for playing Beacon."
+    "Made by ZERO Studios:\n
+    Graham Held -- Art, world design, dialog.\n
+    Garret Holman -- Sound, design, dialog.\n
+    Kyle McCormick -- Programming, game design, dialog."
+    "Additional contributions:\n
+    Jesse Colford -- Introduction and Grand Marketplace music\n
+    Calum Briggs, Thomas Brown IV -- Design advice"
+    "Created using The Ren'Py Visual Novel Engine (http://www.renpy.org)."
+    "Please see documentation for citations to non-original assets."
     return
