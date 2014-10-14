@@ -137,7 +137,13 @@ label result_1:
     stop music
     play music "assets/mu_title.ogg"
     scene bg result1 with squares
-    "[[text]"
+    "As a result of your failure to act to prevent the assassination, the rebels carry out their plans unhindered."
+    "Irridiss is killed but the lack of discretion and precision renders it easy for authorities to catch up to and apprehend the human rebels."
+    "The spark that Valak Lideri hoped to light did not take properly and the rebellion they wanted to occur never lifts off."
+    "The loss of a figurehead of peace between the humans and kaldreans quickly causes relations to break apart and violence to intensify."
+    "War breaks out on Bridge and the infant alliance between the kaldreans and humans is destroyed, leaving both embroiled in conflict."
+    "However, the alliance is restored after the bitter races eventually forget what they are fighting about and set their differences aside once again."
+    $ renpy.pause()
     jump credits
 
 label result_2:
@@ -145,7 +151,12 @@ label result_2:
     stop music
     play music "assets/mu_title.ogg"
     scene bg result2 with squares
-    "[[text]"
+    "Your sharp eye for detail and ability to determine critical information allows you to do what you were assigned to do: apprehend Valak Lideri."
+    "Valak Lideri is stopped dead in its tracks and the assassination is not carried out. The impetus behind the progressive movement breaks apart and leaves it to fizzle out."
+    "The tentative peace between the two races continues and slowly strengthens but the kaldrean government remains corrupted."
+    "Bridge remains the safe-haven for those kaldreans and humans with progressive attitudes and the kaldrean government keeps blinders over the eyes of their people."
+    "You have done your duty, Agent, we are exceedingly proud of you."
+    $ renpy.pause()
     jump credits
 
 label result_3:
@@ -153,15 +164,28 @@ label result_3:
     stop music
     play music "assets/mu_title.ogg"
     scene bg result3 with squares
-    "[[text]"
+    "Your shift in perspective has you helping Valak Lideri to carry out their assassination with dramatic cleanliness and precision."
+    "The kaldrean military declares war upon the humans but soon find themselves overwhelmed by the massive uprising on Qolisk."
+    "The military breaks off to quell the rebellion, but by that time it is far too late. The movement is bloody but lighting quick."
+    "While the collateral damage brings the kaldrean home world to its knees, the instantiation of a new democratic republic is a beacon of hope for the kaldrean people."
+    "With the tyrannical government obliterated, the knew leaders are swift to reform their alliance with the humans."
+    "What was a previously tentative alliance is reinforced and ultimately leads to stronger and more stable relations between the two races."
+    $ renpy.pause()
     jump credits
 
 label result_4:
     $ plot_state.set_stage(PlotStage.GAME_OVER)
     stop music
     play music "assets/mu_title.ogg"
-    "[[text]"
     scene bg result4 with squares
+    "Your skill with words convinces Ambassador Irridiss to publicly denounce the kaldrean government. Valak Lideri do not carry out an assassination."
+    "The shock wave of Irridiss' words are so profound that the progressive movement swells and even pulls in some conservative sympathetics."
+    "The human military coupled with the progressive movement descends upon the corrupted controllers with deadly accuracy."
+    "Professional tactics and strategy ensures that collateral damage is minimized and only those at the source of the corruption are neutralized."
+    "A new democratic government is created and its newly elected leaders swiftly strengthen the terms of the alliance with the humans."
+    "A new friendship blossoms between the two races and the galaxy enters into an era of peace, prosperity, and liberty."
+    "You may not have set out to accomplish what you did, but ultimately what you accomplished is extraordinary."
+    $ renpy.pause()
     jump credits
 
 label credits:
