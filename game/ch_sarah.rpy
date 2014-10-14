@@ -78,7 +78,7 @@ label sarah_kald_govt_info:
             sarah "Dammit. I expected more of you, Agent. Oh well."
 
     sarah "For your next task: As you know, there are rumors of Ambassador Irridiss' life being
-    in danger. As you know, the asssissination of such an important kaldrean figure would surely
+    in danger. The assassination of such an important kaldrean figure would surely
     destabilize our already-fragile inter-racial relations."
 
     sarah "Unfortunately, Irridiss does not seem to be aware of these rumors, and if he is, he
