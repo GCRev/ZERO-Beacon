@@ -11,7 +11,7 @@ label ck_kro:
         kro '[last_dialog]'
 
     else:
-        kro "Salutations. I am Flight Commander Kro Zalva. Welcome to Vivarioss"
+        kro "Salutations. I am Flight Commander Kro Zalva. Welcome to Vivarioss."
 
         p "Nice to meet you Commander, I\'m [alias.full]."
 

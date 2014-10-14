@@ -266,11 +266,11 @@ label ck_vatrisk:
 
         vatrisk "Hello, Diplomat [alias.last]. How can I help you?"
        
-        p "I want to talk about recent political unrest in the city"
+        p "I want to talk about recent political unrest in the city."
       
         vatrisk "Oh. I see. But I was told you were here to discuss interstellar trade laws."
       
-        p "I am sorry but that was not true. I'm here to actually discuss Valak Lideri. I have evidence that your life may be in danger."
+        p "I am sorry but that was not true. I'm actually here to discuss Valak Lideri. I have evidence that your life may be in danger."
 
         vatrisk "Really? And what is this evidence?"
 
@@ -308,7 +308,7 @@ label ck_vatrisk:
 
         if pct_gotten_infos < 1.0 / 3.0:
         
-            vatrisk "Well, I still don't believe you."
+            vatrisk "Well, idle talk will not convince me of any threats."
         
             jump vatrisk_meeting_fail
         
@@ -353,7 +353,7 @@ label ck_vatrisk:
 
         label vatrisk_meeting_fail:
 
-            vatrisk "Now, If you would excuse me, I have a transport to board now."
+            vatrisk "Now, If you would excuse me, I have a transport to board."
 
             "The ambassador leaves the room and walks to his personal landing pad to board his transport. 
             You follow him, still trying to dissuade him from leaving the safety of the High Embassy without guard."

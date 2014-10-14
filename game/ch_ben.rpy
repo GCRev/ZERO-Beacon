@@ -28,7 +28,7 @@ label ch_ben:
                 call ben_events
             "Ask Ben about kaldrean government" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.ben_kald_govt_info != InfoGet.SUCCESS:
                 call ben_ask_kald_govt
-            "Ask Ben about his day" if plot_state.stage == PlotStage.KALD_GOVT_INFO  and plot_state.ben_kald_govt_info != InfoGet.SUCCESS and plot_state.ben_talk_lida == False:
+            "Ask Ben about his day" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.lida_convinced == InfoGet.NO_ATTEMPT and plot_state.ben_kald_govt_info != InfoGet.SUCCESS and plot_state.ben_talk_lida == False:
                 call ben_ask_day
             "Ask Ben about his past":
                 call ben_Bg
@@ -153,6 +153,7 @@ label ch_ben:
             ben "Thank you very much for your help, [alias.first]. I will remember your helpfulness."
             $ plot_state.ben_talk_lida = False
             $ plot_state.ben_trust = TrustLevel.HIGH
+            $ last_dialog = "Now is there anything else I can help you with?"
         return
 
     label ben_advice:
