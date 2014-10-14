@@ -276,6 +276,8 @@ label ck_lorisk:
                     lorisk "I am willing to go to any length to make sure that we have a chance. Any measure..."
 
                     lorisk "Any means will justify the ends provided that those like my family can be rid of the oppression and the slander and the hatred."
+
+                    lorisk "Valak Lideri is our Beacon. When we restore it... not only will we "
                     menu:
                         lorisk '[[reveals that she  is a part of the VL and that she is willing to go to any length to make a difference.]'
                         '[[peace is slow but more stable]':
