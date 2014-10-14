@@ -21,8 +21,8 @@ label ch_lauren:
             lauren '[last_dialog]'
             'Ask Lauren what she is reading' if plot_state.stage == PlotStage.VL_INFO:
                 jump lauren_info_tree_start
-            'Ask Lauren about her background':
-                call lauren_background
+            ##'Ask Lauren about her background':
+            ##    call lauren_background
             'Ask Lauren for advice':
                 call lauren_advice
             'Ask Lauren about her opinion on recent events':
@@ -80,39 +80,64 @@ label ch_lauren:
             return
         
         label lauren_info_tree_start:
-            p '[[I am quite into literature myself. Might I ask what you are reading?]'
+            p "I am quite into literature myself. Might I ask what you are reading?"
+
             menu:
-                lauren '[[This is a novel by a progressive kaldrean author.]'
-                '[[ask her opinion on progressives]':
+                lauren "This is a novel by a progressive kaldrean author. It's called {i}Through the Void{/i}."
+                "Ask Lauren her opinion on progressives":
                     jump lauren_info_tree_progressives
-                '[[ask about novel]':
+                "Ask Lauren about the novel":
                     jump lauren_info_tree_novel
 
             label lauren_info_tree_progressives:
-                p '[[what is your opinion on these progressive kaldreans?]'
-                lauren '[[approves of the movement, but saddened by the force of the oppressing government.]'
-                $last_dialog = '[Please keep further inquiry to yourself.]'
+                p "A progressive author? What is your opinion on these progressive kaldreans?"
+
+                lauren "I do think that the progressive movement is beneficial to the kaldrean people. Their government is so corrupt that it is really time for a change."
+
+                lauren "I don't approve of how their government treats their people. It has me both angry and sorry at once - one of the few things that can actually make me emotional."
+
+                p "It must be worse than I've been told."
+
+                lauren "They don't tell us anything."
+
+                p "Thank you for answering my question."
+
+                $last_dialog = "Please keep further inquiry to yourself."
                 jump menu_lauren
 
             label lauren_info_tree_novel:
-                p '[[ask about novel]'
+                p "That must be a recent novel, because I haven't heard of it. Can you tell me about it?"
+
+                lauren "It's not normally a genre I read, I prefer more philosophical works, but this was so highly recommended that I had to pick up a copy."
+
+                lauren "It is based off a true story of a kaldrean and a human who entered into a relationship during the first contact conflict."
+
+                lauren "It raises a lot of questions about what makes us human and what makes them kaldrean. The author smartly decided to focus on themes rather than details."
                 menu:
-                    lauren '[[Not normally a genre she reads, but highly rated novel. It\'s based off a true story of a kaldrean and human who entered into a relationship during the first contact conflict and had to overcome adversity to stay with one another. Reminds her of of a kaldrean she grew up with: Lorisk]'
-                    '[[sympathize]':
+                    lauren "It reminds me of someone I grew up with - Nidaria. I imagine this novel does a pretty good job portraying her family's situation."
+                    "Show sympathy":
                         jump lauren_info_tree_sympathize
-                    '[[disapproval]':
+                    "Show disapproval":
                         jump lauren_info_tree_disapproval
 
                 label lauren_info_tree_sympathize:
-                    p '[[sympathize with perspective]'
-                    lauren '[[Lauren reveals that Lorisk has a human mother and a kaldrean father.]'
+                    p "I feel sorry for those humans and kaldreans who have to face that kind of oppression. It seems like an unnecessary barrier."
+
+                    lauren "Lorisk would certainly know about that. She was always picked on at school by the kaldreans especially, who did not approve of her human mother and kaldrean father."
+
+                    lauren "And on top of that she was adopted, which did not sit well with the humans. She really did not deserve that kind of treatment."
+
+                    p "I'm sorry to hear that."
+
                     $ plot_state.lauren_lorisk_info = InfoGet.SUCCESS
-                    $last_dialog = '[Please keep further inquiry to yourself.]'
+                    $last_dialog = "Right well, that doesn't change the fact that it happened. I got sidetracked; if you have any other questions keep them brief."
                     jump menu_lauren
 
                 label lauren_info_tree_disapproval:
-                    p '[[disapprove]'
-                    lauren '[[criticizes you for your thoughlessness]'
+                    p "I don't think that kaldreans and humans should have that kind of relationship."
+
+                    lauren "That's narrow-minded of you, [alias.title_full]. I honestly would have expected that kind of response from you. Or at least you would have kept it to yourself."
+
                     $ plot_state.lauren_lorisk_info = InfoGet.FAIL
-                    $last_dialog = '[Something dismissive that Lauren would say]'
+                    $last_dialog = "If you have something open-minded to say, then you can ask me. Otherwise I would prefer it if I could get back to my break."
                     jump menu_lauren
