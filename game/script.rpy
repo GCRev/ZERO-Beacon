@@ -120,6 +120,7 @@ init -2 python:
         alkay_adam_info = InfoGet.NO_ATTEMPT
         alkay_vl_info = InfoGet.NO_ATTEMPT
         alkay_vl_plan_info = InfoGet.NO_ATTEMPT
+        alkay_vl_plan_told = False
 
     #Ben's flags
         ben_met = False

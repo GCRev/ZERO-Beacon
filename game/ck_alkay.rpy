@@ -21,7 +21,7 @@ label ck_alkay:
 
         p "[alias.full]"
 
-        alkay "[alias.first]. It is my pleasure. Please, have a seat. The first meal is always on the house. We’ll talk over some good food. Feel free to ask me anything."
+        alkay "[alias.first]. It is my pleasure. Please, have a seat. The first meal is always on the house. We\'ll talk over some good food. Feel free to ask me anything."
         
         $last_dialog = "Just be wary, I do like to talk and ramble. Stop me if I go off-subject."
         alkay '[last_dialog]'
@@ -68,7 +68,7 @@ label ck_alkay:
 
             alkay "They are neither human, nor kaldrean - but something novel, unique, miraculous even."
 
-            p "I’m not entirely sure I follow."
+            p "I\'m not entirely sure I follow."
 
             alkay "think of it like this: you are not the same person as your mother and father. You are separate and you are independent."
             
@@ -101,7 +101,7 @@ label ck_alkay:
             
             alkay "But this is no ordinary \"tension.\""
 
-            p "You’re going to have to elaborate, how do you mean this is not simply tension? What more do you think this is?"
+            p "You\'re going to have to elaborate, how do you mean this is not simply tension? What more do you think this is?"
 
             alkay "Its a change. I remember back when our first dark-energy craft were created, how you could smell the ozone and the distinct and 
             the scent of dark-energy in the atmosphere." 
@@ -116,11 +116,11 @@ label ck_alkay:
 
             alkay "Ha! I have had many years to develop that talent. But, I find that I can only really let loose when it is something that I am passionate for."
 
-            p "So you’re passionate about whatever this \"union\" is that you referred to."
+            p "So you\'re passionate about whatever this \"union\" is that you referred to."
 
-            alkay "Definitely. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we’ve self-imposed."
+            alkay "Definitely. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we\'ve self-imposed."
 
-            p "I see. I’m grateful for your wise words."
+            p "I see. I\'m grateful for your wise words."
 
             $last_dialog =  "It was my pleasure. Is there anything else you want to know?"
             return

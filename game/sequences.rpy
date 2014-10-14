@@ -89,44 +89,37 @@ label intro:
 
     return
 
-label ending_incorrect_plans:
-    $ hide_ch('sarah', 'left')
-    "[[Sarah goes to initiate the raid.]"
-    "[[Later you find out that you incorrectly identified the rebels' plans. You have failed to apprehend
-    the rebels in time]"
-    jump result_1
-
 label ending_correct_plans:
     $ hide_ch('sarah', 'left')
-    "[[Sarah goes to initiate the raid.]"
+    "Sarah goes to initiate the raid."
     jump result_2
 
 label ending_too_many_wrong_rebels_identified:
     $ hide_ch('sarah', 'left')
-    "[[Sarah goes to initiate the raid.]"
-    "[[Later you find out that you identified too many people as rebels that weren't. 
-    You have failed to apprehend the rebels in time]"
+    "Sarah goes to initiate the raid."
+    "Later you find out that you identified too many people as rebels that weren't. 
+    You have failed to apprehend the rebels in time."
     jump result_1
 
 label ending_not_enough_rebels_identified:
     $ hide_ch('sarah', 'left')
-    "[[Sarah goes to initiate the raid.]"
-    "[[Later you find out that you didn't identify enough rebels 
-    You have failed to apprehend the rebels in time]"
+    "Sarah goes to initiate the raid."
+    "Later you find out that you didn't identify enough rebels 
+    You have failed to apprehend the rebels in time."
     jump result_1
 
 label ending_correct_rebels:
-    "[[You correctly identified enough rebels]"
+    "You correctly identified enough rebels!"
     jump result_2
 
 label ending_vatrisk_lure:
     stop music
     scene black
-    "[[Vatrisk trustingly follows you out to the grove, unguarded]"
+    "Vatrisk trustingly follows you out to the grove, unguarded"
     play sound "assets/sf_assassination1.ogg"
-    "[[After talking for a short time, you hear the blast of a plasma gun]"
+    "After talking for a short time, you hear the blast of a linear rifle."
     play sound "assets/sf_assassination2.ogg"
-    "[[Vatrisk falls to the ground, fatally wounded]"
+    "Vatrisk falls to the ground, fatally wounded."
     jump result3
 
 label ending_vatrisk_denounce_govt:

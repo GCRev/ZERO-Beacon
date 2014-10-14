@@ -143,59 +143,8 @@ label sarah_vl_plans:
 
         sarah "Have you found out who the rebels are or what their plan is?"
 
-        "I think I've figured out what their plan is.":
-            $ sarah_vl_plans_scenario = -1
-            $ sarah_vl_plans_time = -1
-            menu:
-                sarah "Excellent! So what is it?"
-
-                "[[option # 0 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 0
-                "[[option # 1 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 1
-                "[[option # 2 (correct)]":
-                    $ sarah_vl_plans_scenario = 2
-                "[[option # 3 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 3
-                "[[option # 4 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 4
-                "[[option # 5 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 5
-                "[[option # 6 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 6
-                "[[option # 7 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 7
-                "[[option # 8 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 8
-                "[[option # 9 (incorrect)]":
-                    $ sarah_vl_plans_scenario = 9
-                "On second thought, I'm not sure.":
-                    jump sarah_vl_plans_unsure
-            menu:
-                sarah "And when do they plan to do this?"
-                "Five O'Clock this afternoon.":
-                    $ sarah_vl_plans_time = 0
-                "Seven O'Clock tonight.":
-                    $ sarah_vl_plans_time = 1
-                "Midnight tonight.":
-                    $ sarah_vl_plans_time = 2
-                "Five O'Clock tomorrow afternoon.":
-                    $ sarah_vl_plans_time = 3
-                "Seven O'Clock tomorrow night.":
-                    $ sarah_vl_plans_time = 4
-                "Midnight tomorrow.":
-                    $ sarah_vl_plans_time = 5
-                "On second thought, I'm not sure.":
-                    jump sarah_vl_plans_unsure
-            menu:
-                sarah "Are you completely sure?"
-                "Yes.":
-                    if sarah_vl_plans_scenario == 2 and sarah_vl_plans_time == 0:
-                        jump ending_correct_plans
-                    else:
-                        jump ending_incorrect_plans
-                "On second thought, no, I'm not.":
-                    jump sarah_vl_plans_unsure
+        "I think I've figured out what their plan is." if plot_state.alkay_vl_plan_told:
+            jump sarah_vl_plans_unsure
 
         "I think I know who they are.":
             python:
@@ -242,8 +191,3 @@ label sarah_vl_plans:
             sarah "Well, what are you waiting for? We haven't much time."   
 
     return
-
-    label sarah_vl_plans_unsure:
-        sarah "Well come back to me when you are sure. And be quick about it; 
-        we don't have much time." 
-        return
