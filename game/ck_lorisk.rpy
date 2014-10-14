@@ -253,16 +253,29 @@ label ck_lorisk:
                     jump lorisk_VL_plans_tree_disgust
 
             label lorisk_VL_plans_tree_sympathy:
-                p '[[respond with sympathy]'
+                p "I just wanted to say that I think you and you're family are very courageous to be strong against the controversy you likely received."
+
+                p "You and others like you deserve better than that."
+
+                lorisk "I-"
+
+                lorisk "You have no idea how hard it's been for us. For all of us. I just... can't stand to see anyone else go through what we have."
+
+                p "I'm doing my best to help."
+
                 menu:
-                    lorisk '[[breaks down and reveals just how badly she wants this revolution to go through.]'
-                    '[[offer trust and confidentiality]':
+                    lorisk "Thank you. I cannot express enough just how much this means to me. I am desperate for this revolution to occur - it is the only way we have a chance to make it stop."
+                    "Assure Lorisk that she can trust you":
                         jump lorisk_VL_plans_tree_sympathy_confidentiality
-                    '[[the rebels are going to ruin your chances with their ways]':
+                    "Warn Lorisk about the truth of revolution":
                         jump lorisk_VL_plans_tree_disgust
 
                 label lorisk_VL_plans_tree_sympathy_confidentiality:
-                    p '[[offer trust and confidentiality]'
+                    p "You can trust me Lorisk. I want to help this rebellion to make the change it promises."
+
+                    lorisk "I am willing to go to any length to make sure that we have a chance. Any measure..."
+
+                    lorisk "Any means will justify the ends provided that those like my family can be rid of the oppression and the slander and the hatred."
                     menu:
                         lorisk '[[reveals that she  is a part of the VL and that she is willing to go to any length to make a difference.]'
                         '[[peace is slow but more stable]':
