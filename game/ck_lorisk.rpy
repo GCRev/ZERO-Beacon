@@ -53,11 +53,14 @@ label ck_lorisk:
             lorisk "I talk to and interpret people for a living. You\'d find that after doing something like that for so long,
             you develop an intuition to predict what someone is going to say."
             
-            lorisk "Anyway, I\'ll tell you that acceptance is a big deal here. The more you find yourself seeing through someone\'s skin and into their
-            being, the more your definition of \"person\" will change." 
+            lorisk "Anyway, I\'ll tell you that acceptance is a big deal here." 
+
+            lorisk "The more you find yourself seeing through someone\'s skin and into their being, the more your definition of \"person\" will change." 
            
             lorisk "While you may recognize someone as kaldrean in passing, when you get to know 
-            them you begin to identify them based on their presence in the room, their cadence of speech, the energy they project."
+            them you begin to identify them based on their presence in the room."
+
+            lorisk "You can understand a great deal about people based on their cadence of speech and energy they project."
 
             p "I can see what you mean. Thanks for your advice, Lorisk."
 

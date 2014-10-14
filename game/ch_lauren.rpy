@@ -45,14 +45,13 @@ label ch_lauren:
              
             lauren "I heard you, I just don\'t really have anything to say."
             lauren "(pauses)"
-            lauren "Alright, I suppose I can offer a few words. I work with numbers all day long and I don\'t get out much so I\'m probably not the best
-            person to ask. But after working here for a while I\'ve noticed a pattern, like a bell curve in a distribution graph – those who talk too
-            much or too little are more or less shut away by society. Like me."
+            lauren "Alright, I suppose I can offer a few words. I work with numbers all day long and I don\'t get out much so I\'m probably not the best person to ask."
+            lauren "But after working here for a while I\'ve noticed a pattern, like a bell curve in a distribution graph – those who talk too
+            much or too little are more or less shut away by society."
              
             p "Don\'t be too—"
              
-            lauren "I wasn\'t done talking. Those who know just when and what to say make it very far very fast. It doesn\'t matter what your race may be,
-            it\'s the same for everyone."
+            lauren "I wasn\'t done talking. Those who know just when and what to say make it very far very fast. It doesn\'t matter what your race may be, it\'s the same for everyone."
              
             p "So— actually, thank you for your advice. I\'ll let you get back to your work."
 
@@ -66,9 +65,9 @@ label ch_lauren:
 
             p "I had hoped."
 
-            lauren "Hah! About all I can tell you is that it is silly. I know plenty of kaldreans, none of whom are bothered or riled up by any of this so-called 
-            \"tension.\" I would almost think that you've been lied to about this, because honestly, I haven\'t noticed anything particularly out of the ordinary. 
-            And I work in upper-level management!"
+            lauren "Hah! About all I can tell you is that it is silly. I know plenty of kaldreans, none of whom are bothered or riled up by any of this so-called \"tension.\"" 
+            
+            lauren "I would almost think that you've been lied to about this, because honestly, I haven\'t noticed anything particularly out of the ordinary. And I work in upper-level management!"
 
             p "(muttered) Yeah, but upper-level management has pulled the wool over your eyes."
 

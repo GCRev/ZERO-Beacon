@@ -14,7 +14,8 @@ label ch_adam:
         adam "Hello! Or as the kaldreans say \"kevey\"! Welcome to my humble living space and please make yourself comfortable. I'm always happy to meet new people! I'm Adam by the way."
         p "It's a pleasure to meet you Adam. I'm [alias.full]. But if we're on a first name basis, you can just call me [alias.first]."
         adam "Likewise, [alias.first]. If there is anything I can get you just let me know, or perhaps you just want to ask some questions? 
-        I'm always open to converse. I haven't seen you around... are you a new arrival?"
+        I'm always open to converse."
+        adam "I haven't seen you around, are you a new arrival?"
         p "I am."
         $ last_dialog =  "Even better! I'm sure you have some questions about Concord then. Please, ask away"
 
@@ -41,18 +42,24 @@ label ch_adam:
         jump menu_adam
 
         label adam_advice:
+           
             p 'Do you have any advice for a citizen new to Concord - particularly a diplomat?'
 
-            adam 'To us, here, the person that you were before you arrived does not necessarily shape you. I have learned slowly but surely that the dynamic 
-            here is far different than Earth, the wonderful planet upon which I grew up. There, you are what you were – the person that is you becomes what
-            others can gather by looking at your past.'
+            adam 'To us, here, the person that you were before you arrived does not necessarily shape you.'
+           
+            adam 'I have learned slowly but surely that the dynamic here is far different than Earth, the wonderful planet upon which I grew up.'
+           
+            adam 'There, you are what you were – the person that is you becomes what others can gather by looking at your past.'
             
             p 'And the dynamic here is far different.'
 
-            adam "Exactly. Simply by saying that you've shown how it impresses upon you. Here, you are what you make yourself – we have the kaldreans to thank for this. 
-            They judge based on ends rather than means. Not the best, but certainly different. But you can see that it has rubbed off on us. Asking about one's past is 
-            generally regarded as very personal information to kaldreans – so be careful when jumping into this topic... anyone. Some will be ready and willing to share, others... 
-            not so much."
+            adam 'Exactly. Simply by saying that you\'ve shown how it impresses upon you. Here, you are what you make yourself – we have the kaldreans to thank for this.'
+
+            adam 'They judge based on ends rather than means. Not the best, but certainly different. But you can see that it has rubbed off on us.'
+            
+            adam 'Asking about one\'s past is generally regarded as very personal information to kaldreans – so be careful when jumping into this topic... anyone.' 
+
+            adam 'Some will be ready and willing to share, others... not so much.'
 
             p "And how do you find this - exchange?"
 
@@ -70,10 +77,13 @@ label ch_adam:
 
             p 'You think that someone is creating this tension on purpose.'
 
-            adam "There is such a thing as ambient tension, but then there is the reek of hate that clings to what we call \"rumors.\" I can smell it - and believe me,
-            I know it because I've experienced it before. Concord, while a beacon for galactic peace, is equally fragile. Only fifty years a settlement - if I can remember 
-            its inception and creation, then it is NOT old enough to be entirely stable. I only hope that this tension passes quickly, because the last thing we need now
-            is another conflict we cannot weasel our way out of."
+            adam "There is such a thing as ambient tension, but then there is the reek of hate that clings to what we call \"rumors.\"" 
+            
+            adam "I can smell it - and believe me, I know it because I've experienced it before. Concord, while a beacon for galactic peace, is equally fragile." 
+
+            adam "Only fifty years a settlement - if I can remember its inception, then it is NOT old enough to be entirely stable."
+            
+            adam "I only hope that this tension passes quickly, because the last thing we need now is another conflict we cannot weasel our way out of."
 
             $last_dialog = "Any time! Now, what else would you like to talk about?"
             return
@@ -121,8 +131,7 @@ label ch_adam:
             p "Probably also a coincidence."
 
             menu:
-                adam "I can relate to that - I have been involved in my fair share of coincidences throughout my life. So what do you think about this group, based off what you know? 
-                I\'ve heard some conflicting and slanting viewpoints on them so I'm curious to know what you think."
+                adam "I can relate to that - I have been involved in my fair share of coincidences throughout my life. So what do you think about this group, based off what you know? I\'ve heard some conflicting and slanting viewpoints on them so I'm curious to know what you think."
 
                 'Sympathize with Valak Lideri':
                     jump adam_VL_tree_sympathize
@@ -131,13 +140,10 @@ label ch_adam:
             jump menu_adam
 
             label adam_VL_tree_sympathize:  
-                p "I think that Valak Lideri have a stronger set of morals than the rest of us give them credit. I still think that they are risking a lot, especially now. 
-                I still need to understand them better though, I\'m basically just going with what I've been told."
+                p "I think that Valak Lideri have a stronger set of morals than the rest of us give them credit. I still think that they are risking a lot, especially now. I still need to understand them better though, I\'m basically just going with what I've been told."
                         
                 menu:   
-                    adam "It all depends on what you\'ve been told, of course. I agree with you; they are taking a huge risk right now, but they definitely do have a strong moral heading.
-                    Although, assuming they do want to spark a revolution, their apparent itch for chaos does not really make sense. They don't seem like they would be such a violent group, 
-                    given their morals."       
+                    adam "It all depends on what you\'ve been told, of course. I agree with you; they are taking a huge risk right now, but they definitely do have a strong moral heading. Although, assuming they do want to spark a revolution, their apparent itch for chaos does not really make sense. They don't seem like they would be such a violent group, given their morals."       
                     'Violence will get them nowhere':
                         jump adam_VL_tree_nowhere
                     'Care less about their methods':
@@ -152,9 +158,9 @@ label ch_adam:
 
                     p "I can see your point, but establishments and actual people are two completely different things."
 
-                    adam "[alias.first], you did not live through the conflict the way I did. Peace works very, very well in the long term. But violence is a quick way 
-                    to solve immediate problems - strategy versus tactics. You don\'t have to agree with me, we all have our separate opinions and backgrounds to inform them,
-                    but this is the way I have seen it work in the past."
+                    adam "[alias.first], you did not live through the conflict the way I did. Peace works very, very well in the long term. But violence is a quick way to solve immediate problems - strategy versus tactics."
+                    
+                    adam "You don\'t have to agree with me, we all have our separate opinions and backgrounds to inform them, but this is the way I have seen it work in the past."
 
                     $ last_dialog = "Valak Lideri, if could make any guesses, have found their way and they are willing to pursue it with great force. For a rebel group to \
                     even become a rumor they must have good cause and powerful people in the background. Is there anything else that you want to ask me?"
@@ -164,8 +170,8 @@ label ch_adam:
                 label adam_VL_tree_care_less:
                     p "I don't care too much about how they go about pulling this off. As long as their intentions are strong and directed, what will come of it will be good."
 
-                    adam "Sometimes we have to make concessions for the greater good - I found that out the hard way during the first contact conflict. 
-                    You begin to question what you know about morality when lives are called into question."
+                    adam "Sometimes we have to make concessions for the greater good - I found that out the hard way during the first contact conflict."
+                    adam "You begin to question what you know about morality when lives are called into question."
 
                     p "I understand."
 

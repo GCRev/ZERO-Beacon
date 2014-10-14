@@ -83,8 +83,9 @@ label ch_ben:
                    
                     p "I can\'t say that I have."
                    
-                    ben "It was a controversial kaldrean novel that made it past the government\'s censors and was widely read and lauded as one of the greatest works of literature to date.
-                    It may remind you of Fahrenheit 451 by Ray Bradbury."
+                    ben "It was a controversial kaldrean novel that made it past the government\'s censors and was widely read and lauded as one of the greatest works of literature to date."
+                    
+                    ben "It may remind you of Fahrenheit 451 by Ray Bradbury."
                    
                     ben "Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to 
                     give back in other ways."
@@ -102,10 +103,14 @@ label ch_ben:
 
     label ben_ask_day:
         p "How has your day been, Ambassador?"
+        
         ben "Quite frustrating, actually."
+        
         p "May I ask why?"
+        
         ben "Well, I urgently need to speak with Lida Ezekeri Skar, the kaldrean Senior Operations manager, but she has been actively avoiding
         all my attempts to meet with her."
+        
         p "Any reason why you think she has been avoiding you? Or why she can in the first place?"
 
         menu:
@@ -113,6 +118,7 @@ label ch_ben:
             set in her says, and has a certain... distaste for human politicians such as myself."
 
             "Okay":
+                
                 p "Well, that is quite unfortunate."
                 
                 $ last_dialog = "It certainly is. Is there anything else I can help you with?"
@@ -167,6 +173,7 @@ label ch_ben:
             ben "Ah yes, she has sent me a message accepting my latest request."
 
             ben "Thank you very much for your help, [alias.first]. I will remember your helpfulness."
+            
             $ plot_state.ben_talk_lida = False
             $ plot_state.ben_trust = TrustLevel.HIGH
             $ last_dialog = "Now is there anything else I can help you with?"
@@ -176,7 +183,7 @@ label ch_ben:
         p "What advice can you offer, from one diplomat to another?"
 
         ben "Ah yes, of course. What often happens to the greenhorns who arrive here from Earth and Qolisk alike, 
-        is that they forget that they are entering an environment they have never before experienced."
+        is that they forget that they are entering an entirely new environment."
 
         ben "You have to drop your prejudices and fabrications and simply observe. If you can\'t, then you struggle."
          
@@ -190,7 +197,7 @@ label ch_ben:
         tailored by their experiences."
 
         ben "I never claimed it was possible simply become judgment-free. That does not mean that you can\'t try."
-        
+
         ben "The closer you come to being spotless, the more those around you will accept you."
          
         ben "If only... (muttered)"
@@ -203,8 +210,9 @@ label ch_ben:
     label ben_events:
         p "You probably know all about the rumors of racial tensions that have been circulating. Care to elaborate?"
 
-        ben "Rumors are but rumors - they are innocuous little flies that eventually die down. No need to concern yourself with these 
-        \"rumors\" my friend. I can assure that both Ambassador Irridiss and I are on quite even terms."
+        ben "Rumors are but rumors - they are innocuous little flies that eventually die down. No need to concern yourself with these \"rumors\" my friend."
+
+        ben "I can assure that both Ambassador Irridiss and I are on quite even terms."
         
         ben "The peace that we maintain here is secure so there is really no need to worry."
 

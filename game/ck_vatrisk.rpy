@@ -76,7 +76,9 @@ label ck_vatrisk:
             
             p 'Good to know, I\'ll keep that in mind. Anything else you could tell me?'
             
-            vatrisk 'Don\'t believe everything you hear. I\'ve ran into many liars in my life, and they can destroy people. I\'ve seen good people have their careers get destroyed by a single lie, and I believe it shouldn\'t happen to anyone.'
+            vatrisk 'Don\'t believe everything you hear. I\'ve run into many liars in my life, and I\'ve seen good people have their careers get destroyed by a single lie.'
+
+            vatrisk 'This shouldn\'t happen to anyone.'
             
             p 'Thank you for the advice.'
             
@@ -97,7 +99,9 @@ label ck_vatrisk:
             
             p 'What can you tell me about your past?'
             
-            vatrisk 'Well, I was born and raised on Qolisk, went through school just like everyone else, and joined the military. They had me installed in Concord a few years back and I made my way up the rankings. Not much of a story, but that\'s me.'
+            vatrisk 'Well, I was born and raised on Qolisk, went through school just like everyone else, and joined the military.'
+
+            vatrisk 'They had me installed in Concord a few years back and I made my way up the rankings. Not much of a story, but that\'s me.'
             
             return
 
@@ -107,7 +111,9 @@ label ck_vatrisk:
             
             vatrisk 'Finally someone who understands. It\'s not easy being this kind of leader. Sure, our government is a little strict, but that\'s how it has always been!'
             
-            vatrisk 'It\'s hard with all of these rules and everything, but it works. Crime rates are low as ever. You wouldn\'t believe how hard it is to balance happiness with safety these days.'
+            vatrisk 'It\'s hard with all of these rules and everything, but it works. Crime rates are low as ever.'
+
+            vatrisk 'The people just don\'t understand that the balance of happiness and safety is an impossible task.'
             
             $ last_dialog = 'Anyways, what else can I do for you?'
             $plot_state.vatrisk_kald_govt_info = InfoGet.SUCCESS
@@ -121,7 +127,7 @@ label ck_vatrisk:
             
             p 'You heard me.'
             
-            $ last_dialog = 'Talk to me when you have calmed down.'
+            vatrisk 'Talk to me when you have calmed down.'
             $plot_state.vatrisk_kald_govt_info = InfoGet.FAIL
             $ hide_ch('vatrisk', 'right')
             return
@@ -162,11 +168,11 @@ label ck_vatrisk:
                 jump menu_vatrisk
 
         label vatrisk_VL_denounce:
-            p 'You should denounce the kaldrean government.'
+            p 'You must denounce the kaldrean government.'
             
             vatrisk 'What?'
             
-            p 'You heard me.'
+            p 'Trust me, it\'s for the best.'
 
             $ last_dialog = 'Come back when you have something intelligent to say.'
         
