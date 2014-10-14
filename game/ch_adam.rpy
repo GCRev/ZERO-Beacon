@@ -121,8 +121,7 @@ label ch_adam:
         label adam_VL_tree_start:
             p 'What can you tell me about Valak Lideri?'
 
-            adam "Well, that\'s certainly an ambitious question for someone so new to Concord. How did you come across this rumor? I have been here for nearly my
-            entire life and I\'ve only heard whispers of this group's existence. And I have a careful ear."
+            adam "Well, that\'s certainly an ambitious question for someone so new to Concord. How did you come across this rumor? I have been here for nearly my entire life and I\'ve only heard whispers of this group's existence. And I have a careful ear."
 
             p "I will remind you that I am a diplomat - I was chosen because I have a careful ear."
 
@@ -152,9 +151,11 @@ label ch_adam:
                 label adam_VL_tree_nowhere:
                     p "Hopefully they don\'t resort to violence - the change they want to impart on this scale... it is still too fragile."
 
-                    adam "What you have to understand, is that there is always a time for peace and for violence. If my experiences during the first contact conflict 
-                    and the years following were anything to go by... Look, you\'ll be told that a peaceful resolution is always the best answer. But when you come down with a disease, 
-                    let's say, you terminate with medicine because it is a pest. The same goes for establishments. How many have shattered under the scope of a sniper rifle?"
+                    adam "What you have to understand, is that there is always a time for peace and for violence. If my experiences during the first contact conflict and the years following were anything to go by..."
+                   
+                    adam "Look, you\'ll be told that a peaceful resolution is always the best answer. But when you come down with a disease, let's say, you terminate with medicine because it is a pest." 
+
+                    adam "The same goes for establishments. How many have shattered under the scope of a sniper rifle?"
 
                     p "I can see your point, but establishments and actual people are two completely different things."
 
@@ -182,17 +183,17 @@ label ch_adam:
 
             label adam_VL_tree_disapprove:
 
-                p "I don\'t really know what to think of them, I haven\'t heard too much. In general, though, rebel groups like these compromise the peace that we all work so hard to keep
-                afloat. While they all have their justifications and sometimes they make perfect sense, ultimately their very existence counteracts the change they seek."
+                p "I don\'t really know what to think of them, I haven\'t heard too much. In general, though, rebel groups like these compromise the peace that we all work so hard to keep afloat." 
 
-                adam "Hm... there are many examples where history supports your assertion, but sometimes these groups have noticed something fundamentally wrong, and they are simply
-                trying to do what is best. During first contact there were suddenly many of these rebel cells who were all fighting for what they thought was right. Some worked to 
-                push us away, others to bring us together."
+                adam "While they all have their justifications and sometimes they make perfect sense, ultimately their very existence counteracts the change they seek."
+
+                adam "Hm... there are many examples where history supports your assertion, but sometimes these groups have noticed something fundamentally wrong, and they are simply trying to do what is best."
+
+                adam "During first contact there were suddenly many of these rebel cells who were all fighting for what they thought was right. Some worked to push us away, others to bring us together."
 
                 p "So what exactly is your point?"
 
-                adam "My point is that these rebel groups are not something that you simply sympathize or disagree with - they lie in a moral gray zone in which our own sense of ethics 
-                begins to affect our perceptions of them."
+                adam "My point is that these rebel groups are not something that you simply sympathize or disagree with - they lie in a moral gray zone in which our own sense of ethics begins to affect our perceptions of them."
 
                 p "Right, that I can agree with."
 
@@ -204,20 +205,29 @@ label ch_adam:
 
             p "What can you tell me about your past? I don\'t mean to offend, but you look like you\'ve seen quite a great deal of change here."
 
-            adam "That I have. But actually, I was there when we made first contact. I was a chief engineer aboard the TSS Armada, flagship of Operation Bridge - I can still 
-            remember by heart swelling with pride seeing her lift off from Terra for the first time. Space was not foreign to us, but the distance from home was. Nowhere in our
-             minds was the possibility that we could come into contact with another highly-intelligent biped species like our own."
+            adam "That I have. But actually, I was there when we made first contact. I was a chief engineer aboard the TSS Armada, flagship of Operation Bridge."
+
+            adam "I can still remember by heart swelling with pride seeing her lift off from Terra for the first time." 
+
+            adam "Space was not foreign to us, but the distance from home was."
+
+            adam "Nowhere in our minds was the possibility that we could come into contact with another highly-intelligent biped species like our own."
 
             p "I imagine it was pandemonium when you first saw them?"
 
-            adam "Boy, that moment when we stopped over bridge and saw their fleet, it was silent for a straight ten minutes. From that point on it\'s history - but I need to be 
-            completely clear that neither their commander nor ours wanted the fight to break out. The warning shots eventually turned into full-on fighting. The Verdict was shot 
-            down... we took down their ship the Krona... it was a disaster."
+            adam "Boy, that moment when we stopped over bridge and saw their fleet, it was silent for a straight ten minutes."
+
+            adam "From that point on it\'s history - but I need to be completely clear that neither their commander nor ours wanted the fight to break out." 
+
+            adam "The warning shots eventually turned into full-on fighting. The Verdict was shot down... we took down their ship the Krona... it was a disaster."
 
             p "So how did you end up resolving tensions with the kaldreans?"
 
-            adam "It was certainly difficult trying to communicate  with one another. As I\'m sure you can guess it was like being thrust into a completely different culture. We 
-            landed here and then we tried to establish some form of communications. Throughout the process I became friends with a kaldrean, Alkay - wonderful character that one."
+            adam "It was certainly difficult trying to communicate  with one another. As I\'m sure you can guess it was like being thrust into a completely different culture." 
+
+            adam "We landed here and then we tried to establish some form of communications."
+
+            adam "Through the process I became friends with a kaldrean, Alkay - wonderful character that one."
 
             p "So I take it you were around when Concord was constructed."
 
@@ -235,9 +245,11 @@ label ch_adam:
             label adam_Bg_tree_Alkay:
                 p "You mentioned Alkay?"
 
-                adam "Oh he\'s been a friend of mine for many years now. He was actually instrumental in resolving the conflict because he was one of the first kaldreans to learn 
-                human standard -  probably THE first, actually. When I was... when I was working alongside them during the war he and I were unofficial emissaries. When you next stop 
-                by Oasis tell him I sent you - he\'ll be happy to know."
+                adam "Oh he\'s been a friend of mine for many years now."
+
+                adam "He was actually instrumental in resolving the conflict because he was one of the first kaldreans to learn human standard -  probably THE first, actually." 
+
+                adam "When I was... when I was working alongside them during the war he and I were unofficial emissaries. When you next stop by Oasis tell him I sent you - he\'ll be happy to know."
 
                 $ plot_state.adam_talk_alkay = True
                 $ last_dialog = 'Is there anything else I can help you with?'
@@ -246,15 +258,21 @@ label ch_adam:
             label adam_Bg_tree_conflict:
                 p "So, could you explain your experience in the first contact conflict a little more?"
 
-                adam "I suppose... although the events that transpired affected quite a few people, including a number of those who live here on Concord. I\'ll try to keep this brief 
-                because you really don\'t need to hear about all the problems. With the Verdict and the Krona damaged beyond repair the rest of our ships landed planet-side because we 
-                needed to make repairs. Fire was exchanged on the ground despite explicit orders on both sides not to. Some of our scouts went missing at about the same time that our
-                people made hostages out of their scouts. It was all quite tense - lives were unnecessarily lost."
+                adam "I suppose... although the events that transpired affected quite a few people, including a number of those who live here on Concord." 
+
+                adam "I\'ll try to keep this brief because you really don\'t need to hear about all the problems." 
+
+                adam "With the Verdict and the Krona damaged beyond repair the rest of our ships landed planet-side because we needed to make repairs." 
+
+                adam "Fire was exchanged on the ground despite explicit orders on both sides not to."
+
+                adam "Some of our scouts went missing at about the same time that our people made hostages out of their scouts." 
+
+                adam "It was all quite tense - lives were unnecessarily lost."
 
                 p "Are you okay?"
 
-                adam "Yeah. I'm still upset by how much pain we could have avoided if we had been better prepared. So just always remember, [alias.first], go prepared; you\'ll never know
-                quite what to expect out there."
+                adam "Yeah. I'm still upset by how much pain we could have avoided if we had been better prepared. So just always remember, [alias.first], go prepared; you\'ll never know quite what to expect out there."
 
                 p "I'll do my best."
 
