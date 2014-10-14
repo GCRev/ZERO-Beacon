@@ -253,49 +253,98 @@ label ck_lorisk:
                     jump lorisk_VL_plans_tree_disgust
 
             label lorisk_VL_plans_tree_sympathy:
-                p '[[respond with sympathy]'
+                p "I just wanted to say that I think you and you're family are very courageous to be strong against the controversy you likely received."
+
+                p "You and others like you deserve better than that."
+
+                lorisk "I-"
+
+                lorisk "You have no idea how hard it's been for us. For all of us. I just... can't stand to see anyone else go through what we have."
+
+                p "I'm doing my best to help."
+
                 menu:
-                    lorisk '[[breaks down and reveals just how badly she wants this revolution to go through.]'
-                    '[[offer trust and confidentiality]':
+                    lorisk "Thank you. I cannot express enough just how much this means to me. I am desperate for this revolution to occur - it is the only way we have a chance to make it stop."
+                    "Assure Lorisk that she can trust you":
                         jump lorisk_VL_plans_tree_sympathy_confidentiality
-                    '[[the rebels are going to ruin your chances with their ways]':
+                    "Warn Lorisk about the truth of revolution":
                         jump lorisk_VL_plans_tree_disgust
 
                 label lorisk_VL_plans_tree_sympathy_confidentiality:
-                    p '[[offer trust and confidentiality]'
+                    p "You can trust me Lorisk. I want to help this rebellion to make the change it promises."
+
+                    lorisk "I am willing to go to any length to make sure that we have a chance. Any measure..."
+
+                    lorisk "Any means will justify the ends provided that those like my family can be rid of the oppression and the slander and the hatred."
+
+                    lorisk "Valak Lideri is our Beacon. When we restore it... not only will we spawn another golden age for kaldreans, but break down the barriers between our races."
+
                     menu:
-                        lorisk '[[reveals that she  is a part of the VL and that she is willing to go to any length to make a difference.]'
-                        '[[peace is slow but more stable]':
+                        lorisk "It will be a new age for all of us."
+                        "Peace is slow but more stable":
                             jump lorisk_VL_plans_tree_sympathy_confidentiality_peace
-                        '[[important to only punish those responsible]':
+                        "It is important to punish only those responsible":
                             jump lorisk_VL_plans_tree_sympathy_confidentiality_reason
-                        '[[quick violence will solve problem quickly]':
+                        "Violence will create the necessary spark":
                             jump lorisk_VL_plans_tree_sympathy_confidentiality_violence
 
                     label lorisk_VL_plans_tree_sympathy_confidentiality_peace:
-                        p '[[peace is slow but more stable]'
-                        lorisk '[[agrees, but does not like that her people would have to wait any longer]'
+                        p "Just remember that peaceful uprising will ultimately be the most effective. Minimize the grudges and the vengeance."
+
+                        lorisk "We cannot wait any longer, [alias.first]. We have already struggled for so long to give the progressive movement the ability to take down the corruption."
+
+                        lorisk "It never works. While I agree that peace minimizes the collateral damage, I simply do not think that we have a choice but to use force."
+                        
+                        p "You may be correct. But if you must use the barrel of a rifle to argue your point, make sure you are aiming at the right people."
                         $plot_state.lorisk_vl_plan_info = InfoGet.SUCCESS
-                        $last_dialog = '[Thank you for talking to me about this. Let me know if you need anything else.]'
+                        $last_dialog = "Thank you for talking to me about this. Let me know if you need anything else."
                         jump menu_lorisk
 
                     label lorisk_VL_plans_tree_sympathy_confidentiality_violence:
-                        p '[[quick violence will solve problem quickly]'
-                        lorisk '[[agrees, but hopes that if it does come to violence, that it is minimal.]'
+                        p "Make your point with the barrel of a linear rifle. From what I understand the progressive movement is extremely volatile - it would take little to set them off."
+                        
+                        lorisk "That's what we are planning - I just with that there was a better way. I do not want my fellow kaldreans to perish for the corrupted controllers."
+
+                        lorisk "Their lives are worthless. They do not deserve to have soldiers fight and die for them."
+
+                        p "You know that Vatrisk is doing his best to help you right?"
+
+                        lorisk "I... I know. But this is out of my hands now. If we turn back now we may never accomplish what we have set out to change."
+
+                        p "Then be very careful. I might not be able to help you once this gets going."
                         $plot_state.lorisk_vl_plan_info = InfoGet.SUCCESS
-                        $last_dialog = '[Thank you for talking to me about this. Let me know if you need anything else.]'
+                        $last_dialog = "I know. I'm sorry. Is there anything else you want to ask?"
                         jump menu_lorisk
 
 
                     label lorisk_VL_plans_tree_sympathy_confidentiality_reason:
-                        p '[[important to only punish those responsible]'
-                        lorisk '[[agrees. Those who were caught up, including those under corrupt control, may not have wholeheartedly agreed.]'
+                        p "When you bring the movement to Qolisk, make sure that the ones under the rifle scope are truly the ones responsible for the corruption."
+
+                        lorisk "I cannot agree with you more, [alias.first]. I cannot imagine how many poor souls are bent to do the bidding of our controllers. They should not trade their lives for leaders'."
+
+                        lorisk "I'm afraid, however, that this will get out of hand."
+
+                        p "The it is up to you to keep it under control. You can - you know strength better that most and I definitely know that you can communicate better than most."
                         $plot_state.lorisk_vl_plan_info = InfoGet.SUCCESS
-                        $last_dialog = '[Thank you for talking to me about this. Let me know if you need anything else.]'
+                        $last_dialog = "Thank you so much "+alias.first+". Let me know if you need anything else."
                         jump menu_lorisk
 
             label lorisk_VL_plans_tree_disgust:
-                p '[[don\'t you find that wrong?]'
-                lorisk '[[blows up in your face about hardship and how you have no idea. Ceases conversation]'
+                p "How exactly does that work? How does a kaldrean and a human fall into a relationship?"
+
+                lorisk "I cannot believe you really just asked me that? You did not really think that question through before you blurted it did you?"
+
+                p "No I'm actually -"
+
+                lorisk "Stop. Stop before you say something even worse than that. You have no idea how much they have had to stand against to be together and to raise me."
+                
+                lorisk "They are happier together than most kaldrean or human couples. So not only did they have to face the fire, but I did as well."
+
+                lorisk "I was shunned throughout my schooling and denied military service and the respect that kaldreans gain by going through it."
+
+                lorisk "So do not try to tell me that you understand, or that you want to. No words can express what we have gone through."
+
+                lorisk "I thought I could trust you, [alias.title_last], but I guess I couldn't recognize your deceitful tone. I do not want to talk to you anymore."
+                $ plot_state.lorisk_vl_plan_info = InfoGet.FAIL
                 hide lorisk 
                 return
