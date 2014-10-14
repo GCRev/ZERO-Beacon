@@ -153,8 +153,7 @@ label ch_adam:
                     p "I can see your point, but establishments and actual people are two completely different things."
 
                     adam "[alias.first], you did not live through the conflict the way I did. Peace works very, very well in the long term. But violence is a quick way 
-                    to solve immediate problems - strategy versus tactics. You don\'t have to agree with me, we all have our separate opinions and backg
-                    rounds to inform them,
+                    to solve immediate problems - strategy versus tactics. You don\'t have to agree with me, we all have our separate opinions and backgrounds to inform them,
                     but this is the way I have seen it work in the past."
 
                     $ last_dialog = "Valak Lideri, if could make any guesses, have found their way and they are willing to pursue it with great force. For a rebel group to \
@@ -243,7 +242,7 @@ label ch_adam:
 
                 adam "I suppose... although the events that transpired affected quite a few people, including a number of those who live here on Concord. I\'ll try to keep this brief 
                 because you really don\'t need to hear about all the problems. With the Verdict and the Krona damaged beyond repair the rest of our ships landed planet-side because we 
-                needed to make repairs. Fire was exchanged on the ground despite explicit orders on boths sides not to. Some of our scouts went missing at about the same time that our
+                needed to make repairs. Fire was exchanged on the ground despite explicit orders on both sides not to. Some of our scouts went missing at about the same time that our
                 people made hostages out of their scouts. It was all quite tense - lives were unnecessarily lost."
 
                 p "Are you okay?"

@@ -194,7 +194,7 @@ label ch_jon:
                 jon "Based on what little I know I believe that have a good cause - they want to give the kaldrean progressive movement new life and new force."
 
                 menu:
-                    jon "Many kaldreans want to be free of their suppressive controllers - Valak Lideri are are not afraid to do what is right."
+                    jon "Many kaldreans want to be free of their suppressive controllers - Valak Lideri are not afraid to do what is right."
                     "Thank Jon for the information":
                         jump jon_hobbies_tree_VL_thank_jon
                     "Reassure that you think kaldreans deserve liberation":

@@ -106,7 +106,7 @@ label ck_alkay:
             alkay "Its a change. I remember back when our first dark-energy craft were created, how you could smell the ozone and the distinct and 
             the scent of dark-energy in the atmosphere." 
 
-            alkay "You could feel the drives buzzing like beatles inside your very bones. 
+            alkay "You could feel the drives buzzing like beetles inside your very bones. 
             The energy became a volume that you were suddenly within."
 
             alkay "You can feel that energy here - it is not \"tension\" 
@@ -118,7 +118,7 @@ label ck_alkay:
 
             p "So you’re passionate about whatever this \"union\" is that you referred to."
 
-            alkay "Definately. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we’ve self-imposed."
+            alkay "Definitely. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we’ve self-imposed."
 
             p "I see. I’m grateful for your wise words."
 
@@ -154,7 +154,7 @@ label ck_alkay:
                 alkay "[last_dialog]"
                 "Ask about Alkay\'s bitterness":
                     jump alkay_adam_tree_bitterness
-                "Ask about Alkay\'s hopefulness':
+                "Ask about Alkay\'s hopefulness":
                     jump alkay_adam_tree_hopefulness
 
             label alkay_adam_tree_bitterness:
@@ -337,7 +337,7 @@ label ck_alkay:
 
                 p "Of course. Please continue."
 
-                alkay "It is thanks to him that the the humans and kadreans are speaking to one another, quite literally. In the time that he was working with us he learned to speak kaldrean common."
+                alkay "It is thanks to him that the humans and kaldreans are speaking to one another, quite literally. In the time that he was working with us he learned to speak kaldrean common."
 
                 alkay "I, in turn, learned human common. He is a good man and he has endured quite a lot. Quite. I think no one should have to experience what he did."
 

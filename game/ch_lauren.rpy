@@ -67,7 +67,7 @@ label ch_lauren:
             p "I had hoped."
 
             lauren "Hah! About all I can tell you is that it is silly. I know plenty of kaldreans, none of whom are bothered or riled up by any of this so-called 
-            \"tension.\" I would almost think that you\tve been lied to about this, because honestly, I haven\'t noticed anything particularly out of the ordinary. 
+            \"tension.\" I would almost think that you've been lied to about this, because honestly, I haven\'t noticed anything particularly out of the ordinary. 
             And I work in upper-level management!"
 
             p "(muttered) Yeah, but upper-level management has pulled the wool over your eyes."

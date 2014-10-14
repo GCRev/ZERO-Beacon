@@ -35,8 +35,8 @@ label ck_noq:
                 call noq_advice
             'Ask Noq about his opinions on recent events':
                 call noq_events
-            'Ask Noq about his background':
-                call noq_background
+            ##'Ask Noq about his background':
+            ##    call noq_background
             'Ask Noq about his interests'  if plot_state.stage == PlotStage.VL_PLANS and plot_state.noq_vl_plan_info == InfoGet.NO_ATTEMPT:
                 jump noq_interests_tree_start
             'Done talking to Noq':
@@ -46,7 +46,7 @@ label ck_noq:
 
         label noq_advice:
             p "Would you mind sharing some advice?"
-            noq "Normally I wouldn\'t, but right now I am very busy. I have a deadline that I need to meet and right now I\'m in the zone."
+            noq "Normally I wouldn't, but right now I am very busy. I have a deadline that I need to meet and right now I'm in the zone."
             p "Perhaps later then."
             noq "Perhaps"
             p "Alright"
@@ -103,10 +103,10 @@ label ck_noq:
             if plot_state.stage == PlotStage.VL_PLANS and plot_state.noq_vl_plan_info == InfoGet.NO_ATTEMPT:
                 menu:
                     noq '[last_dialog]'
-                    '[[ask again]':
+                    "Ask Noq again if he is Valak Lideri":
                         $ plot_state.noq_vl_plan_info = InfoGet.FAIL
                         jump noq_VL_tree_ask_again
-                    '[[drop the topic]':
+                    "Drop the topic]":
                         jump menu_noq
 
             else:
@@ -116,9 +116,9 @@ label ck_noq:
                 p '[[ask Noq again]'
                 menu:
                     noq '[[He again asserts he knows nothing, seems frustrated]'
-                    '[[Assert that he must know something]':
+                    "Assert that Noq must know something":
                         jump noq_VL_tree_assert
-                    '[[drop the topic]':
+                    "Drop the topic":
                         jump menu_noq
 
                 label noq_VL_tree_assert:
@@ -135,18 +135,18 @@ label ck_noq:
             p '[[And what happened after that?]'
             menu:
                 noq '[[Tells you about his background and his failure in the military]'
-                '[[ask about opinions of military]':
+                "Ask about opinions of military":
                     jump noq_interests_tree_opinions
-                '[[sympathize]':
+                "Show sympathy":
                     jump noq_interests_tree_sympathize
 
             label noq_interests_tree_opinions:
                 p '[[ask about opinions of military]'
                 menu:
                     noq '[[Happily tells you his dislike for the military. Slips that Alkay shares many of his opinions on the unfairness of kaldrean military and life in general]'
-                    '[[Ask about Alkay]':
+                    "Ask about Alkay":
                         jump noq_interests_tree_opnions_alkay
-                    '[[Agree with his opinions]':
+                    "Agree with his opinions":
                         jump noq_interests_tree_opinions_agree
 
                 label noq_interests_tree_opnions_alkay:
