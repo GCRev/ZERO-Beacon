@@ -88,7 +88,7 @@ label ck_lorisk:
         label lorisk_personal_reasons:
             p 'Can you tell me anything about Valak Lideri?'
 
-            lorisk "Sorry I'd rather not?"
+            lorisk "Sorry I'd rather not."
 
             p "Personal reasons?"
 

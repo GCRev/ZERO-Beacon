@@ -103,70 +103,106 @@ label ck_noq:
             if plot_state.stage == PlotStage.VL_PLANS and plot_state.noq_vl_plan_info == InfoGet.NO_ATTEMPT:
                 menu:
                     noq '[last_dialog]'
-                    "Ask Noq again if he is Valak Lideri":
+                    "Ask Noq again if he knows something about Valak Lideri":
                         $ plot_state.noq_vl_plan_info = InfoGet.FAIL
                         jump noq_VL_tree_ask_again
-                    "Drop the topic]":
+                    "Drop the topic":
                         jump menu_noq
 
             else:
                 jump menu_noq
 
             label noq_VL_tree_ask_again:
-                p '[[ask Noq again]'
+                p "Are you sure, Noq? I feel like you might have something more to say about Valak Lideri."
                 menu:
-                    noq '[[He again asserts he knows nothing, seems frustrated]'
+                    noq "I do not understand why you keep questioning me about this. I already told you that I do not know anything about Valak Lideri."
                     "Assert that Noq must know something":
                         jump noq_VL_tree_assert
                     "Drop the topic":
                         jump menu_noq
 
                 label noq_VL_tree_assert:
-                    p '[[Assert that he must know something right in Noq\'s pretty face]'
-                    noq '[[You annoy me very much. Remove yourself or I will have security remove you for you.]'
+                    p "Surely you must know something. I can tell that you do."
+                    noq "You are irritating me with your ridiculous questioning. Remove yourself or I will have security remove you for you."
                     $ hide_ch('noq', 'left')
                     return
 
         label noq_interests_tree_start:
-            p '[[ask Noq about his interests]'
-            noq '[[He tells you about his love for engineering and mathematics]'
-            p '[[How did you become interested?]'
-            noq '[[Tell you about his schooling on Qolisk]'
-            p '[[And what happened after that?]'
+            p "What interests you Noq? I'm guessing it's not a question you are asked often."
+
+            noq "You are correct. I have a passion for mathematics and engineering - I can see these shapes and images that translate into numbers and measurements."
+
+            noq "When I put them into software everything simply works. I feel liberated when I am given architectural design work."
+
+            p "How did you become interested? I assume you had a good education if you have such an expansive knowledge of this material."
+
+            noq "I did. My family and my clan is wealthy. When my parents saw that I had a bent for engineering they put into the best educational system that money can buy."
+
+            noq "Citadel's Academy is the most difficult school to get into, but I was practically invited."
+
+            p "So you're a savant basically."
+
+            noq "I suppose. That may also explain why I'm so socially and physically inept."
+
+            p "Based on that I can infer that you had some troubles afterwards?"
+
+            noq "Military training... was absolutely terrible to me. I was unable to perform most of the tasks they asked of me, and I was ridiculed as a result."
+
+            noq "I managed to regain some respect by becoming the youngest decorated master marksman in the last two centuries."
             menu:
-                noq '[[Tells you about his background and his failure in the military]'
-                "Ask about opinions of military":
+                noq "The math skills really do come in handy when you can calculate projectile trajectories in your head and hit the center of the target every time."
+                "Ask about opinions of the kaldrean military":
                     jump noq_interests_tree_opinions
                 "Show sympathy":
                     jump noq_interests_tree_sympathize
 
             label noq_interests_tree_opinions:
-                p '[[ask about opinions of military]'
+                p "So you dislike the military? I suppose that's obvious... Can you be more specific? What is it about the military that turned you away?"
+
+                noq "They have a certain expectation for every rookie soldier, even though it may be completely obvious that expectations are unreasonable."
+
+                noq "You get burned even though it is not your fault you were born with a physical defect."
+
+                noq "They are not permitted to kill you but they will try. They will have you within inches of death simply because they are trying to teach you \"strength.\""
+
+                noq "Their system would work much better if it sought to put those with the right skills in the right training. But they do not. So they waste everyone's time."
+
                 menu:
-                    noq '[[Happily tells you his dislike for the military. Slips that Alkay shares many of his opinions on the unfairness of kaldrean military and life in general]'
+                    noq "Alkay seems to think this accurate. I can definitely see why there are so many kaldreans out there who dislike the military and service to it."
                     "Ask about Alkay":
                         jump noq_interests_tree_opnions_alkay
                     "Agree with his opinions":
                         jump noq_interests_tree_opinions_agree
 
                 label noq_interests_tree_opnions_alkay:
-                    p '[[ask about Alkay]'
-                    noq '[[Becomes quiet, realizing he has already said too much. Will not talk to you in depth anymore]'
+                    p "You mentioned Alkay?"
+
+                    noq "Right well, I think I got carried away."
                     $ plot_state.noq_vl_plan_info = InfoGet.SUCCESS
-                    $ last_dialog = '[What else?]'
+                    $ last_dialog = "What else?"
                     jump menu_noq
 
                 label noq_interests_tree_opinions_agree:
-                    p '[[agree with his opinions]'
-                    noq '[[He suggests you talk to Alkay and Jonathan]'
+                    p "I agree. Our military, while not compulsory like the kaldrean's, does uphold the same operational standards for everyone."
+
+                    p "I feel like the way that they run things around there is inefficient and unbalanced as well."
+
+                    noq "You might talk to Officer Caise and Elder Volk. They know quite a bit about this as well."
+
+                    p "Thank you"
                     $ plot_state.noq_vl_plan_info = InfoGet.SUCCESS
-                    $ last_dialog = '[What else?]'
+                    $ last_dialog = "What else?"
                     jump menu_noq
 
             label noq_interests_tree_sympathize:
-                p '[[sympathize]'
-                noq '[[Becomes frustrated, thinking you are being patronizing. Will tell you no more about his background]'
-                $ plot_state.noq_vl_plan_info = InfoGet.SUCCESS
-                $ last_dialog = '[You begin to frustrate me.]'
+                p "I'm sorry that you had to go through that. I don't think any military should treat their own people that way."
+
+                noq "Do not patronize me, you do not truly understand how bad it was for some of us."
+
+                p "I'm sorry I said anything then."
+
+                noq "Good."
+                $ plot_state.noq_vl_plan_info = InfoGet.FAIL
+                $ last_dialog = "If you want ask anything else, be snappy about it."
                 jump menu_noq
 

@@ -41,7 +41,8 @@ label ch_ben:
 
     label ben_ask_kald_govt: 
         p "I was wondering about your opinion on the state of the kaldrean government."
-        ben "[[canned response]"
+
+        ben "Their government is stable and provides their people with high standard of living. I do not see anything particularly wrong with it."
 
         menu:
             ben "Is that along the lines of what you were looking for?"
@@ -55,7 +56,7 @@ label ch_ben:
                 p "Well, to be honest, I was looking for something more... in depth."
                
                 ben "Ahh, I see."
-                "Ben looks a bit nervous, and hesitates before continuing to speak."
+                ##"Ben looks a bit nervous, and hesitates before continuing to speak."
                 
                 ben "Well, [alias.first], as I'm sure you understand, someone in a position such as mine must be very careful with
                 what he says and to whom he says it."
@@ -79,13 +80,13 @@ label ch_ben:
                     
                     p "I\'m listening."
                     
-                    ben "The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read Vel Kerriss\' \"Dystopia\"?"
+                    ben "The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read \nVel Kerriss' {i}Dystopia{/i}?"
                    
                     p "I can\'t say that I have."
                    
                     ben "It was a controversial kaldrean novel that made it past the government\'s censors and was widely read and lauded as one of the greatest works of literature to date."
                     
-                    ben "It may remind you of Fahrenheit 451 by Ray Bradbury."
+                    ben "It may remind you of {i}Fahrenheit 451{/i} by Ray Bradbury."
                    
                     ben "Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to 
                     give back in other ways."
@@ -94,7 +95,7 @@ label ch_ben:
                   
                     p "But they are blissfully ignorant."
                   
-                    ben "You could say that, yes. I think that about covers their situation without distorting the truth."
+                    ben "You could say that, yes. I think that about covers their situation without inordinately distorting the truth."
                   
                     $ last_dialog = "Is there anything else you would like to ask me?"
                     $ plot_state.ben_kald_govt_info = InfoGet.SUCCESS
@@ -200,7 +201,7 @@ label ch_ben:
 
         ben "The closer you come to being spotless, the more those around you will accept you."
          
-        ben "If only... (muttered)"
+        ben "{size=-10}If only...{/size}"
          
         p "What?"
          
