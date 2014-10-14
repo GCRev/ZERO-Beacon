@@ -64,7 +64,7 @@ label ch_cole:
             p 'Everything alright, Cole?'
             menu:
                 cole 'Yes. I\'m fine.'
-                'Ask about his background again':
+                'Ask Cole about his background again':
                     jump cole_Bg_tree_pursue
                 'Apologize':
                     jump cole_Bg_tree_apologize
@@ -72,15 +72,16 @@ label ch_cole:
             label cole_Bg_tree_pursue:
                 p 'Well, is there anything else you can tell me about the history of this planet? 
                 Maybe, when you got here, or what it was like being exposed to the kaldreans for the first time?'
-                $last_dialog = 'Quit your prying! Didn\'t they ever teach you any manners growing up? Anyways I think we\'re done here.'
+                $last_dialog = 'Quit your prying! Didn\'t they ever teach you any manners growing up? Anyways ask me whatever you please, so long as it is not about my past.'
                 $ plot_state.cole_background_info = InfoGet.FAIL
                 jump menu_cole
 
             label cole_Bg_tree_apologize:
                 p 'I apologize, I didn\'t realize that it was a delicate topic for you.'
+
+                cole 'It\'s okay, I didn\'t mean to snap at you. Things weren\'t always as easy for us as kids. Even less so during the contact conflict.'
                 menu:
-                    cole 'It\'s okay, I didn\'t mean to snap at you. Things weren\'t always as easy for us as kids. 
-                    As my great granddad would say, \"Walking to the Academy was uphill, both ways!\" Oh, how he cracked me up.'
+                    cole "As my great granddad would say, \"Walking to the Academy was uphill, both ways!\" Oh, how he cracked me up. Never thought it would stick with me for all these years."
                     'Ask about his background again':
                         jump cole_Bg_tree_pursue
                     'Offer him your confidentiality':
@@ -90,12 +91,20 @@ label ch_cole:
                     p 'Well, if you ever have anything you want to share with me, you have my complete confidentiality. 
                     I\'d be happy to listen!'        
                     cole 'Well, you seem like a well-mannered kid. Here\'s a little about Old Cole.'
-                    cole 'I was part of Operation Bridge, on the TSS Destroyer Verdict. I was the Gunnery Officer on board. 
-                    It was that operation we made first contact with the kaldreans, actually. Then the fighting began...'
-                    cole 'For the most part the kaldreans were the ones trying to stop the fighting.'
-                    cole '...'
-                    cole 'But that\'s all water under the bridge, right?'
-                    p 'Right! Well thank you very much for sharing on such a fragile topic.'
+
+                    cole "I was part of Operation Bridge, on the TSS Destroyer {i}Verdict{/i}. I was the Gunnery Officer on board. 
+                    It was that operation we made first contact with the kaldreans, actually."
+
+                    cole "Then the fighting began... I lost some of my closest friends that day. A lost some of myself as I watched the {i}Verdict{/i} lose its battle with gravity and fell to Bridge."
+
+                    cole "It was fight no one wanted, but it was a fight nonetheless. I was unable to forgive the kaldreans for many years."
+
+                    cole "Eventually it became evident that we had both wronged one another, and that it was time I moved on. It was difficult, but I'm past it now."
+
+                    cole "Took my mind of things by applying myself to electronics. Turns out I have a penchant for it. After Uncle Klay opened up his place I was second."
+
+                    cole "I faced the problem head on, and I'm a better person now because of it. Remember not to turn away from you fears, because they will still be there."
+                    p 'Right. Well thank you very much for sharing on such a fragile topic.'
                     $ last_dialog = 'Thank you for listening. Anything else I can help you with today?'
-                    $ cole_background_info = InfoGet.SUCCESS
+                    $ plot_state.cole_background_info = InfoGet.SUCCESS
                     jump menu_cole
