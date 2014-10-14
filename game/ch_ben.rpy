@@ -53,32 +53,48 @@ label ch_ben:
 
             "Say you were looking for more depth":
                 p "Well, to be honest, I was looking for something more... in depth."
+               
                 ben "Ahh, I see."
                 "Ben looks a bit nervous, and hesitates before continuing to speak."
+                
                 ben "Well, [alias.first], as I'm sure you understand, someone in a position such as mine must be very careful with
-                what he says and to whom he says it. Especially in such tense times such as these."
+                what he says and to whom he says it."
+
+                ben "Especially in such tense times such as these."
                 
                 if plot_state.ben_trust <= TrustLevel.MEDIUM:
-                    ben "Now, as you seem to have already figured out, my opinion on the kaldreans govern themselves is not exactly positive. And
-                    I would gladly talk about it with someone whom I knew I could trust."
+                    ben "Now, as you seem to have already figured out, my opinion on the kaldreans govern themselves is not exactly positive."
+                    
+                    ben "I would gladly talk about it with someone whom I knew I could trust."
+
                     $ last_dialog = "Unfortunately, while I would like to trust you, we have only just met."
                     $ plot_state.ben_kald_govt_info = InfoGet.FAIL
                     # note: even though the above line sets ben_kald_govt_info to FAIL, the player can still succeed in getting the info
                     #   later if they do the Lida favor. It's just we need to set it to FAIL here so that it registers that the player
                     #   has talked to Ben when they go talk to Sarah
                 else:
-                    ben "On the other hand, you have shown yourself to be a reliable and competent person, so maybe I could share with you some of my 
-                    less... popular opinions on the kaldrean governmental system."
+                    ben "On the other hand, you have shown yourself to be a reliable and competent person."
+
+                    ben "Maybe I could share with you some of my less... popular opinions on the kaldrean governmental system."
+                    
                     p "I\'m listening."
+                    
                     ben "The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read Vel Kerriss\' \"Dystopia\"?"
+                   
                     p "I can\'t say that I have."
+                   
                     ben "It was a controversial kaldrean novel that made it past the government\'s censors and was widely read and lauded as one of the greatest works of literature to date.
                     It may remind you of Fahrenheit 451 by Ray Bradbury."
+                   
                     ben "Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to 
                     give back in other ways."
+                  
                     ben "They have the highest standards of living I have ever seen, crime rates are low, there are no apparent problems."
+                  
                     p "But they are blissfully ignorant."
+                  
                     ben "You could say that, yes. I think that about covers their situation without distorting the truth."
+                  
                     $ last_dialog = "Is there anything else you would like to ask me?"
                     $ plot_state.ben_kald_govt_info = InfoGet.SUCCESS
                     $ plot_state.ben_talk_lida = False
@@ -107,9 +123,9 @@ label ch_ben:
     
                 ben "Hmmm... what a novel idea. Yes, why don't you try to persuade her? I would be most appreciative of the favor."
 
-                ben "Now that I think of it, I'm confident you'll be able to persuade her to meet with me. You'll find Ms. Ezekeri in the kaldrean embassy.
+                ben "Now that I think of it, I'm confident you'll be able to persuade her to meet with me. You'll find Ms. Ezekeri in the kaldrean embassy."
 
-                Tell her that I need to discuss the new trade regulations with her."
+                ben "Tell her that I need to discuss the new trade regulations with her."
 
                 p "Of course, but why exactly are you so confident in me? You only met me a few minutes ago."
 
@@ -160,8 +176,9 @@ label ch_ben:
         p "What advice can you offer, from one diplomat to another?"
 
         ben "Ah yes, of course. What often happens to the greenhorns who arrive here from Earth and Qolisk alike, 
-        is that they forget that they are entering an environment they have never before experienced. 
-        You have to drop your prejudices and fabrications and simply observe. If you can\'t, then you struggle."
+        is that they forget that they are entering an environment they have never before experienced."
+
+        ben "You have to drop your prejudices and fabrications and simply observe. If you can\'t, then you struggle."
          
         p "I respect your advice, Ambassador –"
          
@@ -170,8 +187,11 @@ label ch_ben:
         p "I respect your advice, Ben, but doesn\'t it seem like a lot to ask of anyone to simply \"drop their prejudices?\""
          
         ben "Of course it is. It\'s completely unreasonable – everyone will remain with their judgment 
-        tailored by their experiences. I never claimed it was possible simply become judgment-free. 
-        That does not mean that you can\'t try. The closer you come to being spotless, the more those around you will accept you."
+        tailored by their experiences."
+
+        ben "I never claimed it was possible simply become judgment-free. That does not mean that you can\'t try."
+        
+        ben "The closer you come to being spotless, the more those around you will accept you."
          
         ben "If only... (muttered)"
          
@@ -184,8 +204,9 @@ label ch_ben:
         p "You probably know all about the rumors of racial tensions that have been circulating. Care to elaborate?"
 
         ben "Rumors are but rumors - they are innocuous little flies that eventually die down. No need to concern yourself with these 
-        \"rumors\" my friend. I can assure that both Ambassador Irridiss and I are on quite even terms. 
-        The peace that we maintain here is secure so there is really no need to worry."
+        \"rumors\" my friend. I can assure that both Ambassador Irridiss and I are on quite even terms."
+        
+        ben "The peace that we maintain here is secure so there is really no need to worry."
 
         p "If you insist..."
 
