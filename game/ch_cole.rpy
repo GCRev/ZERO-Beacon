@@ -85,7 +85,7 @@ label ch_cole:
                     cole "As my great granddad would say, \"Walking to the Academy was uphill, both ways!\" Oh, how he cracked me up. Never thought it would stick with me for all these years."
                     'Ask about his background again':
                         jump cole_Bg_tree_pursue
-                    'Offer him your confidentiality':
+                    'Offer him confidentiality':
                         jump cole_Bg_tree_confidentiality
 
                 label cole_Bg_tree_confidentiality:

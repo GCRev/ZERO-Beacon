@@ -159,7 +159,7 @@ label ch_adam:
                 menu:   
                     'Violence will get them nowhere':
                         jump adam_VL_tree_nowhere
-                    'Care less about their methods':
+                    'You could care less about their methods':
                         jump adam_VL_tree_care_less
 
                 label adam_VL_tree_nowhere:

@@ -115,7 +115,7 @@ label ck_kro:
                 kro "The obsession. What did you and Officer Caise discuss that prompted a referral to me?"
                 "Ask Kro about Valak Lideri":
                     jump kro_jon_tree_VL
-                "Ask why obsession worries Kro":
+                "Ask Kro why obsession worries her":
                     jump kro_jon_tree_obsession
 
             label kro_jon_tree_VL:

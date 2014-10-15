@@ -132,9 +132,9 @@ label ck_lorisk:
                     p "Can you tell me about the traditional dialects? Alkay mentioned them so he got me wondering about them."
                     menu:
                         lorisk "I actually know how to read and write in four of the many traditional dialects. Of those four I can speak and understand two: Kalaras and Takress."
-                        "ask what \"Valak Lideri\" means":
+                        "Ask what \"Valak Lideri\" means":
                             jump lorisk_personal_reasons
-                        "ask about dialect history":
+                        "Ask about dialect history":
                             jump lorisk_VL_tree_dialect_history
 
                     label lorisk_VL_tree_dialect_history:
@@ -250,9 +250,9 @@ label ck_lorisk:
             p "Lorisk I know about your parents. I know that they are mixed-race."
             menu:
                 lorisk "Oh. You know about that? What do you care? Are you going to scorn me and my family for doing what they feel is right?"
-                "show sympathy":
+                "Show sympathy":
                     jump lorisk_VL_plans_tree_sympathy
-                "show skepticism":
+                "Show skepticism":
                     jump lorisk_VL_plans_tree_disgust
 
             label lorisk_VL_plans_tree_sympathy:
@@ -284,11 +284,11 @@ label ck_lorisk:
 
                     menu:
                         lorisk "It will be a new age for all of us."
-                        "Peace is slow but more stable":
+                        "Assert that peace is slow but more stable":
                             jump lorisk_VL_plans_tree_sympathy_confidentiality_peace
-                        "It is important to punish only those responsible":
+                        "Assert that it is important to punish only those responsible":
                             jump lorisk_VL_plans_tree_sympathy_confidentiality_reason
-                        "Violence will create the necessary spark":
+                        "Assert that violence will create the necessary spark":
                             jump lorisk_VL_plans_tree_sympathy_confidentiality_violence
 
                     label lorisk_VL_plans_tree_sympathy_confidentiality_peace:

@@ -24,9 +24,9 @@ label ch_ben:
             ben "[last_dialog]"
             "Ask Ben for advice":
                 call ben_advice
-            "Ask Ben for opinion on recent events":
+            "Ask Ben for his opinion on recent events":
                 call ben_events
-            "Ask Ben about kaldrean government" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.ben_kald_govt_info != InfoGet.SUCCESS:
+            "Ask Ben about the kaldrean government" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.ben_kald_govt_info != InfoGet.SUCCESS:
                 call ben_ask_kald_govt
             "Ask Ben about his day" if plot_state.stage == PlotStage.KALD_GOVT_INFO and plot_state.lida_convinced == InfoGet.NO_ATTEMPT and plot_state.ben_kald_govt_info != InfoGet.SUCCESS and plot_state.ben_talk_lida == False:
                 call ben_ask_day

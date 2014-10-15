@@ -155,7 +155,7 @@ label ch_jon:
                     jon "[last_dialog]"
                     "Inquire about dislike of kaldrean government":
                         jump jon_hobbies_tree_pursue
-                    "Ask about Valak Lideri":
+                    "Ask Jon about Valak Lideri":
                         jump jon_hobbies_tree_VL
             else:
                 jon "[last_dialog]"
@@ -199,7 +199,7 @@ label ch_jon:
                         jump jon_hobbies_tree_VL_thank_jon
                     "Reassure that you think kaldreans deserve liberation":
                         jump jon_hobbies_tree_VL_liberation
-                    "You seem quite passionate":
+                    "Comment on Jon's apparent passion":
                         jump jon_hobbies_tree_VL_passionate
 
                 label jon_hobbies_tree_VL_thank_jon:
