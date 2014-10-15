@@ -69,7 +69,7 @@ label ck_lida:
 
 
             label lida_convince_tree_flatter:
-                p "Ms. Ezekeri I can see that you are very wise - Ambassador Columbus, on of the most important figures in the galaxy, requires your professional input."
+                p "Ms. Ezekeri I can see that you are very wise - Ambassador Columbus, one of the most important figures in the galaxy, requires your professional input."
 
                 p "He and I both have a deep respect for our elders."
 

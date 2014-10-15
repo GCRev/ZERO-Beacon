@@ -61,7 +61,7 @@ label ck_alkay:
             alkay "I am an old man, and not to \"toot my own horn\" as you humans say, but I have seen my fair share of conflict, 
             suffering, violence, camaraderie, hope, and strength to know a thing or two about living and breathing creatures."
             
-            alkay "We are all the same - over simplified and cliché as it may sound."
+            alkay "We are all the same - over-simplified and cliché as it may sound."
 
             alkay "But I have spent many, many years amongst my people, your people, 
             and the entirely new people that live here on Bridge."
@@ -103,8 +103,7 @@ label ck_alkay:
 
             p "You\'re going to have to elaborate, how do you mean this is not simply tension? What more do you think this is?"
 
-            alkay "Its a change. I remember back when our first dark-energy craft were created, how you could smell the ozone and the distinct and 
-            the scent of dark-energy in the atmosphere." 
+            alkay "Its a change. I remember back when our first dark-energy craft were created, how you could smell the ozone and the distinct scent of dark-energy in the atmosphere." 
 
             alkay "You could feel the drives buzzing like beetles inside your very bones. 
             The energy became a volume that you were suddenly within."
@@ -223,14 +222,14 @@ label ck_alkay:
         label alkay_VL_tree_start:
             p "Can you tell me about these \"Valak Lideri?\" I've heard about them but the lack of information makes me uneasy."
             menu:
-                alkay "Yes, well, I HAVE heard of this group. But they are just shadows and whispers. I cannot really offer more than my opinions."
+                alkay "Yes, well, I {i}have{/i} heard of this group. But they are just shadows and whispers. I cannot really offer more than my opinions."
                 "Ask Alkay what \"Valak Lideri\" means":
                     jump alkay_VL_tree_translate
                 "Ask Alkay about kaldrean history":
                     jump alkay_VL_tree_history
 
             label alkay_VL_tree_translate:
-                p "Well, perhaps you could tell me more about the title itself? I am curious to know what it means."
+                p "Well, perhaps you could tell me more about the name? I am curious to know what it means and possibly any social context."
                 
                 alkay "Of course. \"Valak Lideri\" is a very, very old phrase from centuries ago. It is a member of the now-deceased {i}kalaras{/i} dialect.
                 Perhaps it is like your Latin dialect."
@@ -239,7 +238,7 @@ label ck_alkay:
 
                 alkay "Personally I find it quite strange that a rebel group should name themselves with such an obscure phrase."
 
-                alkay "It does fit within a modern context so it does not speak to most of the younger, and likely more rebellious crowd."
+                alkay "It does not fit within a modern context so it does not speak to most of the younger, and likely more rebellious crowd."
 
                 p "Thank you for elaborating, Alkay."
 
@@ -253,7 +252,9 @@ label ck_alkay:
 
                 alkay "That is quite a broad-spectrum question, so I'll do my best to generate a concise answer."
 
-                alkay "Just around two and a half millennia ago the Sovereign Paradise which is the largest fertile region on Qolisk. It was their beacon of hope - the could finally settle in one place."
+                alkay "Just around two and a half millennia ago, the largest nomadic group of kaldreans found the Sovereign Paradise, which is the largest fertile region on Qolisk." 
+
+                alkay "It was their beacon of hope - the could finally settle in one place."
 
                 p "Like Mesopotamia."
 
@@ -281,7 +282,7 @@ label ck_alkay:
                 jump menu_alkay
 
         label alkay_Bg_tree_start:
-            p "So how do you get here Alkay? I can tell that there is more to you than just a humble restaurant owner."
+            p "So how did you get here Alkay? I can tell that there is more to you than just a humble restaurant owner."
 
             alkay "Then your perception is sharp, because I do have a rather... colorful history. I used to be a rather high-raking individual in the kaldrean military."
 
@@ -305,7 +306,7 @@ label ck_alkay:
 
             p "That's quite commendable."
 
-            alkay "Hah! Commendable? When you are brought up believing that disobedience is the greatest weakness you may possess it was nearly impossible to weight my options."
+            alkay "Hah! Commendable? When you are brought up believing that disobedience is the greatest weakness you may possess it was nearly impossible to weigh my options."
 
             alkay "But I could see that times and paradigms were about to change. The men and women under my command supported me."
 
@@ -373,7 +374,7 @@ label ck_alkay:
 
                 alkay "But it is true. I was offered residence here and helped direct operations until construction was completed. At that point I just... decided to start a restaurant."
 
-                alkay "I have the best location in the marketplace, and I content here in my elder years."
+                alkay "I have the best location in the marketplace, and I am content here in my elder years."
 
                 p "I'm impressed, I can't say I've met anyone else with a history as decorated as yours."
 
@@ -381,7 +382,7 @@ label ck_alkay:
                 jump menu_alkay
 
         label alkay_VL_plan_sympathy:
-            p "Listen, Alkay, I think that Valak Lideri is striving for a just cause. The corruption on Qolisk makes me sick if not uneasy."
+            p "Listen, Alkay, I think that Valak Lideri are striving for a just cause. The corruption on Qolisk makes me sick if not uneasy."
 
             alkay "Hmm... you are quite convicted in your assertion there. What changed so quickly?"
 
@@ -398,7 +399,7 @@ label ck_alkay:
             return
 
         label alkay_VL_plan_lie:
-            p "Listen, Alkay, I know what Valak Lideri is and what they are planning. I want to help."
+            p "Listen, Alkay, I know what Valak Lideri are and what they are planning. I want to help."
             
             alkay "Perhaps you have ingested some illegal substances, but I see that you are lying. Your voice says one thing but your mind, body, and essence say another."
 
@@ -424,7 +425,7 @@ label ck_alkay:
                 jump alkay_VL_accuse_tree_threaten
 
         label alkay_VL_accuse_tree_threaten:
-            p "Alkay, I will call in authorities if you do not tell what Valak Lideri are planning to do."
+            p "Alkay, I will call in authorities if you do not tell me what Valak Lideri are planning to do."
 
             alkay "Hah! You cannot scare me [alias.first]. Make all the threats you want, I guarantee none are as grave or intense as those I have dealt with previously."
             
@@ -441,8 +442,12 @@ label ck_alkay:
 
                 alkay "The struggle that some face is far greater than you can understand, but I can tell that you know this. I can see that you genuinely want to understand it."
 
+                alkay "We will watch him from one end of a rifle scope. In an instant everything will change."
+
+                $plot_state.alkay_vl_plan_told = True
                 $last_dialog = "We are approaching the horizon, and by mid-morning tomorrow we will cross it. The new day will be wonderful - it will breathe life into us."
                 jump alkay_VL_accuse_tree_hardship_approval
+
             else:
                 $last_dialog = "I want to believe you, "+alias.first+", but something is irking me about your tone."
                 jump alkay_VL_accuse_tree_hardship_question
@@ -506,9 +511,12 @@ label ck_alkay:
                     alkay "Then I suppose you know  that the Ambassador always takes a stroll through the grove at sunrise?
                     Sometimes we talk."
 
+                    alkay "Although, it ordinarily occurs without the gaze of a marksman carefully lining up his shot."
+
                     p "I see."
 
                     $last_dialog = "Now be on your way; I have a line out the door. If you have any more questions I will do my best to be quick."
+                    $plot_state.alkay_vl_plan_told = True
                     $plot_state.alkay_vl_plan_info = InfoGet.SUCCESS
                     jump menu_alkay
 

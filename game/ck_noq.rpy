@@ -27,8 +27,8 @@ label ck_noq:
     label menu_noq:
         menu:
             noq '[last_dialog]'
-            'Ask Noq about his designs' if plot_state.stage == PlotStage.VL_INFO:
-                call noq_designs
+            ##'Ask Noq about his designs' if plot_state.stage == PlotStage.VL_INFO:
+            ##    call noq_designs
             'Ask about Valak Lideri' if plot_state.stage == PlotStage.VL_INFO or plot_state.stage == PlotStage.VL_PLANS:
                 jump noq_VL_tree_start
             'Ask Noq for advice':
@@ -46,8 +46,8 @@ label ck_noq:
             p "Would you mind sharing some advice?"
             noq "Normally I wouldn't, but right now I am very busy. I have a deadline that I need to meet and right now I'm in the zone."
             p "Perhaps later then."
-            noq "Perhaps"
-            p "Alright"
+            noq "Perhaps."
+            p "Alright."
             $last_dialog = 'Anything else? Or shall I be on my way?'
             return
 

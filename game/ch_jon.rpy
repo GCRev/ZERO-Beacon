@@ -28,7 +28,7 @@ label ch_jon:
         p "[alias.full], diplomat over at the Human Embassy."
 
         jon "Greenhorn diplomat? Make sure you really take your time to get to know people."
-        jon "I\'ve seen my fair share of people bail and out and leave because Concord is too much a culture shock for them. 
+        jon "I\'ve seen my fair share of rookies bail and out and leave because Concord is too much a culture shock for them. 
         But you look like you\'ve got a good head on your shoulders."
 
         p "I\'m determined to leave my footprint here."
@@ -65,11 +65,11 @@ label ch_jon:
             jon "Hmmm... I want to say something philosophical but nothing is really coming to me."
 
             jon "Basically, if you want to successfully build friendships here, do your research. 
-            If you know someone\'s culture then you\'re more likely than not going to find it simpler to talk to them."
+            If you know someone's culture more likely than not you're going to find it simpler to talk to them."
              
             p "And how would I go about this \"research?\""
              
-            jon "\I\'m not going to pretend that history and culture is everyone\'s cup of \"vaska\" but for me, 
+            jon "\I\'m not going to pretend that history and culture is everyone\'s cup of \"vaska.\" But for me, 
             it\'s the fascination with it that makes me want to learn more."
 
             jon "The more you genuinely want to find something out, the more you remember along the way and the more likely you are to recall it later... usually when you need it most."
@@ -86,7 +86,7 @@ label ch_jon:
             return
 
         label jon_events:
-            p "Have you heard the talk about mountain racial tensions, have you heard of these?"
+            p "Have you heard the talk about mounting racial tensions?"
 
             jon "It is just talk, but I have."
 
@@ -111,7 +111,7 @@ label ch_jon:
 
             jon "I have a pretty good memory and eye for detail so I was sought-after for this kind of number work. It's pretty repetitive, but I'll take it as long as it pays me well."
 
-            jon "I am a little obsessed with history and cultures - and especially through the lens of weaponry. In my spare time I collect vintage fire arms and restore them."
+            jon "I am a little obsessed with history and cultures - and especially through the lens of weaponry. In my spare time I collect vintage firearms and restore them."
             
             p "That sounds quite interesting actually."
 
@@ -119,7 +119,7 @@ label ch_jon:
 
             p "And you said you weren't an interesting person..."
 
-            jon "Well... not everyone is enthralled by tales of fire arms and how they reflect a people's culture and history. So I tend to leave it out of conversation unless explicitly asked."
+            jon "Well... not everyone is enthralled by tales of firearms and how they reflect a people's culture and history. So I tend to leave it out of conversation unless explicitly asked."
             
             $last_dialog = "If you have any other questions, feel free to ask."
             if plot_state.jon_hobby_info == InfoGet.NO_ATTEMPT:
@@ -127,7 +127,7 @@ label ch_jon:
             return
 
         label jon_hobbies_tree_start:
-            p "Do you have any hobbies? I myself am super into collecting cultural relics."
+            p "I myself am super into collecting cultural relics."
             
             jon "You too? I'm into that sort of thing, only I specifically focus on firearms. They fascinate me, especially the older ones."
 
@@ -145,7 +145,7 @@ label ch_jon:
 
             p "I take it you have also closely studied the kaldrean weapons as well?"
 
-            jon "Oh yes. Theirs are some of the finest I've ever seen. I wish I could find more on their inventors and histories, but the kaldrean government makes that it's nearly impossible."
+            jon "Oh yes. Theirs are some of the finest I've ever seen. I wish I could find more on their inventors and histories, but the kaldrean government makes that nearly impossible."
 
             p "And why is that?"
 
@@ -189,9 +189,9 @@ label ch_jon:
 
                 p "But they aren't terrorists."
 
-                jon "Right. From what I've heard, and likely what you've heard as well, they are become a threat as a political influence rather than a violent group."
+                jon "Right. From what I've heard, and likely what you've heard as well, they are becoming a threat as a political influence rather than a violent group."
 
-                jon "Based on what little I know I believe that have a good cause - they want to give the kaldrean progressive movement new life and new force."
+                jon "Based on what little I know, I believe that have a good cause - they want to give the kaldrean progressive movement new life and new force."
 
                 menu:
                     jon "Many kaldreans want to be free of their suppressive controllers - Valak Lideri are not afraid to do what is right."
@@ -335,7 +335,7 @@ label ch_jon:
                 label jon_VL_plan_tree_change_peace:
                     p "We have to remember, though, that while violence may be able to trip off a revolution, it will not end it with a stable resolution."
 
-                    p "Violence does nothing but alienate people, who forget what they are fighting for and simply that they must kill the enemy."
+                    p "Violence does nothing but alienate people who forget what they are fighting for. They seem only to remember that they must kill their enemies."
 
                     p "It may be powerful, but chaos ultimately creates more chaos. It's simply how the universe works as a closed system."
 
@@ -345,7 +345,7 @@ label ch_jon:
 
                     p "Unfortunately. But it's a small price to pay when you are going to drastically alter the course of a people's future."
 
-                    jon "I suppose. But you'll have to really do some sweet-talking when you try to convince skeptical kaldreans of this."
+                    jon "I suppose. But you'll really have to do some sweet-talking when you try to convince skeptical kaldreans of this."
 
                     $last_dialog = "Then again, it's for the benefit of the future generations. They would most likely agree. If you have anything else to ask, please do."
                     $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
@@ -354,7 +354,7 @@ label ch_jon:
             label jon_VL_plan_tree_aware:
                 p "I'm sure if you were to speak to Alkay, he would give his word that I am trustworthy."
 
-                p "He and I have already had this discussion so I what you are going to do."
+                p "He and I have already had this discussion so I know what you are going to do."
 
                 jon "You're bluffing."
 

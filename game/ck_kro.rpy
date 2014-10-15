@@ -138,7 +138,7 @@ label ck_kro:
 
                 kro "That does not apply to everyone, for instance Officer Caise is very restrained and very professional about his obsessive hobby."
 
-                kro "However, the troubled individuals with darker compulsions are obsessed because they are burying information where the hope no one can find it."
+                kro "However, the troubled individuals with darker compulsions are obsessed because they are burying information where they hope no one can find it."
 
                 kro "They can become reckless or paranoid, and then they begin to propagate disorder."
 
@@ -160,7 +160,7 @@ label ck_kro:
             label kro_VL_tree_idea:
                 p "I just need an idea of what this group might be."
 
-                lorisk "Clearly they are a rebel group with an obsession for change. I fear that they are going to lose sight of their pursuit, however, and turn their revolution in to bloodbath."
+                lorisk "Clearly they are a rebel group with an obsession for change. I fear that they are going to lose sight of their pursuit, however, and turn their revolution into a bloodbath."
 
                 lorisk "If they find assassination a proper method to make their statements, they are likely to overlook the fallout it would cause."
 
@@ -173,9 +173,9 @@ label ck_kro:
 
                 kro "I would prefer not to make enemies out my acquaintances."
 
-                p "I won't go around telling everyone what it you've said. I don't see the point to that."
+                p "I won't go around telling everyone what you've said. I don't see the point to that."
 
-                kro "Well, I suppose if I could make any guesses it Mr. Demarc, Mr. Kriesk, and Ms. Nidaria."
+                kro "Well, I suppose if I could make any guesses, they would be Mr. Demarc, Mr. Kriesk, and Ms. Nidaria. Do not take my words as law, however."
 
                 kro "Mr. Demarc underwent some profound changes and suffered substantial losses during the first contact conflict, he is troubled as a result."
 

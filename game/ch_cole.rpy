@@ -32,10 +32,9 @@ label ch_cole:
         label cole_advice:
             p 'Do you have any advice for a citizen new to Concord?'
             cole 'Give me a moment.'
-            "Cole pauses for a moment to collect his thoughts." 
             cole "Alright, I\'m going to try to keep this concise, because no one likes a rambler."
             cole "Make friends here and give them your trust. Trust is a \"give first and receive later\" game, so you have to be 
-            the one to stick out your neck and offers it."
+            the one to stick out your neck and offer it."
             p 'And what happens if they betray you?'
             cole 'C\'mon now, I never said you just walk around with your head down and your hands at your sides. 
             You aren\'t asking them marry you. You just have to make some concessions in order to gain something out of 
@@ -49,9 +48,11 @@ label ch_cole:
         label cole_events:
             p 'So I\'ve heard rumors of tensions between the kaldreans and humans here, what do you think is going on?'
             cole 'Rumors don\'t speak loudly, son, and in my older age I do not have the best of hearing any more. 
-            So I can\'t say that I\'ve heard much... Well, actually I have heard some rather harsh things about Irridiss lately.'
+            So I can\'t say that I\'ve heard much...'
+
+            cole "Well, actually I have heard some rather harsh things about Irridiss lately."
             cole 'I don\'t really know what to make of it, but I don\'t think I\'m in much of a place to do anything about it, to 
-            be honest (chuckles a little bit).' 
+            be honest' 
             cole 'Why would you ask such a question, just out of curiosity?'
             p 'Oh, just getting a feel for the community is all. Rumors make me uneasy, and I do not like being out of the know.'
             cole 'Okay then, [alias.title_last]. Anything else I can help you with today?'
@@ -60,7 +61,7 @@ label ch_cole:
         label cole_Bg_tree_start:
             p 'So what can you tell me about your past? You seem like you are full of rich stories.'
             cole 'I\'d prefer not to talk about the past - it\'s not really something I like to share, 
-            and I do not want anyone\'s pity. So I really don\'t talk about it.'
+            and I do not want anyone\'s pity.'
             p 'Everything alright, Cole?'
             menu:
                 cole 'Yes. I\'m fine.'
@@ -71,7 +72,7 @@ label ch_cole:
 
             label cole_Bg_tree_pursue:
                 p 'Well, is there anything else you can tell me about the history of this planet? 
-                Maybe, when you got here, or what it was like being exposed to the kaldreans for the first time?'
+                When you got here or what it was like being exposed to the kaldreans for the first time?'
                 $last_dialog = 'Quit your prying! Didn\'t they ever teach you any manners growing up? Anyways ask me whatever you please, so long as it is not about my past.'
                 $ plot_state.cole_background_info = InfoGet.FAIL
                 jump menu_cole
@@ -89,7 +90,7 @@ label ch_cole:
 
                 label cole_Bg_tree_confidentiality:
                     p 'Well, if you ever have anything you want to share with me, you have my complete confidentiality. 
-                    I\'d be happy to listen!'        
+                    I\'d be happy to listen.'        
                     cole 'Well, you seem like a well-mannered kid. Here\'s a little about Old Cole.'
 
                     cole "I was part of Operation Bridge, on the TSS Destroyer {i}Verdict{/i}. I was the Gunnery Officer on board. 
@@ -97,13 +98,13 @@ label ch_cole:
 
                     cole "Then the fighting began... I lost some of my closest friends that day. A lost some of myself as I watched the {i}Verdict{/i} lose its battle with gravity and fell to Bridge."
 
-                    cole "It was fight no one wanted, but it was a fight nonetheless. I was unable to forgive the kaldreans for many years."
+                    cole "It was a fight no one wanted, but it was a fight nonetheless. I was unable to forgive the kaldreans for many years."
 
                     cole "Eventually it became evident that we had both wronged one another, and that it was time I moved on. It was difficult, but I'm past it now."
 
-                    cole "Took my mind of things by applying myself to electronics. Turns out I have a penchant for it. After Uncle Klay opened up his place I was second."
+                    cole "Took my mind off things by applying myself to electronics. Turns out I have a penchant for it. After Uncle Klay opened up his place I was second."
 
-                    cole "I faced the problem head on, and I'm a better person now because of it. Remember not to turn away from you fears, because they will still be there."
+                    cole "I faced the problem head on, and I'm a better person now because of it. Remember not to turn away from your fears, because they will still be there."
                     p 'Right. Well thank you very much for sharing on such a fragile topic.'
                     $ last_dialog = 'Thank you for listening. Anything else I can help you with today?'
                     $ plot_state.cole_background_info = InfoGet.SUCCESS
