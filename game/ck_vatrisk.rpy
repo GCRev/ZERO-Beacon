@@ -76,7 +76,7 @@ label ck_vatrisk:
             
             p 'Good to know, I\'ll keep that in mind. Anything else you could tell me?'
             
-            vatrisk 'Don\'t believe everything you hear. I\'ve run into many liars in my life, and I\'ve seen good people have their careers get destroyed by a single lie.'
+            vatrisk 'Don\'t believe everything you hear. I\'ve run into many liars in my life, and I\'ve seen good people have their careers destroyed by no more than a few words.'
 
             vatrisk 'This shouldn\'t happen to anyone.'
             
@@ -101,7 +101,9 @@ label ck_vatrisk:
             
             vatrisk 'Well, I was born and raised on Qolisk, went through school just like everyone else, and joined the military.'
 
-            vatrisk 'They had me installed in Concord a few years back and I made my way up the rankings. Not much of a story, but that\'s me.'
+            vatrisk "I produced some decent results and progressed through the ranks quite quickly."
+
+            vatrisk 'When the government informed me that I was to be the new Ambassador I was thrilled. Not much of a story, but that\'s me.'
             
             return
 
@@ -109,11 +111,13 @@ label ck_vatrisk:
             
             p 'I don\'t think that anyone understands how hard you work to achieve peace here.'
             
-            vatrisk 'Finally someone who understands. It\'s not easy being this kind of leader. Sure, our government is a little strict, but that\'s how it has always been!'
+            vatrisk 'Finally someone who sees through the shroud of lies and rumors. It\'s not easy being this kind of leader. Sure, our government is a little strict, but that\'s how it has always been.'
             
-            vatrisk 'It\'s hard with all of these rules and everything, but it works. Crime rates are low as ever.'
+            vatrisk 'The government is good to its people. Common resources are practically free, the populace is healthy, crime rates are low as ever.'
 
-            vatrisk 'The people just don\'t understand that the balance of happiness and safety is an impossible task.'
+            vatrisk "Some kaldreans feel their freedom of speech is being cut down. While I can see their point, I would tell them that it is more complicated than oppression and censorship."
+
+            vatrisk 'The people just don\'t understand that the balance of happiness, safety, and liberty is a nearly impossible task.'
             
             $ last_dialog = 'Anyways, what else can I do for you?'
             $plot_state.vatrisk_kald_govt_info = InfoGet.SUCCESS
@@ -134,16 +138,18 @@ label ck_vatrisk:
 
         label vatrisk_bribe:
             p 'Here, a gift from our embassy to yours.'
-        
-            'You give Vatrisk a lot of money in attempt to bribe him for the truth.'
             
             if plot_state.high_emb_tried_bribe:
-                vatrisk "Ahh, so *you're* the one the guards were talking about! Tried to bribe
+                vatrisk "Ahh, so {i}you're{/i} the one the guards were talking about! Tried to bribe
                 your way into the embassy, didn't you?"
-                vatrisk "That's right, I know your tricks. Don't think you'll be getting anything out of me 
-                with such petty tactics."
+                
+                vatrisk "You could have simply asked, you know. Ambassador Columbus and I are willing to speak with anyone who comes up here."
+
+                vatrisk "The guards here are... simply doing their job."
+
+                vatrisk "I do not accept bribes anyway."
                 $ plot_state.vatrisk_kald_govt_info = InfoGet.FAIL
-                $ last_dialog = "So are you done irritating me, or did you have something else to say?"
+                $ last_dialog = "So, moving past this little blunder... Is there anything that you would like to ask me?"
                 jump menu_vatrisk
             
             else:
@@ -151,17 +157,19 @@ label ck_vatrisk:
                 
                 vatrisk 'Please feel free to ask me anything.'
 
-                p 'Well, I was hoping you could tell me why there would be all of these rumors about the kaldreans feeling oppressed.'
+                p 'Well, I was hoping you could tell me why there are all of these rumors about the kaldreans feeling oppressed.'
 
-                vatrisk 'Okay, look. It\'s not easy being me. I have to deal with the pressure of being blamed for everything that this government does.'
+                vatrisk 'Okay, look. It is not a simple matter. I have to deal with the pressure of being blamed for everything that this government does.'
 
-                vatrisk 'Even though I don\'t agree with it all the time.'
+                vatrisk 'Even though I do not agree with it all the time.'
 
-                vatrisk 'I wish there was a way to keep everyone happy AND safe. It\'s practically impossible. Have you ever read Vel Kerriss\' \"Dystopia\"?'
+                vatrisk 'I wish there was a way to keep everyone happy {i}and{/i} safe. It is practically impossible. Have you ever read Vel Kerriss\' {i}Dystopia{/i}?'
 
-                p 'I am not familiar.'
+                p 'I am not familiar with that work, no.'
 
-                vatrisk 'Well it basically describes our government. How we keep everyone safe with rules and law.'
+                vatrisk 'Well it basically describes our government - controversially of course. In short, we must balance law and liberty in order to keep the kaldrean people content.'
+
+                vatrisk "Kerriss seemed to disagree, and having read the novel I understand his perspective. He raises a good cause against them."
 
                 vatrisk 'I feel what people fail to understand is that safety is more of a priority than happiness.'
 
@@ -221,7 +229,7 @@ label ck_vatrisk:
                
                 menu:
                     
-                    vatrisk 'But now I\'m not so sure. With the my life in danger, I\'m not sure who I can trust anymore.'
+                    vatrisk 'But now I\'m not so sure. I cannot tell who I should trust anymore.'
                     
                     'Tell Vatrisk that the government is weak right now':
                         
@@ -240,8 +248,8 @@ label ck_vatrisk:
             label vatrisk_VL_inform_tree_persuade:
               
                 p 'Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.'
-               
-                'He thinks for a long moment.'
+
+                vatrisk "Give me a moment to think."
                 
                 vatrisk 'You are right. \"It\'s time for me to act.\"]'
 
@@ -254,11 +262,9 @@ label ck_vatrisk:
            
             if plot_state.vatrisk_trust == TrustLevel.HIGH or plot_state.vatrisk_trust == TrustLevel.VERY_HIGH:
 
-                vatrisk 'Ah, of course my friend. I\'d be happy to show you around my garden.'
-
-                p 'Actually, I was hoping that you could show me around the grove.'
+                vatrisk "Ah, of course my friend. I\'d be happy to have you."
            
-                vatrisk 'That seems like a lovely place for a walk. Ordinarily my guards ask me to stay away from that area, but I trust you. I will meet you there at 08:00 tomorrow.'
+                vatrisk 'Ordinarily my guards ask me to stay away from that area, but I trust you. I will meet you there at 08:00 tomorrow.'
            
                 call ending_vatrisk_lure
            
@@ -312,7 +318,7 @@ label ck_vatrisk:
             
             p "Your death would be the wind underneath the wings of the progressive movement."
 
-            p "I have no reason to lie to you, Ambassador. And I am quite assured that the evidence all points to this. You won't regret this."
+            p "I have no reason to lie to you, Ambassador. And I am quite assured tvatrihat the evidence all points to this."
 
         $ possible_infos = [plot_state.adam_vl_info, plot_state.alkay_vl_info, plot_state.jon_vl_info, plot_state.lorisk_vl_info]
         $ gotten_infos = [info_state for info_state in possible_infos if info_state == InfoGet.SUCCESS]
@@ -449,7 +455,7 @@ label ck_vatrisk:
             "You and the ambassador sit and talk about Valak Lideri for a bit longer. Then, you hear a sudden,
             deafening blast from outside Kier\'s office."
 
-            play sound "assets/sf_attack1.ogg"
+            play sound "assets/sf_attackAll.ogg"
             
             $ renpy.pause(delay=6)
             

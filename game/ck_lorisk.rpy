@@ -44,7 +44,7 @@ label ck_lorisk:
         jump menu_lorisk
 
         label lorisk_advice:
-            p 'Do you have any —'
+            p 'Do you have any-'
 
             lorisk 'Advice? Always!'
 
@@ -280,7 +280,7 @@ label ck_lorisk:
 
                     lorisk "Any means will justify the ends provided that those like my family can be rid of the oppression and the slander and the hatred."
 
-                    lorisk "Valak Lideri is our Beacon. When we restore it... not only will we spawn another golden age for kaldreans, but break down the barriers between our races."
+                    lorisk "Valak Lideri is Beacon. When we restore it... not only will we spawn another golden age for kaldreans, but break down the barriers between our races."
 
                     menu:
                         lorisk "It will be a new age for all of us."
@@ -306,7 +306,7 @@ label ck_lorisk:
                     label lorisk_VL_plans_tree_sympathy_confidentiality_violence:
                         p "Make your point with the barrel of a linear rifle. From what I understand the progressive movement is extremely volatile - it would take little to set them off."
                         
-                        lorisk "That's what we are planning - I just with that there was a better way. I do not want my fellow kaldreans to perish for the corrupted controllers."
+                        lorisk "That's what we are planning - I just wish that there was a better way. I do not want my fellow kaldreans to perish for the corrupted controllers."
 
                         lorisk "Their lives are worthless. They do not deserve to have soldiers fight and die for them."
 

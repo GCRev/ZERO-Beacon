@@ -64,7 +64,7 @@ label ch_ben:
                 ben "Especially in such tense times such as these."
                 
                 if plot_state.ben_trust <= TrustLevel.MEDIUM:
-                    ben "Now, as you seem to have already figured out, my opinion on the kaldreans govern themselves is not exactly positive."
+                    ben "Now, as you seem to have already figured out, my opinion on how the kaldreans govern themselves is not exactly positive."
                     
                     ben "I would gladly talk about it with someone whom I knew I could trust."
 

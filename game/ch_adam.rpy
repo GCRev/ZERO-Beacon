@@ -101,9 +101,13 @@ label ch_adam:
             
             adam "I'll try to keep this as brief as I can so I don't bore you to death."
             
-            adam "So I was part of the team that made first contact with the kaldreans. I was and engineer on the TSS Armada. When we first saw the aliens, the whole ship was dead silent for a long time. Seeing another intelligent being was... Wow. I can\'t even describe the emotion."
+            adam "So I was part of the team that made first contact with the kaldreans. I was an engineer on the TSS {i}Armada.{/i}"
+
+            adam "When we first saw the aliens, the whole ship was dead silent for a long time. Seeing another intelligent race was... Wow. I can\'t even describe the emotion."
             
-            adam "But I digress! Anyways, then the fighting broke out. Neither side wanted to fight, but eventually someone pulled the trigger. Attempting to communicate was practically futile because of the language and culture barriers."
+            adam "But I digress! Anyways, then the fighting broke out. Neither side wanted to fight, but eventually someone pulled the trigger."
+
+            adam "Attempts to communicate were futile due to the language and culture barriers."
             
             adam "Through the process though, I befriended Alkay. He was one of the first kaldreans to learn the human standard."
             
@@ -121,16 +125,19 @@ label ch_adam:
         label adam_VL_tree_start:
             p 'What can you tell me about Valak Lideri?'
 
-            adam "Well, that\'s certainly an ambitious question for someone so new to Concord. How did you come across this rumor? I have been here for nearly my entire life and I\'ve only heard whispers of this group's existence. And I have a careful ear."
+            adam "Well, that\'s certainly an ambitious question for someone so new to Concord. How did you come across this rumor?" 
 
-            p "I will remind you that I am a diplomat - I was chosen because I have a careful ear."
+            adam "I have been here for nearly my entire life and I\'ve only heard whispers of this group's existence. And I have a careful ear."
+
+            p "I will remind you that I am a diplomat - I was chosen because I too have a careful ear."
 
             adam "Ah yes, I see."
 
             p "Probably also a coincidence."
 
+            adam "I can relate to that - I have been involved in my fair share of coincidences throughout my life. So what do you think about this group, based off what you know?" 
             menu:
-                adam "I can relate to that - I have been involved in my fair share of coincidences throughout my life. So what do you think about this group, based off what you know? I\'ve heard some conflicting and slanting viewpoints on them so I'm curious to know what you think."
+                adam "I\'ve heard some conflicting  viewpoints on them so I'm curious to know what you think."
 
                 'Sympathize with Valak Lideri':
                     jump adam_VL_tree_sympathize
@@ -139,10 +146,17 @@ label ch_adam:
             jump menu_adam
 
             label adam_VL_tree_sympathize:  
-                p "I think that Valak Lideri have a stronger set of morals than the rest of us give them credit. I still think that they are risking a lot, especially now. I still need to understand them better though, I\'m basically just going with what I've been told."
+                p "I think that Valak Lideri have a stronger set of morals than the rest of us give them credit. I still think that they are risking a lot, especially now."
+                
+                adam "I'd need to understand them better though to give you a solid response, I\'m basically just going with what I've been told."
                         
+                adam "It all depends on what you\'ve been told, of course. I agree with you; they are taking a huge risk right now, but they definitely do have a strong moral heading." 
+
+                adam "Although, assuming they do want to spark a revolution, their apparent itch for chaos does not really make sense."
+
+                adam "They don't seem like they would be such a violent group, given their morals."       
+                
                 menu:   
-                    adam "It all depends on what you\'ve been told, of course. I agree with you; they are taking a huge risk right now, but they definitely do have a strong moral heading. Although, assuming they do want to spark a revolution, their apparent itch for chaos does not really make sense. They don't seem like they would be such a violent group, given their morals."       
                     'Violence will get them nowhere':
                         jump adam_VL_tree_nowhere
                     'Care less about their methods':
@@ -205,9 +219,9 @@ label ch_adam:
 
             p "What can you tell me about your past? I don\'t mean to offend, but you look like you\'ve seen quite a great deal of change here."
 
-            adam "That I have. But actually, I was there when we made first contact. I was a chief engineer aboard the TSS Armada, flagship of Operation Bridge."
+            adam "That I have. But actually, I was there when we made first contact. I was a chief engineer aboard the TSS {i}Armada{/i}, flagship of Operation Bridge."
 
-            adam "I can still remember by heart swelling with pride seeing her lift off from Terra for the first time." 
+            adam "I can still remember my heart swelling with pride seeing Terra disappear behind us as she brought us to the stars." 
 
             adam "Space was not foreign to us, but the distance from home was."
 
@@ -219,11 +233,11 @@ label ch_adam:
 
             adam "From that point on it\'s history - but I need to be completely clear that neither their commander nor ours wanted the fight to break out." 
 
-            adam "The warning shots eventually turned into full-on fighting. The Verdict was shot down... we took down their ship the Krona... it was a disaster."
+            adam "The warning shots eventually turned into full-on fighting. The {i}Verdict{/i} was shot down... we took down their ship the {i}Krona{/i}... it was a disaster."
 
             p "So how did you end up resolving tensions with the kaldreans?"
 
-            adam "It was certainly difficult trying to communicate  with one another. As I\'m sure you can guess it was like being thrust into a completely different culture." 
+            adam "It was certainly difficult trying to communicate  with one another. We were literally thrust into a completely different culture." 
 
             adam "We landed here and then we tried to establish some form of communications."
 
@@ -247,7 +261,7 @@ label ch_adam:
 
                 adam "Oh he\'s been a friend of mine for many years now."
 
-                adam "He was actually instrumental in resolving the conflict because he was one of the first kaldreans to learn human standard -  probably THE first, actually." 
+                adam "He was actually instrumental in resolving the conflict because he was one of the first kaldreans to learn human standard -  probably {i}the{/i} first, actually." 
 
                 adam "When I was... when I was working alongside them during the war he and I were unofficial emissaries. When you next stop by Oasis tell him I sent you - he\'ll be happy to know."
 
@@ -262,7 +276,7 @@ label ch_adam:
 
                 adam "I\'ll try to keep this brief because you really don\'t need to hear about all the problems." 
 
-                adam "With the Verdict and the Krona damaged beyond repair the rest of our ships landed planet-side because we needed to make repairs." 
+                adam "With the {i}Verdict{/i} and the {i}Krona{/i} damaged beyond repair the rest of our ships landed planet-side because we needed to make repairs." 
 
                 adam "Fire was exchanged on the ground despite explicit orders on both sides not to."
 

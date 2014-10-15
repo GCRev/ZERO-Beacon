@@ -91,25 +91,28 @@ label intro:
 
 label ending_correct_plans:
     $ hide_ch('sarah', 'left')
-    "Sarah goes to initiate the raid."
+    "Agent Redmont goes to initiate the raid."
+    "You know what Valak Lideri are planning and therefore it is easy for you to stop them."
+    "In the process you apprehend the suspects. When they are tried in court they are found guilty. However, cannot bring yourself to meet their gazes."
     jump result_2
 
 label ending_too_many_wrong_rebels_identified:
     $ hide_ch('sarah', 'left')
-    "Sarah goes to initiate the raid."
-    "Later you find out that you identified too many people as rebels that weren't. 
-    You have failed to apprehend the rebels in time."
+    "Agent Redmont goes to initiate the raid."
+    "Those who accuse of association with Valak Lideri are investigated, but it does not stop the assassination of Ambassador Irriddiss."
+    "Your accusations do not hold up and the suspects are all found not guilty."
     jump result_1
 
 label ending_not_enough_rebels_identified:
     $ hide_ch('sarah', 'left')
-    "Sarah goes to initiate the raid."
-    "Later you find out that you didn't identify enough rebels 
-    You have failed to apprehend the rebels in time."
+    "Agent Redmont goes to initiate the raid."
+    "Those who accuse of association with Valak Lideri are investigated, but it does not stop the assassination of Ambassador Irriddiss."
+    "You did not identify enough of the rebels, which leaves the others to carry out the assassination anyway. Albeit without additional support."
     jump result_1
 
 label ending_correct_rebels:
-    "You correctly identified enough rebels!"
+    "You correctly identified the rebels. You and Agent Redmont easily apprehend them."
+    "When they are tried in court they are found guilty. However, cannot bring yourself to meet their gazes."
     jump result_2
 
 label ending_vatrisk_lure:
@@ -148,7 +151,8 @@ label result_2:
     "Valak Lideri is stopped dead in its tracks and the assassination is not carried out. The impetus behind the progressive movement breaks apart and leaves it to fizzle out."
     "The tentative peace between the two races continues and slowly strengthens but the kaldrean government remains corrupted."
     "Bridge remains the safe-haven for those kaldreans and humans with progressive attitudes and the kaldrean government keeps blinders over the eyes of their people."
-    "You have done your duty, Agent, we are exceedingly proud of you."
+    "You have done your duty, Agent, we are exceedingly proud of you." 
+    "Now, onto your next assignment..."
     $ renpy.pause()
     jump credits
 

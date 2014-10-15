@@ -64,6 +64,7 @@ label sarah_kald_govt_info:
         p "That's why they don't seem to have any problems..."
         sarah "Very interesting! And Irridiss?"
         if plot_state.vatrisk_kald_govt_info == InfoGet.SUCCESS:
+            p "Vatrisk said roughly the same thing as Columbus."
             call sarah_kald_govt_info_vatrisk_tell
             sarah "Yes, this is very good to know. Excellent work, Agent."
         else:
@@ -127,11 +128,9 @@ label sarah_vatrisk_meet:
 label sarah_attack_just_happened:
     sarah "I heard what happened! Is Vatrisk alright? Is he safe?"
     
-    p "Yes, the ambassador is f.ine. We have to find out who the Valak Lideri are and what they are going to do next."
-
-    p "Before it's too late"
+    p "Yes, the ambassador is fine. We have to find out who the Valak Lideri are and what they are going to do next before something like this happens again."
    
-    sarah "Good idea. You go question people in the city and I'll go prepare a squad to take down the Valak Lideri."
+    sarah "Obviously! You go question people in the city and I'll go prepare a squad to take down the Valak Lideri."
 
     sarah "Talk to me when you've figured out their plans."
     $  plot_state.set_stage(PlotStage.VL_PLANS)

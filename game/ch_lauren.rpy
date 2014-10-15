@@ -44,7 +44,6 @@ label ch_lauren:
             p "Ms. Gray?"
              
             lauren "I heard you, I just don\'t really have anything to say."
-            lauren "(pauses)"
             lauren "Alright, I suppose I can offer a few words. I work with numbers all day long and I don\'t get out much so I\'m probably not the best person to ask."
             lauren "But after working here for a while I\'ve noticed a pattern, like a bell curve in a distribution graph – those who talk too
             much or too little are more or less shut away by society."
@@ -69,7 +68,7 @@ label ch_lauren:
             
             lauren "I would almost think that you've been lied to about this, because honestly, I haven\'t noticed anything particularly out of the ordinary. And I work in upper-level management!"
 
-            p "(muttered) Yeah, but upper-level management has pulled the wool over your eyes."
+            p "{size=-10}Yeah, but upper-level management has pulled the wool over your eyes.{/size}"
 
             lauren "What was that?"
 
@@ -135,7 +134,7 @@ label ch_lauren:
                 label lauren_info_tree_disapproval:
                     p "I don't think that kaldreans and humans should have that kind of relationship."
 
-                    lauren "That's narrow-minded of you, [alias.title_full]. I honestly would have expected that kind of response from you. Or at least you would have kept it to yourself."
+                    lauren "That's narrow-minded of you, [alias.title_full]. I honestly would not have expected that kind of response from you. Or at least you would have kept it to yourself."
 
                     $ plot_state.lauren_lorisk_info = InfoGet.FAIL
                     $last_dialog = "If you have something open-minded to say, then you can ask me. Otherwise I would prefer it if I could get back to my break."
