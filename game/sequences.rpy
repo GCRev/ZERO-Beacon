@@ -123,7 +123,7 @@ label ending_vatrisk_lure:
     "After talking for a short time, you hear the blast of a linear rifle."
     play sound "assets/sf_assassination2.ogg"
     "Vatrisk falls to the ground, fatally wounded."
-    jump result3
+    jump result_3
 
 label ending_vatrisk_denounce_govt:
     jump result_4
@@ -139,7 +139,6 @@ label result_1:
     "The loss of a figurehead of peace between the humans and kaldreans quickly causes relations to break apart and violence to intensify."
     "War breaks out on Bridge, and the infant alliance between the kaldreans and humans is destroyed, leaving both embroiled in conflict."
     "However, the alliance is restored after the bitter races eventually forget what they are fighting about and set their differences aside once again."
-    $ renpy.pause()
     jump credits
 
 label result_2:
@@ -153,7 +152,6 @@ label result_2:
     "Bridge remains the safe-haven for those kaldreans and humans with progressive attitudes, and the kaldrean government keeps blinders over the eyes of their people."
     "You have done your duty, Agent, we are exceedingly proud of you."
     "Now, on to your next assignment..."
-    $ renpy.pause()
     jump credits
 
 label result_3:
@@ -167,7 +165,6 @@ label result_3:
     "While the collateral damage brings the kaldrean home world to its knees, the instantiation of a new democratic republic is a beacon of hope for the kaldrean people."
     "With the tyrannical government obliterated, the new leaders are swift to reform their alliance with the humans."
     "The previously tentative alliance is reformed and reinforced, ultimately leads to stronger and more stable relations between the two races."
-    $ renpy.pause()
     jump credits
 
 label result_4:
@@ -182,10 +179,10 @@ label result_4:
     "A new democratic government is created, and its newly elected leaders swiftly strengthen the terms of the alliance with the humans."
     "A new friendship blossoms between the two races and the galaxy enters into an era of peace, prosperity, and liberty."
     "You may not have set out to accomplish what you did, but ultimately, what you accomplished is extraordinary."
-    $ renpy.pause()
     jump credits
 
 label credits:
+    $ renpy.pause()
     "Thank you for playing Beacon."
     "Made by ZERO Studios:\n
     Graham Held -- Art, world design, dialog.\n

@@ -143,7 +143,8 @@ label sarah_vl_plans:
         sarah "Have you found out who the rebels are or what their plan is?"
 
         "I think I've figured out what their plan is." if plot_state.alkay_vl_plan_told:
-            jump sarah_vl_plans_unsure
+            "You tell Sarah what you have learned from Alkay about the rebels' plans."
+            call ending_correct_plans
 
         "I think I know who they are.":
             python:
@@ -187,6 +188,9 @@ label sarah_vl_plans:
                 else:
                     renpy.call('ending_correct_rebels')
         "No, I haven't.":
-            sarah "Well, what are you waiting for? We haven't much time."   
-
+            jump sarah_vl_plans_unsure
     return
+
+    label sarah_vl_plans_unsure:
+        sarah "Well, come back when you have. And be quick about it; we haven't much time."
+        return
