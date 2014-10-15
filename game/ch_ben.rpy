@@ -161,7 +161,7 @@ label ch_ben:
 
             p "Unfortunately, yes."
 
-            $ last_dialog = "Well, thank you for trying at any rate. Perhaps we\'ll talk about that information another time. Until then, is there anything else you would like to ask me?"
+            $ last_dialog = "Well, thank you for trying at any rate. Is there anything else you would like to ask me?"
 
             $ plot_state.ben_kald_govt_info = InfoGet.FAIL
 
@@ -173,7 +173,7 @@ label ch_ben:
 
             ben "Ah yes, she has sent me a message accepting my latest request."
 
-            ben "Thank you very much for your help, [alias.first]. I will remember your helpfulness."
+            ben "Thank you very much for your help, [alias.first]. I will remember your kindness."
             
             $ plot_state.ben_talk_lida = False
             $ plot_state.ben_trust = TrustLevel.HIGH

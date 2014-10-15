@@ -441,7 +441,7 @@ label ck_alkay:
 
                 alkay "The struggle that some face is far greater than you can understand, but I can tell that you know this. I can see that you genuinely want to understand it."
 
-                $last_dialog = "We are approaching the horizon, and by mid morning tomorrow we will cross it. The new day will be wonderful -  it will breathe life into us."
+                $last_dialog = "We are approaching the horizon, and by mid-morning tomorrow we will cross it. The new day will be wonderful - it will breathe life into us."
                 jump alkay_VL_accuse_tree_hardship_approval
             else:
                 $last_dialog = "I want to believe you, "+alias.first+", but something is irking me about your tone."
@@ -521,6 +521,6 @@ label ck_alkay:
 
                     alkay "Anger will not improve your chances of convincing me, [alias.first]. I do not know you well-enough to believe that you can simply \"understand\" on command."
 
-                    $last_dialog = "So keep your head down and allow time to pass. In the meantime if you have any more questions feel free to ask."
+                    $last_dialog = "So keep your head down and allow time to pass. In the meantime, if you have any more questions, feel free to ask."
                     $plot_state.alkay_vl_plan_info = InfoGet.FAIL
                     jump menu_alkay

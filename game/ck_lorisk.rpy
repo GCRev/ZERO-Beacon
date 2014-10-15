@@ -241,7 +241,7 @@ label ck_lorisk:
 
                     p "I'll bear that in mind. Thank you Lorisk."
 
-                    $last_dialog = "No problems "+alias.first+". If there is anything else you need please ask."
+                    $last_dialog = "No problem, "+alias.first+". If there is anything else you need, please ask."
 
                     #$ plot_state.lorisk_flatter_offend = True
                     jump menu_lorisk
@@ -329,7 +329,7 @@ label ck_lorisk:
 
                         p "The it is up to you to keep it under control. You can - you know strength better that most and I definitely know that you can communicate better than most."
                         $plot_state.lorisk_vl_plan_info = InfoGet.SUCCESS
-                        $last_dialog = "Thank you so much "+alias.first+". Let me know if you need anything else."
+                        $last_dialog = "Thank you so much, "+alias.first+". Let me know if you need anything else."
                         jump menu_lorisk
 
             label lorisk_VL_plans_tree_disgust:

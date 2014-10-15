@@ -17,7 +17,7 @@ label ch_adam:
         I'm always open to converse."
         adam "I haven't seen you around, are you a new arrival?"
         p "I am."
-        $ last_dialog =  "Even better! I'm sure you have some questions about Concord then. Please, ask away"
+        $ last_dialog =  "Even better! I'm sure you have some questions about Concord, then. Please, ask away"
 
         adam '[last_dialog]'
 
@@ -163,8 +163,10 @@ label ch_adam:
                     
                     adam "You don\'t have to agree with me, we all have our separate opinions and backgrounds to inform them, but this is the way I have seen it work in the past."
 
-                    $ last_dialog = "Valak Lideri, if could make any guesses, have found their way and they are willing to pursue it with great force. For a rebel group to \
-                    even become a rumor they must have good cause and powerful people in the background. Is there anything else that you want to ask me?"
+                    adam "Valak Lideri, if I could make any guesses, have found their way, and they are willing to pursue it with great force. For a rebel group to \
+                    even become a rumor, they must have good cause and powerful people in the background."
+
+                    $ last_dialog = "Is there anything else that you want to ask me?"
                 
                     jump menu_adam
 
@@ -197,7 +199,7 @@ label ch_adam:
 
                 p "Right, that I can agree with."
 
-                $ last_dialog = "Now you get it. Is there anything else I answer for you?"
+                $ last_dialog = "Now you get it. Is there anything else I can answer for you?"
 
                 jump menu_adam
 
