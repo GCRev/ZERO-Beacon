@@ -374,23 +374,57 @@ label ck_vatrisk:
             "The ambassador leaves the room and walks to his personal landing pad to board his transport. 
             You follow him, still trying to dissuade him from leaving the safety of the High Embassy without guard."
 
-            scene bg landing_pad with squares
-            
+            image white = "#fff"
+
+            scene bg landing_pad 
+            show dropship at Position(xpos = 623, xanchor=0.5, ypos=207,  yanchor=0.5)
+            with squares
+
             "Ignoring your protests, he boards the transport. Soon after it takes off, you hear a deafening blast."
             
-            play sound "assets/sf_attack1.ogg"
+
+            show white
+            play sound "assets/sf_attackAll.ogg"
+            show dropship:
+                parallel:
+                    easein 1.0 xpos 650
+                    
+                parallel:
+                    easein 1.2 ypos 230
+
+                parallel:
+                    easein 1.1 rotate 5
+
+            hide white with dissolve
+
+            #play sound "assets/sf_attack1.ogg"
             
             $ renpy.pause(delay=6)
             
             "The ships seems to have been shot! It begins falling."
             
+            show dropship:
+                parallel:
+                    ease 10.0 xpos 1200
+
+                parallel:
+                    pause 2.0
+                    ease 7.0 ypos 400
+
+                parallel:
+                    ease 0.6 rotate 1
+                    ease 3.0 rotate -6
+                    ease 1.6 rotate 4
+                    ease 3.8 rotate 0
+
+
             play sound "assets/sf_attack2.ogg"
             
-            "Miraculously, the pilot manages to safely land the critically wounded pod on the landing pad."
+            "Miraculously, the pilot manages to safely land the critically wounded craft as close as she can to the landing pad."
             
             $ renpy.pause(delay=6)
             
-            "Ambassador Kier steps out, clearly shaken, but seemingly uninjured."
+            "Ambassador Irridiss steps out, clearly shaken, but seemingly uninjured."
             
             if pct_gotten_infos < 1.0 / 3.0:
             

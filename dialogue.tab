@@ -2,140 +2,171 @@ Identifier	Character	Dialogue	Filename	Line Number
 ch_adam_810db67f	adam	[last_dialog]	game/ch_adam.rpy	11
 ch_adam_5d3e994a	adam	Hello! Or as the kaldreans say "kevey"! Welcome to my humble living space and please make yourself comfortable. I'm always happy to meet new people! I'm Adam by the way.	game/ch_adam.rpy	14
 ch_adam_cf0f4831	p	It's a pleasure to meet you Adam. I'm [alias.full]. But if we're on a first name basis, you can just call me [alias.first].	game/ch_adam.rpy	15
-ch_adam_5c104cb6	adam	Likewise, [alias.first]. If there is anything I can get you just let me know, or perhaps you just want to ask some questions? I'm always open to converse. I haven't seen you around... are you a new arrival?	game/ch_adam.rpy	16
-ch_adam_afc4ff76	p	I am.	game/ch_adam.rpy	18
-ch_adam_810db67f_1	adam	[last_dialog]	game/ch_adam.rpy	21
-menu_adam_68e701ee	adam	[last_dialog]	game/ch_adam.rpy	26
-adam_advice_f9d18705	p	Do you have any advice for a citizen new to Concord - particularly a diplomat?	game/ch_adam.rpy	44
-adam_advice_cd1005a5	adam	To us, here, the person that you were before you arrived does not necessarily shape you. I have learned slowly but surely that the dynamic here is far different than Earth, the wonderful planet upon which I grew up. There, you are what you were – the person that is you becomes what others can gather by looking at your past.	game/ch_adam.rpy	46
-adam_advice_361cee56	p	And the dynamic here is far different.	game/ch_adam.rpy	50
-adam_advice_2492521c	adam	Exactly. Simply by saying that you've shown how it impresses upon you. Here, you are what you make yourself – we have the kaldreans to thank for this. They judge based on ends rather than means. Not the best, but certainly different. But you can see that it has rubbed off on us. Asking about one's past is generally regarded as very personal information to kaldreans – so be careful when jumping into this topic... anyone. Some will be ready and willing to share, others... not so much.	game/ch_adam.rpy	52
-adam_advice_81399f57	p	And how do you find this - exchange?	game/ch_adam.rpy	57
-adam_advice_ab240d23	adam	Personally, I do not mind it. I think it suits this new beacon of hope to have an entirely new culture to both races.	game/ch_adam.rpy	59
-adam_advice_d8a3ffd9	p	Of course.	game/ch_adam.rpy	61
-adam_events_f7cc920e	p	You seem like you're in the know about recent events. What do you think about these tensions?	game/ch_adam.rpy	67
-adam_events_d69ede72	adam	It seems like a ploy to me - someone is looking for problems and they are eager to place blame wherever it may settle.	game/ch_adam.rpy	69
-adam_events_8e0ce8ca	p	You think that someone is creating this tension on purpose.	game/ch_adam.rpy	71
-adam_events_d3415daa	adam	There is such a thing as ambient tension, but then there is the reek of hate that clings to what we call "rumors." I can smell it - and believe me, I know it because I've experienced it before. Concord, while a beacon for galactic peace, is equally fragile. Only fifty years a settlement - if I can remember its inception and creation, then it is NOT old enough to be entirely stable. I only hope that this tension passes quickly, because the last thing we need now is another conflict we cannot weasel our way out of.	game/ch_adam.rpy	73
-adam_alkay_dialog_1c3f696e	p	Actually, Alkay wanted me to talk to you.	game/ch_adam.rpy	82
-adam_alkay_dialog_22908d56	adam	Yes, of course, any friend of Alkay is a friend of mine! What would you like to know, [alias.first]?	game/ch_adam.rpy	84
-adam_alkay_dialog_b28ea849	p	Well, he mentioned a little bit about how you two met, what was your perspective?	game/ch_adam.rpy	86
-adam_alkay_dialog_1f462455	adam	That's not something I'd normally share with strangers, but if Alkay sent you, I'm sure that I can trust you.	game/ch_adam.rpy	88
-adam_alkay_dialog_9a37621f	adam	Where to begin... Ah yes. The operation.	game/ch_adam.rpy	90
-adam_alkay_dialog_97bf2612	adam	I'll try to keep this as brief as I can so I don't bore you to death.	game/ch_adam.rpy	92
-adam_alkay_dialog_b672411e	adam	So I was part of the team that made first contact with the kaldreans. I was and engineer on the TSS Armada. When we first saw the aliens, the whole ship was dead silent for a long time. Seeing another intelligent being was... Wow. I can't even describe the emotion.	game/ch_adam.rpy	94
-adam_alkay_dialog_9fca2ba8	adam	But I digress! Anyways, then the fighting broke out. Neither side wanted to fight, but eventually someone pulled the trigger. Attempting to communicate was practically futile because of the language and culture barriers.	game/ch_adam.rpy	96
-adam_alkay_dialog_cec1f702	adam	Through the process though, I befriended Alkay. He was one of the first kaldreans to learn the human standard.	game/ch_adam.rpy	98
-adam_alkay_dialog_7b1e0008	adam	We were practically the emissaries of the time.	game/ch_adam.rpy	100
-adam_alkay_dialog_a1c831ab	adam	He was taking a huge risk doing this though. He was going against his leaders to try to stop the fighting. It was very brave of him. Some could argue foolish, but either way he was successful and we live in peace because of it.	game/ch_adam.rpy	102
-adam_alkay_dialog_718bbfc3	adam	Alkay and I have been friends ever since.	game/ch_adam.rpy	104
-adam_VL_tree_start_88fac75a	p	What can you tell me about Valak Lideri?	game/ch_adam.rpy	112
-adam_VL_tree_start_2f12fc4e	adam	Well, that's certainly an ambitious question for someone so new to Concord. How did you come across this rumor? I have been here for nearly my entire life and I've only heard whispers of this group's existence. And I have a careful ear.	game/ch_adam.rpy	114
-adam_VL_tree_start_4d554bd4	p	I will remind you that I am a diplomat - I was chosen because I have a careful ear.	game/ch_adam.rpy	117
-adam_VL_tree_start_fbfdf652	adam	Ah yes, I see.	game/ch_adam.rpy	119
-adam_VL_tree_start_5568d126	p	Probably also a coincidence.	game/ch_adam.rpy	121
-adam_VL_tree_start_1fa99d79	adam	I can relate to that - I have been involved in my fair share of coincidences throughout my life. So what do you think about this group, based off what you know? I've heard some conflicting and slanting viewpoints on them so I'm curious to know what you think.	game/ch_adam.rpy	123
-adam_VL_tree_sympathize_88718f18	p	I think that Valak Lideri have a stronger set of morals than the rest of us give them credit. I still think that they are risking a lot, especially now. I still need to understand them better though, I'm basically just going with what I've been told.	game/ch_adam.rpy	134
-adam_VL_tree_sympathize_60e018b9	adam	It all depends on what you've been told, of course. I agree with you; they are taking a huge risk right now, but they definitely do have a strong moral heading. Although, assuming they do want to spark a revolution, their apparent itch for chaos does not really make sense. They don't seem like they would be such a violent group, given their morals.	game/ch_adam.rpy	137
-adam_VL_tree_nowhere_c77e2189	p	Hopefully they don't resort to violence - the change they want to impart on this scale... it is still too fragile.	game/ch_adam.rpy	147
-adam_VL_tree_nowhere_61d1d58f	adam	What you have to understand, is that there is always a time for peace and for violence. If my experiences during the first contact conflict and the years following were anything to go by... Look, you'll be told that a peaceful resolution is always the best answer. But when you come down with a disease, let's say, you terminate with medicine because it is a pest. The same goes for establishments. How many have shattered under the scope of a sniper rifle?	game/ch_adam.rpy	149
-adam_VL_tree_nowhere_c654b780	p	I can see your point, but establishments and actual people are two completely different things.	game/ch_adam.rpy	153
-adam_VL_tree_nowhere_23379cc9	adam	[alias.first], you did not live through the conflict the way I did. Peace works very, very well in the long term. But violence is a quick way to solve immediate problems - strategy versus tactics. You don't have to agree with me, we all have our separate opinions and backgrounds to inform them, but this is the way I have seen it work in the past.	game/ch_adam.rpy	155
-adam_VL_tree_care_less_5a33b1e9	p	I don't care too much about how they go about pulling this off. As long as their intentions are strong and directed, what will come of it will be good.	game/ch_adam.rpy	165
-adam_VL_tree_care_less_f8224ccd	adam	Sometimes we have to make concessions for the greater good - I found that out the hard way during the first contact conflict. You begin to question what you know about morality when lives are called into question.	game/ch_adam.rpy	167
-adam_VL_tree_care_less_bb7dfb49	p	I understand.	game/ch_adam.rpy	170
-adam_VL_tree_disapprove_2320152d	p	I don't really know what to think of them, I haven't heard too much. In general, though, rebel groups like these compromise the peace that we all work so hard to keep afloat. While they all have their justifications and sometimes they make perfect sense, ultimately their very existence counteracts the change they seek.	game/ch_adam.rpy	179
-adam_VL_tree_disapprove_0efe14e6	adam	Hm... there are many examples where history supports your assertion, but sometimes these groups have noticed something fundamentally wrong, and they are simply trying to do what is best. During first contact there were suddenly many of these rebel cells who were all fighting for what they thought was right. Some worked to push us away, others to bring us together.	game/ch_adam.rpy	182
-adam_VL_tree_disapprove_64d3f6ad	p	So what exactly is your point?	game/ch_adam.rpy	186
-adam_VL_tree_disapprove_b7eac7e3	adam	My point is that these rebel groups are not something that you simply sympathize or disagree with - they lie in a moral gray zone in which our own sense of ethics begins to affect our perceptions of them.	game/ch_adam.rpy	188
-adam_VL_tree_disapprove_4611acd0	p	Right, that I can agree with.	game/ch_adam.rpy	191
-adam_Bg_tree_start_3a12e893	p	What can you tell me about your past? I don't mean to offend, but you look like you've seen quite a great deal of change here.	game/ch_adam.rpy	199
-adam_Bg_tree_start_620b2a1f	adam	That I have. But actually, I was there when we made first contact. I was a chief engineer aboard the TSS Armada, flagship of Operation Bridge - I can still remember by heart swelling with pride seeing her lift off from Terra for the first time. Space was not foreign to us, but the distance from home was. Nowhere in our minds was the possibility that we could come into contact with another highly-intelligent biped species like our own.	game/ch_adam.rpy	201
-adam_Bg_tree_start_c57a3cb5	p	I imagine it was pandemonium when you first saw them?	game/ch_adam.rpy	205
-adam_Bg_tree_start_bd4cb309	adam	Boy, that moment when we stopped over bridge and saw their fleet, it was silent for a straight ten minutes. From that point on it's history - but I need to be completely clear that neither their commander nor ours wanted the fight to break out. The warning shots eventually turned into full-on fighting. The Verdict was shot down... we took down their ship the Krona... it was a disaster.	game/ch_adam.rpy	207
-adam_Bg_tree_start_849b30bc	p	So how did you end up resolving tensions with the kaldreans?	game/ch_adam.rpy	211
-adam_Bg_tree_start_d92fc005	adam	It was certainly difficult trying to communicate with one another. As I'm sure you can guess it was like being thrust into a completely different culture. We landed here and then we tried to establish some form of communications. Throughout the process I became friends with a kaldrean, Alkay - wonderful character that one.	game/ch_adam.rpy	213
-adam_Bg_tree_start_be405caa	p	So I take it you were around when Concord was constructed.	game/ch_adam.rpy	216
-adam_Bg_tree_start_581fdc4b	adam	For the first decade I was actually back on Terra. But I decided to come back here and do my best to facilitate the friendship between the kaldreans and humans.	game/ch_adam.rpy	218
-adam_Bg_tree_start_7f5288fd	p	Clearly your work paid off.	game/ch_adam.rpy	220
-adam_Bg_tree_start_3ace53d7	adam	You could certainly say that.	game/ch_adam.rpy	222
-adam_Bg_tree_Alkay_d5f3a08d	p	You mentioned Alkay?	game/ch_adam.rpy	230
-adam_Bg_tree_Alkay_6c0f812d	adam	Oh he's been a friend of mine for many years now. He was actually instrumental in resolving the conflict because he was one of the first kaldreans to learn human standard - probably THE first, actually. When I was... when I was working alongside them during the war he and I were unofficial emissaries. When you next stop by Oasis tell him I sent you - he'll be happy to know.	game/ch_adam.rpy	232
-adam_Bg_tree_conflict_808021ac	p	So, could you explain your experience in the first contact conflict a little more?	game/ch_adam.rpy	241
-adam_Bg_tree_conflict_3feea187	adam	I suppose... although the events that transpired affected quite a few people, including a number of those who live here on Concord. I'll try to keep this brief because you really don't need to hear about all the problems. With the Verdict and the Krona damaged beyond repair the rest of our ships landed planet-side because we needed to make repairs. Fire was exchanged on the ground despite explicit orders on both sides not to. Some of our scouts went missing at about the same time that our people made hostages out of their scouts. It was all quite tense - lives were unnecessarily lost.	game/ch_adam.rpy	243
-adam_Bg_tree_conflict_f8d3c444	p	Are you okay?	game/ch_adam.rpy	248
-adam_Bg_tree_conflict_96503fb5	adam	Yeah. I'm still upset by how much pain we could have avoided if we had been better prepared. So just always remember, [alias.first], go prepared; you'll never know quite what to expect out there.	game/ch_adam.rpy	250
-adam_Bg_tree_conflict_2c467556	p	I'll do my best.	game/ch_adam.rpy	253
+ch_adam_d6540aa7	adam	Likewise, [alias.first]. If there is anything I can get you just let me know, or perhaps you just want to ask some questions? I'm always open to converse.	game/ch_adam.rpy	16
+ch_adam_ffd287d8	adam	I haven't seen you around, are you a new arrival?	game/ch_adam.rpy	18
+ch_adam_afc4ff76	p	I am.	game/ch_adam.rpy	19
+ch_adam_810db67f_1	adam	[last_dialog]	game/ch_adam.rpy	22
+menu_adam_68e701ee	adam	[last_dialog]	game/ch_adam.rpy	27
+adam_advice_f9d18705	p	Do you have any advice for a citizen new to Concord - particularly a diplomat?	game/ch_adam.rpy	46
+adam_advice_915d8f6f	adam	To us, here, the person that you were before you arrived does not necessarily shape you.	game/ch_adam.rpy	48
+adam_advice_f8f58bdf	adam	I have learned slowly but surely that the dynamic here is far different than Earth, the wonderful planet upon which I grew up.	game/ch_adam.rpy	50
+adam_advice_f41f9f0d	adam	There, you are what you were – the person that is you becomes what others can gather by looking at your past.	game/ch_adam.rpy	52
+adam_advice_361cee56	p	And the dynamic here is far different.	game/ch_adam.rpy	54
+adam_advice_428c5792	adam	Exactly. Simply by saying that you've shown how it impresses upon you. Here, you are what you make yourself – we have the kaldreans to thank for this.	game/ch_adam.rpy	56
+adam_advice_f117f483	adam	They judge based on ends rather than means. Not the best, but certainly different. But you can see that it has rubbed off on us.	game/ch_adam.rpy	58
+adam_advice_1116630b	adam	Asking about one's past is generally regarded as very personal information to kaldreans – so be careful when jumping into this topic... anyone.	game/ch_adam.rpy	60
+adam_advice_54de21fd	adam	Some will be ready and willing to share, others... not so much.	game/ch_adam.rpy	62
+adam_advice_81399f57	p	And how do you find this - exchange?	game/ch_adam.rpy	64
+adam_advice_ab240d23	adam	Personally, I do not mind it. I think it suits this new beacon of hope to have an entirely new culture to both races.	game/ch_adam.rpy	66
+adam_advice_d8a3ffd9	p	Of course.	game/ch_adam.rpy	68
+adam_events_f7cc920e	p	You seem like you're in the know about recent events. What do you think about these tensions?	game/ch_adam.rpy	74
+adam_events_d69ede72	adam	It seems like a ploy to me - someone is looking for problems and they are eager to place blame wherever it may settle.	game/ch_adam.rpy	76
+adam_events_8e0ce8ca	p	You think that someone is creating this tension on purpose.	game/ch_adam.rpy	78
+adam_events_38b99a88	adam	There is such a thing as ambient tension, but then there is the reek of hate that clings to what we call "rumors."	game/ch_adam.rpy	80
+adam_events_daeefe63	adam	I can smell it - and believe me, I know it because I've experienced it before. Concord, while a beacon for galactic peace, is equally fragile.	game/ch_adam.rpy	82
+adam_events_7205f1e8	adam	Only fifty years a settlement - if I can remember its inception, then it is NOT old enough to be entirely stable.	game/ch_adam.rpy	84
+adam_events_ee159fb4	adam	I only hope that this tension passes quickly, because the last thing we need now is another conflict we cannot weasel our way out of.	game/ch_adam.rpy	86
+adam_alkay_dialog_1c3f696e	p	Actually, Alkay wanted me to talk to you.	game/ch_adam.rpy	92
+adam_alkay_dialog_22908d56	adam	Yes, of course, any friend of Alkay is a friend of mine! What would you like to know, [alias.first]?	game/ch_adam.rpy	94
+adam_alkay_dialog_b28ea849	p	Well, he mentioned a little bit about how you two met, what was your perspective?	game/ch_adam.rpy	96
+adam_alkay_dialog_1f462455	adam	That's not something I'd normally share with strangers, but if Alkay sent you, I'm sure that I can trust you.	game/ch_adam.rpy	98
+adam_alkay_dialog_9a37621f	adam	Where to begin... Ah yes. The operation.	game/ch_adam.rpy	100
+adam_alkay_dialog_97bf2612	adam	I'll try to keep this as brief as I can so I don't bore you to death.	game/ch_adam.rpy	102
+adam_alkay_dialog_b672411e	adam	So I was part of the team that made first contact with the kaldreans. I was and engineer on the TSS Armada. When we first saw the aliens, the whole ship was dead silent for a long time. Seeing another intelligent being was... Wow. I can't even describe the emotion.	game/ch_adam.rpy	104
+adam_alkay_dialog_9fca2ba8	adam	But I digress! Anyways, then the fighting broke out. Neither side wanted to fight, but eventually someone pulled the trigger. Attempting to communicate was practically futile because of the language and culture barriers.	game/ch_adam.rpy	106
+adam_alkay_dialog_cec1f702	adam	Through the process though, I befriended Alkay. He was one of the first kaldreans to learn the human standard.	game/ch_adam.rpy	108
+adam_alkay_dialog_7b1e0008	adam	We were practically the emissaries of the time.	game/ch_adam.rpy	110
+adam_alkay_dialog_a1c831ab	adam	He was taking a huge risk doing this though. He was going against his leaders to try to stop the fighting. It was very brave of him. Some could argue foolish, but either way he was successful and we live in peace because of it.	game/ch_adam.rpy	112
+adam_alkay_dialog_718bbfc3	adam	Alkay and I have been friends ever since.	game/ch_adam.rpy	114
+adam_VL_tree_start_88fac75a	p	What can you tell me about Valak Lideri?	game/ch_adam.rpy	122
+adam_VL_tree_start_2f12fc4e	adam	Well, that's certainly an ambitious question for someone so new to Concord. How did you come across this rumor? I have been here for nearly my entire life and I've only heard whispers of this group's existence. And I have a careful ear.	game/ch_adam.rpy	124
+adam_VL_tree_start_4d554bd4	p	I will remind you that I am a diplomat - I was chosen because I have a careful ear.	game/ch_adam.rpy	126
+adam_VL_tree_start_fbfdf652	adam	Ah yes, I see.	game/ch_adam.rpy	128
+adam_VL_tree_start_5568d126	p	Probably also a coincidence.	game/ch_adam.rpy	130
+adam_VL_tree_start_1fa99d79	adam	I can relate to that - I have been involved in my fair share of coincidences throughout my life. So what do you think about this group, based off what you know? I've heard some conflicting and slanting viewpoints on them so I'm curious to know what you think.	game/ch_adam.rpy	132
+adam_VL_tree_sympathize_88718f18	p	I think that Valak Lideri have a stronger set of morals than the rest of us give them credit. I still think that they are risking a lot, especially now. I still need to understand them better though, I'm basically just going with what I've been told.	game/ch_adam.rpy	142
+adam_VL_tree_sympathize_60e018b9	adam	It all depends on what you've been told, of course. I agree with you; they are taking a huge risk right now, but they definitely do have a strong moral heading. Although, assuming they do want to spark a revolution, their apparent itch for chaos does not really make sense. They don't seem like they would be such a violent group, given their morals.	game/ch_adam.rpy	144
+adam_VL_tree_nowhere_c77e2189	p	Hopefully they don't resort to violence - the change they want to impart on this scale... it is still too fragile.	game/ch_adam.rpy	152
+adam_VL_tree_nowhere_e6cf1d55	adam	What you have to understand, is that there is always a time for peace and for violence. If my experiences during the first contact conflict and the years following were anything to go by...	game/ch_adam.rpy	154
+adam_VL_tree_nowhere_c9033f59	adam	Look, you'll be told that a peaceful resolution is always the best answer. But when you come down with a disease, let's say, you terminate with medicine because it is a pest.	game/ch_adam.rpy	156
+adam_VL_tree_nowhere_91c1da2c	adam	The same goes for establishments. How many have shattered under the scope of a sniper rifle?	game/ch_adam.rpy	158
+adam_VL_tree_nowhere_c654b780	p	I can see your point, but establishments and actual people are two completely different things.	game/ch_adam.rpy	160
+adam_VL_tree_nowhere_085b50d1	adam	[alias.first], you did not live through the conflict the way I did. Peace works very, very well in the long term. But violence is a quick way to solve immediate problems - strategy versus tactics.	game/ch_adam.rpy	162
+adam_VL_tree_nowhere_8f4583fb	adam	You don't have to agree with me, we all have our separate opinions and backgrounds to inform them, but this is the way I have seen it work in the past.	game/ch_adam.rpy	164
+adam_VL_tree_care_less_5a33b1e9	p	I don't care too much about how they go about pulling this off. As long as their intentions are strong and directed, what will come of it will be good.	game/ch_adam.rpy	172
+adam_VL_tree_care_less_c9986126	adam	Sometimes we have to make concessions for the greater good - I found that out the hard way during the first contact conflict.	game/ch_adam.rpy	174
+adam_VL_tree_care_less_2da41993	adam	You begin to question what you know about morality when lives are called into question.	game/ch_adam.rpy	175
+adam_VL_tree_care_less_bb7dfb49	p	I understand.	game/ch_adam.rpy	177
+adam_VL_tree_disapprove_69d17cd1	p	I don't really know what to think of them, I haven't heard too much. In general, though, rebel groups like these compromise the peace that we all work so hard to keep afloat.	game/ch_adam.rpy	186
+adam_VL_tree_disapprove_2306122f	adam	While they all have their justifications and sometimes they make perfect sense, ultimately their very existence counteracts the change they seek.	game/ch_adam.rpy	188
+adam_VL_tree_disapprove_09ebf4f9	adam	Hm... there are many examples where history supports your assertion, but sometimes these groups have noticed something fundamentally wrong, and they are simply trying to do what is best.	game/ch_adam.rpy	190
+adam_VL_tree_disapprove_37570988	adam	During first contact there were suddenly many of these rebel cells who were all fighting for what they thought was right. Some worked to push us away, others to bring us together.	game/ch_adam.rpy	192
+adam_VL_tree_disapprove_64d3f6ad	p	So what exactly is your point?	game/ch_adam.rpy	194
+adam_VL_tree_disapprove_b7eac7e3	adam	My point is that these rebel groups are not something that you simply sympathize or disagree with - they lie in a moral gray zone in which our own sense of ethics begins to affect our perceptions of them.	game/ch_adam.rpy	196
+adam_VL_tree_disapprove_4611acd0	p	Right, that I can agree with.	game/ch_adam.rpy	198
+adam_Bg_tree_start_3a12e893	p	What can you tell me about your past? I don't mean to offend, but you look like you've seen quite a great deal of change here.	game/ch_adam.rpy	206
+adam_Bg_tree_start_81fd8126	adam	That I have. But actually, I was there when we made first contact. I was a chief engineer aboard the TSS Armada, flagship of Operation Bridge.	game/ch_adam.rpy	208
+adam_Bg_tree_start_4be9bebd	adam	I can still remember by heart swelling with pride seeing her lift off from Terra for the first time.	game/ch_adam.rpy	210
+adam_Bg_tree_start_c2769297	adam	Space was not foreign to us, but the distance from home was.	game/ch_adam.rpy	212
+adam_Bg_tree_start_4391a911	adam	Nowhere in our minds was the possibility that we could come into contact with another highly-intelligent biped species like our own.	game/ch_adam.rpy	214
+adam_Bg_tree_start_c57a3cb5	p	I imagine it was pandemonium when you first saw them?	game/ch_adam.rpy	216
+adam_Bg_tree_start_e06991e9	adam	Boy, that moment when we stopped over bridge and saw their fleet, it was silent for a straight ten minutes.	game/ch_adam.rpy	218
+adam_Bg_tree_start_97b55b15	adam	From that point on it's history - but I need to be completely clear that neither their commander nor ours wanted the fight to break out.	game/ch_adam.rpy	220
+adam_Bg_tree_start_b4c8c32f	adam	The warning shots eventually turned into full-on fighting. The Verdict was shot down... we took down their ship the Krona... it was a disaster.	game/ch_adam.rpy	222
+adam_Bg_tree_start_849b30bc	p	So how did you end up resolving tensions with the kaldreans?	game/ch_adam.rpy	224
+adam_Bg_tree_start_f5821e52	adam	It was certainly difficult trying to communicate with one another. As I'm sure you can guess it was like being thrust into a completely different culture.	game/ch_adam.rpy	226
+adam_Bg_tree_start_59d67a18	adam	We landed here and then we tried to establish some form of communications.	game/ch_adam.rpy	228
+adam_Bg_tree_start_8b38b442	adam	Through the process I became friends with a kaldrean, Alkay - wonderful character that one.	game/ch_adam.rpy	230
+adam_Bg_tree_start_be405caa	p	So I take it you were around when Concord was constructed.	game/ch_adam.rpy	232
+adam_Bg_tree_start_581fdc4b	adam	For the first decade I was actually back on Terra. But I decided to come back here and do my best to facilitate the friendship between the kaldreans and humans.	game/ch_adam.rpy	234
+adam_Bg_tree_start_7f5288fd	p	Clearly your work paid off.	game/ch_adam.rpy	236
+adam_Bg_tree_start_3ace53d7	adam	You could certainly say that.	game/ch_adam.rpy	238
+adam_Bg_tree_Alkay_d5f3a08d	p	You mentioned Alkay?	game/ch_adam.rpy	246
+adam_Bg_tree_Alkay_c87c6660	adam	Oh he's been a friend of mine for many years now.	game/ch_adam.rpy	248
+adam_Bg_tree_Alkay_0aa2b287	adam	He was actually instrumental in resolving the conflict because he was one of the first kaldreans to learn human standard - probably THE first, actually.	game/ch_adam.rpy	250
+adam_Bg_tree_Alkay_3d2c5dc2	adam	When I was... when I was working alongside them during the war he and I were unofficial emissaries. When you next stop by Oasis tell him I sent you - he'll be happy to know.	game/ch_adam.rpy	252
+adam_Bg_tree_conflict_808021ac	p	So, could you explain your experience in the first contact conflict a little more?	game/ch_adam.rpy	259
+adam_Bg_tree_conflict_014c740f	adam	I suppose... although the events that transpired affected quite a few people, including a number of those who live here on Concord.	game/ch_adam.rpy	261
+adam_Bg_tree_conflict_3e49a372	adam	I'll try to keep this brief because you really don't need to hear about all the problems.	game/ch_adam.rpy	263
+adam_Bg_tree_conflict_048a9426	adam	With the Verdict and the Krona damaged beyond repair the rest of our ships landed planet-side because we needed to make repairs.	game/ch_adam.rpy	265
+adam_Bg_tree_conflict_9f1ab0ff	adam	Fire was exchanged on the ground despite explicit orders on both sides not to.	game/ch_adam.rpy	267
+adam_Bg_tree_conflict_a0d76271	adam	Some of our scouts went missing at about the same time that our people made hostages out of their scouts.	game/ch_adam.rpy	269
+adam_Bg_tree_conflict_438bb3f1	adam	It was all quite tense - lives were unnecessarily lost.	game/ch_adam.rpy	271
+adam_Bg_tree_conflict_f8d3c444	p	Are you okay?	game/ch_adam.rpy	273
+adam_Bg_tree_conflict_96503fb5	adam	Yeah. I'm still upset by how much pain we could have avoided if we had been better prepared. So just always remember, [alias.first], go prepared; you'll never know quite what to expect out there.	game/ch_adam.rpy	275
+adam_Bg_tree_conflict_2c467556	p	I'll do my best.	game/ch_adam.rpy	277
 ch_ben_d34932bd	ben	I was told we were going to have a new team member. You must be [alias.first].	game/ch_ben.rpy	14
 ch_ben_5ef06c7e	p	That is me.	game/ch_ben.rpy	15
 ch_ben_e91dad3c	ben	Wonderful. As you might already know, I'm Ambassador Columbus. But please, just call me Ben. I hope that your time on Concord thus far has been pleasant.	game/ch_ben.rpy	16
 ch_ben_7bc22752	p	It's a beautiful city.	game/ch_ben.rpy	17
 menu_ben_f4f4fa61	ben	[last_dialog]	game/ch_ben.rpy	23
 ben_ask_kald_govt_71ba29de	p	I was wondering about your opinion on the state of the kaldrean government.	game/ch_ben.rpy	43
-ben_ask_kald_govt_0bcadd63	ben	[[]canned response	game/ch_ben.rpy	44
-ben_ask_kald_govt_dd3fb3f1	ben	Is that along the lines of what you were looking for?	game/ch_ben.rpy	46
-ben_ask_kald_govt_f7fd1beb	p	Yes, thank you.	game/ch_ben.rpy	50
-ben_ask_kald_govt_ff4abd7e	p	Well, to be honest, I was looking for something more... in depth.	game/ch_ben.rpy	55
-ben_ask_kald_govt_352ed468	ben	Ahh, I see.	game/ch_ben.rpy	57
-ben_ask_kald_govt_f668fbd6		Ben looks a bit nervous, and hesitates before continuing to speak.	game/ch_ben.rpy	58
-ben_ask_kald_govt_e2032147	ben	Well, [alias.first], as I'm sure you understand, someone in a position such as mine must be very careful with what he says and to whom he says it.	game/ch_ben.rpy	60
-ben_ask_kald_govt_3201cffe	ben	Especially in such tense times such as these.	game/ch_ben.rpy	63
-ben_ask_kald_govt_30838584	ben	Now, as you seem to have already figured out, my opinion on the kaldreans govern themselves is not exactly positive.	game/ch_ben.rpy	66
-ben_ask_kald_govt_91ee3620	ben	I would gladly talk about it with someone whom I knew I could trust.	game/ch_ben.rpy	68
-ben_ask_kald_govt_03741fec	ben	On the other hand, you have shown yourself to be a reliable and competent person.	game/ch_ben.rpy	76
-ben_ask_kald_govt_923befe9	ben	Maybe I could share with you some of my less... popular opinions on the kaldrean governmental system.	game/ch_ben.rpy	78
-ben_ask_kald_govt_dcedc3b2	p	I'm listening.	game/ch_ben.rpy	80
-ben_ask_kald_govt_8956678d	ben	The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read Vel Kerriss' "Dystopia"?	game/ch_ben.rpy	82
-ben_ask_kald_govt_3ffde9df	p	I can't say that I have.	game/ch_ben.rpy	84
-ben_ask_kald_govt_4218ba42	ben	It was a controversial kaldrean novel that made it past the government's censors and was widely read and lauded as one of the greatest works of literature to date. It may remind you of Fahrenheit 451 by Ray Bradbury.	game/ch_ben.rpy	86
-ben_ask_kald_govt_7d317f47	ben	Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to give back in other ways.	game/ch_ben.rpy	89
-ben_ask_kald_govt_d85eb06a	ben	They have the highest standards of living I have ever seen, crime rates are low, there are no apparent problems.	game/ch_ben.rpy	92
-ben_ask_kald_govt_5e23a77c	p	But they are blissfully ignorant.	game/ch_ben.rpy	94
-ben_ask_kald_govt_6ce9286f	ben	You could say that, yes. I think that about covers their situation without distorting the truth.	game/ch_ben.rpy	96
-ben_ask_day_c947206d	p	How has your day been, Ambassador?	game/ch_ben.rpy	104
-ben_ask_day_04280197	ben	Quite frustrating, actually.	game/ch_ben.rpy	105
-ben_ask_day_5fdf6ab7	p	May I ask why?	game/ch_ben.rpy	106
-ben_ask_day_12465b98	ben	Well, I urgently need to speak with Lida Ezekeri Skar, the kaldrean Senior Operations manager, but she has been actively avoiding all my attempts to meet with her.	game/ch_ben.rpy	107
-ben_ask_day_3cdae9fa	p	Any reason why you think she has been avoiding you? Or why she can in the first place?	game/ch_ben.rpy	109
-ben_ask_day_4b8aa2c3	ben	As a kaldrean she is only obligated to respond to meeting requests with other kaldreans. On top of that, Ms. Ezekeri is an older woman who is set in her says, and has a certain... distaste for human politicians such as myself.	game/ch_ben.rpy	111
-ben_ask_day_dad47c6f	p	Well, that is quite unfortunate.	game/ch_ben.rpy	116
-ben_ask_day_eaa50289	p	Is it possible she would be more willing to listen to a newcomer such as myself?	game/ch_ben.rpy	122
-ben_ask_day_37e2a886	ben	Hmmm... what a novel idea. Yes, why don't you try to persuade her? I would be most appreciative of the favor.	game/ch_ben.rpy	124
-ben_ask_day_4866b7ff	ben	Now that I think of it, I'm confident you'll be able to persuade her to meet with me. You'll find Ms. Ezekeri in the kaldrean embassy.	game/ch_ben.rpy	126
-ben_ask_day_6f37d73d	ben	Tell her that I need to discuss the new trade regulations with her.	game/ch_ben.rpy	128
-ben_ask_day_5a0aceaa	p	Of course, but why exactly are you so confident in me? You only met me a few minutes ago.	game/ch_ben.rpy	130
-ben_ask_day_b3247489	ben	I can just tell that you are going to have an impact here - perhaps you don't recognize it yet.	game/ch_ben.rpy	132
-ben_ask_day_208e3a6b	p	I'll take your word for it.	game/ch_ben.rpy	134
-ben_mention_lida_a0c09a03	ben	Have you spoken to Ms. Ezekeri in kaldrean embassy yet?	game/ch_ben.rpy	141
-ben_mention_lida_94276cc7	p	Sorry, I haven't done that yet.	game/ch_ben.rpy	145
-ben_mention_lida_8a4bbbb8	ben	Take your time. I will be awaiting news of your success.	game/ch_ben.rpy	147
-ben_mention_lida_652477f1	p	I did talk to her but...	game/ch_ben.rpy	151
-ben_mention_lida_e5c62126	ben	Let me guess: she was too difficult.	game/ch_ben.rpy	153
-ben_mention_lida_eba8ea2a	p	Unfortunately, yes.	game/ch_ben.rpy	155
-ben_mention_lida_43ce8161	p	I did, and she has decided to meet with you.	game/ch_ben.rpy	163
-ben_mention_lida_4501a1a6	ben	That is wonderful news! I knew that you could pull this off, [alias.first].	game/ch_ben.rpy	165
-ben_mention_lida_dfbd0248	ben	Ah yes, she has sent me a message accepting my latest request.	game/ch_ben.rpy	167
-ben_mention_lida_ce08afe9	ben	Thank you very much for your help, [alias.first]. I will remember your helpfulness.	game/ch_ben.rpy	169
-ben_advice_64519f71	p	What advice can you offer, from one diplomat to another?	game/ch_ben.rpy	176
-ben_advice_50ca2b42	ben	Ah yes, of course. What often happens to the greenhorns who arrive here from Earth and Qolisk alike, is that they forget that they are entering an environment they have never before experienced.	game/ch_ben.rpy	178
-ben_advice_1b2ffd02	ben	You have to drop your prejudices and fabrications and simply observe. If you can't, then you struggle.	game/ch_ben.rpy	181
-ben_advice_2e8341d3	p	I respect your advice, Ambassador –	game/ch_ben.rpy	183
-ben_advice_b5209178	ben	Call me Ben, please	game/ch_ben.rpy	185
-ben_advice_68fc0775	p	I respect your advice, Ben, but doesn't it seem like a lot to ask of anyone to simply "drop their prejudices?"	game/ch_ben.rpy	187
-ben_advice_a5f5452b	ben	Of course it is. It's completely unreasonable – everyone will remain with their judgment tailored by their experiences.	game/ch_ben.rpy	189
-ben_advice_fd6b14a7	ben	I never claimed it was possible simply become judgment-free. That does not mean that you can't try.	game/ch_ben.rpy	192
-ben_advice_2a9ab253	ben	The closer you come to being spotless, the more those around you will accept you.	game/ch_ben.rpy	194
-ben_advice_fecf8415	ben	If only... (muttered)	game/ch_ben.rpy	196
-ben_advice_1b640dae	p	What?	game/ch_ben.rpy	198
-ben_events_c863762f	p	You probably know all about the rumors of racial tensions that have been circulating. Care to elaborate?	game/ch_ben.rpy	204
-ben_events_9aed66ee	ben	Rumors are but rumors - they are innocuous little flies that eventually die down. No need to concern yourself with these "rumors" my friend. I can assure that both Ambassador Irridiss and I are on quite even terms.	game/ch_ben.rpy	206
-ben_events_232feae2	ben	The peace that we maintain here is secure so there is really no need to worry.	game/ch_ben.rpy	209
-ben_events_e02f1060	p	If you insist...	game/ch_ben.rpy	211
-ben_events_d672a5f2	ben	I have no reason to be dishonest with you.	game/ch_ben.rpy	213
-ben_events_058ac1d4	p	No, I believe you. Thank you for the reassurance, Ben.	game/ch_ben.rpy	215
-ben_Bg_98b003cf	p	Tell me about yourself	game/ch_ben.rpy	221
-ben_Bg_87d7d5d8	ben	There is not much to tell. I was born and raised here in this beautiful city and grew up inspired by the previous human and kaldrean ambassadors.	game/ch_ben.rpy	223
-ben_Bg_92cb6a44	ben	After graduate school I went into politics and I suppose you know how that turned out.	game/ch_ben.rpy	225
+ben_ask_kald_govt_fe19dc12	ben	Their government is stable and provides their people with high standard of living. I do not see anything particularly wrong with it.	game/ch_ben.rpy	45
+ben_ask_kald_govt_dd3fb3f1	ben	Is that along the lines of what you were looking for?	game/ch_ben.rpy	47
+ben_ask_kald_govt_f7fd1beb	p	Yes, thank you.	game/ch_ben.rpy	51
+ben_ask_kald_govt_ff4abd7e	p	Well, to be honest, I was looking for something more... in depth.	game/ch_ben.rpy	56
+ben_ask_kald_govt_352ed468	ben	Ahh, I see.	game/ch_ben.rpy	58
+ben_ask_kald_govt_e2032147	ben	Well, [alias.first], as I'm sure you understand, someone in a position such as mine must be very careful with what he says and to whom he says it.	game/ch_ben.rpy	61
+ben_ask_kald_govt_3201cffe	ben	Especially in such tense times such as these.	game/ch_ben.rpy	64
+ben_ask_kald_govt_30838584	ben	Now, as you seem to have already figured out, my opinion on the kaldreans govern themselves is not exactly positive.	game/ch_ben.rpy	67
+ben_ask_kald_govt_91ee3620	ben	I would gladly talk about it with someone whom I knew I could trust.	game/ch_ben.rpy	69
+ben_ask_kald_govt_03741fec	ben	On the other hand, you have shown yourself to be a reliable and competent person.	game/ch_ben.rpy	77
+ben_ask_kald_govt_923befe9	ben	Maybe I could share with you some of my less... popular opinions on the kaldrean governmental system.	game/ch_ben.rpy	79
+ben_ask_kald_govt_dcedc3b2	p	I'm listening.	game/ch_ben.rpy	81
+ben_ask_kald_govt_32351836	ben	The kaldrean government on Qolisk is a tad... shall we say, controlling. Have you read 
+Vel Kerriss' Dystopia?	game/ch_ben.rpy	83
+ben_ask_kald_govt_3ffde9df	p	I can't say that I have.	game/ch_ben.rpy	85
+ben_ask_kald_govt_8b439213	ben	It was a controversial kaldrean novel that made it past the government's censors and was widely read and lauded as one of the greatest works of literature to date.	game/ch_ben.rpy	87
+ben_ask_kald_govt_1e6995ea	ben	It may remind you of Fahrenheit 451 by Ray Bradbury.	game/ch_ben.rpy	89
+ben_ask_kald_govt_7d317f47	ben	Simply put: their government is controlling, [alias.first], but what they take away from their people they seem to give back in other ways.	game/ch_ben.rpy	91
+ben_ask_kald_govt_d85eb06a	ben	They have the highest standards of living I have ever seen, crime rates are low, there are no apparent problems.	game/ch_ben.rpy	94
+ben_ask_kald_govt_5e23a77c	p	But they are blissfully ignorant.	game/ch_ben.rpy	96
+ben_ask_kald_govt_842a886c	ben	You could say that, yes. I think that about covers their situation without inordinately distorting the truth.	game/ch_ben.rpy	98
+ben_ask_day_c947206d	p	How has your day been, Ambassador?	game/ch_ben.rpy	106
+ben_ask_day_04280197	ben	Quite frustrating, actually.	game/ch_ben.rpy	108
+ben_ask_day_5fdf6ab7	p	May I ask why?	game/ch_ben.rpy	110
+ben_ask_day_12465b98	ben	Well, I urgently need to speak with Lida Ezekeri Skar, the kaldrean Senior Operations manager, but she has been actively avoiding all my attempts to meet with her.	game/ch_ben.rpy	112
+ben_ask_day_3cdae9fa	p	Any reason why you think she has been avoiding you? Or why she can in the first place?	game/ch_ben.rpy	115
+ben_ask_day_4b8aa2c3	ben	As a kaldrean she is only obligated to respond to meeting requests with other kaldreans. On top of that, Ms. Ezekeri is an older woman who is set in her says, and has a certain... distaste for human politicians such as myself.	game/ch_ben.rpy	117
+ben_ask_day_dad47c6f	p	Well, that is quite unfortunate.	game/ch_ben.rpy	123
+ben_ask_day_eaa50289	p	Is it possible she would be more willing to listen to a newcomer such as myself?	game/ch_ben.rpy	129
+ben_ask_day_37e2a886	ben	Hmmm... what a novel idea. Yes, why don't you try to persuade her? I would be most appreciative of the favor.	game/ch_ben.rpy	131
+ben_ask_day_4866b7ff	ben	Now that I think of it, I'm confident you'll be able to persuade her to meet with me. You'll find Ms. Ezekeri in the kaldrean embassy.	game/ch_ben.rpy	133
+ben_ask_day_6f37d73d	ben	Tell her that I need to discuss the new trade regulations with her.	game/ch_ben.rpy	135
+ben_ask_day_5a0aceaa	p	Of course, but why exactly are you so confident in me? You only met me a few minutes ago.	game/ch_ben.rpy	137
+ben_ask_day_b3247489	ben	I can just tell that you are going to have an impact here - perhaps you don't recognize it yet.	game/ch_ben.rpy	139
+ben_ask_day_208e3a6b	p	I'll take your word for it.	game/ch_ben.rpy	141
+ben_mention_lida_ffd902de	ben	Have you spoken to Ms. Ezekeri in the Kaldrean Embassy yet?	game/ch_ben.rpy	148
+ben_mention_lida_94276cc7	p	Sorry, I haven't done that yet.	game/ch_ben.rpy	152
+ben_mention_lida_8a4bbbb8	ben	Take your time. I will be awaiting news of your success.	game/ch_ben.rpy	154
+ben_mention_lida_652477f1	p	I did talk to her but...	game/ch_ben.rpy	158
+ben_mention_lida_e5c62126	ben	Let me guess: she was too difficult.	game/ch_ben.rpy	160
+ben_mention_lida_eba8ea2a	p	Unfortunately, yes.	game/ch_ben.rpy	162
+ben_mention_lida_43ce8161	p	I did, and she has decided to meet with you.	game/ch_ben.rpy	170
+ben_mention_lida_4501a1a6	ben	That is wonderful news! I knew that you could pull this off, [alias.first].	game/ch_ben.rpy	172
+ben_mention_lida_dfbd0248	ben	Ah yes, she has sent me a message accepting my latest request.	game/ch_ben.rpy	174
+ben_mention_lida_ce08afe9	ben	Thank you very much for your help, [alias.first]. I will remember your helpfulness.	game/ch_ben.rpy	176
+ben_advice_64519f71	p	What advice can you offer, from one diplomat to another?	game/ch_ben.rpy	184
+ben_advice_a2cb0321	ben	Ah yes, of course. What often happens to the greenhorns who arrive here from Earth and Qolisk alike, is that they forget that they are entering an entirely new environment.	game/ch_ben.rpy	186
+ben_advice_1b2ffd02	ben	You have to drop your prejudices and fabrications and simply observe. If you can't, then you struggle.	game/ch_ben.rpy	189
+ben_advice_2e8341d3	p	I respect your advice, Ambassador –	game/ch_ben.rpy	191
+ben_advice_b5209178	ben	Call me Ben, please	game/ch_ben.rpy	193
+ben_advice_68fc0775	p	I respect your advice, Ben, but doesn't it seem like a lot to ask of anyone to simply "drop their prejudices?"	game/ch_ben.rpy	195
+ben_advice_a5f5452b	ben	Of course it is. It's completely unreasonable – everyone will remain with their judgment tailored by their experiences.	game/ch_ben.rpy	197
+ben_advice_fd6b14a7	ben	I never claimed it was possible simply become judgment-free. That does not mean that you can't try.	game/ch_ben.rpy	200
+ben_advice_2a9ab253	ben	The closer you come to being spotless, the more those around you will accept you.	game/ch_ben.rpy	202
+ben_advice_9e9ec633	ben	If only...	game/ch_ben.rpy	204
+ben_advice_1b640dae	p	What?	game/ch_ben.rpy	206
+ben_events_c863762f	p	You probably know all about the rumors of racial tensions that have been circulating. Care to elaborate?	game/ch_ben.rpy	212
+ben_events_e1cb0e7d	ben	Rumors are but rumors - they are innocuous little flies that eventually die down. No need to concern yourself with these "rumors" my friend.	game/ch_ben.rpy	214
+ben_events_be7f0db3	ben	I can assure that both Ambassador Irridiss and I are on quite even terms.	game/ch_ben.rpy	216
+ben_events_232feae2	ben	The peace that we maintain here is secure so there is really no need to worry.	game/ch_ben.rpy	218
+ben_events_e02f1060	p	If you insist...	game/ch_ben.rpy	220
+ben_events_d672a5f2	ben	I have no reason to be dishonest with you.	game/ch_ben.rpy	222
+ben_events_058ac1d4	p	No, I believe you. Thank you for the reassurance, Ben.	game/ch_ben.rpy	224
+ben_Bg_98b003cf	p	Tell me about yourself	game/ch_ben.rpy	230
+ben_Bg_87d7d5d8	ben	There is not much to tell. I was born and raised here in this beautiful city and grew up inspired by the previous human and kaldrean ambassadors.	game/ch_ben.rpy	232
+ben_Bg_92cb6a44	ben	After graduate school I went into politics and I suppose you know how that turned out.	game/ch_ben.rpy	234
 ch_cole_46b6734f	cole	Welcome to my store. What are you looking for today?	game/ch_cole.rpy	13
 ch_cole_123119d0	p	Actually, I just arrived here, so I'm still adjusting to the climate and getting to know people. I'm [alias.full]. Nice to meet you.	game/ch_cole.rpy	14
 menu_cole_a6566c0f	cole	[last_dialog]	game/ch_cole.rpy	19
@@ -179,7 +210,7 @@ ch_jon_6e625b25	jon	HEY! JANS! GET YOUR PEOPLE ON THE TARMAC ASAP.	game/ch_jon.r
 ch_jon_d16f41da	jon	Sorry. Can I help you [alias.address]?	game/ch_jon.rpy	22
 ch_jon_b7dfc43d	p	I'm just trying to get to know people here.	game/ch_jon.rpy	24
 ch_jon_a6c0c1c5	jon	New to Concord? Welcome. I'm Jonathan Caise, manager of logistics here at the port.	game/ch_jon.rpy	26
-ch_jon_db880bdd	p	[alias.full], diplomat over at the human embassy.	game/ch_jon.rpy	28
+ch_jon_0c9ba35b	p	[alias.full], diplomat over at the Human Embassy.	game/ch_jon.rpy	28
 ch_jon_84d66abd	jon	Greenhorn diplomat? Make sure you really take your time to get to know people.	game/ch_jon.rpy	30
 ch_jon_535c3a3e	jon	I've seen my fair share of people bail and out and leave because Concord is too much a culture shock for them. But you look like you've got a good head on your shoulders.	game/ch_jon.rpy	31
 ch_jon_f3ffca18	p	I'm determined to leave my footprint here.	game/ch_jon.rpy	34
@@ -293,42 +324,44 @@ ch_lauren_0f5f9622	lauren	I'm Lauren Gray, manager of logistics here.	game/ch_la
 ch_lauren_b4fa0016	p	It's a pleasure to meet you.	game/ch_lauren.rpy	15
 menu_lauren_692449ef	lauren	[last_dialog]	game/ch_lauren.rpy	20
 lauren_background_c3941055	p	So what can you tell me about your past?	game/ch_lauren.rpy	36
-lauren_background_ddf78886	lauren	[[]replies that she does not have time to speak with you about non job-related things	game/ch_lauren.rpy	37
+lauren_background_173b0521	lauren	I don't really have time for this chit-chat right now.	game/ch_lauren.rpy	37
 lauren_advice_1dc84298	p	Excuse me... sorry, but would you be willing to offer me any advice as I start my work here?	game/ch_lauren.rpy	42
 lauren_advice_1c40105c	lauren	...	game/ch_lauren.rpy	43
 lauren_advice_473ba6ef	p	Ms. Gray?	game/ch_lauren.rpy	44
 lauren_advice_82334497	lauren	I heard you, I just don't really have anything to say.	game/ch_lauren.rpy	46
 lauren_advice_c5e80ca3	lauren	(pauses)	game/ch_lauren.rpy	47
-lauren_advice_e422b56e	lauren	Alright, I suppose I can offer a few words. I work with numbers all day long and I don't get out much so I'm probably not the best person to ask. But after working here for a while I've noticed a pattern, like a bell curve in a distribution graph – those who talk too much or too little are more or less shut away by society. Like me.	game/ch_lauren.rpy	48
+lauren_advice_30d15a84	lauren	Alright, I suppose I can offer a few words. I work with numbers all day long and I don't get out much so I'm probably not the best person to ask.	game/ch_lauren.rpy	48
+lauren_advice_bf5caac8	lauren	But after working here for a while I've noticed a pattern, like a bell curve in a distribution graph – those who talk too much or too little are more or less shut away by society.	game/ch_lauren.rpy	49
 lauren_advice_5f409947	p	Don't be too—	game/ch_lauren.rpy	52
 lauren_advice_64fdea9c	lauren	I wasn't done talking. Those who know just when and what to say make it very far very fast. It doesn't matter what your race may be, it's the same for everyone.	game/ch_lauren.rpy	54
-lauren_advice_aebec6a2	p	So— actually, thank you for your advice. I'll let you get back to your work.	game/ch_lauren.rpy	57
-lauren_events_a84c334e	p	What is your opinion on this alleged racial tension within Concord?	game/ch_lauren.rpy	63
-lauren_events_87747e71	lauren	Do you think that I am going to have a good answer for you?	game/ch_lauren.rpy	65
-lauren_events_79657c8d	p	I had hoped.	game/ch_lauren.rpy	67
-lauren_events_5ab6d131	lauren	Hah! About all I can tell you is that it is silly. I know plenty of kaldreans, none of whom are bothered or riled up by any of this so-called "tension." I would almost think that you've been lied to about this, because honestly, I haven't noticed anything particularly out of the ordinary. And I work in upper-level management!	game/ch_lauren.rpy	69
-lauren_events_3005156b	p	(muttered) Yeah, but upper-level management has pulled the wool over your eyes.	game/ch_lauren.rpy	73
-lauren_events_345ed6a7	lauren	What was that?	game/ch_lauren.rpy	75
-lauren_events_7abbaf5a	p	Don't worry about it. Thank you for your time. I'll let you get back to work.	game/ch_lauren.rpy	77
-lauren_info_tree_start_30ff6388	p	I am quite into literature myself. Might I ask what you are reading?	game/ch_lauren.rpy	83
-lauren_info_tree_start_a4c918e6	lauren	This is a novel by a progressive kaldrean author. It's called Through the Void.	game/ch_lauren.rpy	85
-lauren_info_tree_progressives_70564c27	p	A progressive author? What is your opinion on these progressive kaldreans?	game/ch_lauren.rpy	93
-lauren_info_tree_progressives_78f1a092	lauren	I do think that the progressive movement is beneficial to the kaldrean people. Their government is so corrupt that it is really time for a change.	game/ch_lauren.rpy	95
-lauren_info_tree_progressives_12cfdadd	lauren	I don't approve of how their government treats their people. It has me both angry and sorry at once - one of the few things that can actually make me emotional.	game/ch_lauren.rpy	97
-lauren_info_tree_progressives_fa8bf610	p	It must be worse than I've been told.	game/ch_lauren.rpy	99
-lauren_info_tree_progressives_f7294613	lauren	They don't tell us anything.	game/ch_lauren.rpy	101
-lauren_info_tree_progressives_90717bf6	p	Thank you for answering my question.	game/ch_lauren.rpy	103
-lauren_info_tree_novel_a81a4ee2	p	That must be a recent novel, because I haven't heard of it. Can you tell me about it?	game/ch_lauren.rpy	109
-lauren_info_tree_novel_9c605abd	lauren	It's not normally a genre I read, I prefer more philosophical works, but this was so highly recommended that I had to pick up a copy.	game/ch_lauren.rpy	111
-lauren_info_tree_novel_ef64c153	lauren	It is based off a true story of a kaldrean and a human who entered into a relationship during the first contact conflict.	game/ch_lauren.rpy	113
-lauren_info_tree_novel_ffd93c3b	lauren	It raises a lot of questions about what makes us human and what makes them kaldrean. The author smartly decided to focus on themes rather than details.	game/ch_lauren.rpy	115
-lauren_info_tree_novel_878fc8e0	lauren	It reminds me of someone I grew up with - Nidaria. I imagine this novel does a pretty good job portraying her family's situation.	game/ch_lauren.rpy	116
-lauren_info_tree_sympathize_2787cfb5	p	I feel sorry for those humans and kaldreans who have to face that kind of oppression. It seems like an unnecessary barrier.	game/ch_lauren.rpy	124
-lauren_info_tree_sympathize_064c8e62	lauren	Lorisk would certainly know about that. She was always picked on at school by the kaldreans especially, who did not approve of her human mother and kaldrean father.	game/ch_lauren.rpy	126
-lauren_info_tree_sympathize_0379b772	lauren	And on top of that she was adopted, which did not sit well with the humans. She really did not deserve that kind of treatment.	game/ch_lauren.rpy	128
-lauren_info_tree_sympathize_f81e7e2a	p	I'm sorry to hear that.	game/ch_lauren.rpy	130
-lauren_info_tree_disapproval_8e455196	p	I don't think that kaldreans and humans should have that kind of relationship.	game/ch_lauren.rpy	137
-lauren_info_tree_disapproval_760c29e4	lauren	That's narrow-minded of you, [alias.title_full]. I honestly would have expected that kind of response from you. Or at least you would have kept it to yourself.	game/ch_lauren.rpy	139
+lauren_advice_aebec6a2	p	So— actually, thank you for your advice. I'll let you get back to your work.	game/ch_lauren.rpy	56
+lauren_events_a84c334e	p	What is your opinion on this alleged racial tension within Concord?	game/ch_lauren.rpy	62
+lauren_events_87747e71	lauren	Do you think that I am going to have a good answer for you?	game/ch_lauren.rpy	64
+lauren_events_79657c8d	p	I had hoped.	game/ch_lauren.rpy	66
+lauren_events_c6fc0f71	lauren	Hah! About all I can tell you is that it is silly. I know plenty of kaldreans, none of whom are bothered or riled up by any of this so-called "tension."	game/ch_lauren.rpy	68
+lauren_events_989bcf50	lauren	I would almost think that you've been lied to about this, because honestly, I haven't noticed anything particularly out of the ordinary. And I work in upper-level management!	game/ch_lauren.rpy	70
+lauren_events_3005156b	p	(muttered) Yeah, but upper-level management has pulled the wool over your eyes.	game/ch_lauren.rpy	72
+lauren_events_345ed6a7	lauren	What was that?	game/ch_lauren.rpy	74
+lauren_events_7abbaf5a	p	Don't worry about it. Thank you for your time. I'll let you get back to work.	game/ch_lauren.rpy	76
+lauren_info_tree_start_30ff6388	p	I am quite into literature myself. Might I ask what you are reading?	game/ch_lauren.rpy	82
+lauren_info_tree_start_a4c918e6	lauren	This is a novel by a progressive kaldrean author. It's called Through the Void.	game/ch_lauren.rpy	84
+lauren_info_tree_progressives_70564c27	p	A progressive author? What is your opinion on these progressive kaldreans?	game/ch_lauren.rpy	92
+lauren_info_tree_progressives_78f1a092	lauren	I do think that the progressive movement is beneficial to the kaldrean people. Their government is so corrupt that it is really time for a change.	game/ch_lauren.rpy	94
+lauren_info_tree_progressives_12cfdadd	lauren	I don't approve of how their government treats their people. It has me both angry and sorry at once - one of the few things that can actually make me emotional.	game/ch_lauren.rpy	96
+lauren_info_tree_progressives_fa8bf610	p	It must be worse than I've been told.	game/ch_lauren.rpy	98
+lauren_info_tree_progressives_f7294613	lauren	They don't tell us anything.	game/ch_lauren.rpy	100
+lauren_info_tree_progressives_90717bf6	p	Thank you for answering my question.	game/ch_lauren.rpy	102
+lauren_info_tree_novel_a81a4ee2	p	That must be a recent novel, because I haven't heard of it. Can you tell me about it?	game/ch_lauren.rpy	108
+lauren_info_tree_novel_9c605abd	lauren	It's not normally a genre I read, I prefer more philosophical works, but this was so highly recommended that I had to pick up a copy.	game/ch_lauren.rpy	110
+lauren_info_tree_novel_ef64c153	lauren	It is based off a true story of a kaldrean and a human who entered into a relationship during the first contact conflict.	game/ch_lauren.rpy	112
+lauren_info_tree_novel_ffd93c3b	lauren	It raises a lot of questions about what makes us human and what makes them kaldrean. The author smartly decided to focus on themes rather than details.	game/ch_lauren.rpy	114
+lauren_info_tree_novel_878fc8e0	lauren	It reminds me of someone I grew up with - Nidaria. I imagine this novel does a pretty good job portraying her family's situation.	game/ch_lauren.rpy	115
+lauren_info_tree_sympathize_2787cfb5	p	I feel sorry for those humans and kaldreans who have to face that kind of oppression. It seems like an unnecessary barrier.	game/ch_lauren.rpy	123
+lauren_info_tree_sympathize_064c8e62	lauren	Lorisk would certainly know about that. She was always picked on at school by the kaldreans especially, who did not approve of her human mother and kaldrean father.	game/ch_lauren.rpy	125
+lauren_info_tree_sympathize_0379b772	lauren	And on top of that she was adopted, which did not sit well with the humans. She really did not deserve that kind of treatment.	game/ch_lauren.rpy	127
+lauren_info_tree_sympathize_f81e7e2a	p	I'm sorry to hear that.	game/ch_lauren.rpy	129
+lauren_info_tree_disapproval_8e455196	p	I don't think that kaldreans and humans should have that kind of relationship.	game/ch_lauren.rpy	136
+lauren_info_tree_disapproval_760c29e4	lauren	That's narrow-minded of you, [alias.title_full]. I honestly would have expected that kind of response from you. Or at least you would have kept it to yourself.	game/ch_lauren.rpy	138
 sarah_arrive_7166c7b6	sarah	Greetings. I'm Agent Redmont, but I prefer to stay in character whenever possible, so call me Sarah. I've heard that you're quite the sharp one.	game/ch_sarah.rpy	26
 sarah_arrive_e9127ab2	p	If my record is anything to go by.	game/ch_sarah.rpy	29
 sarah_arrive_58d3c8da	sarah	If your record can impress me, then you are definitely fit for this mission.	game/ch_sarah.rpy	31
@@ -336,43 +369,43 @@ sarah_arrive_baec3564	p	Diplomat? Ha! It should be a learning experience for all
 sarah_arrive_70e30e3f	sarah	Before we're able to quell the political unrest, we need to understand it.	game/ch_sarah.rpy	35
 sarah_arrive_fca57579	sarah	I've arranged it so that you now have access to the High Embassy, where you'll find High Ambassadors Ben Columbus and Vatrisk Irridiss Kier.	game/ch_sarah.rpy	37
 sarah_arrive_dff1ea1a	sarah	I want you to go talk to them and learn about the state of the kaldrean government. They may not be very willing to divulge in-depth information, so speak carefully.	game/ch_sarah.rpy	40
-sarah_kald_govt_info_1aaa5142	sarah	Have you talked to both Ambassadors yet?	game/ch_sarah.rpy	50
-sarah_kald_govt_info_82e11d37	p	No, not yet.	game/ch_sarah.rpy	53
-sarah_kald_govt_info_5c70c67e	sarah	Well, what are you waiting for? Come back when you have.	game/ch_sarah.rpy	54
-sarah_kald_govt_info_02a893be	p	Yes, I have.	game/ch_sarah.rpy	57
-sarah_kald_govt_info_418e45bc	sarah	And?	game/ch_sarah.rpy	59
-sarah_kald_govt_info_7179aa43	p	I was able to get some useful information for Ambassador Columbus.	game/ch_sarah.rpy	62
-sarah_kald_govt_info_018b596d	p	[[]tell Sarah what you've learned about kaldrean gov't from Columbus	game/ch_sarah.rpy	63
-sarah_kald_govt_info_6bcc19f2	sarah	Very interesting! And Irridiss?	game/ch_sarah.rpy	64
-sarah_kald_govt_info_982d63ea	sarah	Yes, this is very good to know. Excellent work, Agent.	game/ch_sarah.rpy	67
-sarah_kald_govt_info_c86a091b	p	I didn't have the same luck with him... he wasn't willing to tell me anything of use.	game/ch_sarah.rpy	69
-sarah_kald_govt_info_f05f0058	sarah	Hmmm, that is unfortunate. At least we have something, though.	game/ch_sarah.rpy	70
-sarah_kald_govt_info_c82eb87f	p	Ambassador Columbus wasn't willing to give me any in-depth information, unfortunately.	game/ch_sarah.rpy	72
-sarah_kald_govt_info_59eaacb8	sarah	Yes, that is very unfortunate. I assume you had better luck with Vatrisk, at least?	game/ch_sarah.rpy	73
-sarah_kald_govt_info_fe72de4d	p	Yes, I did.	game/ch_sarah.rpy	75
-sarah_kald_govt_info_f37f2580	sarah	Yes, this is very good to know. Good work.	game/ch_sarah.rpy	77
-sarah_kald_govt_info_34ae3b12	p	Well... he wasn't very willing to divulge much information either.	game/ch_sarah.rpy	79
-sarah_kald_govt_info_f3f69810	sarah	Dammit. I expected more of you, Agent. Oh well.	game/ch_sarah.rpy	80
-sarah_kald_govt_info_1cec8c11	sarah	For your next task: As you know, there are rumors of Ambassador Irridiss' life being in danger. The assassination of such an important kaldrean figure would surely destabilize our already-fragile inter-racial relations.	game/ch_sarah.rpy	82
-sarah_kald_govt_info_46d0d6ab	sarah	Unfortunately, Irridiss does not seem to be aware of these rumors, and if he is, he does not seem to be taking them seriously. He's been seen walking around the city, unguarded, as if there is nothing to fear. We must convince him otherwise.	game/ch_sarah.rpy	86
-sarah_kald_govt_info_6d22c192	sarah	So, I want you to go around the city, and find out information about this mysterious rebel group that calls themselves Valak Lideri. Try to learn as much as you can about them, finding out whether or not this grave rumor is true.	game/ch_sarah.rpy	90
-sarah_kald_govt_info_102ce956	sarah	When you've talked to several people and think you're ready, I'll set up an exclusive meeting between you and Ambassador Irridiss. By then, you'll hopefully have enough information to convince him to lay low until this threat has passed.	game/ch_sarah.rpy	94
-sarah_kald_govt_info_babd741e	p	Sounds good.	game/ch_sarah.rpy	98
-sarah_kald_govt_info_vatrisk_tell_97aae220	p	[[]tell Sarah what you've learned about kaldrean gov't from Vatrisk	game/ch_sarah.rpy	105
-sarah_vl_info_56e9ee15	sarah	Have you gathered enough information to talk to Ambassador Irridiss yet?	game/ch_sarah.rpy	109
-sarah_vl_info_ce660bf7	sarah	Okay, I'll arrange for you to meet with him. Head to the High Embassy and ask to speak with him.	game/ch_sarah.rpy	112
-sarah_vl_info_9dc57b54	p	Will do.	game/ch_sarah.rpy	114
-sarah_vl_info_a60a9120	sarah	Okay.	game/ch_sarah.rpy	117
-sarah_vatrisk_meet_179f05b2	sarah	Shouldn't you be meeting with Ambassador Irridiss?	game/ch_sarah.rpy	121
-sarah_attack_just_happened_f63113d5	sarah	[[]I heard what happened. panic panic panic panic	game/ch_sarah.rpy	125
-sarah_attack_just_happened_a7212543	p	[[]We needa find out who is in the VL and what their plans are ASAP	game/ch_sarah.rpy	126
-sarah_attack_just_happened_7c275b05	sarah	[[]Good idea. Go around the city and do that. When you think you've figured out who they are or what their plans are, come back to me, and I'll organize a raid	game/ch_sarah.rpy	127
-sarah_vl_plans_56688972	sarah	Have you found out who the rebels are or what their plan is?	game/ch_sarah.rpy	135
-sarah_vl_plans_16d0cae1	sarah	Excellent! So what is it?	game/ch_sarah.rpy	142
-sarah_vl_plans_492505c0	sarah	And when do they plan to do this?	game/ch_sarah.rpy	166
-sarah_vl_plans_76ac3033	sarah	[[]are you completely sure? you can't guess again.	game/ch_sarah.rpy	182
-sarah_vl_plans_54f78df1	sarah	Well, what are you waiting for? We haven't much time.	game/ch_sarah.rpy	234
-sarah_vl_plans_unsure_2362323d	sarah	Well come back to me when you are sure. And be quick about it; we don't have much time.	game/ch_sarah.rpy	239
+sarah_kald_govt_info_1aaa5142	sarah	Have you talked to both Ambassadors yet?	game/ch_sarah.rpy	49
+sarah_kald_govt_info_82e11d37	p	No, not yet.	game/ch_sarah.rpy	52
+sarah_kald_govt_info_5c70c67e	sarah	Well, what are you waiting for? Come back when you have.	game/ch_sarah.rpy	53
+sarah_kald_govt_info_02a893be	p	Yes, I have.	game/ch_sarah.rpy	56
+sarah_kald_govt_info_418e45bc	sarah	And?	game/ch_sarah.rpy	58
+sarah_kald_govt_info_7179aa43	p	I was able to get some useful information for Ambassador Columbus.	game/ch_sarah.rpy	61
+sarah_kald_govt_info_ed275e24	p	Columbus told me that the kaldrean government is incredibly controlling.	game/ch_sarah.rpy	62
+sarah_kald_govt_info_8ee0cb7e	p	That's why they don't seem to have any problems...	game/ch_sarah.rpy	64
+sarah_kald_govt_info_6bcc19f2	sarah	Very interesting! And Irridiss?	game/ch_sarah.rpy	65
+sarah_kald_govt_info_982d63ea	sarah	Yes, this is very good to know. Excellent work, Agent.	game/ch_sarah.rpy	68
+sarah_kald_govt_info_c86a091b	p	I didn't have the same luck with him... he wasn't willing to tell me anything of use.	game/ch_sarah.rpy	70
+sarah_kald_govt_info_f05f0058	sarah	Hmmm, that is unfortunate. At least we have something, though.	game/ch_sarah.rpy	71
+sarah_kald_govt_info_c82eb87f	p	Ambassador Columbus wasn't willing to give me any in-depth information, unfortunately.	game/ch_sarah.rpy	73
+sarah_kald_govt_info_59eaacb8	sarah	Yes, that is very unfortunate. I assume you had better luck with Vatrisk, at least?	game/ch_sarah.rpy	74
+sarah_kald_govt_info_fe72de4d	p	Yes, I did.	game/ch_sarah.rpy	76
+sarah_kald_govt_info_f37f2580	sarah	Yes, this is very good to know. Good work.	game/ch_sarah.rpy	78
+sarah_kald_govt_info_34ae3b12	p	Well... he wasn't very willing to divulge much information either.	game/ch_sarah.rpy	80
+sarah_kald_govt_info_f3f69810	sarah	Dammit. I expected more of you, Agent. Oh well.	game/ch_sarah.rpy	81
+sarah_kald_govt_info_1cec8c11	sarah	For your next task: As you know, there are rumors of Ambassador Irridiss' life being in danger. The assassination of such an important kaldrean figure would surely destabilize our already-fragile inter-racial relations.	game/ch_sarah.rpy	83
+sarah_kald_govt_info_46d0d6ab	sarah	Unfortunately, Irridiss does not seem to be aware of these rumors, and if he is, he does not seem to be taking them seriously. He's been seen walking around the city, unguarded, as if there is nothing to fear. We must convince him otherwise.	game/ch_sarah.rpy	87
+sarah_kald_govt_info_6d22c192	sarah	So, I want you to go around the city, and find out information about this mysterious rebel group that calls themselves Valak Lideri. Try to learn as much as you can about them, finding out whether or not this grave rumor is true.	game/ch_sarah.rpy	91
+sarah_kald_govt_info_102ce956	sarah	When you've talked to several people and think you're ready, I'll set up an exclusive meeting between you and Ambassador Irridiss. By then, you'll hopefully have enough information to convince him to lay low until this threat has passed.	game/ch_sarah.rpy	95
+sarah_kald_govt_info_babd741e	p	Sounds good.	game/ch_sarah.rpy	99
+sarah_kald_govt_info_vatrisk_tell_804871fa	p	Vatrisk told me about how the main priority of their government is to keep the people safe.	game/ch_sarah.rpy	106
+sarah_kald_govt_info_vatrisk_tell_c604943c	p	But to them that means sacrificing their happiness.	game/ch_sarah.rpy	108
+sarah_vl_info_56e9ee15	sarah	Have you gathered enough information to talk to Ambassador Irridiss yet?	game/ch_sarah.rpy	112
+sarah_vl_info_ce660bf7	sarah	Okay, I'll arrange for you to meet with him. Head to the High Embassy and ask to speak with him.	game/ch_sarah.rpy	115
+sarah_vl_info_9dc57b54	p	Will do.	game/ch_sarah.rpy	117
+sarah_vl_info_a60a9120	sarah	Okay.	game/ch_sarah.rpy	120
+sarah_vatrisk_meet_179f05b2	sarah	Shouldn't you be meeting with Ambassador Irridiss?	game/ch_sarah.rpy	124
+sarah_attack_just_happened_dcfefa4d	sarah	I heard what happened! Is Vatrisk alright? Is he safe?	game/ch_sarah.rpy	128
+sarah_attack_just_happened_fedf1f08	p	Yes, the ambassador is f.ine. We have to find out who the Valak Lideri are and what they are going to do next.	game/ch_sarah.rpy	130
+sarah_attack_just_happened_e008303a	p	Before it's too late	game/ch_sarah.rpy	132
+sarah_attack_just_happened_c7a21d0c	sarah	Good idea. You go question people in the city and I'll go prepare a squad to take down the Valak Lideri.	game/ch_sarah.rpy	134
+sarah_attack_just_happened_ccc841aa	sarah	Talk to me when you've figured out their plans.	game/ch_sarah.rpy	136
+sarah_vl_plans_56688972	sarah	Have you found out who the rebels are or what their plan is?	game/ch_sarah.rpy	142
+sarah_vl_plans_54f78df1	sarah	Well, what are you waiting for? We haven't much time.	game/ch_sarah.rpy	191
 ck_alkay_3d4007be	alkay	[last_dialog]	game/ck_alkay.rpy	11
 ck_alkay_d15b1cd8	alkay	Welcome to my humble eatery. Ah! A new face, you must be a new arrival, are you not?	game/ck_alkay.rpy	14
 ck_alkay_afc4ff76	p	I am.	game/ck_alkay.rpy	16
@@ -380,7 +413,7 @@ ck_alkay_a9227991	alkay	Of course, of course. I am Alkay Volk, although some aff
 ck_alkay_f0f52fa5	alkay	You humans have this interesting way of informally incorporating everyone into your families, a custom of which I have become quite fond.	game/ck_alkay.rpy	19
 ck_alkay_0909b135	alkay	I apologize for running a tangent, I believe I lack your name.	game/ck_alkay.rpy	20
 ck_alkay_f2eadfac	p	[alias.full]	game/ck_alkay.rpy	22
-ck_alkay_e5523315	alkay	[alias.first]. It is my pleasure. Please, have a seat. The first meal is always on the house. We’ll talk over some good food. Feel free to ask me anything.	game/ck_alkay.rpy	24
+ck_alkay_0ffdb9be	alkay	[alias.first]. It is my pleasure. Please, have a seat. The first meal is always on the house. We'll talk over some good food. Feel free to ask me anything.	game/ck_alkay.rpy	24
 ck_alkay_3d4007be_1	alkay	[last_dialog]	game/ck_alkay.rpy	27
 menu_alkay_91a68aec	alkay	[last_dialog]	game/ck_alkay.rpy	32
 alkay_advice_2533ac48	p	Do you have any pieces of wisdom you would be willing to share?	game/ck_alkay.rpy	56
@@ -389,7 +422,7 @@ alkay_advice_f920508e	alkay	I am an old man, and not to "toot my own horn" as yo
 alkay_advice_83230b94	alkay	We are all the same - over simplified and cliché as it may sound.	game/ck_alkay.rpy	64
 alkay_advice_71c4daad	alkay	But I have spent many, many years amongst my people, your people, and the entirely new people that live here on Bridge.	game/ck_alkay.rpy	66
 alkay_advice_40e27c90	alkay	They are neither human, nor kaldrean - but something novel, unique, miraculous even.	game/ck_alkay.rpy	69
-alkay_advice_56f8e096	p	I’m not entirely sure I follow.	game/ck_alkay.rpy	71
+alkay_advice_e8b1a350	p	I'm not entirely sure I follow.	game/ck_alkay.rpy	71
 alkay_advice_83814ccc	alkay	think of it like this: you are not the same person as your mother and father. You are separate and you are independent.	game/ck_alkay.rpy	73
 alkay_advice_7613212a	alkay	They gave you life and they brought you up, but ultimately you shape yourself.	game/ck_alkay.rpy	75
 alkay_advice_623edf6c	p	But I am still a human.	game/ck_alkay.rpy	77
@@ -402,15 +435,15 @@ alkay_events_e102d31c	alkay	When you run a business where it is practically your
 alkay_events_984d38b4	alkay	So yes, I have heard about this "tension," as you refer to it.	game/ck_alkay.rpy	97
 alkay_events_80461416	alkay	However, I think that the terminology is all wrong - "tension" comes across so poorly that people are afraid to speak about it... so I commend you [alias.first] for your bravery to broach the subject.	game/ck_alkay.rpy	99
 alkay_events_bec7c323	alkay	But this is no ordinary "tension."	game/ck_alkay.rpy	102
-alkay_events_b3f0cf82	p	You’re going to have to elaborate, how do you mean this is not simply tension? What more do you think this is?	game/ck_alkay.rpy	104
+alkay_events_c28a51e2	p	You're going to have to elaborate, how do you mean this is not simply tension? What more do you think this is?	game/ck_alkay.rpy	104
 alkay_events_29f565fc	alkay	Its a change. I remember back when our first dark-energy craft were created, how you could smell the ozone and the distinct and the scent of dark-energy in the atmosphere.	game/ck_alkay.rpy	106
 alkay_events_6440735b	alkay	You could feel the drives buzzing like beetles inside your very bones. The energy became a volume that you were suddenly within.	game/ck_alkay.rpy	109
 alkay_events_78aecf9e	alkay	You can feel that energy here - it is not "tension" because that implies that things are pulling apart, but it is union, when you can sense them becoming closer.	game/ck_alkay.rpy	112
 alkay_events_73a0f9ea	p	Are you always this well-spoken?	game/ck_alkay.rpy	115
 alkay_events_fabac03e	alkay	Ha! I have had many years to develop that talent. But, I find that I can only really let loose when it is something that I am passionate for.	game/ck_alkay.rpy	117
-alkay_events_52c52f38	p	So you’re passionate about whatever this "union" is that you referred to.	game/ck_alkay.rpy	119
-alkay_events_2ffe5a7c	alkay	Definitely. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we’ve self-imposed.	game/ck_alkay.rpy	121
-alkay_events_e0450b1d	p	I see. I’m grateful for your wise words.	game/ck_alkay.rpy	123
+alkay_events_092aa6d9	p	So you're passionate about whatever this "union" is that you referred to.	game/ck_alkay.rpy	119
+alkay_events_87152e88	alkay	Definitely. I think that we, as separate races, are about to recognize a fundamental similarity and overcome a great deal of the separation we've self-imposed.	game/ck_alkay.rpy	121
+alkay_events_8820c932	p	I see. I'm grateful for your wise words.	game/ck_alkay.rpy	123
 alkay_adam_tree_start_d5321709	p	I talked to Adam Demeter and he said that you would be enthusiastic to meet a friend.	game/ck_alkay.rpy	129
 alkay_adam_tree_start_de50a5c0	alkay	You know Adam? Ha! Any friend of Adam is a friend of mine!	game/ck_alkay.rpy	132
 alkay_adam_tree_start_b2cec193	alkay	He and I are very close, he frequents my restaurant when he is not working or enjoying is rather comfortable retirement.	game/ck_alkay.rpy	134
@@ -550,8 +583,8 @@ ck_kro_6f8e1380	kro	Salutations. I am Flight Commander Kro Zalva. Welcome to Viv
 ck_kro_e54b881e	p	Nice to meet you Commander, I'm [alias.full].	game/ck_kro.rpy	16
 ck_kro_b3b03c2e_1	kro	[last_dialog]	game/ck_kro.rpy	20
 menu_kro_4937419b	kro	[last_dialog]	game/ck_kro.rpy	23
-kro_flatter_d0ec8799	p	[[]your ship is so big.	game/ck_kro.rpy	43
-kro_flatter_fad09a1c	kro	[[]slightly amused. Thanks you for your attempt. Schools you a bit on Kaldrean culture and flattery.	game/ck_kro.rpy	44
+kro_flatter_b9c68df3	p	I must say, I am thoroughly impressed with your ship. Based of the AK-213 model?	game/ck_kro.rpy	43
+kro_flatter_75adf2c9	kro	Yes, in fact. A classic, and it gets the job done.	game/ck_kro.rpy	44
 kro_advice_36f311f1	p	Could you offer any advice to someone new to Concord?	game/ck_kro.rpy	50
 kro_advice_2dd5bf72	kro	I will tell you what I have told others before you, and what I was told early on in my training: By choosing to come here you have agreed to change yourself.	game/ck_kro.rpy	52
 kro_advice_e6cb9fcc	kro	You will be judged by a new set of rules and regulations, and who you become will be no one like who you left behind.	game/ck_kro.rpy	53
@@ -565,7 +598,7 @@ kro_events_44da98fa	kro	I do not spend too much of my operational time actually 
 kro_events_8a09a594	kro	You are likely much better informed that I am on these matters.	game/ck_kro.rpy	73
 kro_events_92807f33	p	You're probably right.	game/ck_kro.rpy	75
 kro_events_4d1a6900	kro	Just ask around, if you have heard of these "rumors" then I am sure others have come into contact with the same fleeting words.	game/ck_kro.rpy	77
-kro_events_98923784	kro	If you have not already talked to Elder Volk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the residences.	game/ck_kro.rpy	78
+kro_events_7c015ac2	kro	If you have not already talked to Elder Volk in the Grand Marketplace then I recommend you do so. If not then perhaps Elder Demeter in the Residences.	game/ck_kro.rpy	78
 kro_events_f352765b	p	Thanks for the direction.	game/ck_kro.rpy	80
 kro_background_a5563a6a	p	Could you tell me about yourself Commander? How did you gain your rank?	game/ck_kro.rpy	86
 kro_background_88c8225e	kro	I was born on Qolisk to a family of high political standing - surprisingly so.	game/ck_kro.rpy	87
@@ -607,24 +640,22 @@ ck_lida_80499b82	p	Uh, hello, ma’am. I’m [alias.full]. I -	game/ck_lida.rpy	
 ck_lida_c5c5e2b8	lida	[last_dialog]	game/ck_lida.rpy	14
 ck_lida_c5c5e2b8_1	lida	[last_dialog]	game/ck_lida.rpy	18
 menu_lida_e1322a1d	lida	[last_dialog]	game/ck_lida.rpy	21
-lida_advice_a2035d3e	p	Is there any advice that you could offer me?	game/ck_lida.rpy	37
-lida_advice_b033bb7e	lida	Keep your mouth closed unless you have something intelligent to say.	game/ck_lida.rpy	38
-lida_advice_1278313f	p	Alright. Thank you I suppose.	game/ck_lida.rpy	39
-lida_events_f423dc49	p	Can you tell me anything about the political tension here on bridge?	game/ck_lida.rpy	44
-lida_events_2abc7cf2	lida	Pay it no mind. Those rumors are nothing but rumors. It is a waste of your time to pay mind to something so absurd.	game/ck_lida.rpy	45
-lida_events_fbe37aaf	p	Okay then.	game/ck_lida.rpy	46
-lida_background_c1dcb715	p	[[]you ask Lida about her background	game/ck_lida.rpy	51
-lida_background_c9b249a1	lida	[[]offers little information. She sounds like she does not want to talk to you.	game/ck_lida.rpy	52
-lida_convince_tree_dc261397	p	Ms. Ezekeri, I would implore you to meet with Ambassador Columbus. I cannot understand why you decline such a simple request.	game/ck_lida.rpy	57
-lida_convince_tree_c595177e	lida	Oh so I see he's found another fresh one to do whatever he asks? That is just rich.	game/ck_lida.rpy	59
-lida_convince_tree_f13c7b74	lida	He has no authority to order me to meet with him. But I'll humor you - so go ahead and make your case [alias.title_last].	game/ck_lida.rpy	61
-lida_convince_tree_intimidate_38f391b9	p	Ms. Ezekeri I know that Ambassador Irridiss has called you to meet with Ambassador Columbus. If you refuse to meet with Columbus you are disobeying Irridiss.	game/ck_lida.rpy	69
-lida_convince_tree_intimidate_b7ccb9f9	p	That puts you under threat of insubordination charges.	game/ck_lida.rpy	71
-lida_convince_tree_intimidate_17beaa86	lida	Ha! A threat! You clearly know little about how our system of obligations functions. Please do not make me laugh with your lack of intelligence.	game/ck_lida.rpy	73
-lida_convince_tree_flatter_e8552268	p	Ms. Ezekeri I can see that you are very wise - Ambassador Columbus, on of the most important figures in the galaxy, requires your professional input.	game/ck_lida.rpy	80
-lida_convince_tree_flatter_24a5490c	p	He and I both have a deep respect for our elders.	game/ck_lida.rpy	82
-lida_convince_tree_flatter_6b866bb3	lida	Hm... very well. You are a sharp one [alias.title_last]. I will accept Ambassador Columbus' request on your word.	game/ck_lida.rpy	84
-lida_convince_tree_flatter_2ddd3125	p	On behalf of Columbus and myself, I would like to thank you.	game/ck_lida.rpy	86
+lida_advice_a2035d3e	p	Is there any advice that you could offer me?	game/ck_lida.rpy	35
+lida_advice_b033bb7e	lida	Keep your mouth closed unless you have something intelligent to say.	game/ck_lida.rpy	36
+lida_advice_1278313f	p	Alright. Thank you I suppose.	game/ck_lida.rpy	37
+lida_events_f423dc49	p	Can you tell me anything about the political tension here on bridge?	game/ck_lida.rpy	42
+lida_events_2abc7cf2	lida	Pay it no mind. Those rumors are nothing but rumors. It is a waste of your time to pay mind to something so absurd.	game/ck_lida.rpy	43
+lida_events_fbe37aaf	p	Okay then.	game/ck_lida.rpy	44
+lida_convince_tree_dc261397	p	Ms. Ezekeri, I would implore you to meet with Ambassador Columbus. I cannot understand why you decline such a simple request.	game/ck_lida.rpy	49
+lida_convince_tree_c595177e	lida	Oh so I see he's found another fresh one to do whatever he asks? That is just rich.	game/ck_lida.rpy	51
+lida_convince_tree_f13c7b74	lida	He has no authority to order me to meet with him. But I'll humor you - so go ahead and make your case [alias.title_last].	game/ck_lida.rpy	53
+lida_convince_tree_intimidate_38f391b9	p	Ms. Ezekeri I know that Ambassador Irridiss has called you to meet with Ambassador Columbus. If you refuse to meet with Columbus you are disobeying Irridiss.	game/ck_lida.rpy	61
+lida_convince_tree_intimidate_b7ccb9f9	p	That puts you under threat of insubordination charges.	game/ck_lida.rpy	63
+lida_convince_tree_intimidate_17beaa86	lida	Ha! A threat! You clearly know little about how our system of obligations functions. Please do not make me laugh with your lack of intelligence.	game/ck_lida.rpy	65
+lida_convince_tree_flatter_e8552268	p	Ms. Ezekeri I can see that you are very wise - Ambassador Columbus, on of the most important figures in the galaxy, requires your professional input.	game/ck_lida.rpy	72
+lida_convince_tree_flatter_24a5490c	p	He and I both have a deep respect for our elders.	game/ck_lida.rpy	74
+lida_convince_tree_flatter_6b866bb3	lida	Hm... very well. You are a sharp one [alias.title_last]. I will accept Ambassador Columbus' request on your word.	game/ck_lida.rpy	76
+lida_convince_tree_flatter_2ddd3125	p	On behalf of Columbus and myself, I would like to thank you.	game/ck_lida.rpy	78
 ck_lorisk_8a7b8701	lorisk	I do not wish to speak with you again. Take your bigotry elsewhere.	game/ck_lorisk.rpy	14
 ck_lorisk_1e2f136a	lorisk	Hello, hola, ciao, bonjour, nǐ hǎo, konnichiwa, zdravstvuyte. Welcome to Concord!	game/ck_lorisk.rpy	21
 ck_lorisk_6169d315	lorisk	I'm Lorisk Nidaria, the senior linguist and interpreter here in Concord. But please, just call me Lorisk.	game/ck_lorisk.rpy	22
@@ -634,121 +665,123 @@ lorisk_advice_ac070c17	p	Do you have any —	game/ck_lorisk.rpy	47
 lorisk_advice_76a258c9	lorisk	Advice? Always!	game/ck_lorisk.rpy	49
 lorisk_advice_6640326b	p	How did you —	game/ck_lorisk.rpy	51
 lorisk_advice_1f9d6293	lorisk	I talk to and interpret people for a living. You'd find that after doing something like that for so long, you develop an intuition to predict what someone is going to say.	game/ck_lorisk.rpy	53
-lorisk_advice_f21fd8b3	lorisk	Anyway, I'll tell you that acceptance is a big deal here. The more you find yourself seeing through someone's skin and into their being, the more your definition of "person" will change.	game/ck_lorisk.rpy	56
-lorisk_advice_180f43f3	lorisk	While you may recognize someone as kaldrean in passing, when you get to know them you begin to identify them based on their presence in the room, their cadence of speech, the energy they project.	game/ck_lorisk.rpy	59
-lorisk_advice_7ea1d548	p	I can see what you mean. Thanks for your advice, Lorisk.	game/ck_lorisk.rpy	62
-lorisk_events_c6c91888	p	What do you make of the political tension building here on Concord?	game/ck_lorisk.rpy	68
-lorisk_events_755359b9	lorisk	All I know is that we're working as hard as we can to keep tensions from building up any more. I'm afraid it's become increasingly difficult.	game/ck_lorisk.rpy	70
-lorisk_events_f2034c6c	p	Why is that?	game/ck_lorisk.rpy	72
-lorisk_events_d9888908	lorisk	Kaldreans and humans are just... more bitter recently and I'm not sure why. I have plenty of human friends and they haven't changed their attitudes.	game/ck_lorisk.rpy	74
-lorisk_events_33d6b754	lorisk	So I am confused. Perhaps it is because the ambassadors are relatively new and young - it seems kaldreans and humans share a distrust for youth without much life experience.	game/ck_lorisk.rpy	76
-lorisk_events_f15a6b24	p	I can see why they'd think that. I had to really struggle against that viewpoint to make it to where I am now.	game/ck_lorisk.rpy	78
-lorisk_events_524d51c7	lorisk	We are all doing our best to break down that disposition. I'm glad to see another young diplomat who projects the same charisma and authority as an Elder.	game/ck_lorisk.rpy	80
-lorisk_personal_reasons_4f0508ec	p	Can you tell me anything about Valak Lideri?	game/ck_lorisk.rpy	86
-lorisk_personal_reasons_406381d2	lorisk	Sorry I'd rather not?	game/ck_lorisk.rpy	88
-lorisk_personal_reasons_67cb4e30	p	Personal reasons?	game/ck_lorisk.rpy	90
-lorisk_personal_reasons_9ce49f76	lorisk	...yes. I apologize.	game/ck_lorisk.rpy	92
-lorisk_personal_reasons_7164a94a	p	Please, don't apologize to me. I was prying.	game/ck_lorisk.rpy	94
-lorisk_VL_tree_start_9783413f	p	You seem like you have quite a bit of interesting knowledge and experience. Can you tell me more about yourself and your background?	game/ck_lorisk.rpy	101
-lorisk_VL_tree_start_63e3d376	lorisk	Well, there isn't much to tell. Both my parents were linguists, and they made quite sure that I was prepared to communicate with anyone I met.	game/ck_lorisk.rpy	103
-lorisk_VL_tree_start_ba7a1443	p	Interesting.	game/ck_lorisk.rpy	110
-lorisk_VL_tree_languages_dc5f8785	p	So as the Senior Linguist here I assume you have a penchant for linguistics?	game/ck_lorisk.rpy	115
-lorisk_VL_tree_languages_c7307e33	lorisk	[last_dialog]	game/ck_lorisk.rpy	118
-lorisk_VL_tree_languages_6ed177d5	lorisk	[last_dialog]	game/ck_lorisk.rpy	125
-lorisk_VL_tree_dialects_d9faf4f2	p	Can you tell me about the traditional dialects? Alkay mentioned them so he got me wondering about them.	game/ck_lorisk.rpy	129
-lorisk_VL_tree_dialects_1d4d0746	lorisk	I actually know how to read and write in four of the many traditional dialects. Of those four I can speak and understand two: Kalaras and Takress.	game/ck_lorisk.rpy	130
-lorisk_VL_tree_dialect_history_444f7ba8	p	Could you talk about the history of those two languages?	game/ck_lorisk.rpy	138
-lorisk_VL_tree_dialect_history_60f7a34e	lorisk	Actually the reason I can speak and understand Kalaras and Takress is because they are still spoken, just barely anymore.	game/ck_lorisk.rpy	140
-lorisk_VL_tree_dialect_history_22506562	lorisk	They are the more recent of the traditional languages that were prominent around the settlement of Sovereign Paradise.	game/ck_lorisk.rpy	142
-lorisk_VL_tree_dialect_history_eaca6a49	lorisk	Although "Sovereign Paradise" is a modern adaptation of the original phrase, which would have meant "Beacon" back then.	game/ck_lorisk.rpy	144
-lorisk_VL_tree_dialect_history_3652152e	lorisk	Kalaras and Takress were quite similar and eventually they were unified and enforced in education. This was the first iteration of Kaldrean Common.	game/ck_lorisk.rpy	146
-lorisk_VL_tree_dialect_history_384e826c	lorisk	Different subcultures still spoke in their native dialects and still do today. Kaldrean Common has evolved quite a bit as a result of all the cultural input.	game/ck_lorisk.rpy	148
-lorisk_VL_tree_dialect_history_337d0cd8	p	Thank you for the information, Lorisk, this is really quite interesting.	game/ck_lorisk.rpy	150
-lorisk_VL_tree_list_languages_fbc6b9a2	p	So how many languages can you speak?	game/ck_lorisk.rpy	157
-lorisk_VL_tree_list_languages_1721f5eb	lorisk	I can speak thirty languages. Nineteen kaldrean and eleven human.	game/ck_lorisk.rpy	159
-lorisk_VL_tree_list_languages_0dbf2ac2	p	Thirty languages? Can you name each one?	game/ck_lorisk.rpy	161
-lorisk_VL_tree_list_languages_d36a1d63	lorisk	Do you really want me to list off all the languages I speak? Because I can.	game/ck_lorisk.rpy	162
-lorisk_VL_tree_list_all_lauguages_4e329d9a	p	Actually yes, I would.	game/ck_lorisk.rpy	170
-lorisk_VL_tree_list_all_lauguages_c6f7cd32	lorisk	Let's see...	game/ck_lorisk.rpy	171
-lorisk_VL_tree_list_all_lauguages_f3b5ec0d	lorisk	English,	game/ck_lorisk.rpy	172
-lorisk_VL_tree_list_all_lauguages_a4cbbc19	lorisk	Spanish,	game/ck_lorisk.rpy	173
-lorisk_VL_tree_list_all_lauguages_5a8aa704	lorisk	French,	game/ck_lorisk.rpy	174
-lorisk_VL_tree_list_all_lauguages_cc3a09b1	lorisk	Italian,	game/ck_lorisk.rpy	175
-lorisk_VL_tree_list_all_lauguages_84bcd42f	lorisk	Mandarin,	game/ck_lorisk.rpy	176
-lorisk_VL_tree_list_all_lauguages_63b9be13	lorisk	Chichewa,	game/ck_lorisk.rpy	177
-lorisk_VL_tree_list_all_lauguages_82e799fb	lorisk	Latin,	game/ck_lorisk.rpy	178
-lorisk_VL_tree_list_all_lauguages_b7366dbd	lorisk	Japanese,	game/ck_lorisk.rpy	179
-lorisk_VL_tree_list_all_lauguages_723579c9	lorisk	Russian,	game/ck_lorisk.rpy	180
-lorisk_VL_tree_list_all_lauguages_fea781a3	lorisk	German,	game/ck_lorisk.rpy	181
-lorisk_VL_tree_list_all_lauguages_e5e11dee	lorisk	Hindi,	game/ck_lorisk.rpy	182
-lorisk_VL_tree_list_all_lauguages_e56ae698	lorisk	Kaldrean Common,	game/ck_lorisk.rpy	183
-lorisk_VL_tree_list_all_lauguages_644e0838	lorisk	Ekitri,	game/ck_lorisk.rpy	184
-lorisk_VL_tree_list_all_lauguages_34c35f2f	lorisk	Koroa,	game/ck_lorisk.rpy	185
-lorisk_VL_tree_list_all_lauguages_3f19ae5a	lorisk	Katrs,	game/ck_lorisk.rpy	186
-lorisk_VL_tree_list_all_lauguages_1ff5d85c	lorisk	Akliko,	game/ck_lorisk.rpy	187
-lorisk_VL_tree_list_all_lauguages_1f6b9420	lorisk	Qorosk,	game/ck_lorisk.rpy	188
-lorisk_VL_tree_list_all_lauguages_dda11cd3	lorisk	Niesk,	game/ck_lorisk.rpy	189
-lorisk_VL_tree_list_all_lauguages_6c482ee0	lorisk	Laerek,	game/ck_lorisk.rpy	190
-lorisk_VL_tree_list_all_lauguages_8f6ad122	lorisk	Ruas,	game/ck_lorisk.rpy	191
-lorisk_VL_tree_list_all_lauguages_4d0ed691	lorisk	Tolaer,	game/ck_lorisk.rpy	192
-lorisk_VL_tree_list_all_lauguages_e2a1955e	lorisk	Alkor,	game/ck_lorisk.rpy	193
-lorisk_VL_tree_list_all_lauguages_17931e32	lorisk	Senteares,	game/ck_lorisk.rpy	194
-lorisk_VL_tree_list_all_lauguages_50f9de44	lorisk	Seleksis,	game/ck_lorisk.rpy	195
-lorisk_VL_tree_list_all_lauguages_e124b64a	lorisk	Qalokalra,	game/ck_lorisk.rpy	196
-lorisk_VL_tree_list_all_lauguages_bd0c3813	lorisk	Roaq,	game/ck_lorisk.rpy	197
-lorisk_VL_tree_list_all_lauguages_b55f22cb	lorisk	Tarakres,	game/ck_lorisk.rpy	198
-lorisk_VL_tree_list_all_lauguages_d65c809d	lorisk	Viridi,	game/ck_lorisk.rpy	199
-lorisk_VL_tree_list_all_lauguages_ebfca6a6	lorisk	Irradae,	game/ck_lorisk.rpy	200
-lorisk_VL_tree_list_all_lauguages_42f66a81	lorisk	Valakri,	game/ck_lorisk.rpy	201
-lorisk_VL_tree_list_all_lauguages_1a408d82	lorisk	and... Elvish. Just for fun.	game/ck_lorisk.rpy	202
-lorisk_VL_tree_list_all_lauguages_1ffd68ba	p	Wow, that's quite an impressive repertoire! Elvish really?	game/ck_lorisk.rpy	203
-lorisk_VL_tree_list_all_lauguages_f9cdf288	lorisk	No, not really. Just joking.	game/ck_lorisk.rpy	204
-lorisk_VL_tree_list_languages_cancel_421ee843	p	No I was only joking.	game/ck_lorisk.rpy	210
-lorisk_VL_tree_list_languages_cancel_8c53003e	lorisk	Good... I'm sure I would have bored you to tears with a long list.	game/ck_lorisk.rpy	212
-lorisk_VL_tree_flatter_6f409fc2	p	You come across as very intelligent. I can see how it would be easy for you to pick up so many languages.	game/ck_lorisk.rpy	219
-lorisk_VL_tree_flatter_b6def808	lorisk	Why thank you, [alias.first]. You're quite the charmer, aren't you?	game/ck_lorisk.rpy	221
-lorisk_VL_tree_flatter_8dc1e92e	lorisk	Thank you for the compliment. I don't think it's often that anyone realizes how much work it is to maintain command over thirty languages.	game/ck_lorisk.rpy	223
-lorisk_VL_tree_flatter_4fab1a23	lorisk	I detect another statement - I'll warn you though, compliments and flattery are two very different concepts. I don't appreciate flattery.	game/ck_lorisk.rpy	225
-lorisk_VL_tree_flatter_more_ae22a98e	p	I did mean what I said, Lorisk. I know a few linguists back on Earth, none of whom possess the same repertoire that you do.	game/ck_lorisk.rpy	233
-lorisk_VL_tree_flatter_more_3eb1919f	lorisk	Alright. Let me give you some advice, [alias.first]: Be extremely cautious about compliments and flattery around kaldreans.	game/ck_lorisk.rpy	235
-lorisk_VL_tree_flatter_more_69236e58	lorisk	I've been tempered by my upbringing on Concord, but other kaldreans might be very easily offended by what you might consider an inane compliment.	game/ck_lorisk.rpy	237
-lorisk_VL_tree_flatter_more_3335af2d	p	I'll bear that in mind. Thank you Lorisk.	game/ck_lorisk.rpy	239
-lorisk_VL_plans_tree_start_2c0d83d7	p	Lorisk I know about your parents. I know that they are mixed-race.	game/ck_lorisk.rpy	247
-lorisk_VL_plans_tree_start_cc2fe05b	lorisk	Oh. You know about that? What do you care? Are you going to scorn me and my family for doing what they feel is right?	game/ck_lorisk.rpy	248
-lorisk_VL_plans_tree_sympathy_61455d84	p	I just wanted to say that I think you and you're family are very courageous to be strong against the controversy you likely received.	game/ck_lorisk.rpy	256
-lorisk_VL_plans_tree_sympathy_66495ddb	p	You and others like you deserve better than that.	game/ck_lorisk.rpy	258
-lorisk_VL_plans_tree_sympathy_f6ee3919	lorisk	I-	game/ck_lorisk.rpy	260
-lorisk_VL_plans_tree_sympathy_9111d357	lorisk	You have no idea how hard it's been for us. For all of us. I just... can't stand to see anyone else go through what we have.	game/ck_lorisk.rpy	262
-lorisk_VL_plans_tree_sympathy_ef3f569f	p	I'm doing my best to help.	game/ck_lorisk.rpy	264
-lorisk_VL_plans_tree_sympathy_37345211	lorisk	Thank you. I cannot express enough just how much this means to me. I am desperate for this revolution to occur - it is the only way we have a chance to make it stop.	game/ck_lorisk.rpy	266
-lorisk_VL_plans_tree_sympathy_confidentiality_3168dd21	p	You can trust me Lorisk. I want to help this rebellion to make the change it promises.	game/ck_lorisk.rpy	274
-lorisk_VL_plans_tree_sympathy_confidentiality_8b0a0cb9	lorisk	I am willing to go to any length to make sure that we have a chance. Any measure...	game/ck_lorisk.rpy	276
-lorisk_VL_plans_tree_sympathy_confidentiality_ed25e216	lorisk	Any means will justify the ends provided that those like my family can be rid of the oppression and the slander and the hatred.	game/ck_lorisk.rpy	278
-lorisk_VL_plans_tree_sympathy_confidentiality_5bdee543	lorisk	Valak Lideri is our Beacon. When we restore it... not only will we spawn another golden age for kaldreans, but break down the barriers between our races.	game/ck_lorisk.rpy	280
-lorisk_VL_plans_tree_sympathy_confidentiality_07747415	lorisk	It will be a new age for all of us.	game/ck_lorisk.rpy	282
-lorisk_VL_plans_tree_sympathy_confidentiality_peace_0eb07175	p	Just remember that peaceful uprising will ultimately be the most effective. Minimize the grudges and the vengeance.	game/ck_lorisk.rpy	292
-lorisk_VL_plans_tree_sympathy_confidentiality_peace_146b8782	lorisk	We cannot wait any longer, [alias.first]. We have already struggled for so long to give the progressive movement the ability to take down the corruption.	game/ck_lorisk.rpy	294
-lorisk_VL_plans_tree_sympathy_confidentiality_peace_f984700b	lorisk	It never works. While I agree that peace minimizes the collateral damage, I simply do not think that we have a choice but to use force.	game/ck_lorisk.rpy	296
-lorisk_VL_plans_tree_sympathy_confidentiality_peace_2cd45ae6	p	You may be correct. But if you must use the barrel of a rifle to argue your point, make sure you are aiming at the right people.	game/ck_lorisk.rpy	298
-lorisk_VL_plans_tree_sympathy_confidentiality_violence_889a2fb4	p	Make your point with the barrel of a linear rifle. From what I understand the progressive movement is extremely volatile - it would take little to set them off.	game/ck_lorisk.rpy	304
-lorisk_VL_plans_tree_sympathy_confidentiality_violence_0bc4a8d2	lorisk	That's what we are planning - I just with that there was a better way. I do not want my fellow kaldreans to perish for the corrupted controllers.	game/ck_lorisk.rpy	306
-lorisk_VL_plans_tree_sympathy_confidentiality_violence_5fbdf115	lorisk	Their lives are worthless. They do not deserve to have soldiers fight and die for them.	game/ck_lorisk.rpy	308
-lorisk_VL_plans_tree_sympathy_confidentiality_violence_211b9f55	p	You know that Vatrisk is doing his best to help you right?	game/ck_lorisk.rpy	310
-lorisk_VL_plans_tree_sympathy_confidentiality_violence_ba621da3	lorisk	I... I know. But this is out of my hands now. If we turn back now we may never accomplish what we have set out to change.	game/ck_lorisk.rpy	312
-lorisk_VL_plans_tree_sympathy_confidentiality_violence_cb965f48	p	Then be very careful. I might not be able to help you once this gets going.	game/ck_lorisk.rpy	314
-lorisk_VL_plans_tree_sympathy_confidentiality_reason_1ffcbc3b	p	When you bring the movement to Qolisk, make sure that the ones under the rifle scope are truly the ones responsible for the corruption.	game/ck_lorisk.rpy	321
-lorisk_VL_plans_tree_sympathy_confidentiality_reason_49aca4dd	lorisk	I cannot agree with you more, [alias.first]. I cannot imagine how many poor souls are bent to do the bidding of our controllers. They should not trade their lives for leaders'.	game/ck_lorisk.rpy	323
-lorisk_VL_plans_tree_sympathy_confidentiality_reason_be8528ab	lorisk	I'm afraid, however, that this will get out of hand.	game/ck_lorisk.rpy	325
-lorisk_VL_plans_tree_sympathy_confidentiality_reason_940d935f	p	The it is up to you to keep it under control. You can - you know strength better that most and I definitely know that you can communicate better than most.	game/ck_lorisk.rpy	327
-lorisk_VL_plans_tree_disgust_80350066	p	How exactly does that work? How does a kaldrean and a human fall into a relationship?	game/ck_lorisk.rpy	333
-lorisk_VL_plans_tree_disgust_051cc16f	lorisk	I cannot believe you really just asked me that? You did not really think that question through before you blurted it did you?	game/ck_lorisk.rpy	335
-lorisk_VL_plans_tree_disgust_100ca155	p	No I'm actually -	game/ck_lorisk.rpy	337
-lorisk_VL_plans_tree_disgust_b8a64b7c	lorisk	Stop. Stop before you say something even worse than that. You have no idea how much they have had to stand against to be together and to raise me.	game/ck_lorisk.rpy	339
-lorisk_VL_plans_tree_disgust_459a5baa	lorisk	They are happier together than most kaldrean or human couples. So not only did they have to face the fire, but I did as well.	game/ck_lorisk.rpy	341
-lorisk_VL_plans_tree_disgust_3db04b52	lorisk	I was shunned throughout my schooling and denied military service and the respect that kaldreans gain by going through it.	game/ck_lorisk.rpy	343
-lorisk_VL_plans_tree_disgust_cb78a30f	lorisk	So do not try to tell me that you understand, or that you want to. No words can express what we have gone through.	game/ck_lorisk.rpy	345
-lorisk_VL_plans_tree_disgust_ba6092c8	lorisk	I thought I could trust you, [alias.title_last], but I guess I couldn't recognize your deceitful tone. I do not want to talk to you anymore.	game/ck_lorisk.rpy	347
-ck_noq_d31d521b	noq	[[]I told you not to bother me.	game/ck_noq.rpy	11
+lorisk_advice_ffb02261	lorisk	Anyway, I'll tell you that acceptance is a big deal here.	game/ck_lorisk.rpy	56
+lorisk_advice_bcea669c	lorisk	The more you find yourself seeing through someone's skin and into their being, the more your definition of "person" will change.	game/ck_lorisk.rpy	58
+lorisk_advice_9ccaa72c	lorisk	While you may recognize someone as kaldrean in passing, when you get to know them you begin to identify them based on their presence in the room.	game/ck_lorisk.rpy	60
+lorisk_advice_d87e39ab	lorisk	You can understand a great deal about people based on their cadence of speech and energy they project.	game/ck_lorisk.rpy	63
+lorisk_advice_7ea1d548	p	I can see what you mean. Thanks for your advice, Lorisk.	game/ck_lorisk.rpy	65
+lorisk_events_c6c91888	p	What do you make of the political tension building here on Concord?	game/ck_lorisk.rpy	71
+lorisk_events_755359b9	lorisk	All I know is that we're working as hard as we can to keep tensions from building up any more. I'm afraid it's become increasingly difficult.	game/ck_lorisk.rpy	73
+lorisk_events_f2034c6c	p	Why is that?	game/ck_lorisk.rpy	75
+lorisk_events_d9888908	lorisk	Kaldreans and humans are just... more bitter recently and I'm not sure why. I have plenty of human friends and they haven't changed their attitudes.	game/ck_lorisk.rpy	77
+lorisk_events_33d6b754	lorisk	So I am confused. Perhaps it is because the ambassadors are relatively new and young - it seems kaldreans and humans share a distrust for youth without much life experience.	game/ck_lorisk.rpy	79
+lorisk_events_f15a6b24	p	I can see why they'd think that. I had to really struggle against that viewpoint to make it to where I am now.	game/ck_lorisk.rpy	81
+lorisk_events_524d51c7	lorisk	We are all doing our best to break down that disposition. I'm glad to see another young diplomat who projects the same charisma and authority as an Elder.	game/ck_lorisk.rpy	83
+lorisk_personal_reasons_4f0508ec	p	Can you tell me anything about Valak Lideri?	game/ck_lorisk.rpy	89
+lorisk_personal_reasons_136b1889	lorisk	Sorry I'd rather not.	game/ck_lorisk.rpy	91
+lorisk_personal_reasons_67cb4e30	p	Personal reasons?	game/ck_lorisk.rpy	93
+lorisk_personal_reasons_9ce49f76	lorisk	...yes. I apologize.	game/ck_lorisk.rpy	95
+lorisk_personal_reasons_7164a94a	p	Please, don't apologize to me. I was prying.	game/ck_lorisk.rpy	97
+lorisk_VL_tree_start_9783413f	p	You seem like you have quite a bit of interesting knowledge and experience. Can you tell me more about yourself and your background?	game/ck_lorisk.rpy	104
+lorisk_VL_tree_start_63e3d376	lorisk	Well, there isn't much to tell. Both my parents were linguists, and they made quite sure that I was prepared to communicate with anyone I met.	game/ck_lorisk.rpy	106
+lorisk_VL_tree_start_ba7a1443	p	Interesting.	game/ck_lorisk.rpy	113
+lorisk_VL_tree_languages_dc5f8785	p	So as the Senior Linguist here I assume you have a penchant for linguistics?	game/ck_lorisk.rpy	118
+lorisk_VL_tree_languages_c7307e33	lorisk	[last_dialog]	game/ck_lorisk.rpy	121
+lorisk_VL_tree_languages_6ed177d5	lorisk	[last_dialog]	game/ck_lorisk.rpy	128
+lorisk_VL_tree_dialects_d9faf4f2	p	Can you tell me about the traditional dialects? Alkay mentioned them so he got me wondering about them.	game/ck_lorisk.rpy	132
+lorisk_VL_tree_dialects_1d4d0746	lorisk	I actually know how to read and write in four of the many traditional dialects. Of those four I can speak and understand two: Kalaras and Takress.	game/ck_lorisk.rpy	133
+lorisk_VL_tree_dialect_history_444f7ba8	p	Could you talk about the history of those two languages?	game/ck_lorisk.rpy	141
+lorisk_VL_tree_dialect_history_60f7a34e	lorisk	Actually the reason I can speak and understand Kalaras and Takress is because they are still spoken, just barely anymore.	game/ck_lorisk.rpy	143
+lorisk_VL_tree_dialect_history_22506562	lorisk	They are the more recent of the traditional languages that were prominent around the settlement of Sovereign Paradise.	game/ck_lorisk.rpy	145
+lorisk_VL_tree_dialect_history_eaca6a49	lorisk	Although "Sovereign Paradise" is a modern adaptation of the original phrase, which would have meant "Beacon" back then.	game/ck_lorisk.rpy	147
+lorisk_VL_tree_dialect_history_3652152e	lorisk	Kalaras and Takress were quite similar and eventually they were unified and enforced in education. This was the first iteration of Kaldrean Common.	game/ck_lorisk.rpy	149
+lorisk_VL_tree_dialect_history_384e826c	lorisk	Different subcultures still spoke in their native dialects and still do today. Kaldrean Common has evolved quite a bit as a result of all the cultural input.	game/ck_lorisk.rpy	151
+lorisk_VL_tree_dialect_history_337d0cd8	p	Thank you for the information, Lorisk, this is really quite interesting.	game/ck_lorisk.rpy	153
+lorisk_VL_tree_list_languages_fbc6b9a2	p	So how many languages can you speak?	game/ck_lorisk.rpy	160
+lorisk_VL_tree_list_languages_1721f5eb	lorisk	I can speak thirty languages. Nineteen kaldrean and eleven human.	game/ck_lorisk.rpy	162
+lorisk_VL_tree_list_languages_0dbf2ac2	p	Thirty languages? Can you name each one?	game/ck_lorisk.rpy	164
+lorisk_VL_tree_list_languages_d36a1d63	lorisk	Do you really want me to list off all the languages I speak? Because I can.	game/ck_lorisk.rpy	165
+lorisk_VL_tree_list_all_lauguages_4e329d9a	p	Actually yes, I would.	game/ck_lorisk.rpy	173
+lorisk_VL_tree_list_all_lauguages_c6f7cd32	lorisk	Let's see...	game/ck_lorisk.rpy	174
+lorisk_VL_tree_list_all_lauguages_f3b5ec0d	lorisk	English,	game/ck_lorisk.rpy	175
+lorisk_VL_tree_list_all_lauguages_a4cbbc19	lorisk	Spanish,	game/ck_lorisk.rpy	176
+lorisk_VL_tree_list_all_lauguages_5a8aa704	lorisk	French,	game/ck_lorisk.rpy	177
+lorisk_VL_tree_list_all_lauguages_cc3a09b1	lorisk	Italian,	game/ck_lorisk.rpy	178
+lorisk_VL_tree_list_all_lauguages_84bcd42f	lorisk	Mandarin,	game/ck_lorisk.rpy	179
+lorisk_VL_tree_list_all_lauguages_63b9be13	lorisk	Chichewa,	game/ck_lorisk.rpy	180
+lorisk_VL_tree_list_all_lauguages_82e799fb	lorisk	Latin,	game/ck_lorisk.rpy	181
+lorisk_VL_tree_list_all_lauguages_b7366dbd	lorisk	Japanese,	game/ck_lorisk.rpy	182
+lorisk_VL_tree_list_all_lauguages_723579c9	lorisk	Russian,	game/ck_lorisk.rpy	183
+lorisk_VL_tree_list_all_lauguages_fea781a3	lorisk	German,	game/ck_lorisk.rpy	184
+lorisk_VL_tree_list_all_lauguages_e5e11dee	lorisk	Hindi,	game/ck_lorisk.rpy	185
+lorisk_VL_tree_list_all_lauguages_e56ae698	lorisk	Kaldrean Common,	game/ck_lorisk.rpy	186
+lorisk_VL_tree_list_all_lauguages_644e0838	lorisk	Ekitri,	game/ck_lorisk.rpy	187
+lorisk_VL_tree_list_all_lauguages_34c35f2f	lorisk	Koroa,	game/ck_lorisk.rpy	188
+lorisk_VL_tree_list_all_lauguages_3f19ae5a	lorisk	Katrs,	game/ck_lorisk.rpy	189
+lorisk_VL_tree_list_all_lauguages_1ff5d85c	lorisk	Akliko,	game/ck_lorisk.rpy	190
+lorisk_VL_tree_list_all_lauguages_1f6b9420	lorisk	Qorosk,	game/ck_lorisk.rpy	191
+lorisk_VL_tree_list_all_lauguages_dda11cd3	lorisk	Niesk,	game/ck_lorisk.rpy	192
+lorisk_VL_tree_list_all_lauguages_6c482ee0	lorisk	Laerek,	game/ck_lorisk.rpy	193
+lorisk_VL_tree_list_all_lauguages_8f6ad122	lorisk	Ruas,	game/ck_lorisk.rpy	194
+lorisk_VL_tree_list_all_lauguages_4d0ed691	lorisk	Tolaer,	game/ck_lorisk.rpy	195
+lorisk_VL_tree_list_all_lauguages_e2a1955e	lorisk	Alkor,	game/ck_lorisk.rpy	196
+lorisk_VL_tree_list_all_lauguages_17931e32	lorisk	Senteares,	game/ck_lorisk.rpy	197
+lorisk_VL_tree_list_all_lauguages_50f9de44	lorisk	Seleksis,	game/ck_lorisk.rpy	198
+lorisk_VL_tree_list_all_lauguages_e124b64a	lorisk	Qalokalra,	game/ck_lorisk.rpy	199
+lorisk_VL_tree_list_all_lauguages_bd0c3813	lorisk	Roaq,	game/ck_lorisk.rpy	200
+lorisk_VL_tree_list_all_lauguages_b55f22cb	lorisk	Tarakres,	game/ck_lorisk.rpy	201
+lorisk_VL_tree_list_all_lauguages_d65c809d	lorisk	Viridi,	game/ck_lorisk.rpy	202
+lorisk_VL_tree_list_all_lauguages_ebfca6a6	lorisk	Irradae,	game/ck_lorisk.rpy	203
+lorisk_VL_tree_list_all_lauguages_42f66a81	lorisk	Valakri,	game/ck_lorisk.rpy	204
+lorisk_VL_tree_list_all_lauguages_1a408d82	lorisk	and... Elvish. Just for fun.	game/ck_lorisk.rpy	205
+lorisk_VL_tree_list_all_lauguages_1ffd68ba	p	Wow, that's quite an impressive repertoire! Elvish really?	game/ck_lorisk.rpy	206
+lorisk_VL_tree_list_all_lauguages_f9cdf288	lorisk	No, not really. Just joking.	game/ck_lorisk.rpy	207
+lorisk_VL_tree_list_languages_cancel_421ee843	p	No I was only joking.	game/ck_lorisk.rpy	213
+lorisk_VL_tree_list_languages_cancel_8c53003e	lorisk	Good... I'm sure I would have bored you to tears with a long list.	game/ck_lorisk.rpy	215
+lorisk_VL_tree_flatter_6f409fc2	p	You come across as very intelligent. I can see how it would be easy for you to pick up so many languages.	game/ck_lorisk.rpy	222
+lorisk_VL_tree_flatter_b6def808	lorisk	Why thank you, [alias.first]. You're quite the charmer, aren't you?	game/ck_lorisk.rpy	224
+lorisk_VL_tree_flatter_8dc1e92e	lorisk	Thank you for the compliment. I don't think it's often that anyone realizes how much work it is to maintain command over thirty languages.	game/ck_lorisk.rpy	226
+lorisk_VL_tree_flatter_4fab1a23	lorisk	I detect another statement - I'll warn you though, compliments and flattery are two very different concepts. I don't appreciate flattery.	game/ck_lorisk.rpy	228
+lorisk_VL_tree_flatter_more_ae22a98e	p	I did mean what I said, Lorisk. I know a few linguists back on Earth, none of whom possess the same repertoire that you do.	game/ck_lorisk.rpy	236
+lorisk_VL_tree_flatter_more_3eb1919f	lorisk	Alright. Let me give you some advice, [alias.first]: Be extremely cautious about compliments and flattery around kaldreans.	game/ck_lorisk.rpy	238
+lorisk_VL_tree_flatter_more_69236e58	lorisk	I've been tempered by my upbringing on Concord, but other kaldreans might be very easily offended by what you might consider an inane compliment.	game/ck_lorisk.rpy	240
+lorisk_VL_tree_flatter_more_3335af2d	p	I'll bear that in mind. Thank you Lorisk.	game/ck_lorisk.rpy	242
+lorisk_VL_plans_tree_start_2c0d83d7	p	Lorisk I know about your parents. I know that they are mixed-race.	game/ck_lorisk.rpy	250
+lorisk_VL_plans_tree_start_cc2fe05b	lorisk	Oh. You know about that? What do you care? Are you going to scorn me and my family for doing what they feel is right?	game/ck_lorisk.rpy	251
+lorisk_VL_plans_tree_sympathy_61455d84	p	I just wanted to say that I think you and you're family are very courageous to be strong against the controversy you likely received.	game/ck_lorisk.rpy	259
+lorisk_VL_plans_tree_sympathy_66495ddb	p	You and others like you deserve better than that.	game/ck_lorisk.rpy	261
+lorisk_VL_plans_tree_sympathy_f6ee3919	lorisk	I-	game/ck_lorisk.rpy	263
+lorisk_VL_plans_tree_sympathy_9111d357	lorisk	You have no idea how hard it's been for us. For all of us. I just... can't stand to see anyone else go through what we have.	game/ck_lorisk.rpy	265
+lorisk_VL_plans_tree_sympathy_ef3f569f	p	I'm doing my best to help.	game/ck_lorisk.rpy	267
+lorisk_VL_plans_tree_sympathy_37345211	lorisk	Thank you. I cannot express enough just how much this means to me. I am desperate for this revolution to occur - it is the only way we have a chance to make it stop.	game/ck_lorisk.rpy	269
+lorisk_VL_plans_tree_sympathy_confidentiality_3168dd21	p	You can trust me Lorisk. I want to help this rebellion to make the change it promises.	game/ck_lorisk.rpy	277
+lorisk_VL_plans_tree_sympathy_confidentiality_8b0a0cb9	lorisk	I am willing to go to any length to make sure that we have a chance. Any measure...	game/ck_lorisk.rpy	279
+lorisk_VL_plans_tree_sympathy_confidentiality_ed25e216	lorisk	Any means will justify the ends provided that those like my family can be rid of the oppression and the slander and the hatred.	game/ck_lorisk.rpy	281
+lorisk_VL_plans_tree_sympathy_confidentiality_5bdee543	lorisk	Valak Lideri is our Beacon. When we restore it... not only will we spawn another golden age for kaldreans, but break down the barriers between our races.	game/ck_lorisk.rpy	283
+lorisk_VL_plans_tree_sympathy_confidentiality_07747415	lorisk	It will be a new age for all of us.	game/ck_lorisk.rpy	285
+lorisk_VL_plans_tree_sympathy_confidentiality_peace_0eb07175	p	Just remember that peaceful uprising will ultimately be the most effective. Minimize the grudges and the vengeance.	game/ck_lorisk.rpy	295
+lorisk_VL_plans_tree_sympathy_confidentiality_peace_146b8782	lorisk	We cannot wait any longer, [alias.first]. We have already struggled for so long to give the progressive movement the ability to take down the corruption.	game/ck_lorisk.rpy	297
+lorisk_VL_plans_tree_sympathy_confidentiality_peace_f984700b	lorisk	It never works. While I agree that peace minimizes the collateral damage, I simply do not think that we have a choice but to use force.	game/ck_lorisk.rpy	299
+lorisk_VL_plans_tree_sympathy_confidentiality_peace_2cd45ae6	p	You may be correct. But if you must use the barrel of a rifle to argue your point, make sure you are aiming at the right people.	game/ck_lorisk.rpy	301
+lorisk_VL_plans_tree_sympathy_confidentiality_violence_889a2fb4	p	Make your point with the barrel of a linear rifle. From what I understand the progressive movement is extremely volatile - it would take little to set them off.	game/ck_lorisk.rpy	307
+lorisk_VL_plans_tree_sympathy_confidentiality_violence_0bc4a8d2	lorisk	That's what we are planning - I just with that there was a better way. I do not want my fellow kaldreans to perish for the corrupted controllers.	game/ck_lorisk.rpy	309
+lorisk_VL_plans_tree_sympathy_confidentiality_violence_5fbdf115	lorisk	Their lives are worthless. They do not deserve to have soldiers fight and die for them.	game/ck_lorisk.rpy	311
+lorisk_VL_plans_tree_sympathy_confidentiality_violence_211b9f55	p	You know that Vatrisk is doing his best to help you right?	game/ck_lorisk.rpy	313
+lorisk_VL_plans_tree_sympathy_confidentiality_violence_ba621da3	lorisk	I... I know. But this is out of my hands now. If we turn back now we may never accomplish what we have set out to change.	game/ck_lorisk.rpy	315
+lorisk_VL_plans_tree_sympathy_confidentiality_violence_cb965f48	p	Then be very careful. I might not be able to help you once this gets going.	game/ck_lorisk.rpy	317
+lorisk_VL_plans_tree_sympathy_confidentiality_reason_1ffcbc3b	p	When you bring the movement to Qolisk, make sure that the ones under the rifle scope are truly the ones responsible for the corruption.	game/ck_lorisk.rpy	324
+lorisk_VL_plans_tree_sympathy_confidentiality_reason_49aca4dd	lorisk	I cannot agree with you more, [alias.first]. I cannot imagine how many poor souls are bent to do the bidding of our controllers. They should not trade their lives for leaders'.	game/ck_lorisk.rpy	326
+lorisk_VL_plans_tree_sympathy_confidentiality_reason_be8528ab	lorisk	I'm afraid, however, that this will get out of hand.	game/ck_lorisk.rpy	328
+lorisk_VL_plans_tree_sympathy_confidentiality_reason_940d935f	p	The it is up to you to keep it under control. You can - you know strength better that most and I definitely know that you can communicate better than most.	game/ck_lorisk.rpy	330
+lorisk_VL_plans_tree_disgust_80350066	p	How exactly does that work? How does a kaldrean and a human fall into a relationship?	game/ck_lorisk.rpy	336
+lorisk_VL_plans_tree_disgust_051cc16f	lorisk	I cannot believe you really just asked me that? You did not really think that question through before you blurted it did you?	game/ck_lorisk.rpy	338
+lorisk_VL_plans_tree_disgust_100ca155	p	No I'm actually -	game/ck_lorisk.rpy	340
+lorisk_VL_plans_tree_disgust_b8a64b7c	lorisk	Stop. Stop before you say something even worse than that. You have no idea how much they have had to stand against to be together and to raise me.	game/ck_lorisk.rpy	342
+lorisk_VL_plans_tree_disgust_459a5baa	lorisk	They are happier together than most kaldrean or human couples. So not only did they have to face the fire, but I did as well.	game/ck_lorisk.rpy	344
+lorisk_VL_plans_tree_disgust_3db04b52	lorisk	I was shunned throughout my schooling and denied military service and the respect that kaldreans gain by going through it.	game/ck_lorisk.rpy	346
+lorisk_VL_plans_tree_disgust_cb78a30f	lorisk	So do not try to tell me that you understand, or that you want to. No words can express what we have gone through.	game/ck_lorisk.rpy	348
+lorisk_VL_plans_tree_disgust_ba6092c8	lorisk	I thought I could trust you, [alias.title_last], but I guess I couldn't recognize your deceitful tone. I do not want to talk to you anymore.	game/ck_lorisk.rpy	350
+ck_noq_7f85c3fc	noq	I told you not to bother me.	game/ck_noq.rpy	11
 ck_noq_2f5b0d33	noq	[last_dialog]	game/ck_noq.rpy	17
 ck_noq_2770a8e6	noq	Yes?	game/ck_noq.rpy	19
 ck_noq_715b41f8	p	I'm [alias.full]. Nice to meet you.	game/ck_noq.rpy	20
@@ -756,48 +789,61 @@ ck_noq_97c42fad	noq	Very good. Now please be snappy. I am very busy at the momen
 ck_noq_0a2fbbfd	p	Alright. I simply wanted to—	game/ck_noq.rpy	22
 ck_noq_2f5b0d33_1	noq	[last_dialog]	game/ck_noq.rpy	24
 menu_noq_ccaf2e89	noq	[last_dialog]	game/ck_noq.rpy	28
-noq_advice_08e5b379	p	Would you mind sharing some advice?	game/ck_noq.rpy	48
-noq_advice_19408aba	noq	Normally I wouldn't, but right now I am very busy. I have a deadline that I need to meet and right now I'm in the zone.	game/ck_noq.rpy	49
-noq_advice_3a71e76c	p	Perhaps later then.	game/ck_noq.rpy	50
-noq_advice_b865c32d	noq	Perhaps	game/ck_noq.rpy	51
-noq_advice_ea2f8008	p	Alright	game/ck_noq.rpy	52
-noq_events_8079094b	p	What do you think about the whole "tension between kaldreans and humans" supposedly here on Concord?	game/ck_noq.rpy	57
-noq_events_c611ec2e	noq	Ha. I was not aware of this. But that is probably because I do not pay mind to such matters. Clearly it is so obscure that it is not a real problem.	game/ck_noq.rpy	59
-noq_events_38b1fff4	p	Alright then. I think that's clear enough. I'll let you get back to work.	game/ck_noq.rpy	61
-noq_background_9c573a10	p	[[]you ask Noq on his background	game/ck_noq.rpy	68
-noq_background_f2544aca	noq	[[]offers little information. Does not sound interested in talking about it.	game/ck_noq.rpy	69
-noq_designs_94862331	p	[[]you ask Noq about his designs	game/ck_noq.rpy	74
-noq_designs_2b2d7f59	noq	[[]Lightens up and talks for a while about his latest structure.	game/ck_noq.rpy	75
-noq_VL_tree_start_84245f00	p	Would you happen to know anything about Valak Lideri?	game/ck_noq.rpy	80
-noq_VL_tree_start_ea837552	noq	You could ask anyone and they would be likely to give you a better answer than I.	game/ck_noq.rpy	82
-noq_VL_tree_start_5bba6eb8	noq	Everyone knows about them just no one knows who they are or what they want. Kind of impractical for what is deemed a "rebel group" if you ask me.	game/ck_noq.rpy	84
-noq_VL_tree_start_8bda66d3	noq	What was their most recent thing? A threat? Are they going to kill someone to make their point? How elementary.	game/ck_noq.rpy	86
-noq_VL_tree_start_b156882d	noq	If they want to accomplish anything, they will have to re-think their strategy.	game/ck_noq.rpy	88
-noq_VL_tree_start_cc7e845a	noq	All I see right now are tactical decisions - they might work in the short term, but they will fail long term.	game/ck_noq.rpy	90
-noq_VL_tree_start_8e057a3a	noq	Our government has a strong outer shell but a weak internal structure - they should really focus on that instead.	game/ck_noq.rpy	92
-noq_VL_tree_start_acbb5f90	p	You seem like you know quite a lot this.	game/ck_noq.rpy	94
-noq_VL_tree_start_6773a448	noq	I dislike our government. But I'll deal with it as long as they no longer force obligations down my throat and then mock me when I am incapable.	game/ck_noq.rpy	96
-noq_VL_tree_start_c786a4b5	p	I'm sorry I asked.	game/ck_noq.rpy	98
-noq_VL_tree_start_fe2f21db	noq	Just don't ask. Let's avoid talking about my not-so-spectacular military past.	game/ck_noq.rpy	100
-noq_VL_tree_start_ccaf2e89	noq	[last_dialog]	game/ck_noq.rpy	104
-noq_VL_tree_ask_again_4a46a56e	p	[[]ask Noq again	game/ck_noq.rpy	116
-noq_VL_tree_ask_again_7a4c383c	noq	[[]He again asserts he knows nothing, seems frustrated	game/ck_noq.rpy	117
-noq_VL_tree_assert_59e0f383	p	[[]Assert that he must know something right in Noq's pretty face	game/ck_noq.rpy	125
-noq_VL_tree_assert_d5279b67	noq	[[]You annoy me very much. Remove yourself or I will have security remove you for you.	game/ck_noq.rpy	126
-noq_interests_tree_start_48fad109	p	[[]ask Noq about his interests	game/ck_noq.rpy	131
-noq_interests_tree_start_b7468b51	noq	[[]He tells you about his love for engineering and mathematics	game/ck_noq.rpy	132
-noq_interests_tree_start_7334fcf9	p	[[]How did you become interested?	game/ck_noq.rpy	133
-noq_interests_tree_start_68a86f25	noq	[[]Tell you about his schooling on Qolisk	game/ck_noq.rpy	134
-noq_interests_tree_start_29c46b3b	p	[[]And what happened after that?	game/ck_noq.rpy	135
-noq_interests_tree_start_472474e8	noq	[[]Tells you about his background and his failure in the military	game/ck_noq.rpy	136
-noq_interests_tree_opinions_12ae806a	p	[[]ask about opinions of military	game/ck_noq.rpy	144
-noq_interests_tree_opinions_03fc8972	noq	[[]Happily tells you his dislike for the military. Slips that Alkay shares many of his opinions on the unfairness of kaldrean military and life in general	game/ck_noq.rpy	145
-noq_interests_tree_opnions_alkay_2e40f446	p	[[]ask about Alkay	game/ck_noq.rpy	153
-noq_interests_tree_opnions_alkay_4c425005	noq	[[]Becomes quiet, realizing he has already said too much. Will not talk to you in depth anymore	game/ck_noq.rpy	154
-noq_interests_tree_opinions_agree_ea50868a	p	[[]agree with his opinions	game/ck_noq.rpy	160
-noq_interests_tree_opinions_agree_841faa64	noq	[[]He suggests you talk to Alkay and Jonathan	game/ck_noq.rpy	161
-noq_interests_tree_sympathize_f8d7ed9f	p	[[]sympathize	game/ck_noq.rpy	167
-noq_interests_tree_sympathize_553aa953	noq	[[]Becomes frustrated, thinking you are being patronizing. Will tell you no more about his background	game/ck_noq.rpy	168
+noq_advice_08e5b379	p	Would you mind sharing some advice?	game/ck_noq.rpy	46
+noq_advice_19408aba	noq	Normally I wouldn't, but right now I am very busy. I have a deadline that I need to meet and right now I'm in the zone.	game/ck_noq.rpy	47
+noq_advice_3a71e76c	p	Perhaps later then.	game/ck_noq.rpy	48
+noq_advice_b865c32d	noq	Perhaps	game/ck_noq.rpy	49
+noq_advice_ea2f8008	p	Alright	game/ck_noq.rpy	50
+noq_events_8079094b	p	What do you think about the whole "tension between kaldreans and humans" supposedly here on Concord?	game/ck_noq.rpy	55
+noq_events_c611ec2e	noq	Ha. I was not aware of this. But that is probably because I do not pay mind to such matters. Clearly it is so obscure that it is not a real problem.	game/ck_noq.rpy	57
+noq_events_38b1fff4	p	Alright then. I think that's clear enough. I'll let you get back to work.	game/ck_noq.rpy	59
+noq_designs_b57d992e	p	So Noq, tell me about this new design you're working on.	game/ck_noq.rpy	66
+noq_designs_e89cbc13	noq	Oh, yes this structure right here is...	game/ck_noq.rpy	67
+noq_designs_abac4c99		Noq talks about his designs, and you get very board	game/ck_noq.rpy	68
+noq_VL_tree_start_84245f00	p	Would you happen to know anything about Valak Lideri?	game/ck_noq.rpy	73
+noq_VL_tree_start_ea837552	noq	You could ask anyone and they would be likely to give you a better answer than I.	game/ck_noq.rpy	75
+noq_VL_tree_start_5bba6eb8	noq	Everyone knows about them just no one knows who they are or what they want. Kind of impractical for what is deemed a "rebel group" if you ask me.	game/ck_noq.rpy	77
+noq_VL_tree_start_8bda66d3	noq	What was their most recent thing? A threat? Are they going to kill someone to make their point? How elementary.	game/ck_noq.rpy	79
+noq_VL_tree_start_b156882d	noq	If they want to accomplish anything, they will have to re-think their strategy.	game/ck_noq.rpy	81
+noq_VL_tree_start_cc7e845a	noq	All I see right now are tactical decisions - they might work in the short term, but they will fail long term.	game/ck_noq.rpy	83
+noq_VL_tree_start_8e057a3a	noq	Our government has a strong outer shell but a weak internal structure - they should really focus on that instead.	game/ck_noq.rpy	85
+noq_VL_tree_start_acbb5f90	p	You seem like you know quite a lot this.	game/ck_noq.rpy	87
+noq_VL_tree_start_6773a448	noq	I dislike our government. But I'll deal with it as long as they no longer force obligations down my throat and then mock me when I am incapable.	game/ck_noq.rpy	89
+noq_VL_tree_start_c786a4b5	p	I'm sorry I asked.	game/ck_noq.rpy	91
+noq_VL_tree_start_fe2f21db	noq	Just don't ask. Let's avoid talking about my not-so-spectacular military past.	game/ck_noq.rpy	93
+noq_VL_tree_start_ccaf2e89	noq	[last_dialog]	game/ck_noq.rpy	97
+noq_VL_tree_ask_again_cecb4da6	p	Are you sure, Noq? I feel like you might have something more to say about Valak Lideri.	game/ck_noq.rpy	109
+noq_VL_tree_ask_again_2be09cba	noq	I do not understand why you keep questioning me about this. I already told you that I do not know anything about Valak Lideri.	game/ck_noq.rpy	110
+noq_VL_tree_assert_a9ebdab2	p	Surely you must know something. I can tell that you do.	game/ck_noq.rpy	118
+noq_VL_tree_assert_f21f00ad	noq	You are irritating me with your ridiculous questioning. Remove yourself or I will have security remove you for you.	game/ck_noq.rpy	119
+noq_interests_tree_start_739a3fd2	p	What interests you Noq? I'm guessing it's not a question you are asked often.	game/ck_noq.rpy	124
+noq_interests_tree_start_b7601d66	noq	You are correct. I have a passion for mathematics and engineering - I can see these shapes and images that translate into numbers and measurements.	game/ck_noq.rpy	126
+noq_interests_tree_start_6ea7839e	noq	When I put them into software everything simply works. I feel liberated when I am given architectural design work.	game/ck_noq.rpy	128
+noq_interests_tree_start_79b2750f	p	How did you become interested? I assume you had a good education if you have such an expansive knowledge of this material.	game/ck_noq.rpy	130
+noq_interests_tree_start_79a1f715	noq	I did. My family and my clan is wealthy. When my parents saw that I had a bent for engineering they put into the best educational system that money can buy.	game/ck_noq.rpy	132
+noq_interests_tree_start_f76e0867	noq	Citadel's Academy is the most difficult school to get into, but I was practically invited.	game/ck_noq.rpy	134
+noq_interests_tree_start_2dbd9965	p	So you're a savant basically.	game/ck_noq.rpy	136
+noq_interests_tree_start_1b2f9836	noq	I suppose. That may also explain why I'm so socially and physically inept.	game/ck_noq.rpy	138
+noq_interests_tree_start_f50f4c1e	p	Based on that I can infer that you had some troubles afterwards?	game/ck_noq.rpy	140
+noq_interests_tree_start_b1b8da1d	noq	Military training... was absolutely terrible to me. I was unable to perform most of the tasks they asked of me, and I was ridiculed as a result.	game/ck_noq.rpy	142
+noq_interests_tree_start_65ed0b0a	noq	I managed to regain some respect by becoming the youngest decorated master marksman in the last two centuries.	game/ck_noq.rpy	144
+noq_interests_tree_start_35b250af	noq	The math skills really do come in handy when you can calculate projectile trajectories in your head and hit the center of the target every time.	game/ck_noq.rpy	145
+noq_interests_tree_opinions_7e75c6cd	p	So you dislike the military? I suppose that's obvious... Can you be more specific? What is it about the military that turned you away?	game/ck_noq.rpy	153
+noq_interests_tree_opinions_0a653ba6	noq	They have a certain expectation for every rookie soldier, even though it may be completely obvious that expectations are unreasonable.	game/ck_noq.rpy	155
+noq_interests_tree_opinions_c0fdca61	noq	You get burned even though it is not your fault you were born with a physical defect.	game/ck_noq.rpy	157
+noq_interests_tree_opinions_7a480854	noq	They are not permitted to kill you but they will try. They will have you within inches of death simply because they are trying to teach you "strength."	game/ck_noq.rpy	159
+noq_interests_tree_opinions_8fb43b60	noq	Their system would work much better if it sought to put those with the right skills in the right training. But they do not. So they waste everyone's time.	game/ck_noq.rpy	161
+noq_interests_tree_opinions_656a7dc2	noq	Alkay seems to think this accurate. I can definitely see why there are so many kaldreans out there who dislike the military and service to it.	game/ck_noq.rpy	163
+noq_interests_tree_opnions_alkay_d5f3a08d	p	You mentioned Alkay?	game/ck_noq.rpy	171
+noq_interests_tree_opnions_alkay_29598c75	noq	Right well, I think I got carried away.	game/ck_noq.rpy	173
+noq_interests_tree_opinions_agree_7611eb97	p	I agree. Our military, while not compulsory like the kaldrean's, does uphold the same operational standards for everyone.	game/ck_noq.rpy	179
+noq_interests_tree_opinions_agree_53717cfa	p	I feel like the way that they run things around there is inefficient and unbalanced as well.	game/ck_noq.rpy	181
+noq_interests_tree_opinions_agree_959f299f	noq	You might talk to Officer Caise and Elder Volk. They know quite a bit about this as well.	game/ck_noq.rpy	183
+noq_interests_tree_opinions_agree_bb8b3bce	p	Thank you	game/ck_noq.rpy	185
+noq_interests_tree_sympathize_44c442b0	p	I'm sorry that you had to go through that. I don't think any military should treat their own people that way.	game/ck_noq.rpy	191
+noq_interests_tree_sympathize_9ecfb564	noq	Do not patronize me, you do not truly understand how bad it was for some of us.	game/ck_noq.rpy	193
+noq_interests_tree_sympathize_2a8e42bf	p	I'm sorry I said anything then.	game/ck_noq.rpy	195
+noq_interests_tree_sympathize_206aa532	noq	Good.	game/ck_noq.rpy	197
 ck_vatrisk_f960dc5d	vatrisk	Hello again, [alias.first], with what may I help you?	game/ck_vatrisk.rpy	16
 ck_vatrisk_883d6ce1	p	I am doing well. I actually have a few more questions for you, if you have the time.	game/ck_vatrisk.rpy	18
 ck_vatrisk_eb5c0667	vatrisk	[last_dialog]	game/ck_vatrisk.rpy	21
@@ -809,101 +855,104 @@ menu_vatrisk_c681ef65	vatrisk	[last_dialog]	game/ck_vatrisk.rpy	37
 vatrisk_advice_15aba03b	p	What advice would you have for someone like me?	game/ck_vatrisk.rpy	73
 vatrisk_advice_0ff39f89	vatrisk	I definitely recommend going to Alkay's restaurant. You'd probably know it as Oasis. He makes the most delicious vaska.	game/ck_vatrisk.rpy	75
 vatrisk_advice_2e3f3d23	p	Good to know, I'll keep that in mind. Anything else you could tell me?	game/ck_vatrisk.rpy	77
-vatrisk_advice_9c8eb7ae	vatrisk	Don't believe everything you hear. I've ran into many liars in my life, and they can destroy people. I've seen good people have their careers get destroyed by a single lie, and I believe it shouldn't happen to anyone.	game/ck_vatrisk.rpy	79
-vatrisk_advice_ba96940c	p	Thank you for the advice.	game/ck_vatrisk.rpy	81
-vatrisk_events_5400a67e	p	So what's your take on all of this tension in the city?	game/ck_vatrisk.rpy	89
-vatrisk_events_f19899ae	vatrisk	I can assure you that all of this tension is just plain hype. This is just some people getting used to the different cultures, and they will be used to it soon.	game/ck_vatrisk.rpy	91
-vatrisk_background_aa70b5ba	p	What can you tell me about your past?	game/ck_vatrisk.rpy	98
-vatrisk_background_e1dd62ba	vatrisk	Well, I was born and raised on Qolisk, went through school just like everyone else, and joined the military. They had me installed in Concord a few years back and I made my way up the rankings. Not much of a story, but that's me.	game/ck_vatrisk.rpy	100
-vatrisk_flatter_fc93b084	p	I don't think that anyone understands how hard you work to achieve peace here.	game/ck_vatrisk.rpy	106
-vatrisk_flatter_db6d8eb4	vatrisk	Finally someone who understands. It's not easy being this kind of leader. Sure, our government is a little strict, but that's how it has always been!	game/ck_vatrisk.rpy	108
-vatrisk_flatter_0817d377	vatrisk	It's hard with all of these rules and everything, but it works. Crime rates are low as ever. You wouldn't believe how hard it is to balance happiness with safety these days.	game/ck_vatrisk.rpy	110
-vatrisk_intimidate_97196a7b	p	Tell me. Why are you making the government so harsh?	game/ck_vatrisk.rpy	118
-vatrisk_intimidate_fcd50673	vatrisk	Excuse me?	game/ck_vatrisk.rpy	120
-vatrisk_intimidate_37e52925	p	You heard me.	game/ck_vatrisk.rpy	122
-vatrisk_bribe_35c2f1aa	p	Here, a gift from our embassy to yours.	game/ck_vatrisk.rpy	130
-vatrisk_bribe_1b85713f		You give Vatrisk a lot of money in attempt to bribe him for the truth.	game/ck_vatrisk.rpy	132
-vatrisk_bribe_846386a0	vatrisk	Oh my... I can buy a lot of vaska with this...	game/ck_vatrisk.rpy	140
-vatrisk_bribe_e48d8cbf	vatrisk	Please feel free to ask me anything.	game/ck_vatrisk.rpy	142
-vatrisk_bribe_9b505343	p	Well I was hoping you could tell me why there would be all of these rumors about the kaldreans feeling oppressed	game/ck_vatrisk.rpy	144
-vatrisk_bribe_f5980dee	vatrisk	Ok, look. It's not easy being me. I have to deal with the pressure of being blamed for everything that this government does.	game/ck_vatrisk.rpy	146
-vatrisk_bribe_41771ed4	vatrisk	Even though I don't agree with it all the time.	game/ck_vatrisk.rpy	148
-vatrisk_bribe_55019f30	vatrisk	I wish there was a way to keep everyone happy AND safe. It's practically impossible. Have you ever read Vel Kerriss' "Dystopia"?	game/ck_vatrisk.rpy	150
-vatrisk_bribe_3519947e	p	I am not familiar.	game/ck_vatrisk.rpy	152
-vatrisk_bribe_16c40567	vatrisk	Well it basically describes our government. How we keep everyone safe with rules and law.	game/ck_vatrisk.rpy	154
-vatrisk_bribe_48bbc714	vatrisk	I feel what people fail to understand is that safety is more of a priority than happiness.	game/ck_vatrisk.rpy	156
-vatrisk_bribe_ce678378	p	I kind of see what you mean.	game/ck_vatrisk.rpy	158
-vatrisk_VL_denounce_ae1bc09b	p	You should denounce the kaldrean government.	game/ck_vatrisk.rpy	165
-vatrisk_VL_denounce_956cc292	vatrisk	What?	game/ck_vatrisk.rpy	167
-vatrisk_VL_denounce_37e52925	p	You heard me.	game/ck_vatrisk.rpy	169
-vatrisk_VL_inform_tree_start_ade57e3b	p	Irridiss, your life is in grave danger! Valak Lideri plan to kill you and take down the government.	game/ck_vatrisk.rpy	178
-vatrisk_VL_inform_tree_start_77accb47	vatrisk	Come again?	game/ck_vatrisk.rpy	179
-vatrisk_VL_inform_tree_ask_be54ddbf	p	You need to think. What is best for your people?	game/ck_vatrisk.rpy	190
-vatrisk_VL_inform_tree_ask_bd523749	vatrisk	The entire point of a government is to keep it's people safe, not happy. Sure, we may oppress them in some ways, but look at the crime rates. We prevent war!	game/ck_vatrisk.rpy	192
-vatrisk_VL_inform_tree_no_change_17dcdc7b	vatrisk	There is no way that you can change my mind. I will never let this government fall.	game/ck_vatrisk.rpy	205
-vatrisk_VL_inform_tree_not_sure_b0483a04	vatrisk	But now I'm not so sure. With the my life in danger, I'm not sure who I can trust anymore.	game/ck_vatrisk.rpy	212
-vatrisk_VL_inform_tree_not_sure_a2af0853	p	The kaldrean government is weak right now. This rebellion will guarantee the change that your people seek.	game/ck_vatrisk.rpy	218
-vatrisk_VL_inform_tree_not_sure_1def81e5	vatrisk	I cannot risk the stability of the government for these rebels.	game/ck_vatrisk.rpy	220
-vatrisk_VL_inform_tree_not_sure_6eaaf19b	p	Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.	game/ck_vatrisk.rpy	226
-vatrisk_VL_inform_tree_persuade_6eaaf19b	p	Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.	game/ck_vatrisk.rpy	232
-vatrisk_VL_inform_tree_persuade_c58d984c		He thinks for a long moment.	game/ck_vatrisk.rpy	234
-vatrisk_VL_inform_tree_persuade_ed63dd13	vatrisk	]You are right. "It's time for me to act."	game/ck_vatrisk.rpy	236
-vatrisk_VL_lure_ad68de72	p	Allow me to accompany you on your morning walk tomorrow. It would be my pleasure.	game/ck_vatrisk.rpy	243
-vatrisk_VL_lure_ed5dd4fa	vatrisk	Ah, of course my friend. I'd be happy to show you around my garden.	game/ck_vatrisk.rpy	247
-vatrisk_VL_lure_cf4d6093	p	Actually, I was hoping that you could show me around the grove.	game/ck_vatrisk.rpy	249
-vatrisk_VL_lure_24764a1c	vatrisk	That seems like a lovely place for a walk. Ordinarily my guards ask me to stay away from that area, but I trust you. I will meet you there at 08:00 tomorrow.	game/ck_vatrisk.rpy	251
-vatrisk_VL_lure_1ec25df6	vatrisk	I am terribly sorry, but I will not be going out tomorrow morning as I will be busy.	game/ck_vatrisk.rpy	259
-vatrisk_meeting_3396afca	vatrisk	Hello, Diplomat [alias.last]. How can I help you?	game/ck_vatrisk.rpy	267
-vatrisk_meeting_b4fd8d59	p	I want to talk about recent political unrest in the city.	game/ck_vatrisk.rpy	269
-vatrisk_meeting_6e8edcec	vatrisk	Oh. I see. But I was told you were here to discuss interstellar trade laws.	game/ck_vatrisk.rpy	271
-vatrisk_meeting_b57fd657	p	I am sorry but that was not true. I'm actually here to discuss Valak Lideri. I have evidence that your life may be in danger.	game/ck_vatrisk.rpy	273
-vatrisk_meeting_1f1850ac	vatrisk	Really? And what is this evidence?	game/ck_vatrisk.rpy	275
-vatrisk_meeting_3a131647	p	Valak Lideri want to start a progressive revolution, and they are willing to go to any means necessary to accomplish that.	game/ck_vatrisk.rpy	279
-vatrisk_meeting_29ecef59	p	Which includes assassinating you.	game/ck_vatrisk.rpy	281
-vatrisk_meeting_e2538296	vatrisk	I find that quite unlikely, [alias.last]. I am perfectly safe here.	game/ck_vatrisk.rpy	283
-vatrisk_meeting_203a2198	p	They think that the kaldrean people deserve liberation from the corrupted government. They see you as a figurehead for it. I can't argue with that.	game/ck_vatrisk.rpy	288
-vatrisk_meeting_c205ba74	vatrisk	Well... I cannot quite argue with that either. There was a tumult for a while when I was first given office as Ambassador.	game/ck_vatrisk.rpy	290
-vatrisk_meeting_8697528f	p	Valak Lideri wish to bring back what was previously known as "Beacon." They want to restore the golden age and make sure it lasts.	game/ck_vatrisk.rpy	294
-vatrisk_meeting_64ff7098	vatrisk	That sounds unrealistic. Do they not realize how unstable they would make our people?	game/ck_vatrisk.rpy	296
-vatrisk_meeting_6b23f79f	p	If you weren't aware, "Valak Lideri" means "Beacon." They are going to be the beacon for this revolution, and they are likely going to make an example out of you to start it.	game/ck_vatrisk.rpy	300
-vatrisk_meeting_e670e181	p	Your death would be the wind underneath the wings of the progressive movement.	game/ck_vatrisk.rpy	303
-vatrisk_meeting_bf0ee7db	p	I have no reason to lie to you, Ambassador. And I am quite assured that the evidence all points to this. You won't regret this.	game/ck_vatrisk.rpy	305
-vatrisk_meeting_14872daa	p	Well, I don't actually have any proof but please, you have to believe me!	game/ck_vatrisk.rpy	313
-vatrisk_meeting_3be0c81b	vatrisk	Well, idle talk will not convince me of any threats.	game/ck_vatrisk.rpy	317
-vatrisk_meeting_b1fb999c	vatrisk	Are you sure that all of this is true?	game/ck_vatrisk.rpy	323
-vatrisk_meeting_9940b5a0	p	Absolutely.	game/ck_vatrisk.rpy	325
-vatrisk_meeting_95ac507a	vatrisk	This information is definitely unnerving, but I'm still not entirely convinced. Tell me, why should I trust you, an Earthling diplomat who seems to have turned vigilante?	game/ck_vatrisk.rpy	331
-vatrisk_meeting_1e478340	p	Your people need you more than ever now. You shouldn't take any risks that would leave them helpless in such a time of need.	game/ck_vatrisk.rpy	338
-vatrisk_meeting_34bbc7b2	vatrisk	You're right.	game/ck_vatrisk.rpy	340
-vatrisk_meeting_c3bbd265	p	You need to trust us. We're only looking out for your best interests.	game/ck_vatrisk.rpy	346
-vatrisk_meeting_804574d4	vatrisk	Humans never have had our best interests in mind!	game/ck_vatrisk.rpy	348
-vatrisk_meeting_2d6c80ec	p	These rebels are dangerous enemies of the peace. You should fear them.	game/ck_vatrisk.rpy	354
-vatrisk_meeting_9bbee5f7	vatrisk	I don't need to fear those silly rebels.	game/ck_vatrisk.rpy	356
-vatrisk_meeting_fail_64e451f4	vatrisk	Now, If you would excuse me, I have a transport to board.	game/ck_vatrisk.rpy	362
-vatrisk_meeting_fail_dc87d558		The ambassador leaves the room and walks to his personal landing pad to board his transport. You follow him, still trying to dissuade him from leaving the safety of the High Embassy without guard.	game/ck_vatrisk.rpy	364
-vatrisk_meeting_fail_386082d1		Ignoring your protests, he boards the transport. Soon after it takes off, you hear a deafening blast.	game/ck_vatrisk.rpy	369
-vatrisk_meeting_fail_57776b7a		The ships seems to have been shot! It begins falling.	game/ck_vatrisk.rpy	375
-vatrisk_meeting_fail_dc7a6ef2		Miraculously, the pilot manages to safely land the critically wounded pod on the landing pad.	game/ck_vatrisk.rpy	379
-vatrisk_meeting_fail_a245937f		Ambassador Kier steps out, clearly shaken, but seemingly uninjured.	game/ck_vatrisk.rpy	383
-vatrisk_meeting_fail_9c617602	vatrisk	You were right! They tried to kill me. But how did you know? This makes no sense...	game/ck_vatrisk.rpy	387
-vatrisk_meeting_fail_d149ad43	vatrisk	You were right! Thank you for trying to save my life.	game/ck_vatrisk.rpy	392
-vatrisk_meeting_fail_20a2e5f0	p	We need to get you to safety!	game/ck_vatrisk.rpy	394
-vatrisk_meeting_fail_91d565d3	vatrisk	Right away! Guards!	game/ck_vatrisk.rpy	396
-vatrisk_meeting_success_92291f15	vatrisk	Well, I was about to leave to board a transport, but I'm not sure anymore. My life could be in danger. I trust you, [alias.full].	game/ck_vatrisk.rpy	403
-vatrisk_meeting_success_e1f2a549		You and the ambassador sit and talk about Valak Lideri for a bit longer. Then, you hear a sudden, deafening blast from outside Kier's office.	game/ck_vatrisk.rpy	405
-vatrisk_meeting_success_c862c556		The sounds of an aircraft plummeting to the ground come from outside.	game/ck_vatrisk.rpy	412
-vatrisk_meeting_success_29b542f6	vatrisk	That was my transport! You saved my life. I am eternally grateful. If you need anything, you have my full trust.	game/ck_vatrisk.rpy	418
-vatrisk_meeting_end_9cf42e9c		You return to Sarah to discuss what you've witnessed.	game/ck_vatrisk.rpy	425
-loc_market_360d6cf6		You are at the Grand Marketplace. [[]describe	game/script.rpy	279
-loc_high_emb_58d5f71e		You are at the High Embassy. [[]describe	game/script.rpy	294
-menu_high_emb_ec1b8834	guard	Haven't we already talked to you? Unless you have official business here, you may not enter the high embassy.	game/script.rpy	298
-menu_high_emb_33293983	guard	Hi. What business do you have here?	game/script.rpy	301
-high_emb_guard_menu_99d29749	guard	[[]don't see you on appt list	game/script.rpy	307
-high_emb_guard_menu_3bd6f84e	guard	[[]offended; tells you to screw off	game/script.rpy	310
-loc_human_emb_a86bdf98		You are at the Human Embassy. [[]describe	game/script.rpy	333
-loc_kald_emb_743490cb		You are at the Kaldrean Embassy. [[]describe	game/script.rpy	346
-loc_res_1ef31154		You are at the Residences. [[]describe	game/script.rpy	361
-loc_port_no_fade_bb3d2c22		You are at the Spaceport. [[]describe	game/script.rpy	381
+vatrisk_advice_fdc07888	vatrisk	Don't believe everything you hear. I've run into many liars in my life, and I've seen good people have their careers get destroyed by a single lie.	game/ck_vatrisk.rpy	79
+vatrisk_advice_1fb3c668	vatrisk	This shouldn't happen to anyone.	game/ck_vatrisk.rpy	81
+vatrisk_advice_ba96940c	p	Thank you for the advice.	game/ck_vatrisk.rpy	83
+vatrisk_events_5400a67e	p	So what's your take on all of this tension in the city?	game/ck_vatrisk.rpy	91
+vatrisk_events_f19899ae	vatrisk	I can assure you that all of this tension is just plain hype. This is just some people getting used to the different cultures, and they will be used to it soon.	game/ck_vatrisk.rpy	93
+vatrisk_background_aa70b5ba	p	What can you tell me about your past?	game/ck_vatrisk.rpy	100
+vatrisk_background_4e1145e6	vatrisk	Well, I was born and raised on Qolisk, went through school just like everyone else, and joined the military.	game/ck_vatrisk.rpy	102
+vatrisk_background_3c70f503	vatrisk	They had me installed in Concord a few years back and I made my way up the rankings. Not much of a story, but that's me.	game/ck_vatrisk.rpy	104
+vatrisk_flatter_fc93b084	p	I don't think that anyone understands how hard you work to achieve peace here.	game/ck_vatrisk.rpy	110
+vatrisk_flatter_db6d8eb4	vatrisk	Finally someone who understands. It's not easy being this kind of leader. Sure, our government is a little strict, but that's how it has always been!	game/ck_vatrisk.rpy	112
+vatrisk_flatter_c90ed926	vatrisk	It's hard with all of these rules and everything, but it works. Crime rates are low as ever.	game/ck_vatrisk.rpy	114
+vatrisk_flatter_f03b44c8	vatrisk	The people just don't understand that the balance of happiness and safety is an impossible task.	game/ck_vatrisk.rpy	116
+vatrisk_intimidate_97196a7b	p	Tell me. Why are you making the government so harsh?	game/ck_vatrisk.rpy	124
+vatrisk_intimidate_fcd50673	vatrisk	Excuse me?	game/ck_vatrisk.rpy	126
+vatrisk_intimidate_37e52925	p	You heard me.	game/ck_vatrisk.rpy	128
+vatrisk_intimidate_89aaba52	vatrisk	Talk to me when you have calmed down.	game/ck_vatrisk.rpy	130
+vatrisk_bribe_35c2f1aa	p	Here, a gift from our embassy to yours.	game/ck_vatrisk.rpy	136
+vatrisk_bribe_1b85713f		You give Vatrisk a lot of money in attempt to bribe him for the truth.	game/ck_vatrisk.rpy	138
+vatrisk_bribe_cca0d8d1	vatrisk	Ahh, so *you're* the one the guards were talking about! Tried to bribe your way into the embassy, didn't you?	game/ck_vatrisk.rpy	141
+vatrisk_bribe_f4259073	vatrisk	That's right, I know your tricks. Don't think you'll be getting anything out of me with such petty tactics.	game/ck_vatrisk.rpy	143
+vatrisk_bribe_846386a0	vatrisk	Oh my... I can buy a lot of vaska with this...	game/ck_vatrisk.rpy	150
+vatrisk_bribe_e48d8cbf	vatrisk	Please feel free to ask me anything.	game/ck_vatrisk.rpy	152
+vatrisk_bribe_7c917d41	p	Well, I was hoping you could tell me why there would be all of these rumors about the kaldreans feeling oppressed.	game/ck_vatrisk.rpy	154
+vatrisk_bribe_1bc0fa63	vatrisk	Okay, look. It's not easy being me. I have to deal with the pressure of being blamed for everything that this government does.	game/ck_vatrisk.rpy	156
+vatrisk_bribe_41771ed4	vatrisk	Even though I don't agree with it all the time.	game/ck_vatrisk.rpy	158
+vatrisk_bribe_55019f30	vatrisk	I wish there was a way to keep everyone happy AND safe. It's practically impossible. Have you ever read Vel Kerriss' "Dystopia"?	game/ck_vatrisk.rpy	160
+vatrisk_bribe_3519947e	p	I am not familiar.	game/ck_vatrisk.rpy	162
+vatrisk_bribe_16c40567	vatrisk	Well it basically describes our government. How we keep everyone safe with rules and law.	game/ck_vatrisk.rpy	164
+vatrisk_bribe_48bbc714	vatrisk	I feel what people fail to understand is that safety is more of a priority than happiness.	game/ck_vatrisk.rpy	166
+vatrisk_bribe_ce678378	p	I kind of see what you mean.	game/ck_vatrisk.rpy	168
+vatrisk_VL_denounce_0544e70f	p	You must denounce the kaldrean government.	game/ck_vatrisk.rpy	175
+vatrisk_VL_denounce_956cc292	vatrisk	What?	game/ck_vatrisk.rpy	177
+vatrisk_VL_denounce_bca92791	p	Trust me, it's for the best.	game/ck_vatrisk.rpy	179
+vatrisk_VL_inform_tree_start_ade57e3b	p	Irridiss, your life is in grave danger! Valak Lideri plan to kill you and take down the government.	game/ck_vatrisk.rpy	188
+vatrisk_VL_inform_tree_start_77accb47	vatrisk	Come again?	game/ck_vatrisk.rpy	189
+vatrisk_VL_inform_tree_ask_be54ddbf	p	You need to think. What is best for your people?	game/ck_vatrisk.rpy	200
+vatrisk_VL_inform_tree_ask_bd523749	vatrisk	The entire point of a government is to keep it's people safe, not happy. Sure, we may oppress them in some ways, but look at the crime rates. We prevent war!	game/ck_vatrisk.rpy	202
+vatrisk_VL_inform_tree_no_change_17dcdc7b	vatrisk	There is no way that you can change my mind. I will never let this government fall.	game/ck_vatrisk.rpy	215
+vatrisk_VL_inform_tree_not_sure_b0483a04	vatrisk	But now I'm not so sure. With the my life in danger, I'm not sure who I can trust anymore.	game/ck_vatrisk.rpy	222
+vatrisk_VL_inform_tree_not_sure_a2af0853	p	The kaldrean government is weak right now. This rebellion will guarantee the change that your people seek.	game/ck_vatrisk.rpy	228
+vatrisk_VL_inform_tree_not_sure_1def81e5	vatrisk	I cannot risk the stability of the government for these rebels.	game/ck_vatrisk.rpy	230
+vatrisk_VL_inform_tree_not_sure_6eaaf19b	p	Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.	game/ck_vatrisk.rpy	236
+vatrisk_VL_inform_tree_persuade_6eaaf19b	p	Your people are depending on you to fix this. Those rebels are just like you and I. They do not really want to kill you, but they will if they must.	game/ck_vatrisk.rpy	242
+vatrisk_VL_inform_tree_persuade_c58d984c		He thinks for a long moment.	game/ck_vatrisk.rpy	244
+vatrisk_VL_inform_tree_persuade_ed63dd13	vatrisk	]You are right. "It's time for me to act."	game/ck_vatrisk.rpy	246
+vatrisk_VL_lure_ad68de72	p	Allow me to accompany you on your morning walk tomorrow. It would be my pleasure.	game/ck_vatrisk.rpy	253
+vatrisk_VL_lure_ed5dd4fa	vatrisk	Ah, of course my friend. I'd be happy to show you around my garden.	game/ck_vatrisk.rpy	257
+vatrisk_VL_lure_cf4d6093	p	Actually, I was hoping that you could show me around the grove.	game/ck_vatrisk.rpy	259
+vatrisk_VL_lure_24764a1c	vatrisk	That seems like a lovely place for a walk. Ordinarily my guards ask me to stay away from that area, but I trust you. I will meet you there at 08:00 tomorrow.	game/ck_vatrisk.rpy	261
+vatrisk_VL_lure_1ec25df6	vatrisk	I am terribly sorry, but I will not be going out tomorrow morning as I will be busy.	game/ck_vatrisk.rpy	269
+vatrisk_meeting_3396afca	vatrisk	Hello, Diplomat [alias.last]. How can I help you?	game/ck_vatrisk.rpy	277
+vatrisk_meeting_b4fd8d59	p	I want to talk about recent political unrest in the city.	game/ck_vatrisk.rpy	279
+vatrisk_meeting_6e8edcec	vatrisk	Oh. I see. But I was told you were here to discuss interstellar trade laws.	game/ck_vatrisk.rpy	281
+vatrisk_meeting_b57fd657	p	I am sorry but that was not true. I'm actually here to discuss Valak Lideri. I have evidence that your life may be in danger.	game/ck_vatrisk.rpy	283
+vatrisk_meeting_1f1850ac	vatrisk	Really? And what is this evidence?	game/ck_vatrisk.rpy	285
+vatrisk_meeting_3a131647	p	Valak Lideri want to start a progressive revolution, and they are willing to go to any means necessary to accomplish that.	game/ck_vatrisk.rpy	289
+vatrisk_meeting_29ecef59	p	Which includes assassinating you.	game/ck_vatrisk.rpy	291
+vatrisk_meeting_e2538296	vatrisk	I find that quite unlikely, [alias.last]. I am perfectly safe here.	game/ck_vatrisk.rpy	293
+vatrisk_meeting_203a2198	p	They think that the kaldrean people deserve liberation from the corrupted government. They see you as a figurehead for it. I can't argue with that.	game/ck_vatrisk.rpy	298
+vatrisk_meeting_c205ba74	vatrisk	Well... I cannot quite argue with that either. There was a tumult for a while when I was first given office as Ambassador.	game/ck_vatrisk.rpy	300
+vatrisk_meeting_8697528f	p	Valak Lideri wish to bring back what was previously known as "Beacon." They want to restore the golden age and make sure it lasts.	game/ck_vatrisk.rpy	304
+vatrisk_meeting_64ff7098	vatrisk	That sounds unrealistic. Do they not realize how unstable they would make our people?	game/ck_vatrisk.rpy	306
+vatrisk_meeting_6b23f79f	p	If you weren't aware, "Valak Lideri" means "Beacon." They are going to be the beacon for this revolution, and they are likely going to make an example out of you to start it.	game/ck_vatrisk.rpy	310
+vatrisk_meeting_e670e181	p	Your death would be the wind underneath the wings of the progressive movement.	game/ck_vatrisk.rpy	313
+vatrisk_meeting_bf0ee7db	p	I have no reason to lie to you, Ambassador. And I am quite assured that the evidence all points to this. You won't regret this.	game/ck_vatrisk.rpy	315
+vatrisk_meeting_14872daa	p	Well, I don't actually have any proof but please, you have to believe me!	game/ck_vatrisk.rpy	323
+vatrisk_meeting_3be0c81b	vatrisk	Well, idle talk will not convince me of any threats.	game/ck_vatrisk.rpy	327
+vatrisk_meeting_b1fb999c	vatrisk	Are you sure that all of this is true?	game/ck_vatrisk.rpy	333
+vatrisk_meeting_9940b5a0	p	Absolutely.	game/ck_vatrisk.rpy	335
+vatrisk_meeting_95ac507a	vatrisk	This information is definitely unnerving, but I'm still not entirely convinced. Tell me, why should I trust you, an Earthling diplomat who seems to have turned vigilante?	game/ck_vatrisk.rpy	341
+vatrisk_meeting_1e478340	p	Your people need you more than ever now. You shouldn't take any risks that would leave them helpless in such a time of need.	game/ck_vatrisk.rpy	348
+vatrisk_meeting_34bbc7b2	vatrisk	You're right.	game/ck_vatrisk.rpy	350
+vatrisk_meeting_c3bbd265	p	You need to trust us. We're only looking out for your best interests.	game/ck_vatrisk.rpy	356
+vatrisk_meeting_804574d4	vatrisk	Humans never have had our best interests in mind!	game/ck_vatrisk.rpy	358
+vatrisk_meeting_2d6c80ec	p	These rebels are dangerous enemies of the peace. You should fear them.	game/ck_vatrisk.rpy	364
+vatrisk_meeting_9bbee5f7	vatrisk	I don't need to fear those silly rebels.	game/ck_vatrisk.rpy	366
+vatrisk_meeting_fail_578a1bee	vatrisk	Now, if you would excuse me, I have a transport to board.	game/ck_vatrisk.rpy	372
+vatrisk_meeting_fail_dc87d558		The ambassador leaves the room and walks to his personal landing pad to board his transport. You follow him, still trying to dissuade him from leaving the safety of the High Embassy without guard.	game/ck_vatrisk.rpy	374
+vatrisk_meeting_fail_386082d1		Ignoring your protests, he boards the transport. Soon after it takes off, you hear a deafening blast.	game/ck_vatrisk.rpy	383
+vatrisk_meeting_fail_57776b7a		The ships seems to have been shot! It begins falling.	game/ck_vatrisk.rpy	404
+vatrisk_meeting_fail_076c735c		Miraculously, the pilot manages to safely land the critically wounded craft as close as she can to the landing pad.	game/ck_vatrisk.rpy	423
+vatrisk_meeting_fail_73792581		Ambassador Irridiss steps out, clearly shaken, but seemingly uninjured.	game/ck_vatrisk.rpy	427
+vatrisk_meeting_fail_9c617602	vatrisk	You were right! They tried to kill me. But how did you know? This makes no sense...	game/ck_vatrisk.rpy	431
+vatrisk_meeting_fail_d149ad43	vatrisk	You were right! Thank you for trying to save my life.	game/ck_vatrisk.rpy	436
+vatrisk_meeting_fail_20a2e5f0	p	We need to get you to safety!	game/ck_vatrisk.rpy	438
+vatrisk_meeting_fail_91d565d3	vatrisk	Right away! Guards!	game/ck_vatrisk.rpy	440
+vatrisk_meeting_success_92291f15	vatrisk	Well, I was about to leave to board a transport, but I'm not sure anymore. My life could be in danger. I trust you, [alias.full].	game/ck_vatrisk.rpy	447
+vatrisk_meeting_success_e1f2a549		You and the ambassador sit and talk about Valak Lideri for a bit longer. Then, you hear a sudden, deafening blast from outside Kier's office.	game/ck_vatrisk.rpy	449
+vatrisk_meeting_success_c862c556		The sounds of an aircraft plummeting to the ground come from outside.	game/ck_vatrisk.rpy	456
+vatrisk_meeting_success_29b542f6	vatrisk	That was my transport! You saved my life. I am eternally grateful. If you need anything, you have my full trust.	game/ck_vatrisk.rpy	462
+vatrisk_meeting_end_9cf42e9c		You return to Sarah to discuss what you've witnessed.	game/ck_vatrisk.rpy	469
+menu_high_emb_9745b93f	guard	Haven't we already talked to you? Unless you have official business here, you may not enter the High Embassy.	game/script.rpy	334
+menu_high_emb_d48e3ab9	guard	Greetings.	game/script.rpy	337
+high_emb_guard_menu_29c80507	guard	[last_dialog]	game/script.rpy	340
+high_emb_guard_menu_63d81dfa	guard	An appointment? Let me check... what's your name?	game/script.rpy	343
+high_emb_guard_menu_9ffe0c79	p	[alias.full].	game/script.rpy	344
+high_emb_guard_menu_940ec0aa	guard	Sorry, but I don't see you on my list.	game/script.rpy	345
+high_emb_guard_menu_27cce545	guard	What do I look like, a criminal? Get lost.	game/script.rpy	348
 intro_432e9b88		This is the planet Bridge.	game/sequences.rpy	13
 intro_41204718		Fifty years ago, humans made first contact there with the kaldreans, an advanced race of insect-like beings.	game/sequences.rpy	14
 intro_253fe21a		At first, there was fighting between the two races, but later that year, the two signed a treaty of friendship and peace. 	game/sequences.rpy	17
@@ -922,17 +971,50 @@ intro_8b27ce7d	comm	Before you go, you must complete your alias as a diplomat.	g
 intro_e7842160	comm	Very good. It is time for you to get going, then, Agent.	game/sequences.rpy	70
 intro_b95bfbf3	comm	You have not failed me yet. Do not let this be the first time you do.	game/sequences.rpy	71
 intro_36a7dc55		After a month-long journey through space, you finally arrive on Bridge. As you come to land at the Spaceport, you see Concord below you.	game/sequences.rpy	75
-intro_c1e4ad2f		The city appears utopian, set between a shimmering coast and an luscious jungle.	game/sequences.rpy	78
-intro_87a0a02c		You dismount your spacecraft, stumbling a bit as you readjust to the feeling of gravity. You emerge in the bustling, noisy spaceport. People mill about all around.	game/sequences.rpy	82
-intro_869276f6		You open your assignment notes, which tell you to meet Agent Redmont in the residences as soon as you arrive.	game/sequences.rpy	85
-ending_incorrect_plans_79fbb96d		[[]Sarah goes to initiate the raid.	game/sequences.rpy	92
-ending_incorrect_plans_41e449c8		[[]Later you find out that you incorrectly identified the rebels' plans. You have failed to apprehend the rebels in time	game/sequences.rpy	93
-ending_correct_plans_79fbb96d		[[]Sarah goes to initiate the raid.	game/sequences.rpy	101
-ending_too_many_wrong_rebels_identified_79fbb96d		[[]Sarah goes to initiate the raid.	game/sequences.rpy	108
-ending_too_many_wrong_rebels_identified_54e79074		[[]Later you find out that you identified too many people as rebels that weren't. You have failed to apprehend the rebels in time	game/sequences.rpy	109
-ending_not_enough_rebels_identified_79fbb96d		[[]Sarah goes to initiate the raid.	game/sequences.rpy	117
-ending_not_enough_rebels_identified_21e9f02e		[[]Later you find out that you didn't identify enough rebels You have failed to apprehend the rebels in time	game/sequences.rpy	118
-ending_correct_rebels_dcccb5bb		[[]You correctly identified enough rebels	game/sequences.rpy	125
-ending_vatrisk_lure_8233211b		[[]Vatrisk trustingly follows you out to the grove, unguarded	game/sequences.rpy	137
-ending_vatrisk_lure_8d7a5fbb		[[]After talking for a short time, you hear the blast of a plasma gun	game/sequences.rpy	139
-ending_vatrisk_lure_a9f89535		[[]Vatrisk falls to the ground, fatally wounded	game/sequences.rpy	141
+intro_6b10565e		The city appears Utopian, set between a shimmering coast and an luscious jungle.	game/sequences.rpy	78
+intro_33c9b208		Your ship descends to the Spaceport.	game/sequences.rpy	79
+intro_87a0a02c		You dismount your spacecraft, stumbling a bit as you readjust to the feeling of gravity. You emerge in the bustling, noisy spaceport. People mill about all around.	game/sequences.rpy	84
+intro_b19447f5		You open your assignment notes, which tell you to meet Agent Redmont in the Residences as soon as you arrive.	game/sequences.rpy	87
+ending_correct_plans_2984cc2b		Sarah goes to initiate the raid.	game/sequences.rpy	94
+ending_too_many_wrong_rebels_identified_2984cc2b		Sarah goes to initiate the raid.	game/sequences.rpy	99
+ending_too_many_wrong_rebels_identified_0f687e89		Later you find out that you identified too many people as rebels that weren't. You have failed to apprehend the rebels in time.	game/sequences.rpy	100
+ending_not_enough_rebels_identified_2984cc2b		Sarah goes to initiate the raid.	game/sequences.rpy	106
+ending_not_enough_rebels_identified_876c44d6		Later you find out that you didn't identify enough rebels You have failed to apprehend the rebels in time.	game/sequences.rpy	107
+ending_correct_rebels_748dc0cf		You correctly identified enough rebels!	game/sequences.rpy	112
+ending_vatrisk_lure_3cb992c4		Vatrisk trustingly follows you out to the grove, unguarded	game/sequences.rpy	118
+ending_vatrisk_lure_b0badd3b		After talking for a short time, you hear the blast of a linear rifle.	game/sequences.rpy	120
+ending_vatrisk_lure_b5e256ec		Vatrisk falls to the ground, fatally wounded.	game/sequences.rpy	122
+result_1_fcf22950		As a result of your failure to act to prevent the assassination, the rebels carry out their plans unhindered.	game/sequences.rpy	133
+result_1_063b2780		Irridiss is killed but the lack of discretion and precision renders it easy for authorities to catch up to and apprehend the human rebels.	game/sequences.rpy	134
+result_1_46de9bb8		The spark that Valak Lideri hoped to light did not take properly and the rebellion they wanted to occur never lifts off.	game/sequences.rpy	135
+result_1_394e2163		The loss of a figurehead of peace between the humans and kaldreans quickly causes relations to break apart and violence to intensify.	game/sequences.rpy	136
+result_1_33da5d99		War breaks out on Bridge and the infant alliance between the kaldreans and humans is destroyed, leaving both embroiled in conflict.	game/sequences.rpy	137
+result_1_da13851b		However, the alliance is restored after the bitter races eventually forget what they are fighting about and set their differences aside once again.	game/sequences.rpy	138
+result_2_39e0efdf		Your sharp eye for detail and ability to determine critical information allows you to do what you were assigned to do: apprehend Valak Lideri.	game/sequences.rpy	147
+result_2_1c566566		Valak Lideri is stopped dead in its tracks and the assassination is not carried out. The impetus behind the progressive movement breaks apart and leaves it to fizzle out.	game/sequences.rpy	148
+result_2_1910080e		The tentative peace between the two races continues and slowly strengthens but the kaldrean government remains corrupted.	game/sequences.rpy	149
+result_2_50b87ceb		Bridge remains the safe-haven for those kaldreans and humans with progressive attitudes and the kaldrean government keeps blinders over the eyes of their people.	game/sequences.rpy	150
+result_2_e9f76322		You have done your duty, Agent, we are exceedingly proud of you.	game/sequences.rpy	151
+result_3_66dd65b1		Your shift in perspective has you helping Valak Lideri to carry out their assassination with dramatic cleanliness and precision.	game/sequences.rpy	160
+result_3_77291395		The kaldrean military declares war upon the humans but soon find themselves overwhelmed by the massive uprising on Qolisk.	game/sequences.rpy	161
+result_3_95dce297		The military breaks off to quell the rebellion, but by that time it is far too late. The movement is bloody but lighting quick.	game/sequences.rpy	162
+result_3_97e73ca6		While the collateral damage brings the kaldrean home world to its knees, the instantiation of a new democratic republic is a beacon of hope for the kaldrean people.	game/sequences.rpy	163
+result_3_7a8b57f9		With the tyrannical government obliterated, the knew leaders are swift to reform their alliance with the humans.	game/sequences.rpy	164
+result_3_994c7288		What was a previously tentative alliance is reinforced and ultimately leads to stronger and more stable relations between the two races.	game/sequences.rpy	165
+result_4_272fab33		Your skill with words convinces Ambassador Irridiss to publicly denounce the kaldrean government. Valak Lideri do not carry out an assassination.	game/sequences.rpy	174
+result_4_8f10f611		The shock wave of Irridiss' words are so profound that the progressive movement swells and even pulls in some conservative sympathetics.	game/sequences.rpy	175
+result_4_5417ab8f		The human military coupled with the progressive movement descends upon the corrupted controllers with deadly accuracy.	game/sequences.rpy	176
+result_4_cd1d77d4		Professional tactics and strategy ensures that collateral damage is minimized and only those at the source of the corruption are neutralized.	game/sequences.rpy	177
+result_4_bfab9fde		A new democratic government is created and its newly elected leaders swiftly strengthen the terms of the alliance with the humans.	game/sequences.rpy	178
+result_4_4028f01c		A new friendship blossoms between the two races and the galaxy enters into an era of peace, prosperity, and liberty.	game/sequences.rpy	179
+result_4_83455655		You may not have set out to accomplish what you did, but ultimately what you accomplished is extraordinary.	game/sequences.rpy	180
+credits_63015e33		Thank you for playing Beacon.	game/sequences.rpy	185
+credits_56bea827		Made by ZERO Studios:
+ Graham Held -- Art, world design, dialog.
+ Garret Holman -- Sound, design, dialog.
+ Kyle McCormick -- Programming, game design, dialog.	game/sequences.rpy	186
+credits_249a1581		Additional contributions:
+ Jesse Colford -- Introduction and Grand Marketplace music
+ Calum Briggs, Thomas Brown IV -- Design advice	game/sequences.rpy	190
+credits_092bd7bd		Created using The Ren'Py Visual Novel Engine (http://www.renpy.org).	game/sequences.rpy	193
+credits_41c7becb		Please see documentation for citations to non-original assets.	game/sequences.rpy	194

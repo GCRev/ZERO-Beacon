@@ -274,7 +274,9 @@ image bg result2 = bkg_img('bg_result_2-apprehend')
 image bg result3 = bkg_img('bg_result_3-assist')
 image bg result4 = bkg_img('bg_result_4-diplomacy')
 image bg credits = bkg_img('bg_credits')
+image dropship = char_img('bg_dropship')
 
+#image white = "#fff"
 
 
 ####################################################
