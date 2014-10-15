@@ -419,7 +419,7 @@ label ck_alkay:
 
         menu:
             alkay "That is quite the accusation, [alias.first]. I strongly recommend against going about and riddling this city with accusations. Take care when treading about this subject."
-            "You have been told what hardship is like, and you want to help things change":
+            "Assure Alkay that you have been told what hardship is like, and you want to help things change":
                 jump alkay_VL_accuse_tree_hardship
             "Threaten to reveal his intent if he does not tell you his plans":
                 jump alkay_VL_accuse_tree_threaten
