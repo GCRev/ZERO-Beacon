@@ -128,7 +128,7 @@ label ch_lauren:
                     p "I'm sorry to hear that."
 
                     $ plot_state.lauren_lorisk_info = InfoGet.SUCCESS
-                    $last_dialog = "Right well, that doesn't change the fact that it happened. I got sidetracked; if you have any other questions keep them brief."
+                    $last_dialog = "Right. Well, that doesn't change the fact that it happened. I got sidetracked; if you have any other questions, keep them brief."
                     jump menu_lauren
 
                 label lauren_info_tree_disapproval:
@@ -137,5 +137,5 @@ label ch_lauren:
                     lauren "That's narrow-minded of you, [alias.title_full]. I honestly would not have expected that kind of response from you. Or at least you would have kept it to yourself."
 
                     $ plot_state.lauren_lorisk_info = InfoGet.FAIL
-                    $last_dialog = "If you have something open-minded to say, then you can ask me. Otherwise I would prefer it if I could get back to my break."
+                    $last_dialog = "If you have something open-minded to say, then you can ask me. Otherwise, I would prefer it if I could get back to my break."
                     jump menu_lauren

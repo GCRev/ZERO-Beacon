@@ -253,14 +253,14 @@ label ch_jon:
 
                 p "I apologize. I didn't mean to upset you."
                 $plot_state.jon_vl_info = InfoGet.FAIL
-                $last_dialog = "Yeah well, steer clear of that topic and I'll be your friend. Otherwise I'll get irritated. If you have anything else to ask, make it something simple."
+                $last_dialog = "Yeah well, steer clear of that topic and I'll be your friend. Otherwise, I'll get irritated. If you have anything else to ask, make it something simple."
                 jump menu_jon
 
 
             label jon_VL_tree_go_along:
                 p "Right, well I'll just have to dig around some more. "
                 jon "Perhaps you might talk to Flight Commander Zalva. She's younger, but she's seen a lot. She's a little... cold, but oddly friendly."
-                $last_dialog = "If you tell her I sent you she'll be a little more responsive."
+                $last_dialog = "If you tell her I sent you, she'll be a little more responsive."
                 $plot_state.jon_talk_kro = True
                 jump menu_jon
 
@@ -328,7 +328,7 @@ label ch_jon:
 
                     p "I can't stress it enough. There is simply no need to fight another lengthy war when one isn't necessary or even logical."
 
-                    $ last_dialog = "You're words are inspiring, "+alias.first+". Let me know if you need anything else."
+                    $ last_dialog = "Your words are inspiring, "+alias.first+". Let me know if you need anything else."
                     $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
                     jump menu_jon
 
@@ -347,7 +347,7 @@ label ch_jon:
 
                     jon "I suppose. But you'll really have to do some sweet-talking when you try to convince skeptical kaldreans of this."
 
-                    $last_dialog = "Then again, it's for the benefit of the future generations. They would most likely agree. If you have anything else to ask please do."
+                    $last_dialog = "Then again, it's for the benefit of the future generations. They would most likely agree. If you have anything else to ask, please do."
                     $plot_state.jon_vl_plan_info = InfoGet.SUCCESS
                     jump menu_jon
 

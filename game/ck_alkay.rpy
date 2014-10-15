@@ -444,8 +444,8 @@ label ck_alkay:
 
                 alkay "We will watch him from one end of a rifle scope. In an instant everything will change."
 
-                $last_dialog = "We are approaching the horizon, and by mid morning tomorrow we will cross it. The new day will be wonderful -  it will breathe life into us."
                 $plot_state.alkay_vl_plan_told = True
+                $last_dialog = "We are approaching the horizon, and by mid-morning tomorrow we will cross it. The new day will be wonderful - it will breathe life into us."
                 jump alkay_VL_accuse_tree_hardship_approval
 
             else:
@@ -529,6 +529,6 @@ label ck_alkay:
 
                     alkay "Anger will not improve your chances of convincing me, [alias.first]. I do not know you well-enough to believe that you can simply \"understand\" on command."
 
-                    $last_dialog = "So keep your head down and allow time to pass. In the meantime if you have any more questions feel free to ask."
+                    $last_dialog = "So keep your head down and allow time to pass. In the meantime, if you have any more questions, feel free to ask."
                     $plot_state.alkay_vl_plan_info = InfoGet.FAIL
                     jump menu_alkay

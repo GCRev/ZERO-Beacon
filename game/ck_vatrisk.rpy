@@ -28,7 +28,7 @@ label ck_vatrisk:
 
         vatrisk "And we will support you. Ambassador Columbus and I are committed to your success. Because your successes contribute to all of our successes."
         
-        $last_dialog = "So as new arrival I trust you have some questions to ask?"
+        $last_dialog = "So, as a new arrival, you must have some questions to ask. Am I correct?"
         vatrisk '[last_dialog]'
 
         $ plot_state.vatrisk_met = True
